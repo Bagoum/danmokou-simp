@@ -1,0 +1,27 @@
+pattern { }
+phase 0
+	action block 0
+		shift-phase-to 2
+		
+
+phase 0
+	saction 0
+		stage-announce
+		shift-phase
+
+##Mima. Mima
+<!> endboss
+phase 0
+	saction 0
+		boss simp.mima
+		shift-phase
+
+##8
+phase 0
+	saction 0
+		stage-deannounce
+		shift-phase
+
+
+
+

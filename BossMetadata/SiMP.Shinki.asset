@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a92301f86b4dd690557658c7243e8b, type: 3}
+  m_Name: SiMP.Shinki
+  m_EditorClassIdentifier: 
+  boss: {fileID: 6003014192476353498, guid: 190c48124f089ba45a3452933bdb637d, type: 3}
+  CardPracticeName: Shinki
+  stateMachine: {fileID: 4900000, guid: 2a1193b06701d6b49ab8335b1a00b9c9, type: 3}
+  key: simp.shinki
+  displayName: Shinki
+  displayTitle: Tathagata<br>Come From a<br>Shore Beyond
+  trackName: "\u795E\u7DBA"
+  uiColor: {r: 0.6509434, g: 0, b: 0.20107882, a: 1}
+  uiHPColor: {r: 0.9339623, g: 0, b: 0.2769062, a: 1}
+  cardColorR: {r: 0.745283, g: 0, b: 0, a: 1}
+  cardColorG: {r: 0.4132176, g: 0, b: 0.6509434, a: 1}
+  cardColorB: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
+  spellColor1: {r: 0.745283, g: 0.03867035, b: 0.03867035, a: 0.6392157}
+  spellColor2: {r: 0.52521545, g: 0.18511927, b: 0.6037736, a: 0.6313726}
+  spellColor3: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 0.44705883}
+  colors: {fileID: 11400000, guid: f4604fa083596e449a093d14a07e723b, type: 2}
+  rotator: 
+  profile:
+    image: {fileID: 2800000, guid: c8865569eb610484392d5865d65df153, type: 3}
+    offsetX: 0.403
+    offsetY: 0.608
+    zoom: 6.58
+  defaultNonBG: {fileID: 5180723301924424041, guid: 4a0a8a5316c330c4189ab06c1ba0018c,
+    type: 3}
+  defaultSpellBG: {fileID: 5180723301924424041, guid: e5b7364a6eea7aa47b0e0aebb7a4e863,
+    type: 3}
+  defaultIntoSpellTransition: {fileID: 11400000, guid: 9b0abf82e07299741a4d64ecd57ff7e6,
+    type: 2}
+  defaultIntoNonTransition: {fileID: 11400000, guid: ee89dae89d15f34418474c82d6d3a3ba,
+    type: 2}
+  bossCutin: {fileID: 1176886499574204291, guid: 7530759f5bc0409499faac1f1eeb4d73,
+    type: 3}
+  spellCutins:
+  - {fileID: 5101881453110368087, guid: 55e4fa769cf4b28479a5503275230561, type: 3}

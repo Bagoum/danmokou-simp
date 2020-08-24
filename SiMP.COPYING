@@ -1,0 +1,36 @@
+Copyright (c) 2020 <reneedebatz@gmail.com>
+
+This is a submodule of Danmokou containing all resources specific to the fangame project Spirits in Memetic Paradise. 
+See the parent repository here: https://github.com/Bagoum/danmokou
+See this repository here: https://github.com/Bagoum/danmokou-simp
+
+All source code in this submodule is distributed under the GNU GPL v3 or any later version. 
+Source code is present in the folders Scripts and Dialogue/Scripts.
+
+See below for licenses for non-code assets.
+Also see the COPYING file in the parent repository.
+
+Touhou Project is owned by Team Shanghai Alice.
+
+---
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+---
+
+Licenses for non-code assets
+
+- Cutins/dairi: by dairi (https://www.pixiv.net/en/users/4920496).
+- Dialogue/icons: by dairi (modifications applied).
+- Dialogue/Stands: by kaoru (license in folder), with the exception of any folders starting with "dairi_" by dairi.
+- UI: by me, licensed under CC BY 4.
+
+

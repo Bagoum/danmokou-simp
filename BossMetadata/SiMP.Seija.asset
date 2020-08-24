@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a92301f86b4dd690557658c7243e8b, type: 3}
+  m_Name: SiMP.Seija
+  m_EditorClassIdentifier: 
+  boss: {fileID: 6274564262994426332, guid: 33ce4a0ca42ed7e4c98b829e4314bddb, type: 3}
+  CardPracticeName: Seija
+  stateMachine: {fileID: 4900000, guid: 1b371c9e201e35747911cfdc25a695ce, type: 3}
+  key: simp.seija
+  displayName: Kijin<br>Seija
+  displayTitle: Revolutionary<br>Driven by Hate,<br>Criminal<br>Driven by Love
+  trackName: "\u6B63\u90AA"
+  uiColor: {r: 0, g: 0.028045684, b: 0.5294118, a: 1}
+  uiHPColor: {r: 0.52462286, g: 0.36320752, b: 1, a: 1}
+  cardColorR: {r: 0.8396226, g: 0, b: 0.12182774, a: 1}
+  cardColorG: {r: 0.29270786, g: 0.16470589, b: 0.8980392, a: 1}
+  cardColorB: {r: 0.590621, g: 0.06074225, b: 0.8584906, a: 1}
+  spellColor1: {r: 0.5849056, g: 0.06345675, b: 0.1543618, a: 0.6313726}
+  spellColor2: {r: 0.039215695, g: 0.16656838, b: 0.65882355, a: 0.4117647}
+  spellColor3: {r: 0.44517878, g: 0, b: 0.7921569, a: 0.6745098}
+  colors: {fileID: 11400000, guid: 2b0cbd0b46a92ad429b425b10ae95074, type: 2}
+  rotator: 
+  profile:
+    image: {fileID: 2800000, guid: 851f391dd4e0e7c4b843e930edf92ed7, type: 3}
+    offsetX: 0.45
+    offsetY: 0.03
+    zoom: 5
+  defaultNonBG: {fileID: 5180723301924424041, guid: 383decd6574239c4880e63af32094075,
+    type: 3}
+  defaultSpellBG: {fileID: 5180723301924424041, guid: 7111b51df44de5b4fbde84d042b2f9a4,
+    type: 3}
+  defaultIntoSpellTransition: {fileID: 11400000, guid: 76e812b8d330cbe43b048748bf21ae77,
+    type: 2}
+  defaultIntoNonTransition: {fileID: 11400000, guid: 23d9a9fbcd555004c9905acab3bc372a,
+    type: 2}
+  bossCutin: {fileID: 4873451931870563927, guid: a3387276e380f904eb76bcecaec7335e,
+    type: 3}
+  spellCutins:
+  - {fileID: 160725723660692450, guid: fbd3f4d93e6f0e94aa1f9c4f3cc4da2a, type: 3}

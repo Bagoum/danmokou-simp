@@ -1,0 +1,195 @@
+pattern { 
+	boss simp.kasen
+	bgm {
+		2 simp.1.kasen
+	}
+}
+phase 0
+	action block 0
+		shift-phase-to 2
+	
+	
+!!{ me kasen
+
+!{ power1()
+sync powerup1 <> powerup2
+	x-powerup-1 x-powerdown-1
+	witha 0.9 lerp 0 1 t red pink
+	green
+	1.5 2 0 0.5
+!}
+
+
+## 1
+<!> dialogue #{
+phase 0
+	saction 0
+		setstate vulnerable false
+		move-target 3 io-sine cy 1
+		dialogue simp.dialogue.1.3
+		shift-phase
+#}
+
+
+## 2
+<!> bosscutin
+<!> type non `Platinum Elysium: Dancing in the Shadow of the Heavens` #{
+<!> hp 17000
+<!> root 0 1.5
+phase 27
+    action block 0
+		async circle-*/ <0.5;:> gir2 150 _ <> { 
+			p this
+			color { red green }
+			sfx x-fire-burst-1
+		} gcr2	10 8 angle * pm1 p 2.3h {
+        } gsr2c * dl 23 {
+        } s polar
+			pivot t 1.5
+				sine 3 2 t
+				* t -3
+			* pm1 p + 90 * -3 t
+		async gdlaser-*/b <> gcr2 lerpt 0 5 720 480 _ <> {
+			color { red green }
+		} gsr2c + dc 3 {
+			target a Lplayer
+		} laser null 3 0.5 {
+			sfx2 x-laser-fire	x-laser-on
+		}
+		laser-control-sm persist {{ gdlaser-* }} onlyonce & > &lt 3 offscreen loc
+			async sakura-*/w <-0.5;:> gcr2 36 2 <> {
+				color { red green }
+				sfx	x-fire-burst-2
+				p this
+			} gsr2c + 6 dc {
+				##face d
+				##target a Lplayer
+			} s polar
+				* 1.3 t
+				* pm1 p * 6 t
+#}
+
+
+##3
+<!> type timeout `Five Hundred Years under the Five-Finger Mountain` #{
+<!> root 0 0
+phase 32
+    action block 0
+		pool-control {{ shell-* }} allowcull false
+		sync sakura-** <> gsr2 10 <> {
+			color { red green }
+			bindItr layer
+		} gsr2 2 <> {
+			color { /w / }
+			bindLR
+!!{ rep * ^ dl 0.8 24
+		} gsr2c $rep {
+			p this
+		} s polar
+!!{ per 5
+			lerpsmooth out-sine 0 5 t 0 (+ * 0.7 &layer sine $per 0.35 + t + * * 1h $per() &layer * (/ $per $rep) p)
+			* &lr * 8 t
+!!{ crep + 8 d3d2
+		async gdlaser-*/ <-90> gcr2 12 $crep a / 360 $crep {
+			target a Lplayer
+			p	this
+			color { red green }
+		} laser null 2 999 {
+			sfx2 x-laser-fire x-laser-on
+			rotate 0 * 12 (+ t * 12f p)
+		}
+#}
+
+
+## 4
+<!> type non `Flowering Seal: Rooted in the Earth and Reaching for the Skies` #{
+<!> hpi 12000 2
+<!> root 0 2
+phase 28
+	action block 0
+		$power1
+	action block 1.5
+		async sakura-* <0.4;:> gir2 0 2 <> { 
+			p this 
+			color { green/ red/w }
+		} gcr {
+			wtd	dl 5 _
+			frv2	angle + * 0.5 t  (* pm1mod p  + (* 4 t) * 3 softmod 6 t)
+			sfx x-fire-loop-1
+		} gsr2c 5 {
+		} s tprot lerpfromto 0.5 1 cx 3 px + 1.5 * 1.3 p
+		gtr {
+			wt 240 _
+			wait-child
+			preloop lr =f pm1 t
+		} move-target 2 io-sine pxy * &lr brand 0.8 1.5 brand 1.8 2.2
+#}
+
+
+## 5
+<!> type final `Stone Cradle: Standing Alone on the Mountaintop` #{
+<!> hpi 16000 4
+<!> root 0 0.5
+phase 36
+	action block 0
+		pool-control sakura-* allowcull false
+!!{ rockc > t + 3 * 0.26 p
+		bullet-control-sm persist scircle-red/w $rockc
+			sync gdlaser-red/ <-10;:> gsr2 1 <60> {
+				center
+				target a Lplayer
+				face d
+			} laser null 1.5 0.5 { length 30 dsfx s 0.7 }
+		bullet-control persist scircle-red/w softcull cwheel-red/b $rockc
+		gtr {
+			wt	0 _
+			wait-child
+			target a Lplayer
+			rpp <360h>
+			preloop lr =f pm1 t
+		} saction 0.02
+!!{ rpt + 3 dc
+			sync sakura-* <> gsr2 4 aphi $rpt {
+				p this
+				preloop layer =f p
+			} gsr2c $rpt {
+				p add
+			} guideempty .1 p { pl loc pd dir } { }
+				tprot px * lerpt 1.4 3 1 0
+					+ 0.3 * 0.8 p1 {
+	!!{ angle * pm1 &layer logsumshiftt -0.03 3.5 * 120 t 0
+					gsr2c 7 { 
+						preloop a =f [&rv2].a
+					} gsr2 2 <> {
+						p add
+						color { green/w green/b }
+					} sd rotatev @ pd p1 cossindeg + &a $angle
+						dtpoffset pl pd p1 rx
+							logsumshiftt 4 (+ - 4.9 * 0.4 &layer * 1 p2) 0.35 * - 1.2 * 0.4 p2 t
+							$angle
+				}
+	!!{ rpt ceil * 16 dl
+			async scircle-red/w <30> gir2 0 1 <> { } gcr2 / 200 -- $rpt $rpt angle (/ 300 $rpt) {
+				sfx x-fire-burst-2
+				p this
+			} s tprot px lerpt 0.4 2 4 0
+			wait 8.5
+			$power1
+			move-target 1 io-sine pxy * &lr 0.8 y
+			wait 0.5
+			bullet-control once sakura-* softcull cwheel-green/ _
+			bullet-control once empty cull _
+#}
+
+
+## 6
+<!> dialogue #{
+phase 0
+	saction 0
+		move-target 3 io-sine cy 0
+		dialogue simp.dialogue.1.4
+		move-target 2 in-sine cy 10
+		shift-phase
+#}
+
+

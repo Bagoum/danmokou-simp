@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 020ffaf7bd5c48dba990b830dbece245, type: 3}
+  m_Name: Eraa
+  m_EditorClassIdentifier: 
+  leftStands:
+    normal: {fileID: 0}
+    angry: {fileID: 0}
+    happy: {fileID: 0}
+    worry: {fileID: 0}
+    cry: {fileID: 0}
+    surprise: {fileID: 0}
+    special: {fileID: 0}
+  rightStands:
+    normal: {fileID: 21300000, guid: 037fcac01048f5942aa7e56df709c95d, type: 3}
+    angry: {fileID: 21300000, guid: 3ea6159159d24914992509d427a67a02, type: 3}
+    happy: {fileID: 21300000, guid: b15da181575d6b84db52c530f72d9697, type: 3}
+    worry: {fileID: 21300000, guid: a3bdfbf52c2ba774ca4245bf8c92fac7, type: 3}
+    cry: {fileID: 21300000, guid: c4baf906afd109c4db13bd36fdb363f2, type: 3}
+    surprise: {fileID: 21300000, guid: d58096dce195e3042a688e597891c374, type: 3}
+    special: {fileID: 21300000, guid: 29270ed8bf749eb4ca99220463c038cd, type: 3}
+  icons:
+    normal: {fileID: 21300000, guid: fb8551777943f1748ae40cc6b701ffde, type: 3}
+    angry: {fileID: 0}
+    happy: {fileID: 0}
+    worry: {fileID: 0}
+    cry: {fileID: 0}
+    surprise: {fileID: 0}
+    special: {fileID: 0}
+  displayName: ???
+  key: eraa
+  speakSFX: 

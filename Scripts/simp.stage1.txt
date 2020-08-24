@@ -1,0 +1,235 @@
+pattern { bgm {
+	1  simp.1.stage
+	8	_
+} }
+phase 0
+	action block 0
+		shift-phase-to 6
+		
+!{ mw(source, t1, t2, loc1, loc2, hp, fire)
+summonr 
+	null %source
+	movewrap %t1 %loc1 %t2 %loc2 
+		%fire
+	{ hp %hp }
+!}
+!{ mw12(source, loc1, loc2, hp, fire)
+$mw(%source, 1, 2, %loc1, %loc2, %hp, %fire)
+!}
+!{ imw12(source, loc1, loc2, fire)
+summonr 
+	null %source
+	imovewrap 1 %loc1 2 %loc2 
+		%fire
+	{ }
+!}
+
+
+##1
+phase 0
+	saction 0
+		stage-announce
+		shift-phase
+
+!{ obju1(move)
+color fairy1 summonrz
+	movewrap %move
+		async circle-red/ <> gcr3 /i dl 120 5.6s <> {
+			sfx x-bubble
+		} target Lplayer s tprot px lerpt 0 0.4 1.6 2.9
+	{ hp 180 }
+!}
+!{ objs1(move)
+color fairy3 summonrz
+	movewrap %move
+		async sakura-green/w <> gir2 300 4 <> {
+		} gcr2 24 + d3d1 4 <> {
+			target a Lplayer
+			sfx x-fire-burst-2
+		} gsr2 + 5 d3d2 <> {
+			spread <80>
+			center
+		} s tprot px 2
+	{ hp 700 }
+!}
+!{ objm1(move)
+color fairy4 summonrz
+	imovewrap %move
+		async arrow-blue* <> gir2 0 2 <> {
+				p this
+				color  { /w / }
+			} gcr3 / 22 dl 8s * pm1 p <11p> {
+				sfx x-fire-loop-1
+			} gsr2c 3 {
+			} s tprot px * lerpt 0 1 1.5 1 lerpback 0.7 1.0 1.7 2.0 (mod 2 + * 1 p + t &st) 2.5 0.6
+	{ hp 1500 }
+!}
+
+## 2
+<!> stage
+phasej 37 0 #{
+	action block 0
+		async _ <-4;6:> gcr2 30 3 <1;:> {
+		} $obju1(1.3 goy 2 2 goside 0)
+	action block 1
+		async _ <0;6:> gcr2 30 4 <1;:> {
+		} $obju1(1.3 goy 2 2 goside 0)
+	action block 3
+		async _ <-3;6:> $objs1(1.3 goy 0 2 goside 0)
+		async _ <3;6:> gcr2 30 4 <-1;:> {
+		} $obju1(1.3 goy 2 2 goside 0)
+	action block 3
+		sync _ <;6:> $objm1(1.3 goy 2 2 goup)
+		_ 1 sync _ <3;6:> $objs1(1.3 goy 0 2 goside 0)
+	action block 5
+		sync _ <-3;6:> $objm1(1.3 goy 2 2 goup)
+		async _ <6;2:> gcr2 30 4 <;-1:> {
+			delay 1s
+		} $obju1(1 gox 3 2 goside 0)
+	action block 5
+		async _ <3;6:> gcr2 30 4 <-1;:> {
+		} $obju1(1 goy 2 2 goside 0)
+		async _ <-3;6:> $objs1(1.3 goy 1 2 goside 0)
+		_ 2 async _ <3;6:> $objs1(1.3 goy -0.5 2 goside 0)
+	action block 3
+		sync _ <-3;6:> $objm1(1.3 goy 2 2 goup)
+		sync _ <3;6:> $objm1(1.3 goy 2 2 goup)
+		
+		
+#}
+
+
+##3
+<!> stage
+phase 20 #{
+	action block 0
+		async fairy1 <> gir2 6s 3 <> {
+			bindLR
+		} gcr2 40 3 <> {
+			p this
+		} $mw12(pxy * &lr 6 -1, pxy * &lr + 2.6 * 0.8 p 1, pxy 0 6, 300,
+			async gpather-black/w <> gcr2 180 3 <> {
+				delay 1s
+				sfx x-fire-tech-6
+			} target Lplayer dpather
+		)
+		async fairy1 <> gcr3 240 _ <> {
+			p this
+		} gsr2 23 rx /i ^ dl 0.9 0.9 {
+			target nx Lplayer
+			center
+			preloop idx =f t
+		} $mw12(cy 5, pxy x 3.7, pxy x 5, 500, 
+			async sakura-*/ <> gir {
+				sfxif x-fire-burst-2 divby 3 &idx
+				colorf { red blue } p
+			} gcr2 10 6 <> {
+				p this
+			} s tprot py + -0.7 * -0.4 p
+		)
+#}
+
+
+##4 Aya
+<!> midboss
+phase 0
+	saction 0
+		boss simp.aya
+		shift-phase
+
+
+## 5. bamboo + water
+<!> stage
+phase 24 #{
+	action block 0
+		_ 2 sync ifairy5 <0;6:> summons null
+			saction 0 :3
+				move-target 2 out-sine cy 1
+				async ellipse-green/ <;:> gir2 0 2 <> {
+					p this
+				} gir3 240 18s <20h> {
+				} gcr2 10 10 <> {
+					sfx x-fire-burst-2
+				} gsr2c * dl 18 {
+				} s tprot lerpt 0.8 1.2 cx 2 * pm1 p cy 2
+				move-target 2 in-sine cy 6
+		async fairy1 <;5:> gcr3 (lerpt 0 6 260 140) 20s <> {
+			preloop rv2.rx =f * 3.7 rangemodh ++ t
+		} summon tprot py + -1 * -1.2 t
+			async sun-red/w <> gcr {
+				sfx x-metal
+				while < y -4.6
+			} ss + 0.2 * 0.25 ^ t 2 tprot lerp3 0.3 0.4 1.3 2 t zero cy 3.5 zero
+			{ hp 500 }
+		bullet-control-sm persist {{ sun-red/w }} > t 2
+			async fireball-red/w <> gir { 
+					sfx x-boom 
+				} eruption 1 * dl 40
+					+ 90 cosine 12h 30 p
+					+ 1.9 cosine 12 0.7 p
+					max -4.2 * -0.9 t
+					{ p this }
+		bullet-control persist {{ sun-red/w }} softcull cwheel-red/w > t 2
+#}
+
+
+
+## 6. bamboo lasers
+<!> stage
+phase 24 #{
+	action block 0
+		gtr {
+			wt	11s 2
+			p this
+		} action block 0
+			async sakura-green/ <-4;5:> gcr2 12 5 <2;:> {
+				p add
+			} guideempty .1 p { pl loc pd dir } { }
+				tprot lerp3 (0.6 1.6 9 10) t (cy -3) zero (py + 8 * -1 t) {
+					gsr2 9 <> {
+						preloop d =f t
+					} ds pl pd p
+						px * -0.3 &d
+					color inode summons nroffset @ pl p
+						action block 0 :3
+							async gdlaser-green/b <> gcr2 260 3 <> {
+								delay 420
+							} target Lplayer gsr2 3 <40> {
+								center
+							} laser null 1.2 0.5 {
+								sfx2 x-laser-on x-laser-fire
+							}
+							async gem-*/w <> gcr2 1 6 (angle / 360h * dl 20) {
+								delay 20
+								color { red yellow green }
+								p this
+							} gsr2c * dl 20 {
+							} s tprot px + 1.2 * 0.2 p
+							async lellipse-** <> gcr2 100 6 (angle / 360h * ^ dl 0.8 9) {
+								delay 30
+								color { red yellow green }
+								sfx x-fire-burst-1
+							} gsr2c * ^ dl 0.8 9 {
+							} gsr2 2 <> {
+								p this
+								color { / /b }
+							} s tprot lerp3 0.8 1.2 1.8 2.2 t (cx 1.5) (* pm1 p cy 1.5) 
+								* (lerp 0 1 p 0.8 1) (pxy -1.4 * pm1 p -1.4)
+				}
+#}
+
+
+## 7. Kasen
+<!> endboss
+phase 0
+	saction 0
+		boss simp.kasen
+		shift-phase
+
+
+##8
+phase 0
+	saction 0
+		stage-deannounce
+		shift-phase
+

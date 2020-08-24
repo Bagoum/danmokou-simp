@@ -1,0 +1,220 @@
+pattern { bgm {
+	1  simp.3.stage
+	8	_
+} }
+phase 0
+	action block 0
+		shift-phase-to 5
+		
+
+!{ mw(source, t1, t2, loc1, loc2, hp, fire)
+summonr 
+	null %source
+	movewrap %t1 %loc1 %t2 %loc2 
+		%fire
+	{ hp %hp }
+!}
+!{ mw12(source, loc1, loc2, fire)
+summonr 
+	null %source
+	movewrap 1 %loc1 2 %loc2 
+		%fire
+	{ }
+!}
+
+
+!{ fliplrb(color, color2)
+bullet-control persist %color batch > x xmax {
+	flipx> xmax _
+	restyle %color2 _
+}
+bullet-control persist %color batch < x xmin {
+	flipx< xmin _
+	restyle %color2 _
+}
+bullet-control persist %color batch < y ymin {
+	flipy< ymin _
+	##restyle %color2 _
+}
+!}
+
+!{ 17(lr, f, t, props)
+summonr null cy -8
+	movewrap 2 (pxy * %lr 2.5 -3) 2 (cy -6)
+		_ 1 async ellipse-yellow/w <> gir3 %f %t <> {
+			sfx x-fire-keys-2
+		} gcr2 4 8 <> {
+			start rv2.a =f bouncex * %lr xmin loc Lplayer
+		} gsr2 + d3d2 5 <> {
+			spread <15>
+			center
+		} s tprot px lerpt 0.4 0.8 13 2.4
+	{ %props }
+!}
+
+##1
+phase 0
+	saction 0
+		~ _ 4 dangerbot
+		stage-announce
+		shift-phase
+
+## 2
+<!> stage
+phase 27 #{
+	action block 0
+		$fliplrb(ellipse-green/w, ellipse-teal/b)
+		$fliplrb(ellipse-yellow/w, ellipse-orange/b)
+		sync ifairy5 <> $mw12(cy -6, cy -3, cy -6,
+			async ellipse-green/w <> gcr2 /i dl 84 _ <> {
+				preloop rv2.a =f bouncey ymin loc Lplayer
+				sfx x-fire-burst-1
+			} gsr2 13 <10> {
+				center
+			} s tprot px * lerp (1 4) [Lplayer].y 1 1.4  lerpt 0.4 1 7 1.4
+			
+		)
+		async fairy5 <> gcr2 7s _ <> {
+			delay 2s
+			bindLR
+		} $17(&lr, /i dl 130, 14s, hp 1600 drops 10 5 5)
+#}
+
+!{ 3(root, vel, f, color)
+summonr rvtp %root tprot %vel
+	async %color <> gcr2 %f _ <> {
+		while onscreenby 3 loc
+		sfx x-fire-burst-1
+		delay 1s
+	} gsr {
+		face v
+	} gsr2 2 <120> {
+		center
+	} s tprot px lerpt 0.5 0.8 3 1.4
+	{ hp 750 }
+
+!}
+
+
+## 3
+<!> stage
+phase 30 #{
+	action block 0
+		async fairy1 <> gcr3 /i dl 90 _ <> {
+		} $3(cxy -7 -5, cr 2 20, 60, circle-green/w)
+		async fairy1 <> gcr3 /i dl 90 _ <> {
+		} $3(cxy 7 -5, cr 2 160, 60, circle-orange/w)
+		async crow <> gir2 /i ^ dl 0.5 lerpt 0 4 360 280 _ <> {
+			delay 16s
+		} gcr2 36 4 <> {
+			p this
+			sfx x-crow
+		} gsr {
+			root pxy * 4 pm1 p -5
+		} summon null movewrap 1 (pxy [Lplayer].x -3) 2 (pxy * pm1 p 6 -1)
+			action block 0 :2
+				sync gdlaser-pink/b <-2;:> target Lplayer laser null 1.5 0.5 { s 2 dsfx }
+				wait 1
+			{ hp 600 }
+		async crow <-6;-3.8:> gcr3 /i ^ dl 0.6 3.5sh 12s <180> {
+			p this
+		} summon tprot cx 1
+			action block 0 :2
+				async gdlaser-yellow/b <-2;:90> iparent this gir {
+					delay rand 0s 2s
+				} laser null 1.5 1 { repeat sfx2 `` x-laser-on }
+				wait _
+			{ hp 4000 }
+
+#}
+
+
+##4. Mid-boss
+<!> midboss
+phase 0
+	saction 0
+		boss simp.eraa
+		shift-phase
+
+## 5
+<!> stage
+phase 30 #{
+	action block 0
+		dangerleft2
+		dangerright2
+		dangerbot
+		dangertop
+	action block 2
+		async ifairy5 <-4.2;-5:> gcr2 6s _ <> {
+		} gsr2c 2 {
+			p this
+		} summon
+			tprot cy 2
+			async arrow-*/w <0.8;:> gcr2dr dl 4 _ <19p> {
+				colorf { red purple } p1
+				p add
+				while onscreen loc
+				sfxif x-fire-star-2 divby 2 t
+			} gsr {
+				bank0 angle * * 1p (+ 6 * 4 p1) p2
+			} s tprot px + 1.7 * 0.5 p1
+			{ }
+		async crow <> gcr2 /i ^ dl 0.5 (lerpt 0 18 1.3s 0.6s) _ <> {
+			sfx x-crow
+			p this
+			preloop ud =f pm1 p
+		} $mw(py * 6 &ud, 2, 2, pxy * 3 rangemodh p * 3.6 &ud, py * 5 &ud, 500,
+			>> 2 _ 1.5 sync gdlaser-*/b <-2;:> gsr {
+				 colorf { pink yellow } p
+				 target a Lplayer
+			} laser null 1 0.4 { dsfx }
+		)
+
+#}
+
+## 6
+<!> stage
+phase 20 #{ ##Some extra time since this precedes the boss
+	action block 0
+		dangerbot
+	action block 2
+		bullet-control persist ellipse-* batch & > t 0.8 = &.refire 1 {
+			 restyleeffect arrow-black/w cwheel-black/w _
+			 sfx x-transform-2 _
+		}
+		sync fairy5 <> $mw(cy -6, 1, 2, cy -2, cy -6, 12000, 
+			async ellipse-*/b <1;:> gcrf /i dl 35 _ (angle sine 70 200 tdl) {
+					for	14s
+					sfx x-fire-burst-2
+					preloop refire =f if (divby 8 t) 1 0
+				} gsr2c 6 {
+				} gsr2 4 <> {
+					p this
+					color { red orange pink purple }
+				} gsr {
+					start refire =f * &refire (if < p 3 1 0)
+				} s tp rx 
+						* 2.3 (if = &refire 0) 1 lerpt 0.7 0.9 1 0
+						+ -180 * pm1 p / (if = // p 2 0 120 60) 2
+					if (= &refire 0) zero
+						* lerpt 1 1.2 0 1 ss 1 vhome 2 Lplayer
+		)
+#}
+
+## 7 End-boss
+<!> endboss
+phase 0
+	saction 0
+		boss simp.seija
+		shift-phase
+
+
+##8
+phase 0
+	saction 0
+		stage-deannounce
+		shift-phase
+
+
+
+

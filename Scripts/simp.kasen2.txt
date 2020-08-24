@@ -1,0 +1,200 @@
+pattern { 
+	boss simp.kasen2
+	bgm {
+		2 simp.5.kasen
+		5 simp.5.stage
+	}
+}
+phase 0
+	action block 0
+		shift-phase-to 3
+	
+	
+!!{ me kasen
+
+!{ power1()
+sync powerup1 <> powerup2
+	x-powerup-1 x-powerdown-1
+	witha 0.9 lerp 0 1 t red yellow
+	green
+	1.5 2 0 0.5
+!}
+
+
+!!{ kasenc1 { red orange yellow green }
+## 1
+<!> dialogue #{
+phase 0
+	saction 0
+		setstate vulnerable false
+		move-target 3 io-sine cy 1
+		dialogue simp.dialogue.5.1
+		shift-phase
+#}
+
+## 2
+<!> bosscutin
+<!> type non `Flowering Seal: Rooted in the Earth and Reaching for the Moon` #{
+<!> hpi 16000 2
+<!> root 0 2
+phase 36
+	action block 0
+		$power1
+	action block 1.5
+		async lightning-yellow/ <> gcr2 /i ^ dl 0.4 (lerpt 0 4 240 160) _ <> {
+			frv2	a	+ -90 sine 4p 30 t
+			root cy 5
+			sfx x-lightning
+		} gsr2 20 nx - 2 * 0.1 dc {
+			center
+		} pather 1 1 tprot cx 3 { high s 2 }
+		async sakura-* <0.4;:> gir2 0 2 <> { 
+			p this 
+			color { green/w red/ }
+		} gcr {
+			wtd	dl 6 _
+			frv2	angle + * 0 t  (* pm1mod p  + (* 4 t) * 5 softmod 6 t)
+			sfx x-fire-loop-1
+		} gsr2c 5 {
+		} s tprot lerpfromto 0.5 1 cx 3 px - 2.6 * 1.1 p
+		gtr {
+			wt 360 _
+			wait-child
+			preloop lr =f pm1 t
+		} move-target 2.5 io-sine pxy * &lr brand 0.8 1.2 brand 1.8 2.2
+#}
+
+## 3
+<!> type spell `Conspiracy Woven Behind the Water Curtain` #{
+<!> root 0 0.5
+<!> hpi 22000 5
+phase 36
+	action block 0
+		$power1
+!!{ rpt * ^ dl 0.8 18
+		async sakura-*/ <> idelay 1.5s gsr2 12 angle / 180h $rpt {
+			p this
+			color { yellow green }
+		} gsr2c $rpt {
+			p add
+			preloop a =f [&rv2].a
+!!{ angle * pm1 p1 * 15 t
+		} s polar
+!!{ per 5
+			lerpsmooth out-sine 0 5 t (* 0.04 p1) (+ * 0.53 p1 sine $per 0.5 + t * p1 / $per 2)
+			$angle
+		async lightning-red/ <> gir2 /i ^ dl 0.25 lerpt 0 7 240 140 _ <> {
+			sfx x-lightning
+		} gcr2 24 6 <;1.4:> {
+			root pxy * pm1 &pi -6 4
+			target a Lplayer
+			p this
+		} gsr2 2 <> {
+			postloop rv2.ry *=f -1
+		} gsr { clip & = p 0 = &pi 1 } { 
+			pather 1 0.7 tprot px lerpt3 (0.3 0.5 0.9 1.5) 8 2 6 { high s 2 }
+			color glaser-red/b laser null 2.4 0 { hueshift 90 }
+		}
+#}
+
+
+##4
+<!> type spell `The Shattered Sky: Where Tenryuu Consumes the North Star` #{
+<!> hpi 25000 5
+<!> root 0 1.7
+phase 42
+    action block 0
+		beh-control persist lightning-* batch onlyonce | > x 5.3 < x -5.3 {
+			flipx> 5.3 _
+			flipx< -5.3 _
+		}
+		$power1
+		gtr {
+			delay 1.5s
+			wt 0 _
+			wait-child
+			p this
+			preloop lr =f pm1 p
+		} saction 0 :5
+!!{ rpt * ^ dl 0.6 40
+			sync lightning-*/ <180> gsr2 $rpt angle / 280 $rpt {
+				center
+				colorf $kasenc1 p
+				target a Lplayer
+				sfx x-lightning
+			} pather 1 1 tprot px lerpt 0.4 0.8 5 2.5 { high s 2 }
+			async gdlaser-*/ <> gcr2 12 5 <20> { 
+				center
+				colorf $kasenc1 p
+				target a Lplayer
+			}	laser null 1 0.5 {
+				sfx2 x-laser-fire x-laser-on
+				high
+				s 1.5
+			}
+			wait 1.5
+			$power1
+			move-target 1.5 io-sine pxy * &lr brand 0.6 1 brand2 1.5 2
+			
+			
+		async gcircle-*/b <2.5;-4.5:> gcr2 12 30 <> {
+			p this
+			color $kasenc1
+			sfx x-fire-star-2
+		} guideempty .1 p { pl loc pd dir } { } 
+!!{ rt	 4
+!!{ t1 1.3
+!{ spine(t)
+lerp (- $t1 0.6) (+ $t1 0.6) %t
+	tp * (lerpt 0 0.6 3 1) cxy 0.5 2
+	qrotate px + -22 sine * 1h $rt 5 %t
+		pxyz
+			dcosine $rt 4 - %t $t1
+			0
+			dsine $rt 4 - %t $t1
+!}
+			tpnrot $spine(t) {
+!!{ rep 20
+!!{ vp	1
+				gsr2 $rep <> {
+					preloop i =f t
+				} s nroffset :: {
+					vt		+ t * * .9 $vp / &i $rep
+				} + @ pl p
+					v3rotate $spine(t)  :: {
+						r	cosine 100 1 - p 5
+					} pxyz
+						cosine $vp &r &vt
+						sine $vp &r &vt
+						0
+				gsr { clip not divby 5 p }
+					color inode summons nroffset @ pl p
+					async sakura-*/w <> gcr2 /i dl 182 _ <> {
+						delay /i dh + 1.8s * 10 p
+						colorf $kasenc1 // p 5
+						sfx x-fire-burst-1
+!!{ rep 20
+					} gsr2 $rep <> {
+						preloop dir =v2 
+								v3rotate $spine(&st)
+								pxyz
+									cosine $rep 1 + t + * 2h p * / 360h $rep &pi
+									sine $rep 1 + t + * 2h p * / 360h $rep &pi
+									0
+					} s tpnrot * lerpt 0 0.5 4 2 &dir
+					
+		}
+#}
+
+
+## 5
+<!> dialogue #{
+phase 0
+	saction 0
+		move-target 3 io-sine cy 0
+		dialogue simp.dialogue.5.2
+		move-target 2 in-sine cy 10
+		shift-phase
+#}
+
+

@@ -1,0 +1,249 @@
+pattern { bgm {
+	1  simp.2.stage
+	10	_
+} }
+phase 0
+	action block 0
+		shift-phase-to 2
+	
+
+##1
+phase 0
+	saction 0
+		stage-announce
+		shift-phase
+
+!!{ color3 { red pink black }
+!{ fireaim1()
+async sakura-green/ <> gcr3 /i dl 90 4s <> {
+	sfx x-bubble
+} target Lplayer s tprot px lerpt 0 0.4 2 4
+!}
+!{ popcorn1(y)
+summonrz
+	movewrap 1 goy %y 2 goside - y 1
+		$fireaim1
+	{ hp 180 }
+!}
+!!{ rpt ++ * 2 ceil * 0.5 dc
+!{ firesector1()
+async shell-yellow/ <> gir2 240 4 <> {
+	sfx x-fire-burst-2
+} gcr2 8 + 12 d3d2 <> {
+	target a Lplayer
+} {
+	gsr2 + 5 d3d2 <> {
+		spread <80>
+		center
+	} s tprot px 2.3
+	gsr2 2 <4> {
+		center
+	} s tprot px 2.3
+}
+
+!}
+!{ sector1(y)
+summonrz
+	movewrap 1 goy %y 2 goside + y 1
+		$firesector1
+	{ hp 800 }
+!}
+
+##2
+<!> stage
+phase 19 #{
+	action block 0
+		async fairy3 <3;6:> gcr2 4s 4 <> {
+			postloop rv2.rx *=f -1
+		} $sector1(1)
+		async fairy1 <;6:> gir2 3s 5 <> {
+			bindLR
+		} gcr2 30 6 rx * &lr 1.1 {
+			center
+		} $popcorn1(+ 2 * 0.5 &lr)
+#}
+
+##3
+<!> stage
+phase 20 #{
+	action block 0
+		async fairy1 <-3;:> gcr3 80 _ <> {
+			sfx x-bubble
+		} gsr2 2 <0.5;:> {
+		} summonr down * 2.2 t
+			>> _ async sakura-green/ <> gcr3 /i dl 90 2.8s <> {
+			} target Lplayer s tprot px 4
+			{ hp 100 }
+		async fairy3 <1.7;6:> gir2 7s 3 <> {
+			delay 2s
+		} gcr2 80 3 <> {
+			frv2	rxy (if > t 0 1.8 0) (if > t 1 -1.8 0)
+		} summonrz movewrap 2 goy - y 4 2 goside 0
+			$firesector1()
+		{ hp 650 }
+#}
+
+
+##4
+<!> stage
+phase 22 #{
+	action block 0
+		async fairy3 <;6:> gcr2 8s 3 <> {
+		} gsr2 2 <6.2;:> { 
+			center 
+		} summonrz movewrap 1 goy 1 2 goside 0
+			$firesector1()
+			{ hp 800 }
+		async fairy4 <;7:> gcr2 10s 2 <> {
+			delay 3s
+		} summonrz movewrap 2 goy 2 2 goup
+			async ellipse-*/ <40> gir3 180 10s <> {
+			} gcr2d dl 5 13 angle /i dl 22 {
+				sfx x-fire-burst-2
+			} gsr2 2 <> {
+				color { pink red }
+				bindLR
+				mutateang flipxpmmod &lr [&rv2].a
+			} gsr2 7 <> {
+				p this
+			} s polar
+				+ * 0.1 p lssht 2 0.5 0 * 2.4 t
+				* &lr + * -0.2 p lssht -0.2 0.6 * 24 t * 7 t
+			{ hp 1700 }
+		async fairy1 <;6:> gir2 4s 4 <> {
+			bindLR
+		} gcr2 60 4 rx * &lr 2.2 {
+			center
+		} $popcorn1(+ 2 * 0.5 &lr)
+
+#}
+
+
+##6. Mid-boss
+<!> midboss
+phase 0
+	saction 0
+		boss simp.kaguya-fake
+		shift-phase
+
+##7
+<!> stage
+phase 50 #{
+!!{ t1 27s
+	action block 0
+		gtr {
+			wt	/i (min 1 ^ dl 0.6) 360 _
+			for	$t1
+			p this
+		} saction 0 :2
+			crosshair crosshair if (= 0 p) cy 2 Lplayer 0 (- 2.8 * 0.2 dc) ploc p
+			sync gpather-*/b <> gsr2c * ^ dl 0.7 12 {
+				sfx x-fire-tech-6
+				root @ ploc p
+			} gsr2 2 <> {
+				p this
+				color { red pink }
+			} pather 0.5 0.5 tprot lerpt 0.8 1.2 px (lerpt 0 1 1 2) rx 2 * pm1 p 40 { }
+			
+		async crow <> gcrf lerpt 0 8 360 240 _ <> {
+			delay	+ $t1 2s
+			p this
+		} gsr {
+			root pxy * 3.6 pm1 p 6
+		} summon null movewrap 1.5 (pxy * 3.2 rangemod 1 * 2h p 2) 2 (pxy * pm1 p 6 1)
+			async gem-pink* <> gcr {
+				delay 1s
+				sfx x-crow
+			} gsr2c * dl 21 {
+				start a0 =f angleto Lplayer
+			} gsr2 2 <> {
+				p this
+				color { /w / }
+			} s tprot rx
+				* regpoly 1 3 &a
+					if (= p 0)
+						lerpt 0.5 1.2 3 2
+						lerpt 0.5 1.5 2 -3.5
+				&a0
+			{ hp 600 }
+		dangerbot
+		async crow <-4;-5:> gcr2 /i ^ dl 0.3 * 2s 1p _ <180> {
+			delay 3s
+			p this
+		} summon tprot cy 1
+			action block 0 :2
+				async gdlaser-yellow/b <-2;:> iparent this gcr {
+				} laser null 1 0.5 { repeat sfx2 `` x-laser-on }
+				async fireball-blue/b <> gcr2 3s _ <> {
+					while & > p 1 onscreen loc
+					sfx	x-fire-burst-1
+					delay 2s
+				} gsr2 * dl 6 (angle /i dl 24) {
+					center
+					face d
+					target a Lplayer
+				} s tprot px lerpt 0.5 1 1.5 2.5
+			{ hp 2300 }
+
+#}
+
+##8
+<!> stage
+phase 20 #{
+	action block 0
+		sync danger <-3;-6:> gsr2 2 <6;:> { } summonsup 
+			tprot lerp3 1 1.5 2 2.5 t cy 2.2 zero cy -2
+			wait
+		async crow <-4.5;-5:> gcr2 360 _ <> {
+			delay 3s
+		} gsr2 2 <9;:> {
+			p this
+		} summon tprot py lerpt 0 2 6 3
+			action block 0 :2
+				async x-fire-tech-8 <> gcr2 24 5 <> { } sfx
+				async gpather-*/b <> gcr {
+					wt	/i dl 8 _
+					while & > y -4 onscreen loc
+					frv2	angle + * 180 p sine (* 1h + 12 * 2 p) 50 t
+					##rpp	angle /i dl * pm1 p + 24.5 * 12.62 p
+					colorf { yellow pink } p
+				} pather 0.5 0.5 tprot px lerpt 0.5 1 1.5 3 { }
+				{ hp 1000 }
+		async crow <-6;3:> gcr2 /i (min 1.3 ^ dl 0.8) (lerpt 0 4 360 240) _ <> {
+			p this
+			sfx x-crow
+		} gsr2 3 <1;1:> {
+			preloop wc =f t
+		} gsr {
+			start rv2.rx *=f mp1 p
+		} summon tpnrot 
+				* lerpt 0.5 1.5 0.4 1
+					ss0 vhome 5 Lplayer
+			async ellipse-red/ <180> gcr2 24 _ <> { 
+				delay 60
+				sfxif x-fire-burst-1 = &wc 0
+				while onscreen loc
+				face v
+			} gsr2 5 <;0.15:> {
+				center
+			} s tprot px lerpt 1 2.3 2 -8
+			{ hp 200 }
+#}
+
+
+## 9. End-boss
+<!> endboss
+phase 0
+	saction 0
+		boss simp.yukari
+		shift-phase
+
+
+##10
+phase 0
+	saction 0
+		stage-deannounce
+		shift-phase
+
+
+

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 020ffaf7bd5c48dba990b830dbece245, type: 3}
+  m_Name: Kasen
+  m_EditorClassIdentifier: 
+  leftStands:
+    normal: {fileID: 21300000, guid: 24f08fead80d0ae4dbf4761fc7374a65, type: 3}
+    angry: {fileID: 21300000, guid: 19fcfd7a4ff3fa749901c26b2b325a6a, type: 3}
+    happy: {fileID: 21300000, guid: 9fae8b7fb8e74a74a8c4bd2e1271f317, type: 3}
+    worry: {fileID: 21300000, guid: d9cf8bdfe8e08b143b050c277c2405c7, type: 3}
+    cry: {fileID: 21300000, guid: cc6f7ba2d99f6d142a2b97a1adc26708, type: 3}
+    surprise: {fileID: 21300000, guid: 57d241d35904b5f4fbba59c547a9bb9c, type: 3}
+    special: {fileID: 21300000, guid: cc6f7ba2d99f6d142a2b97a1adc26708, type: 3}
+  rightStands:
+    normal: {fileID: 21300000, guid: 24f08fead80d0ae4dbf4761fc7374a65, type: 3}
+    angry: {fileID: 21300000, guid: 19fcfd7a4ff3fa749901c26b2b325a6a, type: 3}
+    happy: {fileID: 21300000, guid: 9fae8b7fb8e74a74a8c4bd2e1271f317, type: 3}
+    worry: {fileID: 21300000, guid: d9cf8bdfe8e08b143b050c277c2405c7, type: 3}
+    cry: {fileID: 21300000, guid: cc6f7ba2d99f6d142a2b97a1adc26708, type: 3}
+    surprise: {fileID: 21300000, guid: 57d241d35904b5f4fbba59c547a9bb9c, type: 3}
+    special: {fileID: 21300000, guid: cc6f7ba2d99f6d142a2b97a1adc26708, type: 3}
+  icons:
+    normal: {fileID: 21300000, guid: eb6a6eb9e00717540b8b208cf7ca1528, type: 3}
+    angry: {fileID: 0}
+    happy: {fileID: 0}
+    worry: {fileID: 0}
+    cry: {fileID: 0}
+    surprise: {fileID: 0}
+    special: {fileID: 0}
+  displayName: Kasen
+  key: kasen
+  speakSFX: x-bubble-2

@@ -1,0 +1,184 @@
+pattern { bgm {
+	1  simp.3.stage
+} }
+phase 0
+	action block 0
+		shift-phase-to 2
+		
+
+!{ mw12(source, loc1, loc2, hp, fire)
+gsr { 
+	root %source
+} summon null 
+	imovewrap 1 %loc1 2 %loc2 
+		%fire
+	{ hp %hp }
+!}
+
+
+!{ fliplrb(color, color2)
+bullet-control persist %color batch > x xmax {
+	flipx> xmax _
+	restyle %color2 _
+}
+bullet-control persist %color batch < x xmin {
+	flipx< xmin _
+	restyle %color2 _
+}
+bullet-control persist %color batch < y ymin {
+	flipy< ymin _
+	##restyle %color2 _
+}
+!}
+
+!{ 17(f, t)
+sync fairy4 <> gsr2 2 <> {
+	p this
+} $mw12(cy -6, pxy * pm1 p 4 -3, cy -6, 5000,
+	async ellipse-red/w <> gir3 %f %t <> {
+		sfx x-fire-burst-2
+	} gcr2 4 8 <> {
+		start rv2.a =f bouncex * pm1 p xmin loc Lplayer
+	} gsr2 5 <4> {
+		center
+	} s tprot px lerpt 0.7 1.2 10 3
+)
+!}
+
+## 1
+<!> stage
+phase 39 #{
+	action block 0
+		$fliplrb(ellipse-blue/w, ellipse-teal/b)
+		$fliplrb(ellipse-red/w, ellipse-pink/b)
+	action block 0
+		sync danger <-3;-6:> gsr2 3 <3;:> { } summonsup 
+			tprot lerp3 1 1.5 2 2.5 t cy 2.2 zero cy -2
+			wait
+		wait 2
+	action block 0
+		sync fairy5 <> $mw12(cy -6, cy -3, cy -6, 14000,
+			async ellipse-blue/w <> gcr3 /i dl 56 17s <> {
+				preloop rv2.a =f bouncey ymin loc Lplayer
+				sfx x-fire-burst-1
+			} gsr2 13 <10> {
+				center
+			} s tprot px * lerp (1 4) [Lplayer].y 1 1.6  lerpt 0.4 1 7 1.4
+		)
+		wait 17
+	action block 0
+		sync fairy5 <> $mw12(cy -6, cy -3, cy -6, 11000,
+			async ellipse-blue/w <> gcr3 /i dl 56 14s <> {
+				preloop rv2.a =f + bouncey ymin loc Lplayer * 5 rangemodh t
+				sfx x-fire-burst-1
+			} gsr2 8 <10> {
+				center
+			} s tprot px lerpt 0.4 0.8 7 1.3
+		)
+		$17(/i dl 120, 16s)
+#}
+
+!{ 3(root, vel, f, color)
+gsr {
+	root %root
+} summon tprot %vel
+	async %color <> gcr2 %f _ <> {
+		while onscreenby 3 loc
+		sfx x-fire-burst-1
+		delay 1s
+	} gsr {
+		face v
+	} gsr2 2 <120> {
+		center
+	} s tprot px lerpt 0.5 0.8 3 1.4
+	{ hp 800 }
+
+!}
+
+## 2
+<!> stage
+phase 34 #{
+	action block 0
+		async fairy1 <> gcr3 /i dl 90 _ <> {
+		} $3(cxy -7 -5, cr 2 20, 60, gcircle-blue/b)
+		async fairy1 <> gcr3 /i dl 90 _ <> {
+		} $3(cxy 7 -5, cr 2 160, 60, gcircle-red/b)
+		async crow <> gir2 /i dl lerpt 0 8 360 240 _ <> {
+			delay 16s
+		} gcr2 36 4 <> {
+			p this
+			sfx x-crow
+		} gsr {
+			root pxy * 4 pm1 p -5
+		} summon null imovewrap 1 (pxy [Lplayer].x -3) 2 (pxy * pm1 p 6 -1)
+			action block 0 :2
+				sync gdlaser-teal/b <-2;:90> laser null 1.5 0.5 { s 4 dsfx }
+				wait 1
+			{ hp 600 }
+		async crow <-6;-3.8:> gcr3 * 3s 1h 12s <180> {
+			p this
+		} summon tprot cx 1
+			action block 0 :2
+				async gdlaser-yellow/b <-2;:90> iparent this gcr {
+					delay rand 0s 2s
+				} laser null 1.5 1.5 { repeat sfx2 `` x-laser-on }
+				wait _
+			{ hp 4000 }
+
+#}
+
+
+## 3
+<!> stage
+phase 32 #{
+	action block 0
+!!{ tr (+ t brand 0 0.5)
+		bullet-control persist fireball-yellow/w restyleeffect fireball-yellow/b cwheel-yellow/ > $tr 1.6
+		sync fairy5 <> $mw12(cy -6, cy -3, cy -6, 8000, async fireball-yellow/w <> gir3 /i dl 120 12s <> {
+			sfx x-fire-burst-2
+		} gcr2 8 8 <> {
+			p this
+		} gsr {
+			target a Lplayer
+		} s tprot px lerp 1.4 2 $tr (+ 1 * 0.8 p) 0)
+		async fairy1 <> gcr2 (lerpt 0 8 130 90) _ <> {
+			p this
+			preloop lr =f pm1 t
+		} $mw12(pxy * 6 &lr -5, pxy * 4 rangemodh ++ p -2, pxy * -6 &lr -5, 500, 
+!!{ rpt * dl 16
+				async circle-orange* <;0.5:> gcr { delay 1s sfx x-fire-burst-1 } gsr2c $rpt {
+				} gsr2 2 angle  / 360h $rpt {
+					p this
+					color { /b / }
+				} s tprot px lerpt 0.1 0.5 4 + 0.8 * 0.5 p
+			)
+		$fliplrb(ellipse-red/w, ellipse-pink/b)
+		_ 13 
+			$17(/i dl 120, 16s)
+#}
+
+## 4
+<!> stage
+phase 18 #{ ##Some extra time since this precedes the boss
+	action block 0
+	sync fairy5 <> $mw12(cy -6, cy -2, cy -6, 12000, 
+		async ellipse-*/b <1;:> gcrf /i dl 32 _ (angle sine 70 200 tdl) {
+				for	14s
+				sfx x-fire-burst-2
+			} gsr2c 6 {
+			} gsr2 4 <> {
+				p this
+				color { red blue pink teal }
+			} s tprot rx 2.3 + -180 * pm1 p / (if = // p 2 0 120 60) 2
+	)
+#}
+
+## 5. End-boss
+<!> endboss
+phase 0
+	saction 0
+		boss simp.seija
+		shift-phase
+
+
+

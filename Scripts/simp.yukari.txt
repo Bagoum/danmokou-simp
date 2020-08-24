@@ -1,0 +1,170 @@
+pattern { 
+	boss simp.yukari 
+	bgm {
+		1 simp.2.stage
+	}
+}
+<!> showlives 5
+phase 0
+	action block 0
+		shift-phase-to 3
+	
+	
+!!{ colors { blue purple pink red orange yellow green teal black  }
+!!{ rainbow { red orange yellow green blue pink  }
+!!{ yukac { teal purple pink red orange yellow  }
+!!{ yukac1 { red orange yellow }
+!!{ yukac2 {  teal blue pink  }
+!!{ yukac_4 { blue teal red yellow }
+!{ power1()
+sync powerup1 <> powerup2
+	x-powerup-1 x-powerdown-1
+	witha 0.9 lerp 0 1 t purple pink
+	witha 0.9 yellow
+	1.5 2 0 0.5
+!}
+!{ power1long()
+sync powerup1 <> powerup x-powerup-1
+	witha 0.9 lerp 0 3.7 t purple yellow
+	3 5
+!}
+
+
+## 1
+<!> dialogue #{
+<!> showlives 5
+phase 0
+	saction 0
+		setstate vulnerable false
+		move-target 3 io-sine cy 1
+		dialogue simp.dialogue.2.3
+		shift-phase
+#}
+
+
+##2
+<!> bosscutin
+<!> type non `Rabenflug: Flight-Path of the Crow Intoxicated on Lunar Wine` #{
+<!> hpi 20000 2
+<!> root 0 1.5
+<!> showlives 5
+phase 27
+    action block 0
+		async lightning-*/w <140> gir2d dl 720 _ <> {
+		} gcr2 24 6 <-20> {
+			color $yukac2
+			sfx x-lightning
+		} pather 1 1 tp
+			lerpt 0.7 1.6 cx 4 zero
+			py * -2 -m t 0.4
+			{ }
+		
+		gtr {
+			wt	420 _
+			wait-child
+			preloop lr =f pm1 t
+		} saction 0 :3
+			$power1
+			move-target 1.5 io-sine pxy * &lr rand 1 1.4 y
+			sync icrow <-1;:> gsr2c 6 { 
+				sfx x-crow
+				target a Lplayer
+				p	this
+			} summons :: {
+				t	* 5 t
+			} roffset pxy
+				+ * 0.3 &t cos * 1 &t
+				sin * 1 &t
+				async gem-*/ <90> gcr2d dh 10 _ <> {
+					cancel offscreenby 0.5 loc
+					colorf $yukac p1
+					p	add
+					sfxif	x-fire-burst-1 divby 4 t
+				} gsr {
+					face v
+				} s tprot lerp 0.6 0.9 (- t * /i dh -6f mod 6 p2) cy 0.7 cx 1.5
+#}
+
+
+##3
+<!> type spell `Hunter's Rune: Sky Burial` #{
+<!> hpi 22000 1
+<!> root 0 1.5
+<!> showlives 5
+phase 26
+	action block 0
+		$power1
+		
+!!{ w - 1.5 * 0.1 dc
+		async scircle-*/b <> gcr2 * 1s $w _ <> {
+			color $yukac2
+			preloop rv2.rx =f + [&brv2].rx * $w mod 1 * 1h t
+			root cxy -6 5
+		} gsr2 20 * $w <1;:> {
+		} s tprot py lerpt 0.5 1 -5 -1
+
+		async icrow <> gcr2d dl 600 _ <> {
+				delay 1.5s
+				sfx x-crow
+			} gsr2 2 <> { 
+				p this
+			} summons tprot pxy * pm1 p 2.5 -0.5
+				action block 0 :2
+					async glaser-*/ <-5;:> gcr {
+						delay 1s
+						colorf { yellow pink } p
+					} gsr {
+						target a Lplayer
+					} laser null 2.7 0 { high }
+					async gem-*/w <> gcr2 999 _ <> {
+						delay 1s
+						colorf { pink yellow } p
+						sfx x-crow
+					} gsr2 10 <> {
+						target a Lplayer
+						p this
+					} s tprot px + 2 * 0.1 p
+				
+		async star-** <0.5;:> gir2 50 _ <360h> {
+			delay 1.5s
+			color $yukac1
+			wait-child
+!!{ dd ^(dl 0.7)
+		} gcr2d $dd 2.7 120 * / 1 $dd <0.015;:9> {
+			p this
+			sfxfif { x-fire-star-1 x-fire-star-2 x-fire-star-3 } &pi divby 6 t
+		} gsr2 2 <> {
+			color { /w /b }
+			p add
+		} sdd starrotb3 tprot rotate + * -90 p2 * 4.5 p1
+			lerpin 0 0.9 cx 2
+		
+		sync icrow <> gsr2 6 <60> {
+			p this
+			root	zero
+		} summons offset
+			rx 
+				lerpsmooth out-sine 0 2 t 10
+					lerpt 2 25 2 (- 2 * 0.25 dc)
+				* 90 t
+			lplayer
+			async gem-*/b <> gcr2 16p _ <> {
+				delay 2s
+				colorf { pink yellow } p
+			} s null
+
+#}
+
+
+## 4
+<!> dialogue #{
+phase 0
+	saction 0
+		setstate vulnerable false
+		move-target 3 io-sine cy 0
+		dialogue simp.dialogue.2.4
+		move-target 2 in-sine cy 10
+		shift-phase
+#}
+
+

@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a92301f86b4dd690557658c7243e8b, type: 3}
+  m_Name: SiMP.Mokou
+  m_EditorClassIdentifier: 
+  boss: {fileID: 2839687353931545823, guid: 567949ea02f82894482d1922e940c492, type: 3}
+  CardPracticeName: Mokou
+  stateMachine: {fileID: 4900000, guid: 355ea18c28fe2a84b8eecc8d720b5d0b, type: 3}
+  key: simp.mokou
+  displayName: Fujiwara<br>no Mokou
+  displayTitle: Rust Phoenix<br>Guarding the<br>Silent Sutra
+  trackName: "\u59B9\u7D05"
+  uiColor: {r: 0.7169812, g: 0, b: 0.32522398, a: 1}
+  uiHPColor: {r: 0.93333334, g: 0, b: 0.55975026, a: 1}
+  cardColorR: {r: 0.74509805, g: 0, b: 0.3511989, a: 1}
+  cardColorG: {r: 0.63317585, g: 0, b: 0.6509804, a: 1}
+  cardColorB: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
+  spellColor1: {r: 0.74509805, g: 0.03921567, b: 0.34034947, a: 0.7607843}
+  spellColor2: {r: 0.5754717, g: 0.08414916, b: 0.4982293, a: 0.6313726}
+  spellColor3: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 0.44705883}
+  colors: {fileID: 11400000, guid: 34641e7d6cf8ea94b8f3b99cf198bd87, type: 2}
+  rotator: 
+  profile:
+    image: {fileID: 2800000, guid: b43db00be9a1e31498ed67c7c77f48a2, type: 3}
+    offsetX: 0.561
+    offsetY: 0.713
+    zoom: 6.28
+  defaultNonBG: {fileID: 5180723301924424041, guid: 4a0a8a5316c330c4189ab06c1ba0018c,
+    type: 3}
+  defaultSpellBG: {fileID: 5180723301924424041, guid: 07cab9910f9f9cf4c9fe48ca50a3ad85,
+    type: 3}
+  defaultIntoSpellTransition: {fileID: 11400000, guid: 9b0abf82e07299741a4d64ecd57ff7e6,
+    type: 2}
+  defaultIntoNonTransition: {fileID: 11400000, guid: ee89dae89d15f34418474c82d6d3a3ba,
+    type: 2}
+  bossCutin: {fileID: 1176886499574204291, guid: 3baf85ace2fa16947a699ccf5b68986b,
+    type: 3}
+  spellCutins:
+  - {fileID: 160725723660692450, guid: d7fe74c6c8b744d47a05ae188235337a, type: 3}

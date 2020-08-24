@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a92301f86b4dd690557658c7243e8b, type: 3}
+  m_Name: SiMP.Keine
+  m_EditorClassIdentifier: 
+  boss: {fileID: 5188976871280437473, guid: 3f74c05d54dfae94ab79f9fa4ea75188, type: 3}
+  CardPracticeName: 
+  stateMachine: {fileID: 0}
+  key: simp.keine
+  displayName: Kamishirasawa<br><size=10>Keine</size>
+  displayTitle: Terror<br>Storyteller
+  trackName: "\u6167\u97F3"
+  colors: {fileID: 11400000, guid: aba4dc560ddf4354c8bfc6c93a4a0099, type: 2}
+  rotator: 
+  profile:
+    image: {fileID: 2800000, guid: cbcaa639a762c5347b62be1e63fd6cbe, type: 3}
+    offsetX: 0.484
+    offsetY: 0.648
+    zoom: 6.3
+  defaultNonBG: {fileID: 0}
+  defaultSpellBG: {fileID: 0}
+  defaultIntoSpellTransition: {fileID: 0}
+  defaultIntoNonTransition: {fileID: 0}
+  bossCutin: {fileID: 0}
+  spellCutins: []

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 020ffaf7bd5c48dba990b830dbece245, type: 3}
+  m_Name: Shinki
+  m_EditorClassIdentifier: 
+  leftStands:
+    normal: {fileID: 0}
+    angry: {fileID: 0}
+    happy: {fileID: 0}
+    worry: {fileID: 0}
+    cry: {fileID: 0}
+    surprise: {fileID: 0}
+    special: {fileID: 0}
+  rightStands:
+    normal: {fileID: 21300000, guid: 7045bfe8a72c47b4da8cd813418e381a, type: 3}
+    angry: {fileID: 21300000, guid: f9046b6ab09b9504f8ca5b8bf4104524, type: 3}
+    happy: {fileID: 21300000, guid: bf689bcad352cce4091a52cb42951b1d, type: 3}
+    worry: {fileID: 21300000, guid: a16093d3ec8850d43a7d267e682bba37, type: 3}
+    cry: {fileID: 21300000, guid: 7ec946396d92c7b45ae0ad093fb96eb6, type: 3}
+    surprise: {fileID: 21300000, guid: a96ef15ad5d440544b56266eb8dade43, type: 3}
+    special: {fileID: 21300000, guid: c8865569eb610484392d5865d65df153, type: 3}
+  icons:
+    normal: {fileID: 21300000, guid: 103898d9cbe88b14fb64cf39cb9835e9, type: 3}
+    angry: {fileID: 0}
+    happy: {fileID: 0}
+    worry: {fileID: 0}
+    cry: {fileID: 0}
+    surprise: {fileID: 0}
+    special: {fileID: 0}
+  displayName: Shinki
+  key: shinki
+  speakSFX: x-bubble-3

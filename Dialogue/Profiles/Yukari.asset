@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 020ffaf7bd5c48dba990b830dbece245, type: 3}
+  m_Name: Yukari
+  m_EditorClassIdentifier: 
+  leftStands:
+    normal: {fileID: 0}
+    angry: {fileID: 0}
+    happy: {fileID: 0}
+    worry: {fileID: 0}
+    cry: {fileID: 0}
+    surprise: {fileID: 0}
+    special: {fileID: 0}
+  rightStands:
+    normal: {fileID: 21300000, guid: 64b091c2e3ca72a4cba405df215e2d15, type: 3}
+    angry: {fileID: 21300000, guid: ef7ba9d117e881c4f93cd3bdf191f3c6, type: 3}
+    happy: {fileID: 21300000, guid: 50ac0fcbe6a13b74e86c54bc5d55726d, type: 3}
+    worry: {fileID: 21300000, guid: f31ff84a9772a1e4e85133dd9559ac2d, type: 3}
+    cry: {fileID: 21300000, guid: c4675281dd73c9c40aa9378d8f3581bf, type: 3}
+    surprise: {fileID: 21300000, guid: 8c416681fd4afa94faf6cf287b0687c2, type: 3}
+    special: {fileID: 0}
+  icons:
+    normal: {fileID: 21300000, guid: fb576bf4de2902a41aadafa8dc4ca0b1, type: 3}
+    angry: {fileID: 0}
+    happy: {fileID: 0}
+    worry: {fileID: 0}
+    cry: {fileID: 0}
+    surprise: {fileID: 0}
+    special: {fileID: 0}
+  displayName: Yakumo Yukari
+  key: yukari
+  speakSFX: x-bubble-3

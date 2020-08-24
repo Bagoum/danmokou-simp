@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 020ffaf7bd5c48dba990b830dbece245, type: 3}
+  m_Name: Mima
+  m_EditorClassIdentifier: 
+  leftStands:
+    normal: {fileID: 21300000, guid: da403080926cddc4ba22e7708be8183d, type: 3}
+    angry: {fileID: 21300000, guid: c9295d6e0920cb44eab048fadaa8ac38, type: 3}
+    happy: {fileID: 21300000, guid: 3ad7e4bb6dcde514e99bfeaec07a327c, type: 3}
+    worry: {fileID: 21300000, guid: d30952f1cf11ca2429a0f9047b06fc61, type: 3}
+    cry: {fileID: 21300000, guid: 0b8fb3d1318ba5c4fb77f542f0a43dae, type: 3}
+    surprise: {fileID: 21300000, guid: 2704a996f4dc2c3439f1eb5c0863919c, type: 3}
+    special: {fileID: 0}
+  rightStands:
+    normal: {fileID: 0}
+    angry: {fileID: 0}
+    happy: {fileID: 0}
+    worry: {fileID: 0}
+    cry: {fileID: 0}
+    surprise: {fileID: 0}
+    special: {fileID: 0}
+  icons:
+    normal: {fileID: 21300000, guid: fd68548e539af474c87ba1c303fe30b1, type: 3}
+    angry: {fileID: 0}
+    happy: {fileID: 0}
+    worry: {fileID: 0}
+    cry: {fileID: 0}
+    surprise: {fileID: 0}
+    special: {fileID: 0}
+  displayName: Mima
+  key: mima
+  speakSFX: x-bubble-2

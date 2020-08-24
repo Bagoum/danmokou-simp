@@ -1,0 +1,207 @@
+pattern { 
+	boss simp.aya
+	bgm {
+		1 simp.1.stage
+	}
+}
+phase 0
+	action block 0
+		shift-phase-to 3
+	
+
+!{ power1()
+sync powerup1 <> powerup2
+	x-powerup-1 x-powerdown-1
+	witha 0.9 lerp 0 1 t blue red
+	rgba 0.8 0.8 0.8 0.9
+	1.5 2 0 0.5
+!}
+
+!!{ me aya
+
+## 1
+<!> dialogue #{
+phase 0
+	saction 0
+		move-target 3 io-sine cy 1
+		dialogue simp.dialogue.1.1
+		shift-phase
+#}
+
+##2
+<!> bosscutin
+<!> type timeout `Tengu's Rise: Winged Feet of Pheidippides` #{
+<!> root 0 7
+phase 21
+	action block 0
+		pool-control {{ gcircle-* }} allowcull false
+		savef lr 0 1
+		sync gcircle-black/b <> loc0 gsr {
+!!{ wl 10
+!!{ ww 6
+			tmmod	$ww
+		} gsr {
+			tmmod	$wl
+		} gsr {
+			tmmod	2
+		} s nroffset :: {
+			px	pma $ww { $wl 2 }
+			py	pm $wl 2
+			plr	pm1 pm 2 1
+		} + lbeh $me qrotate * @0 lr py 24
+			wings1 $ww $wl 1.2
+		gtr {
+			bindLR
+			wt 10 _
+			wait-child
+			preloop itr =f t
+		} saction 0
+			savef lr 0 &lr
+!!{ randy  rand max 0 - 1 * 0.1 &itr min 4.5 + 3.3 * 0.1 &itr
+!!{ movet lerp3 0 2 2 10 &itr 2.1 0.8 (lerp 0 3 dc 0.18 0.12)
+			pos pxy * &lr 10 $randy
+			sfx x-move-anime
+			savev2 next 0 pxy * &lr -10 $randy
+			~ async circle-*/ <0.22;:> gcr {
+				delay * $movet * 1s + 0.5 * 0 rangemodh &itr
+				colorf { red blue } &itr
+			} gsr {
+				root pxy * &lr 0.7 y
+			} gsr2c 12 {
+			} gsr {
+				bank0 <>
+				target ra Lplayer
+			} s tprot px lerpt 0 0.6 1 2.7
+!!{ times * dl lerp 0 12 &itr 30 14
+			sync glaser-*/ <> gsr {
+				clip < &itr 14
+				colorf { blue red } &itr
+				target a @0 next
+			} laser null 0.3 0.4 { length 20 }
+			~ async sakura-black/ <> gcr2 * $movet / 1s $times $times <> {
+				root @0 next
+				start rv2.a =f atan - @0 next loc
+				preloop rv2.rx =f * 20 (-- / t $times)
+			} gsr2c 2 {
+				bank0 <>
+				p this
+			} s tprot rx
+				lerpt 0 0.5 1.4 2.2
+				+ -90 * 25 rangemodh ++ &itr
+			if < &itr 14
+				move-target $movet linear @0 next
+				wait $movet
+			if = &itr 11
+				bullet-control once gcircle-* cull _
+				noop
+	
+
+#}
+
+##3
+<!> type final `Tengu's Rule: Long-Toothed Wings Wrapped Round the Firmament` #{
+<!> hpi 14000 4
+<!> root 0 7
+phase 32
+	action block 0
+		pool-control {{ gcircle-* sakura-* fireball-* }} allowcull false
+	action block 0
+		position 10 6
+!!{ bc sakura-black/
+		bullet-control persist $bc flipy> ymax _
+		bullet-control persist $bc flipx> xmax _
+		bullet-control persist $bc flipx< xmin _
+		bullet-control persist $bc batch > t 3 {
+			restyleeffect circle-pink/w cwheel-pink/ _
+			sfx x-transform-1 _
+		}
+		bullet-control persist circle-pink/w force _ 
+			tpnrot rx
+				* brand 0.7 1.4
+					 lerp3 3.2 4.5 8 10 t 0 1 1.3
+				+ -90 brand2 -20 20
+		gtr {
+			wait-child
+			wt	0	_
+			preloop {
+				lr =f pm1 t
+				itr =f t
+			}
+		} seq
+			saction 0
+				pos pxy * &lr 11 6
+		!!{ wl 12
+		!!{ ww 7
+				sync gcircle-* <> loc0 gsr {
+						tmmod	$ww
+					} gsr {
+						tmmod	$wl
+					} gsr {
+						colorf { blue/b red/b } + t &itr
+						tmmod	2
+					} s nroffset :: {
+						px	pma $ww { $wl 2 }
+						py	pm $wl 2
+						plr	pm1 pm 2 1
+					} + lbeh $me qrotate * &lr py 19
+						wings1 $ww $wl 2
+				~ _ 0.5 
+					$power1
+				move-target 2 out-sine pxy * &lr 0.5 2
+			!!{ rpt * dl 62
+				~ async $bc <;-1.5:;:90> gcr2 30 8 <> {
+					p this
+					sfx x-fire-burst-2
+				} {
+					gsr2 $rpt angle / 310 $rpt {
+						center
+					}	s tpnrot
+						rotify px lerpt 1.2 2.5 - 4.8 * 0.33 p 0
+				}
+				async circle-*/ <-1.8;-0.4:;:> gir2 240 3 <> {
+					sfx x-fire-burst-1
+					p this
+					
+				} { 
+					gsr2 2 <3.6;:;:> {
+						color { blue red }
+						p	add
+					} {
+						gsr2c * dl 10 { 
+							sltarget ra Lplayer
+							clip <  &itr 2 
+							colorf { _gdlaser-black/w _gdlaser-black/ } > t 0
+						} laser null 1.7 0.4 { dsfx }
+			!!{ rpt * ^ dl 0.7 11
+						gsr2 2 angle / 360h $rpt { 
+							sltarget ra Lplayer
+							pm add p2
+						} gsr2c $rpt {
+							start rv2.nx *=f &lr
+							preloop dir =f [&rv2].a
+						} gsr2c 12 {
+							bank <0.23;:>
+						} s tpnrot rx 
+							lerp 0.7 1 (+ t * 0.7 p2) 0 + 1.8 * 0.8 p1
+							&dir
+					}
+				}
+				move-target 1.6 in-sine pxy * &lr 11 4
+				bullet-control once {{ gcircle-*/b } { red blue }} cull _
+#}
+
+
+
+
+## 3
+<!> dialogue #{
+phase 0
+	saction 0
+		move-target 3 io-sine cy 0
+		dialogue simp.dialogue.1.2
+		move-target 2 in-sine cy 10
+		shift-phase
+#}
+
+
+

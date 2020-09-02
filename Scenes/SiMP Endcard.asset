@@ -17,3 +17,4 @@ MonoBehaviour:
   description: Endcard
   stageNumber: 0
   defaultSuicideStyle: 
+  practiceable: 0

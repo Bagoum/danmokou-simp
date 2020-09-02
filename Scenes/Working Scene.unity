@@ -483,7 +483,7 @@ PrefabInstance:
     - target: {fileID: 2839687353931545823, guid: 567949ea02f82894482d1922e940c492,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5738943023965476947, guid: 567949ea02f82894482d1922e940c492,
         type: 3}
@@ -494,7 +494,7 @@ PrefabInstance:
         type: 3}
       propertyPath: behaviorScript
       value: 
-      objectReference: {fileID: 4900000, guid: 355ea18c28fe2a84b8eecc8d720b5d0b, type: 3}
+      objectReference: {fileID: 4900000, guid: b853ae2ee7187844d9bced300f308eed, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 567949ea02f82894482d1922e940c492, type: 3}
 --- !u!1001 &333409527
@@ -567,13 +567,13 @@ PrefabInstance:
     - target: {fileID: 3665291995995624048, guid: efc8d19268d8b854c912ba518b2bb0dd,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6490234047905658620, guid: efc8d19268d8b854c912ba518b2bb0dd,
         type: 3}
       propertyPath: behaviorScript
       value: 
-      objectReference: {fileID: 4900000, guid: 09c66581f08b1fb4d94eac60e59db48f, type: 3}
+      objectReference: {fileID: 4900000, guid: b853ae2ee7187844d9bced300f308eed, type: 3}
     - target: {fileID: 6490234047905658620, guid: efc8d19268d8b854c912ba518b2bb0dd,
         type: 3}
       propertyPath: linkToEditorReload
@@ -1218,7 +1218,7 @@ PrefabInstance:
     - target: {fileID: 5693660460388628149, guid: 4f67648ec56d30044b03a5959e19a4e0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 5693660460388628149, guid: 4f67648ec56d30044b03a5959e19a4e0,
         type: 3}

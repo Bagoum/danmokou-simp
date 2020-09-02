@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SiMP Campaign
   m_EditorClassIdentifier: 
   key: simp.main
+  shortTitle: SiMP Main
   stages:
   - {fileID: 11400000, guid: a46f372fcd2996445bac038ef2a72d0c, type: 2}
   - {fileID: 11400000, guid: 100e508a9bdf67b4982aeb04d285d02c, type: 2}
@@ -31,9 +32,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 43e8e3031b95bc8498525b35ec31b1c9, type: 2}
   - {fileID: 11400000, guid: 5d20410abda162f4b86c5b5511038e76, type: 2}
   - {fileID: 11400000, guid: 1a0ddcbc2a436e8438020c8f8384c55a, type: 2}
-  practiceStages:
-  - {fileID: 11400000, guid: a46f372fcd2996445bac038ef2a72d0c, type: 2}
-  - {fileID: 11400000, guid: 100e508a9bdf67b4982aeb04d285d02c, type: 2}
-  - {fileID: 11400000, guid: 66e5bf4771be67a4b9a41266427756ca, type: 2}
-  - {fileID: 11400000, guid: bcc32a73896be0d46bfb974e9868ca01, type: 2}
-  - {fileID: 11400000, guid: 78cdc667a3de5bc4c9a160339af30f6e, type: 2}

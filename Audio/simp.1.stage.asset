@@ -15,7 +15,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 3838da1a0f6f5564d87ff781ff47fbb0, type: 3}
   key: simp.1.stage
   title: Forwards March! to the End of the World
-  volume: 0.13
+  volume: 0.12
   pitch: 1
   stopOnPause: 0
   loop: 1

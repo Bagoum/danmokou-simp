@@ -117,7 +117,7 @@ phase 28
 			frv2	angle + * 0.5 t  (* pm1mod p  + (* 4 t) * 3 softmod 6 t)
 			sfx x-fire-loop-1
 		} gsr2c 5 {
-		} s tprot lerpfromto 0.5 1 cx 3 px + 1.5 * 1.3 p
+		} s tprot lerpt 0.5 1 cx 3 px + 1.5 * 1.3 p
 		gtr {
 			wt 240 _
 			wait-child
@@ -163,10 +163,10 @@ phase 36
 					} gsr2 2 <> {
 						p add
 						color { green/w green/b }
-					} sd rotatev @ pd p1 cossindeg + &a $angle
-						dtpoffset pl pd p1 rx
+					} simple dtpoffset pl pd p1 rx
 							logsumshiftt 4 (+ - 4.9 * 0.4 &layer * 1 p2) 0.35 * - 1.2 * 0.4 p2 t
 							$angle
+						{ dir2(rotatev @ pd p1 cossindeg + &a $angle) }
 				}
 	!!{ rpt ceil * 16 dl
 			async scircle-red/w <30> gir2 0 1 <> { } gcr2 / 200 -- $rpt $rpt angle (/ 300 $rpt) {

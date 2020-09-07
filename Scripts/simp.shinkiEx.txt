@@ -6,7 +6,7 @@ pattern {
 }
 phase 0
 	action block 0
-		shift-phase-to 2
+		shift-phase-to 3
 	
 
 !{ power1()
@@ -113,7 +113,7 @@ phase 33
 			- 0.5 cosine 5 0.2 (-m t 100)
 			* 400 * brandpm1 t
             tprot switch 1.5 zero
-                lerpfromtoback 100 101 104 105
+                lerpback 100 101 104 105 t
 					rx 0.12 brand 0 360
 					rotate brand -50 50 stopsampling 100.5 vhome 1.5 Lplayer
         _ 1 move _ tpnrot vhome lerpt 0 25 0.3 0.6 Lplayer

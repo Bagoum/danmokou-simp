@@ -56,7 +56,7 @@ phase 36
 			frv2	angle + * 0 t  (* pm1mod p  + (* 4 t) * 5 softmod 6 t)
 			sfx x-fire-loop-1
 		} gsr2c 5 {
-		} s tprot lerpfromto 0.5 1 cx 3 px - 2.6 * 1.1 p
+		} s tprot lerpt 0.5 1 cx 3 px - 2.6 * 1.1 p
 		gtr {
 			wt 360 _
 			wait-child

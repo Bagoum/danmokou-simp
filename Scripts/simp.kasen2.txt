@@ -1,3 +1,4 @@
+<#> strict(none)
 pattern { 
 	boss simp.kasen2
 	bgm {
@@ -26,7 +27,6 @@ sync powerup1 <> powerup2
 <!> dialogue #{
 phase 0
 	saction 0
-		setstate vulnerable false
 		move-target 3 io-sine cy 1
 		dialogue simp.dialogue.5.1
 		shift-phase

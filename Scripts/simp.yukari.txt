@@ -1,3 +1,4 @@
+<#> strict(none)
 pattern { 
 	boss simp.yukari 
 	bgm {
@@ -35,7 +36,6 @@ sync powerup1 <> powerup x-powerup-1
 <!> showlives 5
 phase 0
 	saction 0
-		setstate vulnerable false
 		move-target 3 io-sine cy 1
 		dialogue simp.dialogue.2.3
 		shift-phase
@@ -160,7 +160,6 @@ phase 26
 <!> dialogue #{
 phase 0
 	saction 0
-		setstate vulnerable false
 		move-target 3 io-sine cy 0
 		dialogue simp.dialogue.2.4
 		move-target 2 in-sine cy 10

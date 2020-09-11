@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: simp.ex
   shortTitle: SiMP Ex
+  players:
+  - {fileID: 11400000, guid: a748e7cdf6f25e643891d64f7767dbff, type: 2}
   stages:
   - {fileID: 11400000, guid: 8cf9048803b63fc4486e2a592851b6fb, type: 2}
   - {fileID: 11400000, guid: 1b78d7174f0c1384e8196ab12b27e597, type: 2}

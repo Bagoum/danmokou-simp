@@ -1,3 +1,4 @@
+<#> strict(none)
 pattern { 
 	boss simp.kaguya-fake
 	bgm {
@@ -39,7 +40,6 @@ sync powerup1 <> powerup x-powerup-1
 <!> dialogue #{
 phase 0
 	saction 0
-		setstate vulnerable false
 		move-target 3 io-sine cy 1
 		dialogue simp.dialogue.2.1
 		shift-phase
@@ -303,7 +303,6 @@ phase 32
 <!> dialogue #{
 phase 0
 	saction 0
-		setstate vulnerable false
 		move-target 3 io-sine cy 1
 		dialogue simp.dialogue.2.2
 		move-target 2 in-sine cy 10

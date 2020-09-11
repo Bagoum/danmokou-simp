@@ -1,10 +1,11 @@
+<#> strict(none)
 pattern { bgm {
 	1  simp.3.stage
 	8	_
 } }
 phase 0
 	action block 0
-		shift-phase-to 5
+		shift-phase-to 2
 		
 
 !{ mw(source, t1, t2, loc1, loc2, hp, fire)
@@ -77,7 +78,7 @@ phase 27 #{
 		async fairy5 <> gcr2 7s _ <> {
 			delay 2s
 			bindLR
-		} $17(&lr, /i dl 130, 14s, hp 1600 drops 10 5 5)
+		} $17(&lr, /i dl 130, 14s, hp 1600 drops3 10 5 5)
 #}
 
 !{ 3(root, vel, f, color)

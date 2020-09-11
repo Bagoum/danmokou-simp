@@ -1,3 +1,4 @@
+<#> strict(none)
 pattern { bgm {
 	1  simp.2.stage
 	10	_

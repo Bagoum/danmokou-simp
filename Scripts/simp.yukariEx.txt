@@ -1,3 +1,4 @@
+<#> strict(none)
 pattern { 
 	boss simp.yukari2
 	bgm {

@@ -121,13 +121,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   behaviorScript: {fileID: 4900000, guid: f74707705f11146489aaa861f3668612, type: 3}
   ID: 
-  displayChangedPosition: 1
   rotationMethod: 0
-  rotateTransform: 0
   deathEffect: {fileID: 0}
-  triggersUITimeout: 0
+  cullableRadius:
+    cullable: 1
+    cullRadius: {fileID: 11400000, guid: fd7e3b4d29f6b494eb277b8d8a62bd0d, type: 2}
   cullable: 1
-  ScreenCullRadius: 4
+  CollisionActiveOnInit: 0
+  destructible: 0
+  grazeEveryFrames: 20
   animate:
     method: 0
     LRRelation: 0
@@ -140,6 +142,3 @@ MonoBehaviour:
       downAnim: []
       attackAnim: []
       deathAnim: []
-  movementModifiers:
-    flipX: 0
-    flipY: 0

@@ -1,3 +1,4 @@
+<#> strict(none)
 pattern {
 	boss simp.seija
 	bgm {
@@ -6,7 +7,7 @@ pattern {
 }
 phase 0
 	action block 0
-		shift-phase-to 5
+		shift-phase-to 3
 	
 !!{ me seija
 !{ 
@@ -33,7 +34,6 @@ sync powerup1 <> powerup2
 <!> dialogue #{
 phase 0
 	saction 0
-		setstate vulnerable false
 		move-target 3 io-sine cy 1
 		dialogue simp.dialogue.3.3
 		shift-phase
@@ -42,12 +42,12 @@ phase 0
 ##2 
 <!> bosscutin
 <!> type non `Irrefutable Regret: syn-Propanethial S-oxide` #{
-<!> hpi 23000 2
+<!> hpi 20000 2
 <!> root 0 2
 phase 32
     action block 0
 		gtr {
-			wt 0 _
+			wt 1 _
 			wait-child
 			p this
 		} saction 0
@@ -60,7 +60,7 @@ phase 32
 			$power1
 			move-target 1.5 io-sine pxy * pm1 p 1 y
 			async ellipse-*/w <1;:> gir { 
-				wt	186 8
+				wt	186 6
 				color { purple red }
 				p this
 				rpp	angle + -3 * 19 pm1 p
@@ -79,7 +79,7 @@ phase 32
 					cx 3.2
 					cx 1.8
 				}
-			clear bullet-control
+			pool-control ellipse-* reset
 			sfx x-colorshift
 			##Prevents flip command from screwing shit
 			bullet-control once ellipse-purple/b restyleeffect ellipse-pink/b cwheel-purple/ _
@@ -436,7 +436,6 @@ phase 40
 <!> dialogue #{
 phase 0
 	saction 0
-		setstate vulnerable false
 		move-target 2 io-sine cy 1
 		dialogue simp.dialogue.3.4
 		move-target 2 in-sine cy -10

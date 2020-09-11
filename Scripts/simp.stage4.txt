@@ -1,3 +1,4 @@
+<#> strict(none)
 pattern { }
 phase 0
 	action block 0

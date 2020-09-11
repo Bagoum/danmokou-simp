@@ -1,3 +1,4 @@
+<#> strict(none)
 pattern { bgm {
 	1  simp.3.stage
 } }

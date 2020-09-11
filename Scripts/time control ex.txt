@@ -1,8 +1,7 @@
+<#> strict(none)
 pattern { }
 phase 0
 	action block 0
-		clear phase
-		clear bullet
 		shift-phase-to 1
 
 phase 0

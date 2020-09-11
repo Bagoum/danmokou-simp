@@ -1,3 +1,4 @@
+<#> strict(none)
 pattern { 
 	bosses {
 		simp.mima
@@ -121,7 +122,7 @@ phase 31 #{
 			wait-child
 			preloop {
 				lr =f mp1 // ++ t 2
-				ud =f pm1  in mod 4 ++ t 0.5 2.5
+				ud =f pm1  pred10(in mod 4 ++ t 0.5 2.5)
 			}
 		} move-target 4h io-sine pxy * &lr 3 + 1.2 * 2 &ud
 	
@@ -194,7 +195,8 @@ phase 41 #{
 				lr =f pm1 p
 				ud =f pm1 // p 2
 			}
-		} seq
+			sequential
+		} {
 			action block 0
 				_ 1.5
 					async lightning-teal/w <> gcr2 12 3 <> {
@@ -290,6 +292,7 @@ phase 41 #{
 				} gsr2c * dl 15 {
 					target a Lbeh keine
 				} laser null 1.5 0.5 { dsfx }
+		}
 #}
 
 
@@ -459,7 +462,8 @@ phase 43 #{
 		wt 1s _
 		wait-child
 		preloop lr =f mp1 t
-	} seq
+		sequential
+	} {
 	!!{ pys if > [Lplayer].y 0 2 -2
 		action block 0
 			$mimapower1
@@ -508,7 +512,7 @@ phase 43 #{
 			move-target 2 io-sine pxy * &lr 4 0
 			@ kaguya
 				move-target 2 io-sine pxy * &lr -4 1
-			
+	}
 
 #}
 

@@ -1,3 +1,4 @@
+<#> strict(none)
 pattern { 
 	boss simp.mokou
 	bgm {

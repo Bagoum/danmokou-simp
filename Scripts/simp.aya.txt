@@ -1,3 +1,4 @@
+<#> strict(none)
 pattern { 
 	boss simp.aya
 	bgm {
@@ -122,72 +123,71 @@ phase 32
 				+ -90 brand2 -20 20
 		gtr {
 			wait-child
-			wt	0	_
+			wt	1	_
 			preloop {
 				lr =f pm1 t
 				itr =f t
 			}
-		} seq
-			saction 0
-				pos pxy * &lr 11 6
-		!!{ wl 12
-		!!{ ww 7
-				sync gcircle-* <> loc0 gsr {
-						tmmod	$ww
-					} gsr {
-						tmmod	$wl
-					} gsr {
-						colorf { blue/b red/b } + t &itr
-						tmmod	2
-					} s nroffset :: {
-						px	pma $ww { $wl 2 }
-						py	pm $wl 2
-						plr	pm1 pm 2 1
-					} + lbeh $me qrotate * &lr py 19
-						wings1 $ww $wl 2
-				~ _ 0.5 
-					$power1
-				move-target 2 out-sine pxy * &lr 0.5 2
-			!!{ rpt * dl 62
-				~ async $bc <;-1.5:;:90> gcr2 30 8 <> {
-					p this
-					sfx x-fire-burst-2
+		} saction 0
+			pos pxy * &lr 11 6
+	!!{ wl 12
+	!!{ ww 7
+			sync gcircle-* <> loc0 gsr {
+					tmmod	$ww
+				} gsr {
+					tmmod	$wl
+				} gsr {
+					colorf { blue/b red/b } + t &itr
+					tmmod	2
+				} s nroffset :: {
+					px	pma $ww { $wl 2 }
+					py	pm $wl 2
+					plr	pm1 pm 2 1
+				} + lbeh $me qrotate * &lr py 19
+					wings1 $ww $wl 2
+			~ _ 0.5 
+				$power1
+			move-target 2 out-sine pxy * &lr 0.5 2
+		!!{ rpt * dl 62
+			~ async $bc <;-1.5:;:90> gcr2 30 8 <> {
+				p this
+				sfx x-fire-burst-2
+			} {
+				gsr2 $rpt angle / 310 $rpt {
+					center
+				}	s tpnrot
+					rotify px lerpt 1.2 2.5 - 4.8 * 0.33 p 0
+			}
+			async circle-*/ <-1.8;-0.4:;:> gir2 240 3 <> {
+				sfx x-fire-burst-1
+				p this
+				
+			} { 
+				gsr2 2 <3.6;:;:> {
+					color { blue red }
+					p	add
 				} {
-					gsr2 $rpt angle / 310 $rpt {
-						center
-					}	s tpnrot
-						rotify px lerpt 1.2 2.5 - 4.8 * 0.33 p 0
+					gsr2c * dl 10 { 
+						sltarget ra Lplayer
+						clip <  &itr 2 
+						colorf { _gdlaser-black/w _gdlaser-black/ } pred10(> t 0)
+					} laser null 1.7 0.4 { dsfx }
+		!!{ rpt * ^ dl 0.7 11
+					gsr2 2 angle / 360h $rpt { 
+						sltarget ra Lplayer
+						pm add p2
+					} gsr2c $rpt {
+						start rv2.nx *=f &lr
+						preloop dir =f [&rv2].a
+					} gsr2c 12 {
+						bank <0.23;:>
+					} s tpnrot rx 
+						lerp 0.7 1 (+ t * 0.7 p2) 0 + 1.8 * 0.8 p1
+						&dir
 				}
-				async circle-*/ <-1.8;-0.4:;:> gir2 240 3 <> {
-					sfx x-fire-burst-1
-					p this
-					
-				} { 
-					gsr2 2 <3.6;:;:> {
-						color { blue red }
-						p	add
-					} {
-						gsr2c * dl 10 { 
-							sltarget ra Lplayer
-							clip <  &itr 2 
-							colorf { _gdlaser-black/w _gdlaser-black/ } > t 0
-						} laser null 1.7 0.4 { dsfx }
-			!!{ rpt * ^ dl 0.7 11
-						gsr2 2 angle / 360h $rpt { 
-							sltarget ra Lplayer
-							pm add p2
-						} gsr2c $rpt {
-							start rv2.nx *=f &lr
-							preloop dir =f [&rv2].a
-						} gsr2c 12 {
-							bank <0.23;:>
-						} s tpnrot rx 
-							lerp 0.7 1 (+ t * 0.7 p2) 0 + 1.8 * 0.8 p1
-							&dir
-					}
-				}
-				move-target 1.6 in-sine pxy * &lr 11 4
-				bullet-control once {{ gcircle-*/b } { red blue }} cull _
+			}
+			move-target 1.6 in-sine pxy * &lr 11 4
+			bullet-control once {{ gcircle-*/b } { red blue }} cull _
 #}
 
 

@@ -8,7 +8,7 @@ pattern {
 }
 phase 0
 	action block 0
-		shift-phase-to 1
+		shift-phase-to 5
 	
 	
 !!{ colors { blue purple pink red orange yellow green teal black  }
@@ -185,10 +185,10 @@ phase 32
 			wait-child
 			timer tf
 		} saction 0 :2
-			bullet-control (< timersec(tf) 4) { { shell-* } } slowdown (
-				if (< timersec(tf) 3) 
-					-m 1 * 2 t
-					- timersec(tf) 3
+			bullet-control < timersec(tf) 4 { { shell-* } } slowdown (
+				if (< timersec(tf) 3, 
+					-m 1 * 2 t,
+					- timersec(tf) 3)
 					) _
 			dzawarudo 3
 #}
@@ -273,7 +273,7 @@ phase 32
 			##delay	2s
 			timereset
 		} saction 0
-			savef pang 0 + (if = p 0) 0 * pm1 p (+ 16 * 0.8 p) angleto Lplayer
+			savef pang 0 + if (= p 0) 0 * pm1 p (+ 16 * 0.8 p) angleto Lplayer
 			sfx x-lockon
 			sync mulaser-pink/b <> safelaser 4 {
 				straight @0 pang

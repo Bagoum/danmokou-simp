@@ -126,8 +126,8 @@ phase 33
 !!{ s1 2.2
 !!{ s2 0.8
 			if (= z1 p @0 part) 
-				px lerp (0 1 timersec(pct)) $s1 $s2
-				px lerp (0 1 timersec(pct)) $s2 $s1
+				px lerp 0 1 timersec(pct) $s1 $s2
+				px lerp 0 1 timersec(pct) $s2 $s1
 		
 		savef part 0 1
 		bullet-control persist lcircle-red/w restyleeffect lcircle-red/b cwheel-red/ = @0 part 0
@@ -378,8 +378,8 @@ phase 40
 					color { red purple }
 				} sdd * pm1 p2 * 400 t tprot rx
 					* + 0.23 * 0.2 p1 
-						lerp3 (0.3 1.4 $et1 + $et1 0.2) t 3 1.7
-							lerpt ($et2 + $et2 2) 0 4
+						lerp3 (0.3, 1.4, $et1, + $et1 0.2, t, 3, 1.7,
+							lerpt($et2, + $et2 2, 0, 4))
 					* pm1 p2 + 80 * 7p p1
 					
 		async ellipse-*/b <;:> gcr2d dl 90 _ angle / 180h 16 {
@@ -391,8 +391,8 @@ phase 40
 !!{ s1 2
 !!{ s2 -1
 			if (= z1 p @0 part) 
-				px lerp (0 1 timersec(pct)) $s1 $s2
-				px lerp (0 1 timersec(pct)) $s2 $s1
+				px lerp 0 1 timersec(pct) $s1 $s2
+				px lerp 0 1 timersec(pct) $s2 $s1
 		
 		savef part 0 1
 		bullet-control persist ellipse-red/w restyleeffect ellipse-red/b cwheel-red/ = @0 part 0

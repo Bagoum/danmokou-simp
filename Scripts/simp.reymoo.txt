@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	action block 0
-		shift-phase-to 2
+		shift-phase-to 3
 	
 	
 !!{ me reimu
@@ -58,9 +58,9 @@ phase 36
 	} s :: {
 		q	$q
 		fi	p1
-		fmul	if <(&fi 3) 1 -1
+		fmul	if <(&fi, 3) 1 -1
 		nfmul	* -1 &fmul
-		sfi	if <(&fi 3) &fi (- &fi 3)
+		sfi	if <(&fi, 3) &fi (- &fi 3)
 		i1	* (// p2 &q)  / &q - &q 1
 		i2	* (mod &q p2) / &q - &q 1
 		s	7.2
@@ -69,12 +69,12 @@ phase 36
 		px	* &hs &fmul
 		py	* &hs &fmul
 		pz	* &hs &fmul
-		stp1x	* &nfmul if =(&sfi 1) 0 &stp
-		stp1y	* &nfmul if =(&sfi 1) &stp 0
+		stp1x	* &nfmul if =(&sfi, 1) 0 &stp
+		stp1y	* &nfmul if =(&sfi, 1) &stp 0
 		stp1z	0
 		stp2x	0
-		stp2y	* &nfmul if =(&sfi 0) &stp 0
-		stp2z	* &nfmul if =(&sfi 0) 0 &stp
+		stp2y	* &nfmul if =(&sfi, 0) &stp 0
+		stp2z	* &nfmul if =(&sfi, 0) 0 &stp
 		x	+ + &px * &i1 &stp1x * &i2 &stp2x
 		y	+ + &py * &i1 &stp1y * &i2 &stp2y
 		z	+ + &pz * &i1 &stp1z * &i2 &stp2z

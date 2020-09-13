@@ -129,7 +129,7 @@ phase 26
 			delay 1.5s
 			color $yukac1
 			wait-child
-!!{ dd ^(dl 0.7)
+!!{ dd ^(dl, 0.7)
 		} gcr2d $dd 2.7 120 * / 1 $dd <0.015;:9> {
 			p this
 			sfxfif { x-fire-star-1 x-fire-star-2 x-fire-star-3 } &pi divby 6 t

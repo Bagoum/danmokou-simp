@@ -186,7 +186,7 @@ phase 24 #{
 			async sakura-green/ <-4;5:> gcr2 12 5 <2;:> {
 				p add
 			} guideempty .1 p { pl loc pd dir } { }
-				tprot lerp3 (0.6 1.6 9 10) t (cy -3) zero (py + 8 * -1 t) {
+				tprot lerp3(0.6, 1.6, 9, 10, t, cy -3, zero, py + 8 * -1 t) {
 					gsr2 9 <> {
 						preloop d =f t
 					} ds pl pd p

@@ -87,7 +87,7 @@ phase 32
 			p this
 		} s polar
 !!{ per 5
-			lerpsmooth out-sine 0 5 t 0 (+ * 0.7 &layer sine $per 0.35 + t + * * 1h $per() &layer * (/ $per $rep) p)
+			lerpsmooth out-sine 0 5 t 0 (+ * 0.7 &layer sine $per 0.35 + t + * * 1h $per() &layer *(/ $per $rep, p))
 			* &lr * 8 t
 !!{ crep + 8 d3d2
 		async gdlaser-*/ <-90> gcr2 12 $crep a / 360 $crep {
@@ -114,7 +114,7 @@ phase 28
 			color { green/ red/w }
 		} gcr {
 			wtd	dl 5 _
-			frv2	angle + * 0.5 t  (* pm1mod p  + (* 4 t) * 3 softmod 6 t)
+			frv2	angle + * 0.5 t  (* pm1mod p  +(* 4 t, * 3 softmod 6 t))
 			sfx x-fire-loop-1
 		} gsr2c 5 {
 		} s tprot lerpt 0.5 1 cx 3 px + 1.5 * 1.3 p

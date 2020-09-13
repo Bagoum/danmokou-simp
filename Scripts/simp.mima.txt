@@ -17,7 +17,7 @@ phase 0
 	action block 0
 		@ { kaguya keine }
 			position -15 0
-		shift-phase-to 8
+		shift-phase-to 15
 	
 	
 !!{ mimac { black yellow orange green teal blue pink }
@@ -143,7 +143,7 @@ phase 31 #{
 			p this
 !!{ root py 0
 			root $root
-			preloop eo =f if (even p) 1 -1
+			preloop eo =f if(even p, 1, -1)
 		} guideempty .2 p { pl2 loc } { } polar
 				0.8
 				* &eo * -50 t {
@@ -172,9 +172,9 @@ phase 41 #{
 			} gsr2c $rpt {
 				expose f st
 			} s tp
-				px - (lerpt 0.5 1 3.4 2.5) * 0.6 p
+				px - lerpt(0.5, 1, 3.4, 2.5) * 0.6 p
 				py lerp 0.5 4 (+ t * 0.2 p) 1 -4
-		bullet-control persist glcircle-blue/b restyleeffect fireball-blue/b cwheel-blue/b > (+ t &.st) 1.5
+		bullet-control persist glcircle-blue/b restyleeffect fireball-blue/b cwheel-blue/b >(+ t &.st, 1.5)
 !!{ starwhen > t (+ 0.8 * 3 modh p)
 		bullet-control persist lstar-red/ cull $starwhen
 		bullet-control-sm persist lstar-red/ $starwhen
@@ -237,7 +237,7 @@ phase 41 #{
 						move-target 0.5 linear pxy * &lr -3 1
 						sync lstar-red/ <> gsr {
 							t 20
-							frv2	angle + (- 90 * 70 &lr) cosine 12h 30 t
+							frv2	angle + (- 90 * 70 &lr, cosine 12h 30 t)
 							sfx x-boom
 							p this
 						} sdd starrotb2 tp
@@ -261,12 +261,12 @@ phase 41 #{
 					sfx x-lightning
 				} gsr {
 					target ry Lbeh keine
-				} pather 1 1 tpnrot px * &lr lerp3 (0 0.1 0.6 1.1 t) 6 2 12 {
+				} pather 1 1 tpnrot px * &lr lerp3(0, 0.1, 0.6, 1.1, t, 6, 2, 12) {
 					sm	async star-*/ <> gcr2 /i dl 30 _ <> { 
 								delay * /i dl 30 * 1h p
 							} gsr2 5 <0.1;:> {
 							} {
-								 color blue sdd starrotb2 tprot py lerpt (0 1) 1 lerp (1 2.5 + t * 0.06 p) 3 -4.5
+								 color blue sdd starrotb2 tprot py lerpt(0, 1, 1, lerp(1, 2.5, + t * 0.06 p, 3, -4.5))
 								 color green sdd starrotb1 tprot py lerpt 0 1 0 -3.7
 							}
 				}
@@ -278,7 +278,7 @@ phase 41 #{
 								sfx x-fire-tech-6
 								p this
 							} pather 1 1 tpnrot 
-								ssvhomet (+ 1 * 0.24 ^ p 1.1) pxy * &lr -5 (- 3 * 0.9 p)
+								ssvhomet (+ 1 * 0.24 ^ p 1.1, pxy * &lr -5 (- 3 * 0.9 p))
 								{ }
 			action block 0
 				move-target 2 io-sine pxy * -1 x y
@@ -334,7 +334,7 @@ bullet-control-sm persist keine-*  circ + tp @ pl %idx <;;0.8>
 			color { /b /w }
 			p add
 		} sdd starrotb1 polar
-			lssht -2 0.4 * 3 t * (+ 1.2 * 0.8 p2) t
+			lssht(-2, 0.4, * 3 t, * (+ 1.2 * 0.8 p2, t))
 			* pm1 p1 * pm1 p2 * 10 t
 	}
 		
@@ -362,12 +362,12 @@ bullet-control persist keine-* cull circ + tp @ pl %idx <;;0.8>
 	
 		@ kaguya
 			gtr {
-				wt (max 60 - 100 * 6 t)  _
+				wt (max 60 - 100 * 6 t,  _)
 				wait-child 
 			} {
 				sync gdlaser-pink* <> gsr2c * ^ dh 0.7 15 {
 					target a Lbeh mima
-					colorf { /w /b } if (= t 0) 0 1
+					colorf { /w /b } if (= t 0, 0, 1)
 				} laser null 1.5 0.5 { dsfx }
 				async keine-*/w <;:180> gcr2 20 12 <20>  {
 						sfx x-keine
@@ -545,7 +545,7 @@ phase 37
 		} saction 0 :3
 			async gdlaser-*/b <> gcr2 12 4 <30> { target a Lplayer color $mimac2 } gsr2c 3 . laser null 2 0.5 { sfx2 x-laser-fire x-laser-on }
 			wait-for /i dh 3
-			move 3 tpnrot easedvhomet io-sine 3 pxy (* pm1 p rand 0.7 1.1) (rand 1.8 2.3)
+			move 3 tpnrot easedvhomet io-sine 3 pxy (* pm1 p rand 0.7 1.1, rand 1.8 2.3)
 		shake 2 3 smooth smod-010 / x 3
 		$mimapower1long
 		async x-boom <> gcr2 24 5 <> . sfx
@@ -598,13 +598,13 @@ phase 36
 			} guideempty .1 p { eloc loc edir dir } { }
 				tpnrot 
 					switchH 2 
-						* (lerp3 0.0 0.6 1 1.2 t 10 2 8)
+						* lerp3(0.0, 0.6, 1, 1.2, t, 10, 2, 8)
 							truerotatelerprate 400 + cy 0.2 rotify cx 1
 								ss 0.4 vhome 2 Lplayer
 !!{ rrt 0.1
 !!{ ip pma $n { }
 						switchH $rrt
-							ssvhomet $rrt pxy (+ + 1 xmin * 4 $ip) -6.5
+							ssvhomet $rrt pxy(+ + 1 xmin * 4 $ip, -6.5)
 							lerp3 0.5 1 1.3 1.6 t cy 3.2 zero cy 4
 					 {
 						colorr gpather-*/ pather 3 0.5 nroffset @ eloc p {
@@ -642,14 +642,14 @@ phase 36
 								} gsr2 2 <180> {
 								} gsr2 4 <> {
 									p this
-								} sdd starrot2 tprot px * (lerpt 0 0.5 0.1 1) + 0.82 * 0.25 p
+								} sdd starrot2 tprot px * lerpt(0, 0.5, 0.1, 1) + 0.82 * 0.25 p
 							}
 						}
 						colorr lstar-*/w sdd starrot2 nroffset @ eloc p
 			}
 			~ _ + 3.4 $rrt
 				sfx x-metal
-			move 3 tpnrot easedvhomet io-sine 3 pxy (* pm1 p rand 1 2) 2
+			move 3 tpnrot easedvhomet io-sine 3 pxy (* pm1 p rand 1 2, 2)
 			break
 #}
 
@@ -694,7 +694,7 @@ phase 42
 				delay 1.5s
 				root cxy 0 -1
 			} gsr2 2 <> { p this } pather 7 7 nroffset 
-				if (= p 0) #{
+				if (= p 0, #{
 					lerpmany  {
 						0 $co0
 						1 $co1
@@ -705,7 +705,7 @@ phase 42
 						6 $co6
 						7 $co7
 						7.1 + $co7 py (- t 7)
-					} t
+					} t,
 					lerpmany  {
 						0 $co8
 						1 $co2
@@ -715,8 +715,8 @@ phase 42
 						5 $cob
 						6 $coc
 						7 $cod
-						7.1 + $cod * (- t 7) cxy 0.2 -1.3
-					} t { #}
+						7.1 + $cod * (- t 7, cxy 0.2 -1.3)
+					} t) { #}
 				sm async _ <0.5;:> gir2 120 8 <> {
 					color $mimac2
 				} { #{
@@ -729,7 +729,7 @@ phase 42
 						bank <0.5;:-144>
 						p this 
 						colorr star-*/w
-					} sdd starrot2 tprot  rotate - 160 * (/i dl + 5 * 1.7 t) (mod 4 p)
+					} sdd starrot2 tprot  rotate - 160 * (/i dl + 5 * 1.7 t, mod 4 p)
 						px lerp3c 1 3 4 (+ t * /i dl 40f // p 4) 0 2 3.5
 				} #}
 			}
@@ -746,7 +746,7 @@ phase 42
 						3 $cb3
 						4 $cb4
 						5 $cb5
-						5.1 + $cb5 * (- t 5) cxy -0.3 -2
+						5.1 + $cb5 * (- t 5, cxy -0.3 -2)
 					} t { #}
 				sm async _ <0.5;:> gir2 120 6 <> {
 					color $mimac2
@@ -762,7 +762,7 @@ phase 42
 							bank <0.5;:-144>
 							p this 
 							colorr star-*/w
-						} sdd starrotb2 tprot  rotate - 160 * (/i dl + 2 * 0.8 t) (mod 4 p)
+						} sdd starrotb2 tprot  rotate - 160 * (/i dl + 2 * 0.8 t, mod 4 p)
 							px lerp3c 1 3 4 (+ t * /i dl 16f // p 4) 0 2 3.5
 						gir2 0 5 <72> {
 ## r' = (r+c)cos 36, c' = (r+c)sin 36,  where 36 = 180 / 5
@@ -771,7 +771,7 @@ phase 42
 							bank <.5878;:-90>
 							p this 
 							colorr star-*/
-						} sdd starrotb1 tprot  rotate - 160 * (/i dl + 1 * 0.2 t) (mod 4 p)
+						} sdd starrotb1 tprot  rotate - 160 * (/i dl + 1 * 0.2 t, mod 4 p)
 							px lerp 4 5 (+ t * /i dl 40f // p 4) 0 2.5
 					} 
 				} #}
@@ -796,11 +796,11 @@ phase 34
 	action block 1.5
 		async star-*/ <4.5;:> gir2 60 _ <120h> { wait-child sfx x-metal } gcr {
 			wt	0.5 2300
-			frv2	angle pivot t 740 (* 1 ^ (/ t 2) 0.95) 
+			frv2	angle pivot t 740 (* 1 ^ (/ t 2, 0.95)) 
 						pivot t 980
 							sine 480 18 (- t 720)
-							(* -0.04 ^ (/ - t 860 2) 1.7)
-			sfxif	x-fire-star-2 & (divby 16 t) in t 650 1100
+							(* -0.04 ^ (/ - t 860 2, 1.7))
+			sfxif	x-fire-star-2 & (divby 16 t, in t 650 1100)
 		} gsr2 3 <120> { root zero color $mimac1 }  sdd starrot2 tp-rot cx 1
 !{ sqf(pr, thdr, th0r, spd)
 :: {
@@ -830,7 +830,7 @@ phase 34
 			wt	6s _
 			p	this
 			wait-child
-		} move 3 tpnrot easedvhomet io-sine 3 pxy (* pm1 p rand 0.8 1) y
+		} move 3 tpnrot easedvhomet io-sine 3 pxy (* pm1 p rand 0.8 1, y)
 		
 #}
 
@@ -863,7 +863,7 @@ phase 44
 			wt	6s _
 			p	this
 			wait-child
-		} move 3 tpnrot easedvhomet io-sine 3 pxy (* pm1 p rand 0.4 0.8) (rand 1.8 2.3)
+		} move 3 tpnrot easedvhomet io-sine 3 pxy (* pm1 p rand 0.4 0.8, rand 1.8 2.3)
 			
 !!{ firef pivot t 10 (+ 82 * 7.2 t) (max 130 - 152 * 0.5 t)
 		async _ <> gcr {
@@ -887,7 +887,7 @@ phase 44
 					} colorr star-*/ sdd starrot1 offset 
 						rx
 							reg2star 2.2 5 &a
-							+  srand 0 360 p * (srand 6 12 p) t
+							+  srand 0 360 p * (srand 6 12 p, t)
 						@ eloc p
 					colorr lstar-*/b sdd starrotb2 nroffset @ eloc p
 					colorr lightning-*/ pather 3 2 nroffset @ eloc p { }
@@ -943,9 +943,9 @@ phase 35
 				t		clamp 2 3 dc
 				color	{ /b / /w }
 				p	add
-				rpp	angle if (> p1 70) 
+				rpp	angle if >(p1, 70) 
 						-7.56
-						if (> p1 20)
+						if >(p1, 20)
 							2.34
 							-1.28
 			} gsr2 4 <90> {
@@ -975,7 +975,7 @@ phase 37
 				color	$mimac1
 				sfx	x-metal
 			} gsr { 
-				start	rv2.a *=f  if (odd p1) 1 -1
+				start	rv2.a *=f  if (odd p1, 1, -1)
 			} target Lplayer guideempty .1 p { eloc loc edir dir } {} 
 				polar 
 					logsumshiftt 1.2 1.5 (* 1 t) (* 8 t)
@@ -1003,12 +1003,12 @@ phase 37
 					color { /w /b }
 					p this
 				} sdd starrotb1 polar
-					logsumshiftt -5 0.1 (* - 5 p t) (* t (if = p 0) brand 0.7 0.9 brand 0.4 0.5)
-					* brandpm1 * t (if = p 0) 
+					logsumshiftt -5 0.1 (* - 5 p t) (* t if(= p 0, brand 0.7 0.9, brand 0.4 0.5))
+					* brandpm1 * t if = p 0
 						brand 4 7
 						0
 			pool-control {{ lstar-* }} softcullall cwheel
-			move 3 tpnrot easedvhomet io-sine 3 pxy (* pm1 p rand 1 2) 2
+			move 3 tpnrot easedvhomet io-sine 3 pxy (* pm1 p rand 1 2, 2)
 			break
 #}
 
@@ -1052,7 +1052,7 @@ phase 54
 				p	add
 !!{ rpt floor * dh 4
 			} gsr2 $rpt <> { 
-				root	+ pxy (* mp1 p1 1.8) -1.8 @ jupiter p1 
+				root	+ pxy (* mp1 p1 1.8, -1.8) @ jupiter p1 
 				pm	add p2
 			} laser null 4 3 {
 				straight	atan :: {

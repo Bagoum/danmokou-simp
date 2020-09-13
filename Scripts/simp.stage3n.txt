@@ -72,7 +72,7 @@ phase 27 #{
 				sfx x-fire-burst-1
 			} gsr2 13 <10> {
 				center
-			} s tprot px * lerp (1 4) [Lplayer].y 1 1.4  lerpt 0.4 1 7 1.4
+			} s tprot px * lerp 1 4 [Lplayer].y 1 1.4  lerpt 0.4 1 7 1.4
 			
 		)
 		async fairy5 <> gcr2 7s _ <> {
@@ -195,7 +195,7 @@ phase 20 #{ ##Some extra time since this precedes the boss
 				} gsr {
 					start refire =f * &refire (if < p 3 1 0)
 				} s tp rx 
-						* 2.3 (if = &refire 0) 1 lerpt 0.7 0.9 1 0
+						* 2.3 if =(&refire, 0) 1 lerpt 0.7 0.9 1 0
 						+ -180 * pm1 p / (if = // p 2 0 120 60) 2
 					if (= &refire 0) zero
 						* lerpt 1 1.2 0 1 ss 1 vhome 2 Lplayer

@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	action block 0
-		shift-phase-to 3
+		shift-phase-to 11
 	
 
 !{ power1()
@@ -500,7 +500,7 @@ phase 37
 			sfx	x-fire-burst-3
 			frv2 rx * * 0.25 $dx pm1 t
 		} gsr2 8 rx $dx {
-			root py (if > &pi 1) 4 (- 4 * * (- 2 &pi) 0.866 $dx)
+			root py if >(&pi, 1) 4 (- 4 * * (- 2 &pi) 0.866 $dx)
 			center
 			maxt 8
 			p mod

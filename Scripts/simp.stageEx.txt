@@ -67,7 +67,7 @@ action block 0 :2
 		aimed
 	} gsr2 2 <-0.2;:> {
 		p this
-	} s tprot px (* lerpt 0.3 0.6 2 1) - 1.8 * 0.4 p
+	} s tprot px(* lerpt 0.3 0.6 2 1 - 1.8 * 0.4 p)
 	async ellipse-* <> gir2 0 2 <> {
 		color { pink/w red/w }
 		preloop lr =f pm1 t

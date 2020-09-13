@@ -8,7 +8,7 @@ pattern {
 }
 phase 0
 	action block 0
-		shift-phase-to 3
+		shift-phase-to 2
 	
 	
 !!{ me kasen
@@ -53,7 +53,7 @@ phase 36
 			color { green/w red/ }
 		} gcr {
 			wtd	dl 6 _
-			frv2	angle + * 0 t  (* pm1mod p  + (* 4 t) * 5 softmod 6 t)
+			frv2	angle + * 0 t  (* pm1mod p  +(* 4 t, * 5 softmod 6 t))
 			sfx x-fire-loop-1
 		} gsr2c 5 {
 		} s tprot lerpt 0.5 1 cx 3 px - 2.6 * 1.1 p
@@ -92,7 +92,7 @@ phase 36
 		} gsr2 2 <> {
 			postloop rv2.ry *=f -1
 		} gsr { clip & = p 0 = &pi 1 } { 
-			pather 1 0.7 tprot px lerpt3 (0.3 0.5 0.9 1.5) 8 2 6 { high s 2 }
+			pather 1 0.7 tprot px lerpt3(0.3, 0.5, 0.9, 1.5, 8, 2, 6) { high s 2 }
 			color glaser-red/b laser null 2.4 0 { hueshift 90 }
 		}
 #}
@@ -145,13 +145,13 @@ phase 42
 !!{ rt	 4
 !!{ t1 1.3
 !{ spine(t)
-lerp (- $t1 0.6) (+ $t1 0.6) %t
-	tp * (lerpt 0 0.6 3 1) cxy 0.5 2
+lerp(- $t1 0.6, + $t1 0.6, %t,
+	tp * lerpt(0, 0.6, 3, 1) cxy 0.5 2,
 	qrotate px + -22 sine * 1h $rt 5 %t
 		pxyz
 			dcosine $rt 4 - %t $t1
 			0
-			dsine $rt 4 - %t $t1
+			dsine $rt 4 - %t $t1)
 !}
 			tpnrot $spine(t) {
 !!{ rep 20

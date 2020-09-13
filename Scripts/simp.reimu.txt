@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	action block 0
-		shift-phase-to 7
+		shift-phase-to 6
 	
 	
 !!{ me reimu
@@ -39,7 +39,7 @@ phase 30
 		bullet-control persist amulet-black/ restyleeffect amulet-black/w cwheel-black/b > t 3
 		bullet-control persist amulet-red/ restyleeffect amulet-red/w cwheel-red/b > t 3
 		gtr {
-			wt lerpt (0 6) 90 0 _
+			wt lerpt 0 6 90 0 _
 			wait-child
 			p this
 			rpp <5c>
@@ -213,9 +213,9 @@ phase 28
 				root pxy -6 [Lplayer].y
 				center
 				colorf { red black } + &pi t
-			} laser null lerp (0 3 p 1.5 1) 1 { dsfx }
+			} laser null lerp(0, 3, p, 1.5, 1) 1 { dsfx }
 		gtr {
-			wt lerpt (0 6) 120 0 _
+			wt lerpt(0, 6, 120, 0) _
 			wait-child
 			p this
 			rpp <5c>
@@ -335,7 +335,7 @@ phase 0
 			} gsr2c $zrpt {
 				p this
 			} {
-	!!{ rot * &lr * (+ 7 * 1.5 &lr t)
+	!!{ rot * &lr * (+ 7 * 1.5 &lr, t)
 				colorr zonelaser-*/b safelaser _ { rotate 0 $rot }
 	!!{ crpt 11
 				colorr scircle-*/b gsr2 $crpt <> {
@@ -368,7 +368,7 @@ phase 0
 			} pather 1.2 1.2 tprot 
 					pxy
 						1.5
-						dsine 0.7 0.2 +(t * p2 / 0.7 $prpt)
+						dsine 0.7 0.2 +(t, * p2 / 0.7 $prpt)
 					{ high }
 			sync x-boom <> gsr {
 				clip not (= 0 mod 8 p)
@@ -410,7 +410,7 @@ phase 0
 #{
 phase 0
 	saction 0
-		dbossexplode (lerp 0 1 t red rgb 1 1 1) red
+		dbossexplode lerp(0, 1, t, red, rgb 1 1 1) red
 		position 0 20
 		wait 5
 		shift-phase

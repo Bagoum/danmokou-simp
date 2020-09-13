@@ -227,7 +227,7 @@ phase 38
 			bindLR
 			color { red pink }
 		} pather 1 0.5 tprot rx 
-			lerpt3 (0 0.2 0.4 0.6) 18 3 14
+			lerpt3 (0, 0.2, 0.4, 0.6, 18, 3, 14)
 			lerpt 0.1 0.5
 				+ 90 * &lr + 14 * 10 p
 				+ 90 * &lr + 180 + -36 * 24 p
@@ -241,7 +241,7 @@ phase 0
 	saction 0
 		move-target 3 io-sine cy 0
 		dialogue simp.dialogue.ex.2
-		dbossexplode (lerp 0 1 t red pink) red
+		dbossexplode lerp(0, 1, t, red, pink) red
 		position 0 20
 		shift-phase
 #}

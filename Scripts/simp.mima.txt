@@ -783,7 +783,7 @@ phase 42
 
 ##11
 <!> type non `Starry Night: The Andromeda Revolving` #{
-<!> hp 21000
+<!> hpi 21000 2
 <!> root 0 2
 phase 34
     action block 0

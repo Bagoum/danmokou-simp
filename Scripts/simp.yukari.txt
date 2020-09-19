@@ -45,10 +45,10 @@ phase 0
 ##2
 <!> bosscutin
 <!> type non `Rabenflug: Flight-Path of the Crow Intoxicated on Lunar Wine` #{
-<!> hpi 20000 2
+<!> hpi 19000 2
 <!> root 0 1.5
 <!> showlives 5
-phase 27
+phase 31
     action block 0
 		async lightning-*/w <140> gir2d dl 720 _ <> {
 		} gcr2 24 6 <-20> {
@@ -88,10 +88,10 @@ phase 27
 
 ##3
 <!> type spell `Hunter's Rune: Sky Burial` #{
-<!> hpi 22000 1
+<!> hpi 24000 2
 <!> root 0 1.5
 <!> showlives 5
-phase 26
+phase 36
 	action block 0
 		$power1
 		

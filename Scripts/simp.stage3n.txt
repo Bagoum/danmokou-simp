@@ -5,7 +5,7 @@ pattern { bgm {
 } }
 phase 0
 	action block 0
-		shift-phase-to 2
+		shift-phase-to 3
 		
 
 !{ mw(source, t1, t2, loc1, loc2, hp, fire)
@@ -56,14 +56,15 @@ summonr null cy -8
 ##1
 phase 0
 	saction 0
-		~ _ 4 dangerbot
 		stage-announce
 		shift-phase
 
 ## 2
 <!> stage
-phase 27 #{
+phase 29 #{
 	action block 0
+		dangerbot
+	action block 2
 		$fliplrb(ellipse-green/w, ellipse-teal/b)
 		$fliplrb(ellipse-yellow/w, ellipse-orange/b)
 		sync ifairy5 <> $mw12(cy -6, cy -3, cy -6,
@@ -92,7 +93,7 @@ summonr rvtp %root tprot %vel
 	} gsr2 2 <120> {
 		center
 	} s tprot px lerpt 0.5 0.8 3 1.4
-	{ hp 750 }
+	{ hp 550 }
 
 !}
 

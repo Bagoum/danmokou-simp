@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	action block 0
-		shift-phase-to 11
+		shift-phase-to 10
 	
 
 !{ power1()
@@ -485,11 +485,18 @@ phase 30
 
 
 ##11 -- almost okuu
-<!> type timeout `No Growth, No Reduction` #{
+<!> type spell `No Growth, No Reduction` #{
 <!> root 0 2
+<!> hpi 28000 4
 phase 37
 	action block 0
 		pool-control { { star-* sun-* lstar-* } } cullrad 10
+		gtr {
+			delay 3s
+			wt	5s _
+			wait-child
+			bindLR
+		} move-target 4 io-sine pxy * &lr rand 1 1.2 y
 		timer restart pt
 !!{ dx	2.1
 !!{ spd	lerp 0 27 timersec(pt) 0.45 0.7

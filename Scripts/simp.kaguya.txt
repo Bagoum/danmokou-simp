@@ -49,7 +49,7 @@ phase 0
 ##2
 <!> bosscutin
 <!> type non `Sign of Indolence: Sleeping Through Midday` #{
-<!> hp 16000
+<!> hpi 16000 3
 <!> root 0 1.5
 phase 28
     action block 0

@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameIdentifier: Spirits in Memetic Paradise
   gameVersion:
-    major: 1
-    minor: 6
-    patch: 0
+    major: 2
+    minor: 0
+    patch: 3
   mainMenu: {fileID: 11400000, guid: 977bd9744ba2d3a42a39a6092cb8e0e5, type: 2}
   replaySaveMenu: {fileID: 11400000, guid: 4eb8b66bd76d4d94fa90176835284503, type: 2}
   unitScene: {fileID: 11400000, guid: 060a74326d15dc94db23e8e4878641e5, type: 2}
@@ -26,8 +26,6 @@ MonoBehaviour:
   exCampaign: {fileID: 11400000, guid: 29d8e1b38a50bdc4dbdbafd33095f788, type: 2}
   dayCampaign: {fileID: 0}
   defaultTransition: {fileID: 11400000, guid: c8577b9207247ff4b92b5c2e2cc31ec0, type: 2}
-  shots:
-  - {fileID: 11400000, guid: 94c9dbd65f23dec46894ae6f01f35d23, type: 2}
   dialogue:
   - {fileID: 11400000, guid: 61ec3aa170f0d4f4981fc1a306cfe2e6, type: 2}
   bossMetadata:

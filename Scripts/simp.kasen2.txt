@@ -35,13 +35,13 @@ phase 0
 ## 2
 <!> bosscutin
 <!> type non `Flowering Seal: Rooted in the Earth and Reaching for the Moon` #{
-<!> hpi 16000 2
+<!> hpi 16000 4
 <!> root 0 2
 phase 36
 	action block 0
 		$power1
 	action block 1.5
-		async lightning-yellow/ <> gcr2 /i ^ dl 0.4 (lerpt 0 4 240 160) _ <> {
+		async lightning-yellow/ <> gcr2 /i ^ dl 0.4 (lerpt 0 3 240 160) _ <> {
 			frv2	a	+ -90 sine 4p 30 t
 			root cy 5
 			sfx x-lightning
@@ -83,7 +83,7 @@ phase 36
 !!{ per 5
 			lerpsmooth out-sine 0 5 t (* 0.04 p1) (+ * 0.53 p1 sine $per 0.5 + t * p1 / $per 2)
 			$angle
-		async lightning-red/ <> gir2 /i ^ dl 0.25 lerpt 0 7 240 140 _ <> {
+		async lightning-red/ <> gir2 /i ^ dl 0.25 lerpt 0 5 240 140 _ <> {
 			sfx x-lightning
 		} gcr2 24 6 <;1.4:> {
 			root pxy * pm1 &pi -6 4

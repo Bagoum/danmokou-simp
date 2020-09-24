@@ -42,28 +42,6 @@ z
 z
 . `I left Eientei and weaved through the thickest clusters of the forest, heading towards the lake near my hut.`
 z
-if1cc 
-set 
-{
-. `By the lakeside was a single figure, masked by long robes.`
-z
-. `"Mokoooou! Help me! I can't catch anything!"`
-z
-. `"Kaguya?! What are you doing here?! And why do you have my fishing rod?!"`
-z
-. `A challenge? No, we had a duel scheduled fairly soon. There was no reason for her to one-sidedly push the date forward. A surprise attack, then? No, she was too vulnerable in this situation.`
-z
-. `"You said you wanted to go fishing, so I was waiting for you! I was going to get a head start, but it turns out I'm pretty bad at this..."`
-z
-. `Well, whatever. 
-"If you can't fish, then you'll just have to learn.
-Sit by my side and watch closely."`
-z
-. `(Good End! Congrats! Make sure to play the Extra stage!)`
-z
-} 
-set 
-{
 . `But by the time I reached the lake, the nightbugs had already begun their disorganized, yet somehow harmonious, rehearsal. 
 I screwed up. It's too late to fish today.`
 z
@@ -85,7 +63,5 @@ z
 z
 . `(Bad End! Try for a 1CC next time!)`
 z
-}
-
 
 

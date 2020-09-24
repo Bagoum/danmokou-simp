@@ -93,7 +93,7 @@ phase 36
 			postloop rv2.ry *=f -1
 		} gsr { clip & = p 0 = &pi 1 } { 
 			pather 1 0.7 tprot px lerpt3(0.3, 0.5, 0.9, 1.5, 8, 2, 6) { high s 2 }
-			color glaser-red/b laser null 2.4 0 { hueshift 90 }
+			color glaser-red/b laser null 2.4 0 { hueshift(* 90 t) }
 		}
 #}
 

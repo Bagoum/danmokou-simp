@@ -68,7 +68,7 @@ phase 28
 				target a Lplayer
 			} pather 3 3 tprot
 				ss 1.5 dcircle * &itr 2 1 t
-				{ hueshift 180 }
+				{ hueshift(* 180 t) }
 			async glcircle-*/w <> gcr2 30 1 <;:-5p> {
 				clip	not divby $per (+ -1 + / $per 2 p)
 				sfx	x-fire-burst-2
@@ -217,7 +217,7 @@ phase 30
 				} color glaser-*/ gsr {
 					colorf { blue green } &lr
 				} laser null 0.5 1 {
-						hueshift 240
+						hueshift(* 240 t)
 						s 0.4 
 					}
 				gcr2 24 3 <24> {
@@ -285,7 +285,7 @@ phase 32
 			} gsr2 2 <> { 
 				p add
 			} laser null 0.5 (- 4.8 * 0.17 p1) {
-				hueshift 360
+				hueshift(* 360 t)
 				high
 				sfx2	x-laser-fire x-laser-on
 				rotate	@0 pang lerpu 0 (- 3.5 * 12f p1) t * pm1 p2 (+ -80 * -10 p1) 0

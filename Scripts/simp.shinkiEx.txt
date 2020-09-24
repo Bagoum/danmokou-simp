@@ -174,7 +174,7 @@ phase 34
 				dsfx
 				straight -90
 				s 2
-				hueshift -40
+				hueshift(* -40 t)
 			}
 			gsr {
 				root cx -6
@@ -182,7 +182,7 @@ phase 34
 			} laser null 1.35 0.15 {
 				dsfx
 				s 2
-				hueshift -40
+				hueshift(* -40 t)
 			}
 		}
 		$power1

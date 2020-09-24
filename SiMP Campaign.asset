@@ -15,6 +15,9 @@ MonoBehaviour:
   startLives: 8
   key: simp.main
   shortTitle: SiMP Main
+  endings:
+  - {fileID: 11400000, guid: ee061571258144046846fbe13456a608, type: 2}
+  - {fileID: 11400000, guid: 7f65b4581454d4c4ea4ac16e73a06754, type: 2}
   players:
   - {fileID: 11400000, guid: 794bb6976ccc5104a88d12a1c93fa9fd, type: 2}
   stages:
@@ -23,7 +26,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 66e5bf4771be67a4b9a41266427756ca, type: 2}
   - {fileID: 11400000, guid: bcc32a73896be0d46bfb974e9868ca01, type: 2}
   - {fileID: 11400000, guid: 78cdc667a3de5bc4c9a160339af30f6e, type: 2}
-  - {fileID: 11400000, guid: a6f1ad5cb1334854cae255611f8569c5, type: 2}
   practiceBosses:
   - {fileID: 11400000, guid: 5d6d4963e0f6b7544a9b64095bb1e76d, type: 2}
   - {fileID: 11400000, guid: 99cd8b998316e6a4eae1f8894a706193, type: 2}

@@ -75,6 +75,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ab1e7964542a5b14ea6113eb50c0f46a, type: 2}
   - {fileID: 11400000, guid: 209dcf1a453903d41a2fff56885fa33b, type: 2}
   - {fileID: 11400000, guid: 7d1138de9ee25e14ea3511ee4271d517, type: 2}
+  items: {fileID: 11400000, guid: 18e6de6e951f4114e8823af9e617bff7, type: 2}
   summonables:
   - {fileID: 11400000, guid: 38afc312ddb0ac242b8cfb301b1b4237, type: 2}
   - {fileID: 11400000, guid: 0d4a9136117bbb444bb6a20b70a5e613, type: 2}

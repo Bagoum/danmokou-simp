@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	action block 0
-		shift-phase-to 6
+		shift-phase-to 1
 	
 	
 !!{ me reimu
@@ -254,10 +254,12 @@ phase 37
 		} saction 0
 			$power1
 			crosshair crosshair Lplayer 0 1.5 ploc 0
-			~ async amulet-black* <> gcr2 1 60 <> {
+			~ async amulet-black* <> gcr {
+				times(90)
+				wait(/ 0.5s &times)
 				root @0 ploc
 				start rv2.a =f atan - @0 ploc loc
-				preloop rv2.rx =f * 10 (-- / t 60)
+				preloop rv2.rx =f * 15 (-- / t &times)
 			} gsr2 2 <180> {
 				clip < mod 10 &pi - 7 * 0.5 dc
 				bank <>

@@ -17,7 +17,7 @@ phase 0
 	action block 0
 		@ { kaguya keine }
 			position -15 0
-		shift-phase-to 15
+		shift-phase-to 16
 	
 	
 !!{ mimac { black yellow orange green teal blue pink }
@@ -1120,71 +1120,4 @@ phase 0
 
 ///
 
-##1. joint non 3
-<!> type spell `Imperishable Night: Tr-J Extinction` `Starry Night: Sagittarean Reduction` #{
-<!> hp 26000
-<!> hpbar 0.5
-phase 34
-	end
-		clear phase
-		pool-control { { star-* arrow-* keine-* sun-* } } softcullall cwheel
-		behpool-control { { lightning-* } } softcullall cwheel
-    action block 0
-        move 1 tp-nrot easedvhomet in-sine 1 cxy 0 2
-		@ keine
-			move 1 tp-nrot easedvhomet in-sine 1 cxy 4 0
-	action block 0
-		savef firer 0 0
-		@ keine
-			action block 0 :4
-				position 4 0
-				move _ nroffset - polartoxy 4 * 80 t cx 4
-				async lightning-blue/w <0.5;:> gcr2 120 _ <> {
-					while	= @0 firer 1
-					unpause	async lightning-blue/w <;:> idelay 120 pssfx x-lightning gsr2 12 <30> . pather 3 1 tpnrot 
-						* lerp3 0.0 0.2 0.9 1.1 t 8 2 16
-							truerotatelerprate 400 rotify cx 1
-								ss 1 vhome 2 Lbeh mima
-				} noop ## gsr2 12 <30> . pather 3 2 tprot lerp3 0 0.5 1.2 1.6 t cx 6 cx 2 cx 5
-				async keine-red/w <-1;:-60> gcr2 (- 120 * 40 @0 firer) _ <> sfx x-keine  gsr2 5 <30> { 
-					target	a lbeh mima
-				} {
-					 color arrow-blue/w gsr {
-						bank <-0.2;:>
-						t	5
-						preloop {
-							rv2.rx =f + [&brv2].rx * -0.08 hmod 2.5 (--- 5 t)
-							rv2.ry =f + [&brv2].ry  * 0.025 hnmod 2.5 (--- 5 t)
-						}
-					 } s tprot lerpin 0 0.5 cx 5
-					 s tprot lerpin 0 0.5 cx 5
-				}
-		bullet-control persist sun-yellow/b cull > t 10
-		gtr {
-			delay 5
-			wt	120 _
-			wait-child
-			p this
-		} saction 0
-			savef firer 0 1
-			~ crosshair crosshair (superposec 0.5 lbeh mima lbeh keine) 2 3 ploc p
-			savev2 mloc 0 loc
-			position 0 0
-			move 3 nroffset lerp 0 0.6 t @0 mloc polar2toxy multiplyx -0.5 xytopolar lbeh keine
-			move 2 tpnrot easedvhomet out-sine 2 cy 3
-			sfx x-metal
-			sync sun-yellow/b <> gsr { root @ ploc p } ss - 0.6 * 0.06 t null
-			savef firer 0 0
-			~ move 8 nroffset ease io-sine 8 px sine 4 2 t
-			async star-*/w <3.5;:> gcr2 1 9s <-0.001;:0.8> {
-				root @ ploc p
-				sfxif  x-fire-star-2 (divby 12 t)
-			} gsr2 11 <30> {
-					colorf	{ pink teal black } if (> t 2) 2 t
-					bank	<0.7;:180>
-				} sdd starrot2 tprot cx 1.2
-#}
-	
 
-		
-		

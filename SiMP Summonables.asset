@@ -18,3 +18,8 @@ MonoBehaviour:
     - name: keine
       prefab: {fileID: 5188976871280437473, guid: 3f74c05d54dfae94ab79f9fa4ea75188,
         type: 3}
+  - groupTitle: namecards
+    prefabs:
+    - name: namecard-seija
+      prefab: {fileID: 4801741592690297299, guid: ac807f9482f9ab043bc39ab055b68ff6,
+        type: 3}

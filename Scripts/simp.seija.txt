@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	action block 0
-		shift-phase-to 2
+		shift-phase-to 1
 	
 !!{ me seija
 !{ 
@@ -32,9 +32,9 @@ sync powerup1 <> powerup2
 
 ##1
 <!> dialogue #{
+<!> roott(3, 0, 1)
 phase 0
 	saction 0
-		move-target 3 io-sine cy 1
 		dialogue simp.dialogue.3.3
 		shift-phase
 #}

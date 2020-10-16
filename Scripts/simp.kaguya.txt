@@ -5,10 +5,11 @@ pattern {
 		2	simp.2.kaguya
 		7	simp.2.stage
 	}
+	set-ui-from(2)
 }
 phase 0
 	action block 0
-		shift-phase-to 2
+		shift-phase-to 1
 	
 	
 !!{ colors { blue purple pink red orange yellow green teal black  }

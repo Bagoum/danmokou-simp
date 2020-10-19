@@ -12,6 +12,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 020ffaf7bd5c48dba990b830dbece245, type: 3}
   m_Name: Mokou
   m_EditorClassIdentifier: 
+  leftStands2:
+    defaultRoot:
+      offset: {x: 0, y: 0}
+      sprite: {fileID: 0}
+    normal:
+      sprites: []
+    angry:
+      sprites: []
+    happy:
+      sprites: []
+    worry:
+      sprites: []
+    cry:
+      sprites: []
+    surprise:
+      sprites: []
+    special:
+      sprites: []
+  rightStands2:
+    defaultRoot:
+      offset: {x: 0, y: 0}
+      sprite: {fileID: 0}
+    normal:
+      sprites:
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 0}
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 21300000, guid: 7f212f63d984b264587b13ac678e03b5, type: 3}
+    angry:
+      sprites:
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 0}
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 21300000, guid: 02e7af1343c2e6649bc0e1fc93ccc6fe, type: 3}
+    happy:
+      sprites:
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 0}
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 21300000, guid: 5c2f658893dab4b4093ac6b544b04afa, type: 3}
+    worry:
+      sprites:
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 0}
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 21300000, guid: 7722580209ee53748871da18239b2e43, type: 3}
+    cry:
+      sprites:
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 0}
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 21300000, guid: f6183f452097566478603669bc3f0579, type: 3}
+    surprise:
+      sprites:
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 0}
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 21300000, guid: 26fe9045b5ef246408ec32950e14c74a, type: 3}
+    special:
+      sprites: []
   leftStands:
     normal: {fileID: 0}
     angry: {fileID: 0}

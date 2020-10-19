@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	action block 0
-		shift-phase-to 1
+		shift-phase-to 2
 	
 	
 !!{ me reimu
@@ -412,6 +412,7 @@ phase 0
 #{
 phase 0
 	saction 0
+		position 0 0
 		dbossexplode lerp(0, 1, t, red, rgb 1 1 1) red
 		position 0 20
 		wait 5

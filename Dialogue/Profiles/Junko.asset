@@ -12,6 +12,88 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 020ffaf7bd5c48dba990b830dbece245, type: 3}
   m_Name: Junko
   m_EditorClassIdentifier: 
+  leftStands2:
+    defaultRoot:
+      useDefaultOffset: 0
+      offset: {x: 0, y: 0}
+      sprite: {fileID: 0}
+    defaultOffset: {x: 0, y: 0}
+    normal:
+      sprites: []
+    angry:
+      sprites: []
+    happy:
+      sprites: []
+    worry:
+      sprites: []
+    cry:
+      sprites: []
+    surprise:
+      sprites: []
+    special:
+      sprites: []
+  rightStands2:
+    defaultRoot:
+      useDefaultOffset: 0
+      offset: {x: 0, y: 238}
+      sprite: {fileID: 21300000, guid: ab5547991d654cd4cbd8849525780b73, type: 3}
+    defaultOffset: {x: 66, y: 555}
+    normal:
+      sprites:
+      - useDefaultOffset: 0
+        offset: {x: 0, y: 0}
+        sprite: {fileID: 0}
+      - useDefaultOffset: 1
+        offset: {x: 0, y: 0}
+        sprite: {fileID: 21300000, guid: 5d2a0eee136f3f248855aee3c8d51bc0, type: 3}
+    angry:
+      sprites:
+      - useDefaultOffset: 0
+        offset: {x: 0, y: 0}
+        sprite: {fileID: 0}
+      - useDefaultOffset: 1
+        offset: {x: 0, y: 0}
+        sprite: {fileID: 21300000, guid: 6bb4677644385f94ab24420cdda5340e, type: 3}
+    happy:
+      sprites:
+      - useDefaultOffset: 0
+        offset: {x: 0, y: 0}
+        sprite: {fileID: 0}
+      - useDefaultOffset: 1
+        offset: {x: 0, y: 0}
+        sprite: {fileID: 21300000, guid: 1608a5b3096386d4ebdc6a1f69f206ae, type: 3}
+    worry:
+      sprites:
+      - useDefaultOffset: 0
+        offset: {x: 0, y: 0}
+        sprite: {fileID: 0}
+      - useDefaultOffset: 1
+        offset: {x: 0, y: 0}
+        sprite: {fileID: 21300000, guid: 6f02ee82ecea80542817a25f6db2d29c, type: 3}
+    cry:
+      sprites:
+      - useDefaultOffset: 0
+        offset: {x: 0, y: 0}
+        sprite: {fileID: 0}
+      - useDefaultOffset: 1
+        offset: {x: 0, y: 0}
+        sprite: {fileID: 21300000, guid: 43af08ead03e8324d8399ba929a12dad, type: 3}
+    surprise:
+      sprites:
+      - useDefaultOffset: 0
+        offset: {x: 0, y: 0}
+        sprite: {fileID: 0}
+      - useDefaultOffset: 1
+        offset: {x: 0, y: 0}
+        sprite: {fileID: 21300000, guid: 0a964aee789a3bb458e8931b203470b5, type: 3}
+    special:
+      sprites:
+      - useDefaultOffset: 0
+        offset: {x: 0, y: 0}
+        sprite: {fileID: 0}
+      - useDefaultOffset: 1
+        offset: {x: 1, y: 3}
+        sprite: {fileID: 21300000, guid: 36fda55e365bcc840b3a80b6bf8754f3, type: 3}
   leftStands:
     normal: {fileID: 0}
     angry: {fileID: 0}

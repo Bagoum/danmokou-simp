@@ -12,6 +12,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 020ffaf7bd5c48dba990b830dbece245, type: 3}
   m_Name: Keine
   m_EditorClassIdentifier: 
+  leftStands2:
+    defaultRoot:
+      offset: {x: 0, y: 0}
+      sprite: {fileID: 0}
+    normal:
+      sprites: []
+    angry:
+      sprites: []
+    happy:
+      sprites: []
+    worry:
+      sprites: []
+    cry:
+      sprites: []
+    surprise:
+      sprites: []
+    special:
+      sprites: []
+  rightStands2:
+    defaultRoot:
+      offset: {x: 0, y: 0}
+      sprite: {fileID: 0}
+    normal:
+      sprites:
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 0}
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 21300000, guid: eb81b737c2702454e89319b895677215, type: 3}
+    angry:
+      sprites:
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 0}
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 21300000, guid: fa58177a08e710949b4a89e7226c1875, type: 3}
+    happy:
+      sprites:
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 0}
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 21300000, guid: 62991940b2290f64b976bffe74a76cab, type: 3}
+    worry:
+      sprites:
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 0}
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 21300000, guid: a3cdd6b1725d8b5499a6c7cd6495c6dd, type: 3}
+    cry:
+      sprites:
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 0}
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 21300000, guid: 8de4bdcb155ad6247ac5cff2c3131847, type: 3}
+    surprise:
+      sprites:
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 0}
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 21300000, guid: 9a9392c610ed5d640990e353e8364bd6, type: 3}
+    special:
+      sprites:
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 0}
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 21300000, guid: fa58177a08e710949b4a89e7226c1875, type: 3}
   leftStands:
     normal: {fileID: 0}
     angry: {fileID: 0}

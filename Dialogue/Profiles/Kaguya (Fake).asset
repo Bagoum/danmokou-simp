@@ -12,6 +12,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 020ffaf7bd5c48dba990b830dbece245, type: 3}
   m_Name: Kaguya (Fake)
   m_EditorClassIdentifier: 
+  leftStands2:
+    defaultRoot:
+      offset: {x: 0, y: 0}
+      sprite: {fileID: 0}
+    normal:
+      sprites: []
+    angry:
+      sprites: []
+    happy:
+      sprites: []
+    worry:
+      sprites: []
+    cry:
+      sprites: []
+    surprise:
+      sprites: []
+    special:
+      sprites: []
+  rightStands2:
+    defaultRoot:
+      offset: {x: 0, y: 0}
+      sprite: {fileID: 0}
+    normal:
+      sprites:
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 0}
+      - offset: {x: 0, y: 0}
+        sprite: {fileID: 21300000, guid: 3e7db4e049b48794c818d2c56536bda8, type: 3}
+    angry:
+      sprites: []
+    happy:
+      sprites: []
+    worry:
+      sprites: []
+    cry:
+      sprites: []
+    surprise:
+      sprites: []
+    special:
+      sprites: []
   leftStands:
     normal: {fileID: 0}
     angry: {fileID: 0}
@@ -19,6 +59,7 @@ MonoBehaviour:
     worry: {fileID: 0}
     cry: {fileID: 0}
     surprise: {fileID: 0}
+    special: {fileID: 0}
   rightStands:
     normal: {fileID: 21300000, guid: 3e7db4e049b48794c818d2c56536bda8, type: 3}
     angry: {fileID: 0}
@@ -26,6 +67,7 @@ MonoBehaviour:
     worry: {fileID: 0}
     cry: {fileID: 0}
     surprise: {fileID: 0}
+    special: {fileID: 0}
   icons:
     normal: {fileID: 21300000, guid: 0ed53bb80cca45d449bac60017b7acc2, type: 3}
     angry: {fileID: 0}
@@ -33,6 +75,7 @@ MonoBehaviour:
     worry: {fileID: 0}
     cry: {fileID: 0}
     surprise: {fileID: 0}
+    special: {fileID: 0}
   displayName: ???
   key: kaguya.fake
   speakSFX: x-bubble-3

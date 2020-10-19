@@ -12,6 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 020ffaf7bd5c48dba990b830dbece245, type: 3}
   m_Name: Narrator
   m_EditorClassIdentifier: 
+  leftStands2:
+    defaultRoot:
+      offset: {x: 0, y: 0}
+      sprite: {fileID: 0}
+    normal:
+      sprites: []
+    angry:
+      sprites: []
+    happy:
+      sprites: []
+    worry:
+      sprites: []
+    cry:
+      sprites: []
+    surprise:
+      sprites: []
+    special:
+      sprites: []
+  rightStands2:
+    defaultRoot:
+      offset: {x: 0, y: 0}
+      sprite: {fileID: 0}
+    normal:
+      sprites: []
+    angry:
+      sprites: []
+    happy:
+      sprites: []
+    worry:
+      sprites: []
+    cry:
+      sprites: []
+    surprise:
+      sprites: []
+    special:
+      sprites: []
   leftStands:
     normal: {fileID: 0}
     angry: {fileID: 0}
@@ -19,6 +55,7 @@ MonoBehaviour:
     worry: {fileID: 0}
     cry: {fileID: 0}
     surprise: {fileID: 0}
+    special: {fileID: 0}
   rightStands:
     normal: {fileID: 0}
     angry: {fileID: 0}
@@ -26,6 +63,7 @@ MonoBehaviour:
     worry: {fileID: 0}
     cry: {fileID: 0}
     surprise: {fileID: 0}
+    special: {fileID: 0}
   icons:
     normal: {fileID: 21300000, guid: 081c9bad6640e8d47a4209bb22f1ff4f, type: 3}
     angry: {fileID: 0}
@@ -33,6 +71,7 @@ MonoBehaviour:
     worry: {fileID: 0}
     cry: {fileID: 0}
     surprise: {fileID: 0}
+    special: {fileID: 0}
   displayName: Narrator
   key: narrator
   speakSFX: x-bubble-2

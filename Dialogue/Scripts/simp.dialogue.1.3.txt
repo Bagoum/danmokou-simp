@@ -10,6 +10,7 @@ slc
 . `Same here. Keine told me to get the entire story from you.`
 z
 srce _
+namecard namecard-kasen
 . `Sure. Although there really isn't that much more than what I told her last night.`
 z
 .`A few weeks back, some fairies were searching around the Hakurei shrine, and happened upon Reimu's yin-yang orbs.`
@@ -35,7 +36,7 @@ z
 slce _
 . `Alright. If that's all, I should go find Yukari, right? Can you point me in the right direction?`
 z
-srce cry
+srce worry
 . `Actually, I need to ask you something first.
 How did you find this place?`
 z

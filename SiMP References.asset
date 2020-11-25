@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d7768018aff40589017a165e079b3c1, type: 3}
   m_Name: SiMP References
   m_EditorClassIdentifier: 
-  gameIdentifier: Spirits in Memetic Paradise
+  gameIdentifier: SiMP
   gameVersion:
-    major: 2
-    minor: 0
-    patch: 3
+    major: 3
+    minor: 1
+    patch: 4
   mainMenu: {fileID: 11400000, guid: 977bd9744ba2d3a42a39a6092cb8e0e5, type: 2}
   replaySaveMenu: {fileID: 11400000, guid: 4eb8b66bd76d4d94fa90176835284503, type: 2}
-  unitScene: {fileID: 11400000, guid: 060a74326d15dc94db23e8e4878641e5, type: 2}
+  defaultMenuBackground: {fileID: 6614173089345499342, guid: 56da452ec6a98284295330ef47ecf1c1,
+    type: 3}
+  unitScene: {fileID: 11400000, guid: f6d073d9562719741ac86ec620f65354, type: 2}
   tutorial: {fileID: 11400000, guid: e027ad7aef4a8f64b9c01607748714d4, type: 2}
   miniTutorial: {fileID: 11400000, guid: fb36de3b12e94e04d9e76959a8887586, type: 2}
   endcard: {fileID: 11400000, guid: 8d6f4f35b7d2da942a254e43329ca03c, type: 2}
@@ -28,10 +30,11 @@ MonoBehaviour:
   dayCampaign: {fileID: 0}
   defaultTransition: {fileID: 11400000, guid: c8577b9207247ff4b92b5c2e2cc31ec0, type: 2}
   bounds:
-    left: -5
-    right: 5
+    left: -3.6
+    right: 3.6
     top: 4.1
     bot: -4.5
+    center: {x: -1.9, y: 0}
   dialogue:
   - {fileID: 11400000, guid: 61ec3aa170f0d4f4981fc1a306cfe2e6, type: 2}
   bossMetadata:
@@ -68,7 +71,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e4f2342ee3ea32c4a96302013b10c69b, type: 2}
   tracks:
   - {fileID: 11400000, guid: a6ff62661b444af41a43f397ba8d2779, type: 2}
-  - {fileID: 11400000, guid: 57741b93b464a784196f81a1cc50b6ca, type: 2}
   - {fileID: 11400000, guid: 747d7e582cbb2364998b53986e7e7685, type: 2}
   - {fileID: 11400000, guid: 31d3b25ba58c7244aa7bff9a60b9f407, type: 2}
   - {fileID: 11400000, guid: 489273bb6ef4e3847abc35b4662e4c92, type: 2}
@@ -80,6 +82,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ab1e7964542a5b14ea6113eb50c0f46a, type: 2}
   - {fileID: 11400000, guid: 209dcf1a453903d41a2fff56885fa33b, type: 2}
   - {fileID: 11400000, guid: 7d1138de9ee25e14ea3511ee4271d517, type: 2}
+  - {fileID: 11400000, guid: 2339162d9ceecff4d824aa84b163ef7a, type: 2}
   items: {fileID: 11400000, guid: 18e6de6e951f4114e8823af9e617bff7, type: 2}
   summonables:
   - {fileID: 11400000, guid: 38afc312ddb0ac242b8cfb301b1b4237, type: 2}

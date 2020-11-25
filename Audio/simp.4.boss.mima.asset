@@ -15,7 +15,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 9fd8f62209faaf14fb7e80e0dea61946, type: 3}
   key: simp.4.mima
   title: Haunted Fragments of a Long-Forgotten Past
-  volume: 0.23
+  volume: 0.24
   pitch: 1
   stopOnPause: 0
   loop: 1

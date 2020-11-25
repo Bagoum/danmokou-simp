@@ -14,22 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: {fileID: 6274564262994426332, guid: 2e4cfe2f6f8095747a49bcb45d5dea46, type: 3}
   CardPracticeName: Yukari (Ex)
+  replayNameOverride: 
   stateMachine: {fileID: 4900000, guid: e6752f2cc58aedc4f9f7e8ea873b2ea0, type: 3}
   key: simp.yukari2
+  casualName: 
+  casualNameJP: 
   displayName: Shikumo<br>Midori
   displayTitle: Verdant Fog<br>Overlooking<br>Funeral Prayer
   trackName: "\u7D2B"
-  uiColor: {r: 0.5926142, g: 0, b: 0.6509434, a: 1}
-  uiHPColor: {r: 1, g: 0.8118372, b: 0, a: 1}
-  cardColorR: {r: 0.7647059, g: 0, b: 0.70980394, a: 1}
-  cardColorG: {r: 0.9254902, g: 0.7529412, b: 0, a: 1}
-  cardColorB: {r: 0.6431373, g: 0.09019608, b: 0, a: 1}
-  spellColor1: {r: 0.9372549, g: 0.76513124, b: 0, a: 0.70980394}
-  spellColor2: {r: 0.8018868, g: 0, b: 0.12232151, a: 0.36078432}
-  spellColor3: {r: 0.79263604, g: 0, b: 0.8867924, a: 0.6509804}
   colors: {fileID: 11400000, guid: 149feb9b514a85740b57d74694671283, type: 2}
   rotator: 
   profile:
+    leftSidebar: {fileID: 2800000, guid: 9f9e9d6453a18cd42a54610b9f52950a, type: 3}
+    rightSidebar: {fileID: 2800000, guid: f6d00f000fa70cc46947766cae64e3ad, type: 3}
     image: {fileID: 2800000, guid: 588dac9d75d4260489e6425d3ddf45a0, type: 3}
     offsetX: 0.42
     offsetY: 0.72
@@ -42,7 +39,7 @@ MonoBehaviour:
     type: 2}
   defaultIntoNonTransition: {fileID: 11400000, guid: 76e812b8d330cbe43b048748bf21ae77,
     type: 2}
-  bossCutin: {fileID: 1176886499574204291, guid: 664f8cf416a239247abf86e4e66da994,
+  bossCutin: {fileID: 2426727079670566650, guid: cf37679fe9eb4e14abbf2d9aa35dd246,
     type: 3}
   spellCutins:
   - {fileID: 160725723660692450, guid: 64a979253eb380246aab3a8f93e5d0b6, type: 3}

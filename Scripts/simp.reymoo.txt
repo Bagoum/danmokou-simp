@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	action block 0
-		shift-phase-to 2
+		shift-phase-to 3
 	
 	
 !!{ me reimu
@@ -32,9 +32,10 @@ phase 0
 
 
 ##2
-<!> type timeout `Gods' Throwing Dice` #{
+<!> type spell `Gods' Throwing Dice` #{
 <!> root 0 2.5
-phase 36
+<!> hpi 23000 2
+phase 33
     action block 0
 	event playerinvuln 240
 	gtr {
@@ -48,7 +49,7 @@ phase 36
 			px logsumshiftt -0.5 6.7 (* 1.2 t) (* -1.4 t)
 		0 14 { straight -90 s 1.5 }
 	
-!!{ q + 5 dc
+!!{ q + 6 dc
 	sync gcircle-* <> gsr2 6 <> {
 		root zero
 		color { pink/b pink/ pink/w red/b red/ red/w }
@@ -102,12 +103,12 @@ phase 30
 			stagger 0.24
 			dynamic polar 
 				* 2 t
-				+ * (- -14 dc) &lt sine 2.1 (+ 18 dc) + * 1.1 &lt t
+				+ * (- -11 * 2 dc) &lt sine 2.1 (+ 14 * 2 dc) + * 1.1 &lt t
 		}
 		$power1
 	action block 1.5
 !!{ arpt + dc 2
-		async amulet-* <> gcr2 (lerpt 0 6 360 240) _ angle / 360h $arpt {
+		async amulet-* <> gcr2 (lerpt 0 6 300 200) _ angle / 360h $arpt {
 			p this
 			color { pink/b red/ }
 			sfx x-fire-burst-1
@@ -116,7 +117,7 @@ phase 30
 			t 11
 			bindArrow
 			frv2		rxy * pm1 p * 0.136 (- &aixd 3) * 0.11 &aiyd
-		} s tprot cx 0.6
+		} s tprot cx 0.8
 #}
 
 

@@ -60,6 +60,8 @@ Material:
         m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _BlendFrom: 5
+    - _BlendTo: 10
     - _BumpScale: 1
     - _CircularRadius: 0.1
     - _CircularSpeed: 0
@@ -71,13 +73,14 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _HueShift: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _RotationSpeed: 0
     - _ScrollX: 0
-    - _ScrollY: 0.06
+    - _ScrollY: 0.05
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

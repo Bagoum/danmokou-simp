@@ -23,3 +23,30 @@ MonoBehaviour:
     - name: namecard-seija
       prefab: {fileID: 4801741592690297299, guid: ac807f9482f9ab043bc39ab055b68ff6,
         type: 3}
+    - name: namecard-aya
+      prefab: {fileID: 6996511313717563879, guid: f1bf8dbba6da37649a730e6bb8c4ea06,
+        type: 3}
+    - name: namecard-kaguya
+      prefab: {fileID: 6996511313717563879, guid: ae442c2f8043e594796008b3f4366e77,
+        type: 3}
+    - name: namecard-keine
+      prefab: {fileID: 6996511313717563879, guid: fceaa20a91c84074386c9df344286d74,
+        type: 3}
+    - name: namecard-mima
+      prefab: {fileID: 6996511313717563879, guid: f20549663544233438e2d7bd4019e92e,
+        type: 3}
+    - name: namecard-mokou
+      prefab: {fileID: 6996511313717563879, guid: 6a668b3bd3598a74ca392ea72eca89bb,
+        type: 3}
+    - name: namecard-shinki
+      prefab: {fileID: 6996511313717563879, guid: 6ab190164fa2edc41b24ea76bd9737c4,
+        type: 3}
+    - name: namecard-yukari
+      prefab: {fileID: 6996511313717563879, guid: aec0bf21c1274a74f99482a0408c6438,
+        type: 3}
+    - name: namecard-kasen
+      prefab: {fileID: 6996511313717563879, guid: e74ec7ea22d2c9b40801d0a95aee976e,
+        type: 3}
+    - name: namecard-reimu
+      prefab: {fileID: 6996511313717563879, guid: f6c186a06b4b5d6428b58405a082d402,
+        type: 3}

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: SiMP StageExtra Stage
   m_EditorClassIdentifier: 
   sceneConfig: {fileID: 11400000, guid: 965b34bdd4c15e94a99008fad0ef4771, type: 2}
-  stateMachine: {fileID: 4900000, guid: 82666703aa8886a4fb6f26c229aa338f, type: 3}
+  stateMachine: {fileID: 4900000, guid: 664c7dc0b14995b4da4b0859712a3f23, type: 3}
   description: Deicide is for the Faithful
   stageNumber: Ex
   defaultSuicideStyle: triangle-pink/
+  practiceable: 1

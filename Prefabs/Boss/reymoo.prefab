@@ -12,14 +12,24 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6003014192476353335, guid: de476e8b7e8ae2b47a089273d027f53f,
+    - target: {fileID: 4823259105108341091, guid: de476e8b7e8ae2b47a089273d027f53f,
         type: 3}
-      propertyPath: spellCircle
-      value: 
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4823259105108341091, guid: de476e8b7e8ae2b47a089273d027f53f,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4823259105108341091, guid: de476e8b7e8ae2b47a089273d027f53f,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6003014192476353335, guid: de476e8b7e8ae2b47a089273d027f53f,
         type: 3}
-      propertyPath: healthbarSprite
+      propertyPath: spellCircle
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6003014192476353335, guid: de476e8b7e8ae2b47a089273d027f53f,
@@ -32,6 +42,18 @@ PrefabInstance:
       propertyPath: distorter
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6003014192476353335, guid: de476e8b7e8ae2b47a089273d027f53f,
+        type: 3}
+      propertyPath: nonspellColor.refVal
+      value: 
+      objectReference: {fileID: 11400000, guid: cae71db11a6878c4aa46d8fc198bf1f5,
+        type: 2}
+    - target: {fileID: 6003014192476353335, guid: de476e8b7e8ae2b47a089273d027f53f,
+        type: 3}
+      propertyPath: spellColor.refVal
+      value: 
+      objectReference: {fileID: 11400000, guid: cae71db11a6878c4aa46d8fc198bf1f5,
+        type: 2}
     - target: {fileID: 6003014192476353432, guid: de476e8b7e8ae2b47a089273d027f53f,
         type: 3}
       propertyPath: m_Color.r
@@ -120,7 +142,7 @@ PrefabInstance:
     - target: {fileID: 8369488008355946650, guid: de476e8b7e8ae2b47a089273d027f53f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de476e8b7e8ae2b47a089273d027f53f, type: 3}

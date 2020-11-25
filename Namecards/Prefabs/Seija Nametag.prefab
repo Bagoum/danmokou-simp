@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 4801741592690297297}
   - component: {fileID: 4801741592690297296}
   - component: {fileID: 4801741592690297302}
+  - component: {fileID: -5314196399866226733}
   m_Layer: 5
-  m_Name: Boss Nametag 2
+  m_Name: Seija Nametag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4801741592690297299}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1714704369
   m_SortingLayer: 11
-  m_SortingOrder: -11
+  m_SortingOrder: 7000
   m_Sprite: {fileID: 21300000, guid: f18d512e96e67784297b49d7a9aaf0bf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -97,7 +98,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   behaviorScript: {fileID: 4900000, guid: 6f77f49a95fbae14e930b38b257712fa, type: 3}
   ID: 
-  rotationMethod: 0
   deathEffect: {fileID: 0}
   cullableRadius:
     cullable: 0
@@ -107,15 +107,26 @@ MonoBehaviour:
     CollisionActiveOnInit: 0
     destructible: 0
     grazeEveryFrames: 0
-  animate:
-    method: 0
-    LRRelation: 0
-    UDRelation: 0
-    frames:
-      idleAnim: []
-      rightAnim: []
-      leftAnim: []
-      upAnim: []
-      downAnim: []
-      attackAnim: []
-      deathAnim: []
+  displayer: {fileID: -5314196399866226733}
+--- !u!114 &-5314196399866226733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4801741592690297299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525999232b6d49759c202483542758b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationMethod: 0
+  yPosBopPeriod:
+    useConstant: 1
+    constVal: 0
+    refVal: {fileID: 0}
+  yPosBopAmplitude:
+    useConstant: 1
+    constVal: 0
+    refVal: {fileID: 0}
+  sprite: {fileID: 4801741592690297296}

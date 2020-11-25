@@ -25,6 +25,8 @@ MonoBehaviour:
   colors: {fileID: 11400000, guid: e83c174566855bf419430e8e72dabb67, type: 2}
   rotator: 
   profile:
+    leftSidebar: {fileID: 2800000, guid: 3cc599348e354284cb3e052035774390, type: 3}
+    rightSidebar: {fileID: 2800000, guid: eeda9b1a2f84fda49b544ade0699261b, type: 3}
     image: {fileID: 2800000, guid: b472c6e8d112c65448fcdffaa50673c2, type: 3}
     offsetX: 0.515
     offsetY: 0.686
@@ -37,7 +39,7 @@ MonoBehaviour:
     type: 2}
   defaultIntoNonTransition: {fileID: 11400000, guid: ee89dae89d15f34418474c82d6d3a3ba,
     type: 2}
-  bossCutin: {fileID: 3979773522789506984, guid: e263ebf6b797480479356996c3fa2458,
+  bossCutin: {fileID: 2426727079670566650, guid: da0d72b0151405246972cb9e52d01dba,
     type: 3}
   spellCutins:
   - {fileID: 160725723660692450, guid: a0d43902db95ead47a70227f763ff6a9, type: 3}

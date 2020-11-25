@@ -109,8 +109,8 @@ z
 place l1 kasen
 place r1 yukari
 setstandopacity kasen 0
-fadestandin kasen 1
 setstandopacity yukari 0
+fadestandin kasen 1
 fadestandin yukari 1
 sr yukari
 sl kasen
@@ -169,7 +169,7 @@ z
 srce _
 . `My best guess is that the Hakurei god is involved in the jailbreak. Probably a petty grievance against Reimu.`
 z
-slce cry
+slce surprise
 . `Gods hold grievances against their own shrine maidens? Times have changed...`
 z
 src

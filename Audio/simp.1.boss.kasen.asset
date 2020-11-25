@@ -15,7 +15,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: db1e7b8c971307e4f872aac679ee2415, type: 3}
   key: simp.1.kasen
   title: The Will to Define One's Own Station
-  volume: 0.24
+  volume: 0.23
   pitch: 1
   stopOnPause: 0
   loop: 1

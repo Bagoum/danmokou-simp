@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	action block 0
-		shift-phase-to 3
+		shift-phase-to 2
 	
 
 !{ power1()
@@ -47,9 +47,9 @@ phase 30
 		bullet-control persist sun-* cull > t $sunt
 		pool-control { fireball-* } allowcull false
 	action block 0
-		async fireball-black/b <> gcr2 /i ^ dl 0.5 (lerpt 0 20 120 90) _ <> {
+		async fireball-black/b <> gcr2 /i ^ dl 0.4 (lerpt 0 20 130 100) _ <> {
 			root cy 5
-!!{ vs /i ^ dl 0.4 0.8
+!!{ vs /i ^ dl 0.4 0.9
 			frv2 rx * $vs modh t
 		} gsr2 30 rx $vs {
 			center
@@ -59,9 +59,9 @@ phase 30
 			wait-child 
 			p this
 		} saction 0
-!!{ crosshairt (lerp 0 5 p 3 2)
-			~ _  - $crosshairt 1.5 $power1
-			crosshair crosshair Lplayer 0 $crosshairt sploc 0
+!!{ crosshairt  (lerp 0 5 p 3 lerpd(2.5, 2))
+			~ _  - $crosshairt 1 $power1
+			crosshair crosshair lerpsmooth(out-sine, 0, 59, t, loc, Lplayer) 0.5 $crosshairt sploc 0
 			savef moved 0 0
 			~ async sun-red/w <> gcr2 3 _ <> {
 				sfx	x-boom
@@ -73,7 +73,8 @@ phase 30
 			bullet-control once fireball-pink/b softcull cwheel-pink/ _
 			sync x-boom <> sfx
 			~ shake 1 0.3 smooth smod-010 / x 0.3
-			async lightning-red/ <180> gcr2 10 10 <18>  {
+			async arrowpather-red/w <180> gcr2 10 (+ 7 dc) <>  {
+				spread <170>
 				sfx x-lightning 
 				face v 
 				p this
@@ -81,9 +82,9 @@ phase 30
 				postloop rv2.a *=f -1
 			} gsr {
 				clip & = p 0 = &pi 0
-			} pather 2 1.5 tprot lerpin -0.1 0.5 cx 5 {
-					s 		3
-					sm	async fireball-*/b <> gcr2d ^ dl 0.4 10 _ <> {
+			} pather 1 0.5 tprot lerpin -0.1 0.5 cx 5 {
+					s 		2
+					sm	async fireball-*/b <> gcr2d ^ dl 0.3 11 _ <> {
 						delay 5
 						p this
 						face d
@@ -97,7 +98,7 @@ phase 30
 						}
 					} s polar
 							[&rt].x
-							+ [&rt].y * &lr lssht 0.2 0.5 0 * + 15 * 2 &lr t
+							+ [&rt].y * &lr lssht 0.2 0.8 0 * + 15 * 2 &lr t
 				}
 #}
 
@@ -105,22 +106,22 @@ phase 30
 ## 3 
 <!> type spell `Demon's Scar: Profaned Seething Chaos Serpent` #{
 <!> root 0 1.5
-<!> hpi 22000 2
+<!> hpi 20000 2
 phase 38
 	action block 0
 !!{ seethet 3
 		bullet-control persist sun-* cull > t $seethet
 		bullet-control-sm persist sun-* onlyonce > t * 0.95 $seethet
-			sync fireball-pink/ <> gsr2c * ^ dl 0.7 10 {
+			sync fireball-black/ <> gsr2c * ^ dl 0.6 8 {
 				sfx x-boom
-			} gsr2 5 <> {
+			} gsr2 (+ 4 d3d1) <> {
 				p this
 			} s polar
 			lssht -1 0.3 * 6 t * -1 t
 			+ * 2 p lssht -0.1 1 * 90 t 0
 		bullet-control-sm persist scircle-* onlyonce offscreen loc
 			action block 0 :2
-				sync fireball-red/ <-0.6;:> gsr2c * ^ dl 0.7 14 {
+				sync fireball-red/ <-0.6;:> gsr2c * ^ dl 0.7 12 {
 				} gsr2 3 <0.3;:> {
 				} s tprot px lerpt 0.4 1 0.4 1.6
 				sync sun-pink/ <>  gsr {
@@ -147,11 +148,11 @@ phase 38
 				clip & = &fitr 0 = &pi 1 
 			} guideempty .1 p { pl loc } { } tprot px lerpt 0.5 1.5 2 6
 				{
-					color lightning-red/w pather 0.5 0.3 nroffset @ pl p { 
+					color arrowpather-red/b pather 0.5 0.4 nroffset @ pl p { 
 						high 
-						s 3 
-!!{ d ^ dl 0.5
-						sm	async fireball-black* <> gcr2 /i $d 6 _ <> {
+						s 2 
+!!{ d ^ dl 0.6
+						sm	async fireball-pink* <> gcr2 /i $d 9 _ <> {
 									while onscreen loc
 									p	this
 									face v
@@ -166,7 +167,7 @@ phase 38
 										color /b
 										start rv2.ry =f sine 13h 0.4 + * 13 &fitr / p $d
 									} ss 0.8 tprot polartoxy
-										lerp 0.5 1.7 t 0.2 0.8
+										lerp 0.5 1.7 t 0.2 0.9
 										* 25p / p $d
 								}
 					}
@@ -189,20 +190,20 @@ phase 38
 			bindLR
 			color { red pink }
 		} gsr2 70 <;0.3:> {
-			root px * &lr -6
+			root px * &lr -4
 			center
-!!{ rpt 8
+!!{ rpt 6
 		} gsr2 $rpt <> {
 			p this
 		} s tprot pxy 
-			* &lr * lerp 0 $rpt ++ p 0 1 lerpt 2.5 4 2 -4
+			* &lr * lerp 0 $rpt ++ p 0 1 lerpt 2.5 4 1.3 -3
 			0.4
 !!{ ang	rangesoftmod 30 * 3.2p -m timersec(tmr) 3.5
 		timer restart tmr
-!!{ fireballf /i ^ dl 0.2 lerpt 4 16 150 94
+!!{ fireballf /i ^ dl 0.3 lerpt 4 16 150 94
 		async fireball-red/ <> gcr2 $fireballf _ <> {
 			root cx -6
-!!{ vs /i ^ dl 0.3 0.6
+!!{ vs /i ^ dl 0.4 0.6
 !!{ spacing gsr2 30 ry $vs { center }
 			frv2 ry * $vs modh t
 		} $spacing s tprot cx 1
@@ -218,7 +219,7 @@ phase 38
 		} gsr2 $rpt a / 300 $rpt {
 			center
 		} s tprot cx 4
-		async pather-*/w <> gcr2 30 _ <> {
+		async arrowpather-*/w <> gcr2 30 _ <> {
 			delay 3s
 			frv2	a $ang
 		} gsr2 6 <> {
@@ -241,6 +242,7 @@ phase 0
 	saction 0
 		move-target 3 io-sine cy 0
 		dialogue simp.dialogue.ex.2
+		sync _ <> powerupshiftitem
 		dbossexplode lerp(0, 1, t, red, pink) red
 		position 0 20
 		shift-phase

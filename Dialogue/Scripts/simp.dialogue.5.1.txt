@@ -14,7 +14,7 @@ z
 slc
 . `Ah, that's right, <color=red>[NO ATTRIBUTE]</color> did say something along the lines of you being the Skyf--`
 wait 1
-srce cry
+srce worry
 . `R-returning to the issue at hand, as this incident has turned out to be worse than expected, I thought to provide you an extra trump card.`
 z
 srce _
@@ -24,6 +24,6 @@ z
 slce worry
 . `First a test disguised as a murder, and now a murder disguised as a test? As they say, hermits love having it both ways.`
 z
-srce cry
+srce surprise
 . `Don't say anything unnecessary, Mokou! This is a completely normal event with no strange flags attached!`
 z

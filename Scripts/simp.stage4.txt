@@ -1,5 +1,9 @@
 <#> strict(none)
-pattern { }
+pattern {
+	bgm {
+		1	simp.4.mima
+	}
+}
 phase 0
 	action block 0
 		shift-phase-to 2

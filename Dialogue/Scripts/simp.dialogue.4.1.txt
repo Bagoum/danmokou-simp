@@ -9,6 +9,7 @@ And... one other person?`
 z
 sl keine
 slce angry
+namecard namecard-keine
 . `What do you want, vengeful spirit?!`
 z
 src
@@ -27,7 +28,7 @@ Ahem, uh, if you wish to challenge me, you must capture me first!`
 fadestandout mima 1
 z
 slce surprise
-. `Hey! Get back here!`
+. `Scheiße! Hey! Get back here!`
 fadestandout keine 1
 z
 sl mokou

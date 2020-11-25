@@ -14,22 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: {fileID: 6274564262994426332, guid: 12ab985c2b2abf0419c613bb98fcbe9d, type: 3}
   CardPracticeName: Aya
+  replayNameOverride: 
   stateMachine: {fileID: 4900000, guid: af6b5a45c6905c742935d118f4829e74, type: 3}
   key: simp.aya
+  casualName: 
+  casualNameJP: 
   displayName: Shameimaru<br><size=10>Aya</size>
   displayTitle: Odin's<br>Garrulous<br>Informant
   trackName: "\u6587"
-  uiColor: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
-  uiHPColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
-  cardColorR: {r: 1, g: 1, b: 1, a: 1}
-  cardColorG: {r: 0.8867924, g: 0.1966002, b: 0.30012876, a: 1}
-  cardColorB: {r: 0.19010323, g: 0.20252198, b: 0.4528302, a: 1}
-  spellColor1: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 0.5686275}
-  spellColor2: {r: 0.6981132, g: 0.11525452, b: 0.24082187, a: 0.64705884}
-  spellColor3: {r: 0.114542544, g: 0.13660754, b: 0.735849, a: 0.46666667}
   colors: {fileID: 11400000, guid: 5ebd2d3045839ff4cba23ebafb50e554, type: 2}
   rotator: 
   profile:
+    leftSidebar: {fileID: 2800000, guid: 1fa4f6b8646656944b8c8b22da56df7c, type: 3}
+    rightSidebar: {fileID: 2800000, guid: be13dc74f715e0d45b01d218c39c1c0c, type: 3}
     image: {fileID: 2800000, guid: efd5ac96ec136b64b84dcbe8cfc9ca29, type: 3}
     offsetX: 0.43
     offsetY: 0.728
@@ -42,7 +39,7 @@ MonoBehaviour:
     type: 2}
   defaultIntoNonTransition: {fileID: 11400000, guid: 9b0abf82e07299741a4d64ecd57ff7e6,
     type: 2}
-  bossCutin: {fileID: 1176886499574204291, guid: 3b436ae6bb825504c8d8c16726e3834c,
+  bossCutin: {fileID: 2426727079670566650, guid: af4f40b4b3e089d41904ab766af66aa9,
     type: 3}
   spellCutins:
   - {fileID: 160725723660692450, guid: 8a89e1e02d606c147ad8196276b9a73f, type: 3}

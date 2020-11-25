@@ -14,27 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: {fileID: 6274564262994426332, guid: 33ce4a0ca42ed7e4c98b829e4314bddb, type: 3}
   CardPracticeName: Seija
+  replayNameOverride: 
   stateMachine: {fileID: 4900000, guid: 1b371c9e201e35747911cfdc25a695ce, type: 3}
   key: simp.seija
-  displayName: Kijin<br>Seija
-  displayTitle: Revolutionary<br>Driven by Hate,<br>Criminal<br>Driven by Love
+  casualName: 
+  casualNameJP: 
   trackName: "\u6B63\u90AA"
-  uiColor: {r: 0, g: 0.028045684, b: 0.5294118, a: 1}
-  uiHPColor: {r: 0.52462286, g: 0.36320752, b: 1, a: 1}
-  cardColorR: {r: 0.8396226, g: 0, b: 0.12182774, a: 1}
-  cardColorG: {r: 0.29270786, g: 0.16470589, b: 0.8980392, a: 1}
-  cardColorB: {r: 0.590621, g: 0.06074225, b: 0.8584906, a: 1}
-  spellColor1: {r: 0.5849056, g: 0.06345675, b: 0.1543618, a: 0.6313726}
-  spellColor2: {r: 0.039215695, g: 0.16656838, b: 0.65882355, a: 0.4117647}
-  spellColor3: {r: 0.44517878, g: 0, b: 0.7921569, a: 0.6745098}
   colors: {fileID: 11400000, guid: 2b0cbd0b46a92ad429b425b10ae95074, type: 2}
   rotator: 
+  spellRotator: 
   profile:
-    image: {fileID: 2800000, guid: 851f391dd4e0e7c4b843e930edf92ed7, type: 3}
-    offsetX: 0.45
-    offsetY: 0.03
-    zoom: 5
-  defaultNonBG: {fileID: 5180723301924424041, guid: 383decd6574239c4880e63af32094075,
+    leftSidebar: {fileID: 2800000, guid: 111a06e0e902af749aa902fd7831b3ae, type: 3}
+    rightSidebar: {fileID: 2800000, guid: 8298eb34b11afbe478b7b0cb6974cd0d, type: 3}
+  defaultNonBG: {fileID: 5180723301924424041, guid: 966faf05bff6e584fa9ffd10a7cfe3a2,
     type: 3}
   defaultSpellBG: {fileID: 5180723301924424041, guid: 7111b51df44de5b4fbde84d042b2f9a4,
     type: 3}
@@ -42,7 +34,7 @@ MonoBehaviour:
     type: 2}
   defaultIntoNonTransition: {fileID: 11400000, guid: 23d9a9fbcd555004c9905acab3bc372a,
     type: 2}
-  bossCutin: {fileID: 4873451931870563927, guid: a3387276e380f904eb76bcecaec7335e,
+  bossCutin: {fileID: 2426727079670566650, guid: 8bbfc537408ee7848b7ed9922a93cf8f,
     type: 3}
   spellCutins:
   - {fileID: 160725723660692450, guid: fbd3f4d93e6f0e94aa1f9c4f3cc4da2a, type: 3}

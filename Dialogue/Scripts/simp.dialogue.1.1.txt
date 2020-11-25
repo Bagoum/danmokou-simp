@@ -10,14 +10,15 @@ slce worry
 . `...Who are you talking to?`
 z
 srce surprise
-. `Huh? Fujiwara?! Where's Reimu?`
+namecard namecard-aya
+. `Quoi? Fujiwara?! Where's Reimu?`
 z
 slc
 . `What makes you think Reimu would be out here in the middle of nowhere?`
 z
 srce angry
 . `Don't try to hide it, Fujiwara! I know there's an incident going on!
-Keine, the hermit, and now you... how long are you going to stonewall my investigation?`
+Keine, the hermit, et tu aussi... how long are you going to stonewall my investigation?`
 z
 srce special
 . `But, if it's you going to the hermit's place instead of Reimu, that's actually pretty newsworthy, isn't it? Ayayaya, this is a scoop!`
@@ -32,7 +33,7 @@ slce _
 . `Don't push your luck, little crow. I still have yakitori to prepare for next week's event at the mountain shrine.`
 z
 srce worry
-. `Yakitori, eh?`
+. `Yakitori, c'est le cas?`
 z
 slce angry
 . `Got it? Then scram. Go buy some new crayons while you're waiting for the news to drop.`

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: SiMP Stage5 Stage
   m_EditorClassIdentifier: 
   sceneConfig: {fileID: 11400000, guid: c88892463aff54e46bbf883f6cb7f77d, type: 2}
-  stateMachine: {fileID: 4900000, guid: 8b6f4907d53b0644ca1bf0f7e619eb51, type: 3}
+  stateMachine: {fileID: 4900000, guid: 126e7a3e99b3f674abd91b39c5ef955a, type: 3}
   description: Yesterday's Doubts at Today's Twilight
   stageNumber: 5
   defaultSuicideStyle: triangle-black/
+  practiceable: 1

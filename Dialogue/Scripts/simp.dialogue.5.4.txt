@@ -58,6 +58,7 @@ place r1 reimu
 setemote reimu angry
 setstandopacity reimu 0
 fadestandin reimu 0.4
+namecard namecard-reimu
 . `Mima, aided by Mokou, Kaguya, and even Kasen's pets.
 I guess I should have expected that fake hermit to betray me.`
 z

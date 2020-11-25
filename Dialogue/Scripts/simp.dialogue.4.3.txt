@@ -22,6 +22,7 @@ place r1 mima
 sr mima
 srce _
 fadestandin mima 1
+namecard namecard-mima
 . `So, weakling, are you ready to face your death? If you beg for forgiveness, I might reveal my evil plans before devouring your soul!`
 z
 srce worry

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: SiMP Stage2 Stage
   m_EditorClassIdentifier: 
   sceneConfig: {fileID: 11400000, guid: fff4b8468ceba4b4e932d1af3ba967a9, type: 2}
-  stateMachine: {fileID: 4900000, guid: af8d6f8b31db1e646a1f23e22abb5cf2, type: 3}
+  stateMachine: {fileID: 4900000, guid: 8138e6ec314d21740b7e8e017b89dd9a, type: 3}
   description: Two Steps East of Eden
   stageNumber: 2
   defaultSuicideStyle: triangle-yellow/
+  practiceable: 1

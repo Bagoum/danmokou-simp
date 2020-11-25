@@ -5,7 +5,7 @@ pattern { bgm {
 } }
 phase 0
 	action block 0
-		shift-phase-to 2
+		shift-phase-to 4
 	
 
 ##1

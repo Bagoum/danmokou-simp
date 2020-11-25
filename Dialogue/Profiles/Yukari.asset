@@ -23,7 +23,7 @@ MonoBehaviour:
       - useDefaultOffset: 0
         offset: {x: 0, y: 0}
         sprite: {fileID: 0}
-      - useDefaultOffset: 0
+      - useDefaultOffset: 1
         offset: {x: 0, y: 0}
         sprite: {fileID: 21300000, guid: 2a63269613c65af4e851e0aa6b5e5820, type: 3}
     angry:
@@ -31,7 +31,7 @@ MonoBehaviour:
       - useDefaultOffset: 0
         offset: {x: 0, y: 0}
         sprite: {fileID: 0}
-      - useDefaultOffset: 0
+      - useDefaultOffset: 1
         offset: {x: 0, y: 0}
         sprite: {fileID: 21300000, guid: c520d6299fe5fda45bc0fc4cfb037d4b, type: 3}
     happy:
@@ -39,7 +39,7 @@ MonoBehaviour:
       - useDefaultOffset: 0
         offset: {x: 0, y: 0}
         sprite: {fileID: 0}
-      - useDefaultOffset: 0
+      - useDefaultOffset: 1
         offset: {x: 0, y: 0}
         sprite: {fileID: 21300000, guid: ba665658a38949745b261f6b1bea631a, type: 3}
     worry:
@@ -47,7 +47,7 @@ MonoBehaviour:
       - useDefaultOffset: 0
         offset: {x: 0, y: 0}
         sprite: {fileID: 0}
-      - useDefaultOffset: 0
+      - useDefaultOffset: 1
         offset: {x: 0, y: 0}
         sprite: {fileID: 21300000, guid: 3371349dd7d8d904fb48452d96d3f2b5, type: 3}
     cry:
@@ -55,7 +55,7 @@ MonoBehaviour:
       - useDefaultOffset: 0
         offset: {x: 0, y: 0}
         sprite: {fileID: 0}
-      - useDefaultOffset: 0
+      - useDefaultOffset: 1
         offset: {x: 0, y: 0}
         sprite: {fileID: 21300000, guid: faf389ac02c76124ab4b3b0d5e87350d, type: 3}
     surprise:
@@ -63,7 +63,7 @@ MonoBehaviour:
       - useDefaultOffset: 0
         offset: {x: 0, y: 0}
         sprite: {fileID: 0}
-      - useDefaultOffset: 0
+      - useDefaultOffset: 1
         offset: {x: 0, y: 0}
         sprite: {fileID: 21300000, guid: 31b491fe187d12046995afa2e4024a94, type: 3}
     special:

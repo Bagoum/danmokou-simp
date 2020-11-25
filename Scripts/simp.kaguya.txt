@@ -9,7 +9,7 @@ pattern {
 }
 phase 0
 	action block 0
-		shift-phase-to 7
+		shift-phase-to 2
 	
 	
 !!{ colors { blue purple pink red orange yellow green teal black  }
@@ -73,10 +73,10 @@ phase 28
 			async glcircle-*/w <> gcr2 30 1 <;:-5p> {
 				clip	not divby $per (+ -1 + / $per 2 p)
 				sfx	x-fire-burst-2
-			} gsr2c 24 {
+			} gsr2c (* 8 ++ dc) {
 				color	$kaguc
 			} s tprot cx 2.3
-			sync shell-*/w <0.3;0.1:> gsr2c * dh 38 {
+			sync shell-*/w <> gsr2c * dl 27 {
 				colorf	$kaguc p1
 				p	add
 			} s :: {
@@ -84,26 +84,26 @@ phase 28
 			} polar
 				+ 
 					lerpt 0 3 sine 3 0.1 &t 0
-					logsumshiftt -0.8 1.5 * 2 t * -2 t
+					logsumshiftt -0.8 1.5 * 2 t * lerpd(-2.8, -3.3) t
 				* pm1 p1 +
-					lerpt 0 3 cosine 3 3 &t 0
-					logsumshiftt 0.1 1 0 
-						logsumshiftt -0.1 2 * 90 t * 9 t
+					lerpt 0 2 cosine 3 3 &t 0
+					logsumshiftt 0.1 0.6 0 
+						logsumshiftt -0.1 1.5 * 90 t * 8 t
 		}
 #}
 
 
 ##3
 <!> type spell `Lunar Eyes: Television Remote` #{
-<!> hpi 16000 2
+<!> hpi 15000 6
 <!> root 0 1.5
 phase 33
     action block 0
 		gtr {
-			wt 120 _
+			wt (/ 120 ^ dl 0.3) _
 			wait-child
 			P this
-		} move-target 4 io-sine pxy * mp1 p (+ 1.2 * 0.1 p) y
+		} move-target 4 io-sine pxy * mp1 p (+ 1.2 * 0.1 p) brand 1.4 1.7
 		sync sun-red/b <> loc0 s nroffset Lbeh kaguya
 		bullet-control persist {{ fireball-* }} softcull cwheel-red/b relcirc kaguya <0;0;1>
 		async fireball-*/b <> gcr2d dh 90 _ <> {
@@ -114,20 +114,20 @@ phase 33
 		} gsr2 50 <0.4;:> {
 		} s tprot py + -0.1 * -1 t
 		async ifairy5 <> gcr2 80p 5 <> {
-			root	cxy -5 4
+			root	cxy -3.5 4
 		} summons nroffset py * -1 softmod 10 * 1.5p t
-			async shell-blue/w <> gcr2d dh 50 _ <> {
+			async shell-blue/w <> gcr2d dl 50 _ <> {
 				preloop rv2.ry =f rand -0.6 0.6
 			} s tprot cx 1.6
 		async ifairy5 <> gcr2 80p 5 <> {
-			root	cxy 5 -6
+			root	cxy 3.5 -6
 		} summons nroffset py softmod 10 * 1.8p t
-			async shell-red/w <> gcr2d dh 50 _ <> {
+			async shell-red/w <> gcr2d dl 50 _ <> {
 				preloop rv2.ry =f rand -0.6 0.6
 			} s tprot cx -1.6
 		gtr {
 			delay 1s
-			wt	0	_
+			wt	lerpd(240, 0)	_
 			wait-child
 		} saction 0
 			wait 1
@@ -150,7 +150,7 @@ phase 33
 
 ##4
 <!> type non `Crazy Red Eyes: The World Before the Cosmos` #{
-<!> hp 11000
+<!> hpi 11000 3
 <!> root 0 2
 phase 32
     action block 0
@@ -182,7 +182,7 @@ phase 32
 		}
 		gtr {
 			delay 350
-			wt	820 _
+			wt	lerpd(940, 820) _
 			wait-child
 			timer tf
 		} saction 0 :2
@@ -197,12 +197,12 @@ phase 32
 
 ##5
 <!> type spell `Lunar Vision: Through the Dusk and Dawn` #{
-<!> hp 20000
+<!> hpi 17000 3
 <!> root 0 2
 phase 30
     action block 0
 		gtr {
-			wt	lerp 0 2 dc 120 0  _
+			wt	lerp 0 2 dc 160 0  _
 			wait-child
 			p	this
 			preloop	lr  =f  z1 t
@@ -227,7 +227,7 @@ phase 30
 				} { 
 					gsr {
 						colorf { red pink } &lr
-					} laser null 1 0.5 {
+					} laser null lerpd(1.2, 1) 0.5 {
 						sfx2 x-laser-fire x-laser-on
 					}
 				}
@@ -258,23 +258,24 @@ phase 30
 
 ##6
 <!> type spell `Expiation: Visible Full Moon` #{
-<!> hpi 21000 3
+<!> hpi 19000 3
 <!> root 0 1.5
 phase 32
     action block 0
-		async shell-*/w <> gcr2d (min dh (^ dh 0.2)) 42 _ <6h> {
+		async shell-*/w <> gcr2d (min dh (^ dh 0.2)) 46 _ <6h> {
 			color $rainbow
-		} gsr2c * (min dh (^ dh 0.4)) 62 {
+			delay 90
+		} gsr2c * (min dh (^ dh 0.4)) 58 {
 			target a Lplayer
-		} s tprot cx 1.5
+		} s tprot cx 1.7
 		gtr {
-			wt	/i dl 120 _
+			wt	/i ^ dl 0.3 120 _
 			wait-child
 			p	this
 			##delay	2s
 			timereset
 		} saction 0
-			savef pang 0 + if (= p 0) 0 * pm1 p (+ 16 * 0.8 p) angleto Lplayer
+			savef pang 0 if (= p 0) -80 + * pm1 p (+ 16 * 0.8 p) angleto Lplayer
 			sfx x-lockon
 			sync mulaser-pink/b <> safelaser 4 {
 				straight @0 pang
@@ -289,7 +290,7 @@ phase 32
 				hueshift(* 360 t)
 				high
 				sfx2	x-laser-fire x-laser-on
-				rotate	@0 pang lerpu 0 (- 3.5 * 12f p1) t * pm1 p2 (+ -80 * -10 p1) 0
+				rotate	@0 pang lerpu 0 (- 3.5 * 12f p1) t * pm1 p2 (+ -110 * -7 p1) 0
 			}
 			wait 0.8
 			$kingcrimson
@@ -306,6 +307,8 @@ phase 0
 	saction 0
 		move-target 3 io-sine cy 1
 		dialogue simp.dialogue.2.2
+		sync _ <> 1upitem
+		sync _ <> powerupshiftitem
 		move-target 2 in-sine cy 10
 		shift-phase
 #}

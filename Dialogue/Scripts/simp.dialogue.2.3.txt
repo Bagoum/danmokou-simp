@@ -9,6 +9,7 @@ setstandopacity yukari 0
 fadestandin yukari 1
 sr yukari
 srce happy
+namecard namecard-yukari
 . `I'm here. `
 z
 slce surprise

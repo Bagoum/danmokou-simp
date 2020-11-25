@@ -49,7 +49,7 @@ sre yukari happy
 slc
 .z `And for those who are too weak to guide the eyes of others, existence is damnation as well. But that's the point of claiming titles, isn't it? To force others to perceive you as you will.`
 .z `After all, I'm only involved in today's little facade to claim a title long owed to me. That of God of Makai.`
-sre kasen cry
+sre kasen surprise
 .z `God of Makai? Yukari, you really went overboard with this incident, didn't you?`
 sre yukari worry
 .z `There were two relevant rumors I found on the mysterious god lurking around the Hakurei shrine. One was that she fought the god of Makai to a tie, and the other was that she turned away invaders from the Outside World.`
@@ -67,7 +67,7 @@ slc
 sre yukari happy
 .z `Kasen's wisdom is too great to be encoded in only one side of a word.`
 .z `Some other time, I'll show you some excerpts from the manuscript for Ibaraki's Collected Teachings. You might be able to understand just what it takes to assume a title as grand as Skyfeller.`
-sre kasen cry
+sre kasen worry
 .z `Yukari, it's kind of embarrassing when you talk like that right in front of me...`
 srce _
 .z `Anyways, Mima, we'll leave you to collect your debts. And to clear your, uh, title.`

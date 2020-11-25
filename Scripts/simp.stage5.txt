@@ -71,7 +71,7 @@ color fairy1 summonrz
 !}
 !{ objm1(lr)
 color fairy3 summonr
-	lr %lr crossupl * 1.8 t crossupr * 1.8 t
+	crossup %lr * 1.8 t
 	$firem1
 	{ hp 900 }
 !}

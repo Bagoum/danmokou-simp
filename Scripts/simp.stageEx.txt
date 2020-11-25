@@ -5,7 +5,7 @@ pattern { bgm {
 } }
 phase 0
 	action block 0
-		shift-phase-to 5
+		shift-phase-to 9
 		
 
 <!> dialogue #{
@@ -217,7 +217,7 @@ phase 36
 		dangerleft2
 		timer restart pt
 !!{ firef /i ^ dl 0.4 lerp 0 24 timersec(pt) 3.5sh 2.7sh
-		async crow <-4;-5:180> gcr2 $firef _ <180> {
+		async crow <-3;-5:180> gcr2 $firef _ <180> {
 			p this
 		} summon tprot cy 1
 			action block 0 :2

@@ -3,12 +3,12 @@ pattern {
 	boss simp.kasen2
 	bgm {
 		2 simp.5.kasen
-		5 simp.5.stage
+		6 simp.5.stage
 	}
 }
 phase 0
 	action block 0
-		shift-phase-to 4
+		shift-phase-to 2
 	
 	
 !!{ me kasen
@@ -35,28 +35,28 @@ phase 0
 ## 2
 <!> bosscutin
 <!> type non `Flowering Seal: Rooted in the Earth and Reaching for the Moon` #{
-<!> hpi 16000 4
+<!> hpi 15000 4
 <!> root 0 2
 phase 36
 	action block 0
 		$power1
 	action block 1.5
-		async lightning-yellow/ <> gcr2 /i ^ dl 0.4 (lerpt 0 3 240 160) _ <> {
+		async lightning-yellow/ <> gcr2 /i ^ dl 0.5 (lerpt 0 3 240 160) _ <> {
 			frv2	a	+ -90 sine 4p 30 t
 			root cy 5
 			sfx x-lightning
 		} gsr2 20 nx - 2 * 0.1 dc {
 			center
-		} pather 1 1 tprot cx 3 { high s 2 }
+		} pather 1 lerpd(0.7, 0.8) tprot cx 3 { high s 2 }
 		async sakura-* <0.4;:> gir2 0 2 <> { 
 			p this 
 			color { green/w red/ }
 		} gcr {
-			wtd	dl 6 _
+			wtd	dl 7 _
 			frv2	angle + * 0 t  (* pm1mod p  +(* 4 t, * 5 softmod 6 t))
 			sfx x-fire-loop-1
 		} gsr2c 5 {
-		} s tprot lerpt 0.5 1 cx 3 px - 2.6 * 1.1 p
+		} s tprot lerpt 0.5 1 cx 3 px + 2.2 * lerpd(1.6, 1.8) c p
 		gtr {
 			wt 360 _
 			wait-child
@@ -67,11 +67,11 @@ phase 36
 ## 3
 <!> type spell `Conspiracy Woven Behind the Water Curtain` #{
 <!> root 0 0.5
-<!> hpi 22000 5
+<!> hpi 17000 9
 phase 36
 	action block 0
 		$power1
-!!{ rpt * ^ dl 0.8 18
+!!{ rpt * ^ dl 1 18
 		async sakura-*/ <> idelay 1.5s gsr2 12 angle / 180h $rpt {
 			p this
 			color { yellow green }
@@ -83,7 +83,7 @@ phase 36
 !!{ per 5
 			lerpsmooth out-sine 0 5 t (* 0.04 p1) (+ * 0.53 p1 sine $per 0.5 + t * p1 / $per 2)
 			$angle
-		async lightning-red/ <> gir2 /i ^ dl 0.25 lerpt 0 5 240 140 _ <> {
+		async lightning-red/ <> gir2 /i ^ dl 0.35 lerpt 0 5 240 140 _ <> {
 			sfx x-lightning
 		} gcr2 24 6 <;1.4:> {
 			root pxy * pm1 &pi -6 4
@@ -98,15 +98,81 @@ phase 36
 #}
 
 
-##4
+## 4
+<!> type non `Fiery-Eyed Escape from Eight Trigrams` #{
+<!> hpi 10000 2
+<!> root 1 3
+phase 29
+	gtr {
+		wait(2.5s)
+		times(_)
+		wait-child
+		sequential
+	} {
+!!{ d ^ dl 0.6
+		~ async sakura-green/w <1;:-40> gcr2dr $d 3 17 <-7> {
+			sfx x-fire-small-1
+		} gsr2 (+ 4 d3d1) <> {
+			p this
+		} s tprot rx(+ 1.1 * 0.7 p, 45)
+		move-target 0.5 out-sine pxy(-2, 1)
+		~ async sakura-red/w <1;:-130> gcr2dr $d 3 17 <8> {
+			sfx x-fire-small-2
+		} gsr2 (+ 4 d3d1) <> {
+			p this
+		} s tprot rx(+ 1.3 * 0.55 p, -45)
+		move-target 0.5 out-sine pxy(1, 2)
+		~ async lightning-yellow/w <> gcr2 40 3 <> {
+			sfx x-lightning
+		} gsr2 4 <> {
+			p this
+		} gsr2 2 <> {
+			bindLR
+		} pather 1 0.5 tprot rx 
+			lerpt3 (0, 0.2, 0.4, 0.6, 18, 3, 5)
+			lerpt 0.1 0.5
+				+ 90 * &lr + 14 * 16 p
+				+ 90 * &lr + 180 + -36 * 20 p
+		{ high }
+		move-target 1 io-sine pxy(-1, 3)
+		wait-for 1.5
+		~ async sakura-green/ <0.5;:170> gcr2dr $d 2 24 <12> {
+			sfx x-fire-small-1
+		} gsr2 6 <> {
+			p this
+		} s polar(* (+ 1.1 * 0.2 p) t, * pm1(p) * 10 t)
+		move-target 0.5 out-sine pxy(1, -0.5)
+		~ async sakura-red/ <0;:30> gcr2dr $d 3 18 <-13> {
+			sfx x-fire-small-2
+		} gsr2 (+ 4 d3d1) <> {
+			p this
+		} s tprot px(+ 1.2 * 0.5 p)
+		move-target 0.5 out-sine pxy(-2, 0)
+		~ async lightning-yellow/ <0;:90> gcr3 10 1s <> {
+			sfx	{ x-lightning }
+		} gsr2 3 <> {
+			frv2(angle(rand(-50, 50)))
+			p this
+		} pather 1 0.2 tpnrot
+			* lerp3 0.0 0.3 (+ 1.1 * 0.5 p) (+ 1.3 * 0.5 p) t 14 2 8
+				truerotatelerprate 400 rotify cx 1
+					ss (+ 0.4 * 0.5 p) vhome 2 Lplayer
+			{ high }
+		move-target 1 io-sine pxy(1, 3)
+	}
+
+#}
+
+
+##5
 <!> type spell `The Shattered Sky: Where Tenryuu Consumes the North Star` #{
-<!> hpi 25000 5
-<!> root 0 1.7
+<!> hpi 21000 5
+<!> root 0 2
 phase 42
     action block 0
-		beh-control persist lightning-* batch onlyonce | > x 5.3 < x -5.3 {
-			flipx> 5.3 _
-			flipx< -5.3 _
+		beh-control persist lightning-* batch onlyonce | > x 4 < x -4 {
+			flipx> 4 _
+			flipx< -4 _
 		}
 		$power1
 		gtr {
@@ -115,8 +181,8 @@ phase 42
 			wait-child
 			p this
 			preloop lr =f pm1 p
-		} saction 0 :5
-!!{ rpt * ^ dl 0.6 40
+		} saction 0 :6
+!!{ rpt * ^ dl 0.8 40
 			sync lightning-*/ <180> gsr2 $rpt angle / 280 $rpt {
 				center
 				colorf $kasenc1 p
@@ -133,8 +199,9 @@ phase 42
 				s 1.5
 			}
 			wait 1.5
+			wait lerpd(1, 0)
 			$power1
-			move-target 1.5 io-sine pxy * &lr brand 0.6 1 brand2 1.5 2
+			move-target 1.5 io-sine pxy * &lr brand 0.6 1 brand2 1.8 2.2
 			
 			
 		async gcircle-*/b <2.5;-4.5:> gcr2 12 30 <> {
@@ -181,7 +248,7 @@ lerp(- $t1 0.6, + $t1 0.6, %t,
 									cosine $rep 1 + t + * 2h p * / 360h $rep &pi
 									sine $rep 1 + t + * 2h p * / 360h $rep &pi
 									0
-					} s tpnrot * lerpt 0 0.5 4 2 &dir
+					} s tpnrot * lerpt 0 0.5 5 2.7 &dir
 					
 		}
 #}
@@ -193,6 +260,8 @@ phase 0
 	saction 0
 		move-target 3 io-sine cy 0
 		dialogue simp.dialogue.5.2
+		sync _ <> 1upitem
+		sync _ <> powerupshiftitem
 		move-target 2 in-sine cy 10
 		shift-phase
 #}

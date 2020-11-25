@@ -14,22 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: {fileID: 6003014192476353498, guid: de476e8b7e8ae2b47a089273d027f53f, type: 3}
   CardPracticeName: Reimu
+  replayNameOverride: 
   stateMachine: {fileID: 4900000, guid: f61b535c2eac90d438d2fe512b98ffa5, type: 3}
   key: simp.reimu
+  casualName: 
+  casualNameJP: 
   displayName: Hakurei<br>Reimu
   displayTitle: The Dragon<br>of the<br>Frontier
   trackName: "\u970A\u5922"
-  uiColor: {r: 0.4716981, g: 0, b: 0, a: 1}
-  uiHPColor: {r: 1, g: 0.57254905, b: 0.697212, a: 1}
-  cardColorR: {r: 0.8396226, g: 0, b: 0.048290215, a: 1}
-  cardColorG: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
-  cardColorB: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
-  spellColor1: {r: 0.8396226, g: 0, b: 0.09719979, a: 0.5686275}
-  spellColor2: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 0.64705884}
-  spellColor3: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 0.46666667}
   colors: {fileID: 11400000, guid: b25c8f6870731d14b86cc87bcaf0878b, type: 2}
   rotator: 
   profile:
+    leftSidebar: {fileID: 2800000, guid: d72e5c24d7b83db46a6d85028f4d96ac, type: 3}
+    rightSidebar: {fileID: 2800000, guid: 1b6d77e5f25d32e469448204cad312d0, type: 3}
     image: {fileID: 2800000, guid: 677bdbaf7f9cf624687fe596169903f1, type: 3}
     offsetX: 0.23
     offsetY: 0.66
@@ -42,7 +39,7 @@ MonoBehaviour:
     type: 2}
   defaultIntoNonTransition: {fileID: 11400000, guid: 23d9a9fbcd555004c9905acab3bc372a,
     type: 2}
-  bossCutin: {fileID: 1176886499574204291, guid: b2f85532e262e9444ae5dfc8780da6f1,
+  bossCutin: {fileID: 2426727079670566650, guid: 1d0cef80b8f234243a4c6534215eb710,
     type: 3}
   spellCutins:
   - {fileID: 160725723660692450, guid: 834e4cd9d3707054e90d1d3b2fef1bbd, type: 3}

@@ -5,6 +5,7 @@ sr mokou
 sle mima worry
 .z `Mokou? What are you doing here?`
 srce surprise
+namecard namecard-mokou
 .z `Oh. It's Mima.`
 srce worry
 .z `I'm on a job. I was hired by... someone.  They asked me to defend this place.

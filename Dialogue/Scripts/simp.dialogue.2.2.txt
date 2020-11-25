@@ -11,6 +11,7 @@ place r1 kaguya
 z
 sr kaguya
 srce happy
+namecard namecard-kaguya
 . `You thought it was Reisen, but it was me! Kaguya!`
 z
 slce worry

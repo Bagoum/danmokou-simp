@@ -32,14 +32,14 @@ sync powerup1 <> powerup x-powerup-1
 ##1
 <!> bosscutin
 <!> type non `Silent Sinner's Summoning Ceremony` #{
-<!> hp 19000
-<!> roott 3 0 1.5
-phase 30
+<!> hpi 15000 3
+<!> roott 3 0 2
+phase 32
 	action block 0
-		bullet-control persist amulet-black/ restyleeffect amulet-black/w cwheel-black/b > t 3
-		bullet-control persist amulet-red/ restyleeffect amulet-red/w cwheel-red/b > t 3
+		bullet-control persist amulet-black/ restyleeffect amuletreimu-black/w cwheel-black/b > t 2.5
+		bullet-control persist amulet-red/ restyleeffect amuletreimu-red/w cwheel-red/b > t 2.5
 		gtr {
-			wt lerpt 0 6 90 0 _
+			wt lerpt 0 5 90 0 _
 			wait-child
 			p this
 			rpp <5c>
@@ -47,7 +47,7 @@ phase 30
 			sync amulet-** <;0.67:180> gsr2c 5 {
 					sfx x-fire-burst-1
 					colorf { red black } p
-!!{ rpt floor * ^ dl 0.9 16
+!!{ rpt floor * ^ dl 0.65 16
 !!{ dx / 4 $rpt
 				} gsr2 $rpt rx $dx {
 					p this
@@ -58,30 +58,30 @@ phase 30
 				} s tprot lerpt 0.6 1.3
 					py lerpt 0 2 0 -2
 					rx
-						+ -2 * 0.3 p2
-						atan2 (* 0.7 pm1 p2)  * * $dx (- p1 / $rpt 2) if (= p2 1) 1 (lerpt 2.8 3.2 1 -0.8) 
-			~ _ 3
+						+ -2.5 * 0.3 p2
+						atan2 (* 0.7 pm1 p2)  * * $dx (- p1 / $rpt 2) if (= p2 1) 1 (lerpt 2.3 2.7 1 -0.8) 
+			~ _ 2.5
 				sfx x-transform-2
 			move-target 1 io-sine pxy (* pm1 p + 0.5 * 0.02 p) y
 #}
 	
 
 ##2
-<!> type spell `Green Hands Always Seeking, Never Grasping` #{
-<!> hpi 24000 3
-<!> root 0 1.5
+<!> type spell `Apollon Gravity Assist` #{
+<!> hpi 22000 3
+<!> root 0 2
 phase 37
     action block 0
 		shake 2 3 smooth smod-010 / x 3
 		$power1long
 		async x-boom <> gcr2 24 10 <> . sfx
-		pool-control { { amulet-* } } cullrad 10
+		pool-control { { amulet-* } } allowcull false
 		gtr {
 			delay 3s
 			wt 6s _
 			p this
-		} move-target 2 io-sine pxy * pm1 p brand 0.5 0.8 brand 1.4 1.6
-		async amulet-*/w <1;8:> gir2 (lerpt 0 8 340 280) _ <15> {
+		} move-target 2 io-sine pxy * pm1 p brand 0.5 0.8 brand 1.8 2.2
+		async amulet-*/w <1;8:> gir2 (lerpt 0 4 340 280) _ <15> {
 			p this
 			color { red black }
 		} { 
@@ -89,32 +89,32 @@ phase 37
 			gcr2 3 12 rot 0 0.5 * 1.2 pm1 p1 {
 				preloop rv2.rx =f * 1 pm1 p1
 				p add
-			} gsr2c * ^ dl 0.85 14 { 
+			} gsr2c * dl 14 { 
 			} s tprot lerp3 2 4.5 5.5 6.1 t
 				cy -1.3
 				cy -3.5
 				polartoxy
-					1.4
+					1.5
 					+ -90 * mp1 p1 (+ 60 * 2.5 p2)			
 		}
-		bullet-control persist amulet-black/w restyleeffect amulet-black/b cwheel-black/ > t 5.8
-		bullet-control persist amulet-red/w restyleeffect amulet-red/b cwheel-red/ > t 5.8
+		bullet-control persist amulet-black/w restyleeffect amuletreimu-black/b cwheel-black/ > t 5.8
+		bullet-control persist amulet-red/w restyleeffect amuletreimu-red/b cwheel-red/ > t 5.8
 		
 #}
 	
 
 ##3
-<!> type non `Rain Upon the Victor, an Umbrella For the Defeated` #{
-<!> hpi 19000 2
+<!> type non `Fantasy Seal ~Centripetal Force~` #{
+<!> hpi 10000 7
 <!> root 0 1.9
 phase 32
 	action block 0
 		$power1
     action block 1.5
-		async scircle-*/w <1;:60> gir2 (clamp 140 _ linear 190 -4 t) _ <> {
+		async scircle-*/w <1;:60> gir2 /i ^ dl 0.25 (clamp 110 _ linear 160 -10 t) _ <> {
 				postloop rv2.a =f + 60 * 20h mod 1p t
 			} {
-				gcr2 8 12 <20> {
+				gcr2dr ^ dl 0.2 8 12 <22> {
 					sfxif	x-bubble even t
 				} gsr {
 					p this
@@ -122,7 +122,7 @@ phase 32
 					postloop rv2.a =f - 180 [&rv2].a
 					color	{ red black }
 				}  s polar
-					logsumshiftt 1 2 * 1 t * 2.2 t
+					logsumshiftt 1 2 * 1 t * 3 t
 					* pm1mod p logsumshiftt -0.3 3 * 16 t * 8 t
 			}
 		gtr {
@@ -130,8 +130,8 @@ phase 32
 			wt 160 _
 			p this
 		} move-target 2 io-sine pxy (* pm1 p brand 1 1.3) brand 1.5 2
-!!{ rpt * 17 dl
-		async amulet-*/w <;:90> gir2 120 _ aphi $rpt {
+!!{ rpt * 20 dl
+		async amulet-*/w <;:90> gir2 180 _ aphi $rpt {
 			root py 2
 			sfx x-fire-burst-2
 		} { 
@@ -144,24 +144,24 @@ phase 32
 				+ -1 logsumshiftt -1 0.9 * 4.8 t * 0.4 t
 				* pm1mod p logsumshiftt -0.1 1 * 200 t * 3 t
 		}
-		bullet-control persist amulet-red/w restyleeffect amulet-red/b cwheel-red/ > t 1.1
-		bullet-control persist amulet-black/w restyleeffect amulet-black/b cwheel-black/ > t 1.1
+		bullet-control persist amulet-red/w restyleeffect amuletreimu-red/w cwheel-red/ > t 1.1
+		bullet-control persist amulet-black/w restyleeffect amuletreimu-black/w cwheel-black/ > t 1.1
 #}
 
 
 ##4
 <!> type spell `The Breaking-Wheel of Karma` #{
-<!> hp 22000
+<!> hpi 18000 3
 <!> root 0 1
 phase 36
 	action block 0
-		pool-control amulet-* allowcull false
+		pool-control amuletreimu-* allowcull false
 !!{ lrpt + 3 dc
 !!{ amuletRpt 10s
 		gtr {
 			wt $amuletRpt _
 		} {
-			bullet-control once amulet-* softcull cwheel-red/ _
+			bullet-control once amuletreimu-* softcull cwheel-red/ _
 			$power1
 		}
 		async gdlaser-red/ <> iparent this gsr2c $lrpt {
@@ -170,7 +170,7 @@ phase 36
 			repeat
 			dsfx
 			rotate 0 * 10 t
-			sm		async amulet-red/w <> gcr2 $amuletRpt _ <> {
+			sm		async amuletreimu-red/ <> gcr2 $amuletRpt _ <> {
 							delay 1.5s
 						}	gsr2 70 <> {
 							rootadjust lbeh $me
@@ -183,7 +183,7 @@ phase 36
 							}
 						} s polar
 							[&rt].x
-							+ [&rt].y * pm1 p1 * pm1 // p2 3 lssht 0.2 0.9 0 * 36 t
+							+ [&rt].y * pm1 p1 * pm1 // p2 3 lssht 0.2 0.9 0 * 42 t
 		}
 		move _ nroffset pxy sine 5p 1.3 t sine 5 0.5 t
 		async gdlaser-black/ <> idelay 4s gsr2c $lrpt {
@@ -200,12 +200,12 @@ phase 36
 
 ##5
 <!> type non `Silent Sinner's Secret Sentry` #{
-<!> hp 18000
-<!> root 0 1.5
-phase 28
+<!> hpi 14000 3
+<!> root 0 2
+phase 31
 	action block 0
-		bullet-control persist amulet-black/ restyleeffect amulet-black/w cwheel-black/b > t 2.1
-		bullet-control persist amulet-red/ restyleeffect amulet-red/w cwheel-red/b > t 2.1
+		bullet-control persist amulet-black/ restyleeffect amuletreimu-black/w cwheel-black/b > t 2.1
+		bullet-control persist amulet-red/ restyleeffect amuletreimu-red/w cwheel-red/b > t 2.1
 		async gdlaser-*/ <> gcr2 lerpt 0 1 360 300 _ <> {
 			delay 2s
 			p this
@@ -215,7 +215,7 @@ phase 28
 				colorf { red black } + &pi t
 			} laser null lerp(0, 3, p, 1.5, 1) 1 { dsfx }
 		gtr {
-			wt lerpt(0, 6, 120, 0) _
+			wt lerpt(0, 5, 90, 0) _
 			wait-child
 			p this
 			rpp <5c>
@@ -223,7 +223,7 @@ phase 28
 			sync amulet-** <;0.67:180> gsr2c 5 {
 					sfx x-fire-burst-1
 					colorf { red black } p
-!!{ rpt floor * ^ dl 0.9 22
+!!{ rpt floor * ^ dl 0.7 18
 !!{ dx / 4 $rpt
 				} gsr2 $rpt rx $dx {
 					p this
@@ -233,7 +233,7 @@ phase 28
 					p add
 				} s tprot lerpt 0.6 1.3
 					py lerpt 0 2 0 -2
-					* if (= p2 1) 1 (lerpt 2 2.4 1 -1) rx
+					* if (= p2 1) 1 (lerpt 2 2.4 1 -1.2) rx
 						+ -2.5 * 0.5 p2
 						atan2 (* 0.7 pm1 p2)  * $dx (- p1 / $rpt 2)
 			~ _ 2.1
@@ -243,17 +243,18 @@ phase 28
 
 
 ##6
-<!> type timeout `Impure Wrath of the Avaricious` #{
+<!> type timeout `Fantasy Seal ~Impure Wrath of the Avaricious~` #{
 <!> root 0 2
 phase 37
 	action block 0
 		gtr {
+			delay 30
 			wt	lerpt 0 3 2.4s 1s _
 			wait-child
 			p this
 		} saction 0
-			$power1
-			crosshair crosshair Lplayer 0 1.5 ploc 0
+			~ _ 0.5 $power1
+			crosshair crosshair lerpsmooth(out-sine, 0, 59, t, loc, Lplayer) 0.5 1.5 ploc 0
 			~ async amulet-black* <> gcr {
 				times(90)
 				wait(/ 0.5s &times)
@@ -269,20 +270,20 @@ phase 37
 				p add
 			} gsr2 2 angle - 140 * 40 &pi {
 				center
-			} s tprot px * lerp -0.5 0.5 (- t * 1.5 p2) 0 1
-				+ 1.4 * 0.8 p1
+			} s tprot px * lerp -0.3 0.5 (- t * 1.1 p2) 0 1
+				+ 1.4 * 0.7 p1
 			move-target 0.5 out-sine @0 ploc
-!!{ rpt * dl 24
-			async amulet-red* <0.5;:> gcr2 60 3 angle / 360h $rpt { 
+!!{ rpt * dl 22
+			async amuletreimu-red* <0.5;:> gcr2 60 3 angle / 360h $rpt { 
 				p this
 				sfx x-fire-burst-1
 			} { 
 				gsr2c $rpt {
 					color /b
-				} s tprot px lerpt .2 .5 3 2
+				} s tprot px lerpt .2 .5 3 2.2
 				gsr2c $rpt {
-					color /w
-				} s tprot px lerpt 1 1.3 dsine 2.2 1.2 t -3
+					color /
+				} s tprot px lerpt 1 1.3 dsine 2.2 1.2 t -3.4
 			}
 
 #}
@@ -412,7 +413,6 @@ phase 0
 #{
 phase 0
 	saction 0
-		position 0 0
 		dbossexplode lerp(0, 1, t, red, rgb 1 1 1) red
 		position 0 20
 		wait 5

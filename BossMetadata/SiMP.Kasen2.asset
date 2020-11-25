@@ -14,22 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: {fileID: 6274564262994426332, guid: fc535ee3310d1574da2cf8ad79e59e23, type: 3}
   CardPracticeName: Kasen (2)
+  replayNameOverride: 
   stateMachine: {fileID: 4900000, guid: ca1fb53a373513044bef11c168ccc8a0, type: 3}
   key: simp.kasen2
+  casualName: 
+  casualNameJP: 
   displayName: Kasen
   displayTitle: The Yellow<br>Emperor's<br>Thunderclad<br>Attendant
   trackName: "\u83EF\u4ED9"
-  uiColor: {r: 0.6226415, g: 0.5538615, b: 0, a: 1}
-  uiHPColor: {r: 0.9622642, g: 0, b: 0, a: 1}
-  cardColorR: {r: 0.8396226, g: 0, b: 0.048290215, a: 1}
-  cardColorG: {r: 0.92941177, g: 0.7429555, b: 0.28627452, a: 1}
-  cardColorB: {r: 0, g: 0.5566038, b: 0.036496706, a: 1}
-  spellColor1: {r: 0.8396226, g: 0, b: 0.09719979, a: 0.5686275}
-  spellColor2: {r: 0.062566735, g: 0.6981132, b: 0.0852811, a: 0.64705884}
-  spellColor3: {r: 0.9528302, g: 0.891451, b: 0.18427375, a: 0.46666667}
   colors: {fileID: 11400000, guid: 5df9dbcaf94c7f8459e791a37f854553, type: 2}
   rotator: 
   profile:
+    leftSidebar: {fileID: 2800000, guid: 8cc7235ebe29cdc4aa62302d4c5de717, type: 3}
+    rightSidebar: {fileID: 2800000, guid: cf10aa52430cbb743b5db2d6d5cb600a, type: 3}
     image: {fileID: 2800000, guid: 4bed4529bfa465746a8178f9a47c7a99, type: 3}
     offsetX: 0.43
     offsetY: 0.71
@@ -42,7 +39,7 @@ MonoBehaviour:
     type: 2}
   defaultIntoNonTransition: {fileID: 11400000, guid: 9b0abf82e07299741a4d64ecd57ff7e6,
     type: 2}
-  bossCutin: {fileID: 3705878650974764924, guid: 10c6f939e19eebf4f97155c2562c98fb,
+  bossCutin: {fileID: 2426727079670566650, guid: 9034878ae333cbb4ca7ee234d377cf9d,
     type: 3}
   spellCutins:
   - {fileID: 160725723660692450, guid: 84fb77ee536bc6540b695614be95c03b, type: 3}

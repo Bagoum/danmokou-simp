@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	action block 0
-		shift-phase-to 2
+		shift-phase-to 6
 	
 	
 !!{ me kasen
@@ -182,21 +182,22 @@ phase 28
 phase 36
 	action block 0
 		pool-control sakura-* allowcull false
-!!{ rockc > t + 3 * 0.26 p
-		bullet-control-sm persist scircle-red/w $rockc
-			sync gdlaser-red/ <-10;:> gsr2 1 <60> {
-				center
-				target a Lplayer
-				face d
-			} laser null 1.5 0.5 { length 30 dsfx s 0.7 }
-		bullet-control persist scircle-red/w softcull cwheel-red/b $rockc
+		bullet-control persist scircle-red/w batch > t + 3 * 0.26 p {
+			softcull cwheel-red/w _
+			sm _ 
+				sync gdlaser-red/ <-10;:> gsr2 1 <60> {
+					center
+					target a Lplayer
+					face d
+				} laser null 1.5 0.5 { length 30 dsfx s 0.7 }
+		}
 		gtr {
-			wt	0 _
+			wt	1 _
 			wait-child
 			target a Lplayer
 			rpp <360h>
 			preloop lr =f pm1 t
-		} saction 0.02
+		} saction 0
 !!{ rpt + 3 dc
 			sync sakura-* <> gsr2 4 aphi $rpt {
 				p this
@@ -227,7 +228,7 @@ phase 36
 			move-target 1 io-sine pxy * &lr 0.8 y
 			wait 0.5
 			bullet-control once sakura-* softcull cwheel-green/ _
-			bullet-control once empty cull _
+			bullet-control once empty.1 cull _
 #}
 
 

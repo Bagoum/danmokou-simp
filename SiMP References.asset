@@ -16,7 +16,7 @@ MonoBehaviour:
   gameVersion:
     major: 3
     minor: 1
-    patch: 4
+    patch: 5
   mainMenu: {fileID: 11400000, guid: 977bd9744ba2d3a42a39a6092cb8e0e5, type: 2}
   replaySaveMenu: {fileID: 11400000, guid: 4eb8b66bd76d4d94fa90176835284503, type: 2}
   defaultMenuBackground: {fileID: 6614173089345499342, guid: 56da452ec6a98284295330ef47ecf1c1,

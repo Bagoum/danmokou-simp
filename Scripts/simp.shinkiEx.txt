@@ -8,7 +8,7 @@ pattern {
 }
 phase 0
 	action block 0
-		shift-phase-to 12
+		shift-phase-to 5
 	
 
 !{ power1()
@@ -23,6 +23,7 @@ sync powerup1 <> powerup2
 !!{ me shinki
 
 ## 1
+<!> showlives 0
 <!> dialogue #{
 phase 0
 	saction 0
@@ -201,7 +202,7 @@ phase 34
 			frv2	a * 110 rangesoftmod 1 t
 		} pather 1 0.8 tpnrot
 			* lerpt3 0.1 0.4 0.7 1 9 2 6
-				ss 1.5 truerotatelerprate 120 rotify cx 1
+				ss 1.5 truerotatelerprate lerpt(1, 1.5, 120, 60) rotify cx 1
 					ss 1.7 vhome 1 Lplayer
 			{ high s 12 }
 

@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	action block 0
-		shift-phase-to 7
+		shift-phase-to 6
 	
 !!{ me seija
 !{ 
@@ -42,11 +42,14 @@ phase 0
 ##2 
 <!> bosscutin
 <!> type non `Irrefutable Falsehood: syn-Propanethial S-oxide` #{
-<!> hpi 20000 2
+<!> hpi 18000 4
 <!> root 0 2
 phase 32
     action block 0
+		dangerright2
+		dangerbot
 		gtr {
+			delay 1s
 			wt 1 _
 			wait-child
 			p this
@@ -93,7 +96,7 @@ phase 32
 <!> root 0 1.5
 phase 33
 	action block 0
-		pool-control { { ellipse-*/b } { red purple } } allowcull false
+		pool-control { { ellipse-*/ } { red purple } } allowcull false
 		gtr {
 			delay 3s
 			wt 0.5s _
@@ -103,11 +106,11 @@ phase 33
 !!{ d 8
 !!{ s 1.6
 !!{ t / $d $s
-		bullet-control persist ellipse-red/b softcull cwheel-red/b & > t $t not divby 4 p
-		bullet-control persist ellipse-purple/b softcull cwheel-purple/b & > t $t not divby 4 p
-		bullet-control persist ellipse-red/b restyle ellipse-red/w & > t $t divby 4 p
-		bullet-control persist ellipse-purple/b restyle ellipse-purple/w & > t $t divby 4 p
-		async ellipse-*/b <> gcr2 /i dl 20 _ <30.986> {
+		bullet-control persist ellipse-red/ softcull cwheel-red/b & > t $t not divby 4 p
+		bullet-control persist ellipse-purple/ softcull cwheel-purple/b & > t $t not divby 4 p
+		bullet-control persist ellipse-red/ restyle ellipse-red/w & > t $t divby 4 p
+		bullet-control persist ellipse-purple/ restyle ellipse-purple/w & > t $t divby 4 p
+		async ellipse-*/ <> gcr2 /i dl 20 _ <30.986> {
 			start rv2.rx +=f $d
 		} gsr2c 1 {
 		} gsr2 (+ 4 d3d1) <2> {
@@ -116,7 +119,7 @@ phase 33
 			postloop rv2.a =f - 180 [&rv2].a
 			color { red purple }
 		} s tprot px * -1 lerpt $t + 0.2 $t $s 2.9
-		async lcircle-*/b <;:> gcr2 (/ 66 ^ dl 0.25) _ angle / 180h 16 {
+		async lcircle-*/b <;:> gcr2 (/ 70 ^ dl 0.25) _ angle / 180h 16 {
 			p this
 			color { red purple }
 			sfx x-fire-burst-1
@@ -204,14 +207,14 @@ phase 34
 			p this
 		} move-target 2 io-sine pxy * pm1 p brand 0.5 1.1 brand 1 2
 		async ellipse-* <> gir2 
-			/i (^ dh 0.3) max 190 - 220 * 3 t
+			/i (^ dh 0.3) max 180 - 220 * 5 t
 		_ <8h> {
 			p this
 			sfx { x-fire-burst-3 }
 		} gcr2 0 4 <> {
 			p add
 			preloop {
-				idx2 =f mod 2 // - p2 p1 2
+				idx2 =f mod 2 + p1 // p2 2
 			}
 			colorf { red/w purple/w } &idx2
 		} gsr2c (* ^ dl 0.6 32) {
@@ -268,6 +271,97 @@ phase 34
 
 
 ##6
+<!> type non `Disproven Truth: A Pareto-Optimal Nonspell` #{
+<!> hpi 16000 3
+<!> root 0 2.3
+phase 37
+    action block 0
+		dangerbot
+		pool-control { ellipse-* } cullrad 15
+!!{ crep * dl 16
+		async lcircle-orange/ <> gcr {
+			wait(/i ^ dl 0.3 + 84 sine(8, 28, t))
+			times(_)
+			sfx x-fire-burst-2
+			rv2incr(aphi($crep))
+		} gsr2c $crep {
+		} simple tprot px(lerpt(0, 0.5, 3, 1.6)) {
+			dir(* pm1(p) * 400 t)
+		}
+		gtr {
+			wait-child
+			wait(240)
+			times(_)
+			bindLR
+			sequential
+		} {
+			~ _ 0.5 $power1
+			move-target 2 io-sine pxy * &lr rand 0.7 1 rand 2.1 2.5
+			async ellipse-*/b <;:> gir {
+				times(4)
+				wait-child
+				wait(select t {
+					120
+					240
+					40
+					0
+				})
+				colorf { purple red } // p 2
+				bindLR
+				p this
+				rpp(<5>)
+			} gcr {
+				wt  	 11 (+ 5 dc)
+				rpp(angle(* pm1(// p 2) 1.5))
+				bindItr(n)
+				sfxf	{ x-fire-small-1 x-fire-small-2 } 0
+				preloop root =v2 loc
+				expose v2 root
+			} gsr2c ceil(* (^ dl 0.3) 24) { 
+!!{ t1 0.8
+!!{ t2 2.1
+!!{ t3 2.7
+!!{ t4	2.8
+!!{ t5	3.5
+!{ movement() 
+tprot px lerpmany {
+	- $t1 0.05		1.6
+	+ $t1 0.05	3.2
+	$t2 			3.2
+	$t3			0
+	$t4			0
+	$t5			-2.3
+} t
+!}
+			} s $movement
+		}
+		
+!{ ctrl(color)
+bullet-control persist ellipse-%color%/b batch < abs - t $t1 2f {
+	restyleeffect ellipse-%color%/w cwheel-%color%/ _
+	sfx x-transform-1 _
+}
+bullet-control persist ellipse-%color%/w batch < abs - t $t2 2f {
+	restyleeffect ellipse-%color%/ cwheel-%color%/ _
+	sfx x-fire-small-2 _
+}
+bullet-control persist ellipse-%color%/ batch < abs - t $t4 2f {
+	restyleeffect ellipse-%color%/w cwheel-%color%/ _
+	sm _
+		sync ellipse-%color%/b.1 <>  gsr {
+			sfx x-fire-small-3
+		} s tprot px lerpt 0 0.6 0 2.5
+}
+bullet-control persist ellipse-%color%/w cull circ withz &.root 0.04
+!}
+		$ctrl(purple)
+		$ctrl(red)
+				
+
+#}
+
+
+##7
 <!> type spell `Army Gazing Across the Channel: Feast of Undercooked Potatoes` #{
 <!> hpi 18000 5
 phase 34
@@ -352,7 +446,7 @@ phase 34
 #}
 	
 
-##7
+##8
 <!> type final `Fallacy: Affirming the Consequent` #{
 <!> hpi 16000 7
 <!> root 0 1.5
@@ -362,7 +456,7 @@ phase 40
 	bullet-control persist ellipse-%c%%s1% restyleeffect ellipse-%c%%s2% cwheel-%c%/b %pred
 !}
 !{ glr(c, s1, s2, pred)
-	bullet-control persist lcircle-%c%%s1% restyleeffect lcircle-%c%%s2% cwheel-%c%/b %pred
+	bullet-control persist lcircle-%c%%s1% restyleeffect lcircle-%c%%s2% cwheel-%c%/ %pred
 !}
 !{ rbf(f)
 	$%f(purple)
@@ -374,8 +468,8 @@ phase 40
 !}
 !!{ et1 2
 !!{ et2 11
-		$rbf($glr(!$, /, /b, in t $et1 -- $et2))
-		$rbf($glr(!$, /b, /, > t $et2))
+		$rbf($glr(!$, /w, /, in t $et1 -- $et2))
+		$rbf($glr(!$, /, /w, > t $et2))
 		pool-control ellipse-* cullrad 8
 		gtr {
 			delay 3s
@@ -391,7 +485,7 @@ phase 40
 				sfx x-transform-2
 			_ $et2
 				sfx x-transform-3
-			async lcircle-*/ <1;:150> gcr2 (/i dl 8) (* dl 12) angle /i dl -19p {
+			async lcircle-*/w <1;:150> gcr2 (/i dl 8) (* dl 12) angle /i dl -19p {
 					sfx x-fire-star-3
 !!{ ct 6
 !!{ p1r * p1 / 7 $ct
@@ -457,7 +551,7 @@ phase 40
 #}
 
 
-##8
+##9
 <!> dialogue #{
 phase 0
 	saction 0

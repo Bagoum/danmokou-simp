@@ -6,7 +6,7 @@ pattern {
 	}
 	set-ui-from 2
 }
-<!> showlives 5
+<!> showlives 4
 phase 0
 	action block 0
 		shift-phase-to 2
@@ -34,7 +34,7 @@ sync powerup1 <> powerup x-powerup-1
 
 ## 1
 <!> dialogue #{
-<!> showlives 5
+<!> showlives 4
 phase 0
 	saction 0
 		move-target 3 io-sine cy 1
@@ -48,7 +48,7 @@ phase 0
 <!> hpi 12000 4
 <!> type non `Rabenflug: Flight-Path of the Crow Intoxicated on Lunar Wine` #{
 <!> root 0 1.5
-<!> showlives 5
+<!> showlives 4
 phase 31
     action block 0
 		async lightning-*/w <90> gir2d (^ dl 0.4) 600 _ <> {
@@ -101,7 +101,7 @@ phase 31
 <!> type spell `Hunter's Rune: Sky Burial` #{
 <!> hpi 24000 2
 <!> root 0 1.5
-<!> showlives 5
+<!> showlives 4
 phase 36
 	action block 0
 		$power1

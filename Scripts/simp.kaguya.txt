@@ -9,7 +9,7 @@ pattern {
 }
 phase 0
 	action block 0
-		shift-phase-to 2
+		shift-phase-to 4
 	
 	
 !!{ colors { blue purple pink red orange yellow green teal black  }

@@ -14,14 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: {fileID: 6274564262994426332, guid: 33ce4a0ca42ed7e4c98b829e4314bddb, type: 3}
   CardPracticeName: Seija
-  replayNameOverride: 
+  BossPracticeName:
+    _showEnOnly: 0
+    en: Seija
+    jp: "\u6B63\u90AA"
+  challengeNameOverride:
+    _showEnOnly: 0
+    en: 
+    jp: 
+  replayNameOverride:
+    _showEnOnly: 0
+    en: 
+    jp: 
   stateMachine: {fileID: 4900000, guid: 1b371c9e201e35747911cfdc25a695ce, type: 3}
   key: simp.seija
-  casualName: 
-  casualNameJP: 
   trackName: "\u6B63\u90AA"
   colors: {fileID: 11400000, guid: 2b0cbd0b46a92ad429b425b10ae95074, type: 2}
-  rotator: 
+  cardRotator: 
   spellRotator: 
   profile:
     leftSidebar: {fileID: 2800000, guid: 111a06e0e902af749aa902fd7831b3ae, type: 3}

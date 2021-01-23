@@ -6,8 +6,8 @@ pattern {
 	}
 }
 phase 0
-	action block 0
-		shift-phase-to 2
+	paction 0
+		shift-phase-to 4
 	
 	
 !!{ me reimu
@@ -35,7 +35,7 @@ sync powerup1 <> powerup x-powerup-1
 <!> hpi 15000 3
 <!> roott 3 0 2
 phase 32
-	action block 0
+	paction 0
 		bullet-control persist amulet-black/ restyleeffect amuletreimu-black/w cwheel-black/b > t 2.5
 		bullet-control persist amulet-red/ restyleeffect amuletreimu-red/w cwheel-red/b > t 2.5
 		gtr {
@@ -71,7 +71,7 @@ phase 32
 <!> hpi 22000 3
 <!> root 0 2
 phase 37
-    action block 0
+    paction 0
 		shake 2 3 smooth smod-010 / x 3
 		$power1long
 		async x-boom <> gcr2 24 10 <> . sfx
@@ -108,9 +108,9 @@ phase 37
 <!> hpi 10000 7
 <!> root 0 1.9
 phase 32
-	action block 0
+	paction 0
 		$power1
-    action block 1.5
+    paction 1.5
 		async scircle-*/w <1;:60> gir2 /i ^ dl 0.25 (clamp 110 _ linear 160 -10 t) _ <> {
 				postloop rv2.a =f + 60 * 20h mod 1p t
 			} {
@@ -154,7 +154,7 @@ phase 32
 <!> hpi 18000 3
 <!> root 0 1
 phase 36
-	action block 0
+	paction 0
 		pool-control amuletreimu-* allowcull false
 !!{ lrpt + 3 dc
 !!{ amuletRpt 10s
@@ -203,7 +203,7 @@ phase 36
 <!> hpi 14000 3
 <!> root 0 2
 phase 31
-	action block 0
+	paction 0
 		bullet-control persist amulet-black/ restyleeffect amuletreimu-black/w cwheel-black/b > t 2.1
 		bullet-control persist amulet-red/ restyleeffect amuletreimu-red/w cwheel-red/b > t 2.1
 		async gdlaser-*/ <> gcr2 lerpt 0 1 360 300 _ <> {
@@ -246,7 +246,7 @@ phase 31
 <!> type timeout `Fantasy Seal ~Impure Wrath of the Avaricious~` #{
 <!> root 0 2
 phase 37
-	action block 0
+	paction 0
 		gtr {
 			delay 30
 			wt	lerpt 0 3 2.4s 1s _
@@ -321,7 +321,7 @@ phase 0
 !!{ hp1 $hpr(.8)
 !!{ hp2 $hpr(.6)
 !!{ hp3 $hpr(.35)
-    action block 0
+    paction 0
 		pool-control scircle-* allowcull false
 		sync sun-red/b <> ss 1 null
 		

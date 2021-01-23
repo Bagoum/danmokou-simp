@@ -15,8 +15,8 @@ MonoBehaviour:
   uiColor: {r: 0, g: 0.5660378, b: 0.082754016, a: 1}
   uiHPColor: {r: 0.089700304, g: 0.9056604, b: 0, a: 1}
   cardColorR: {r: 0, g: 0.8584906, b: 0.07219047, a: 1}
-  cardColorG: {r: 1, g: 0.85797274, b: 0, a: 1}
+  cardColorG: {r: 0.9245283, g: 0.74790365, b: 0, a: 1}
   cardColorB: {r: 0.735849, g: 0.4435969, b: 0, a: 1}
-  spellColor1: {r: 1, g: 0.84278667, b: 0, a: 0.70980394}
+  spellColor1: {r: 0.735849, g: 0.3129078, b: 0, a: 1}
   spellColor2: {r: 0, g: 0.8392157, b: 0.023797864, a: 0.6313726}
   spellColor3: {r: 1, g: 0.6096754, b: 0, a: 0.7372549}

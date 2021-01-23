@@ -7,8 +7,8 @@ pattern {
 	set-ui-from 2
 }
 phase 0
-	action block 0
-		shift-phase-to 5
+	paction 0
+		shift-phase-to 12
 	
 
 !{ power1()
@@ -38,7 +38,7 @@ phase 0
 <!> root 0 2
 <!> hp 13000
 phase 26
-	action block 0
+	paction 0
 !!{ rpt 3
 !!{ ra * p / 360 $rpt
 		sync _ <> gsr2 $rpt <> {
@@ -76,8 +76,8 @@ phase 26
 <!> type timeout `No Creation, No Destruction` #{
 <!> root 0 2
 phase 33
-	action block 0
-		sync danger <;6:> gsr2 3 <3.2;:> { center root zero } summonsup tpnrot py lerp3 2 2.5 3 3.5 t -4 0 2 wait
+	paction 0
+		sync danger <;6:> gsr2 3 <3.2;:> { center root zero } summonsup tpnrot py lerp3 2 2.5 3 3.5 t -4 0 2 stall
 		bullet-control PERSIST lcircle-* FLIPX> xmax _
         bullet-control PERSIST lcircle-* FLIPX< xmin _
         bullet-control PERSIST lcircle-* FLIPY> 4 _
@@ -129,7 +129,7 @@ phase 33
 <!> root 0 2
 <!> hp 13000
 phase 25
-	action block 0
+	paction 0
 !!{ rpt 3
 !!{ ra * p / 360 $rpt
 		sync _ <> gsr2 $rpt <> {
@@ -166,7 +166,7 @@ phase 25
 <!> root 0 2.5
 <!> hpi 11000 5
 phase 34
-	action block 0
+	paction 0
 		async gdlaser-red/b <> gcr2 /i ^ dl 0.6 (lerpt 0 25 190 140) _ <> {
 		} {
 			gsr {
@@ -214,7 +214,7 @@ phase 34
 <!> root 0 2
 <!> hp 14000
 phase 27
-	action block 0
+	paction 0
 !!{ rpt 3
 !!{ ra * p / 360 $rpt
 		sync _ <> gsr2 $rpt <> {
@@ -252,7 +252,7 @@ phase 27
 <!> root 1.5 2.5
 <!> hpi 22000 5
 phase 36 
-	action block 0
+	paction 0
 		gtr {
 			delay 7s
 			wt	3s _
@@ -303,7 +303,7 @@ phase 36
 <!> root 0 2
 <!> hpi 16000 3
 phase 32
-	action block 0
+	paction 0
 !!{ rpt 3
 !!{ ra * p / 360 $rpt
 		sync _ <> gsr2 $rpt <> {
@@ -345,7 +345,7 @@ phase 32
 <!> root 0 2
 <!> hpi 26000 4
 phase 37
-	action block 0
+	paction 0
 		pool-control { { star-* sun-* lstar-* } } cullrad 10
 		gtr {
 			delay 3s
@@ -388,7 +388,7 @@ phase 37
 <!> root 0 2
 <!> hpi 13000 2
 phase 30
-	action block 0
+	paction 0
 !!{ rpt 3
 !!{ ra * p / 360 $rpt
 		sync _ <> gsr2 $rpt <> {
@@ -427,7 +427,7 @@ phase 30
 <!> root 0 0
 <!> hpi 28000 8
 phase 42
-	action block 0
+	paction 0
 		$power1
 		~ async gdlaser-red/b <;1.2:> gir2 0 2 <2.4;:> {
 			center
@@ -452,7 +452,7 @@ phase 42
 				p this
 			} laser nroffset lbeh $me 1.5 + 3 * 999 p { dsfx rotate -90 * p sine $lwper * &lr 13 timersec(pt) }
 		}
-	action block 1.5
+	paction 1.5
 		sfx x-boom
 		draiko 2 4
 		move-target 1 out-sine cy 2
@@ -493,7 +493,8 @@ phase 42
 				clip < timersec(pt) 9
 				target a Lplayer
 				center
-				color _scircle-red/w 
+				resetcolor
+				color scircle-red/w 
 				sfx x-fire-burst-2
 			} s tprot cx 1.6
 			gsr2 2 <> {
@@ -535,7 +536,7 @@ phase 42
 <!> root 0 2.5
 <!> hpi 15000 8
 phase 40
-	action block 0
+	paction 0
 		async lcircle-*/ <> gcr {
 			wait(/i dl lerp(0, 13, timersec(phaset), 27, 18))
 			times(_)
@@ -600,7 +601,7 @@ phase 0
 !!{ hp1 $hpr(.9)
 !!{ hp2 $hpr(.65)
 !!{ hp3 $hpr(.4)
-	action block 0
+	paction 0
 		sync circle-black/b <> loc0 gsr {
 !!{ wl 14
 !!{ ww 10
@@ -720,7 +721,7 @@ phase 0
 <!> root 0 2.2
 <!> hpi 12000 2
 phase 26
-	action block 0
+	paction 0
 !!{ srpt * dl 20
 		async scircle-*/w <> gcr2 (lerpt 0 7 150 80) _ a / 360h $srpt {
 			sfx x-fire-burst-1

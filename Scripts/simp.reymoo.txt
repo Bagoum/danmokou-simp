@@ -6,8 +6,8 @@ pattern {
 	}
 }
 phase 0
-	action block 0
-		shift-phase-to 3
+	paction 0
+		shift-phase-to 2
 	
 	
 !!{ me reimu
@@ -36,7 +36,7 @@ phase 0
 <!> root 0 2.5
 <!> hpi 23000 2
 phase 33
-    action block 0
+    paction 0
 	event playerinvuln 240
 	gtr {
 		wt	lerpt 0 3 7s 6s _
@@ -94,7 +94,7 @@ phase 33
 <!> type timeout `Winds Bringing No Change` #{
 <!> root 0 0
 phase 30
-	action block 0
+	paction 0
 		sync gdlaser-*/ <> gsr2c 6 {
 			color { red pink }
 		} laser null 1.5 _ {
@@ -106,7 +106,7 @@ phase 30
 				+ * (- -11 * 2 dc) &lt sine 2.1 (+ 14 * 2 dc) + * 1.1 &lt t
 		}
 		$power1
-	action block 1.5
+	paction 1.5
 !!{ arpt + dc 2
 		async amulet-* <> gcr2 (lerpt 0 6 300 200) _ angle / 360h $arpt {
 			p this

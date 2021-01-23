@@ -1,11 +1,11 @@
 <#> strict(none)
 pattern { }
 phase 0
-	action block 0
+	paction 0
 		shift-phase-to 1
 
 phase 0
-	action block 0
+	paction 0
 		position 0 0
 		async gem-red/w <1;:> gcr2 12 _ <12h> . 
 			s tprot cx 2

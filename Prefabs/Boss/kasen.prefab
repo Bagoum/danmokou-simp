@@ -129,6 +129,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -6415006274216947455, guid: b14099e48ce26e8439c640d781137253,
         type: 3}
+    - target: {fileID: 5442691617086786321, guid: 567949ea02f82894482d1922e940c492,
+        type: 3}
+      propertyPath: m_text
+      value: Protector of the Horses / Kasen / Protector of the Horses / Kasen /
+        Protector of the Horses / Kasen /<color=#ff000000>|</color>
+      objectReference: {fileID: 0}
     - target: {fileID: 5738943023965476947, guid: 567949ea02f82894482d1922e940c492,
         type: 3}
       propertyPath: animate.frames.attackAnim.Array.size

@@ -6,8 +6,8 @@ pattern {
 	}
 }
 phase 0
-	action block 0
-		shift-phase-to 2
+	paction 0
+		shift-phase-to 5
 	
 !!{ me seija
 !{ 
@@ -45,7 +45,7 @@ phase 0
 <!> hpi 18000 4
 <!> root 0 2
 phase 32
-    action block 0
+    paction 0
 		dangerright2
 		dangerbot
 		gtr {
@@ -95,7 +95,7 @@ phase 32
 <!> hp 22000
 <!> root 0 1.5
 phase 33
-	action block 0
+	paction 0
 		pool-control { { ellipse-*/ } { red purple } } allowcull false
 		gtr {
 			delay 3s
@@ -162,9 +162,9 @@ phase 33
 <!> hpi 15000 3
 <!> root 0 1.9
 phase 30
-	action block 0
+	paction 0
 		$power1
-    action block 1.5
+    paction 1.5
 		bullet-control persist ellipse-purple/w batch > x xmax {
 			flipx> xmax _
 			restyleeffect ellipse-purple/b cwheel-purple/b _
@@ -198,7 +198,7 @@ phase 30
 <!> hp 23000
 <!> root 0 1.5
 phase 34
-    action block 0
+    paction 0
 		timer restart seija.fcr
 		
 		gtr {
@@ -275,7 +275,7 @@ phase 34
 <!> hpi 16000 3
 <!> root 0 2.3
 phase 37
-    action block 0
+    paction 0
 		dangerbot
 		pool-control { ellipse-* } cullrad 15
 !!{ crep * dl 16
@@ -365,13 +365,13 @@ bullet-control persist ellipse-%color%/w cull circ withz &.root 0.04
 <!> type spell `Army Gazing Across the Channel: Feast of Undercooked Potatoes` #{
 <!> hpi 18000 5
 phase 34
-	action block 0
+	paction 0
 		dangerbot
 		dangertop
 		dangerleft2
 		dangerright2
 		move-target 2 io-sine py 2.6
-    action block 0
+    paction 0
 		gtr {
 			delay 3s
 			wt 4s _
@@ -451,7 +451,7 @@ phase 34
 <!> hpi 16000 7
 <!> root 0 1.5
 phase 40
-	action block 0
+	paction 0
 !{ er(c, s1, s2, pred)
 	bullet-control persist ellipse-%c%%s1% restyleeffect ellipse-%c%%s2% cwheel-%c%/b %pred
 !}
@@ -480,7 +480,7 @@ phase 40
 		gtr {
 			wt	2s _
 			wait-child
-		} action block 0 :3
+		} paction 0 :3
 			_ $et1
 				sfx x-transform-2
 			_ $et2
@@ -569,7 +569,7 @@ phase 0
 <!> hp 23000
 <!> root 0 1
 phase 27
-	action block 0
+	paction 0
 		pool-control { { ellipse-*/b } { red purple } } allowcull false
 		gtr {
 			wt 0 _
@@ -628,7 +628,7 @@ async gem-%c%/b <0.2;:> gir {
 		face v
 	} s tprot px lerpt 0 0.6 3 0
 !}
-	action block 0
+	paction 0
 		$rbf($er(!$, /, /b, in t 2 10))
 		$rbf($er(!$, /b, /, > t 11))
 		bullet-control persist gem-red/b softcull cwheel-red/b > t 1
@@ -667,7 +667,7 @@ async gem-%c%/b <0.2;:> gir {
 			} guideempty .1 p { plb loc } { }
 				tprot px lerpt 1.2 2 1 4 {
 					inode nroffset @ plb p
-						action block 0 :2
+						paction 0 :2
 							$trail(purple)
 							async strip-*/w <0.5;:> gcr2 40 _ <10c> { 
 								bank <>
@@ -689,7 +689,7 @@ async gem-%c%/b <0.2;:> gir {
 			} guideempty .2 p { plr loc } { }
 				tprot px lerp3 (1 2 2.3 3 t) 1 4 -6 {
 					inode nroffset @ plr p
-						action block 0 :2
+						paction 0 :2
 							$trail(red)
 							async strip-red/w <0.5;:> gcr2 (lerpt 4 7 40 30) _ <10c> { 
 								bank <>

@@ -13,24 +13,28 @@ MonoBehaviour:
   m_Name: SiMP.Keine
   m_EditorClassIdentifier: 
   boss: {fileID: 5188976871280437473, guid: 3f74c05d54dfae94ab79f9fa4ea75188, type: 3}
-  CardPracticeName: 
-  replayNameOverride: 
+  CardPracticeName: Keine
+  BossPracticeName:
+    _showEnOnly: 0
+    en: Keine
+    jp: "\u6167\u97F3"
+  challengeNameOverride:
+    _showEnOnly: 0
+    en: 
+    jp: 
+  replayNameOverride:
+    _showEnOnly: 0
+    en: 
+    jp: 
   stateMachine: {fileID: 0}
   key: simp.keine
-  casualName: 
-  casualNameJP: 
-  displayName: Kamishirasawa<br><size=10>Keine</size>
-  displayTitle: Terror<br>Storyteller
   trackName: "\u6167\u97F3"
   colors: {fileID: 11400000, guid: aba4dc560ddf4354c8bfc6c93a4a0099, type: 2}
-  rotator: 
+  cardRotator: 
+  spellRotator: 
   profile:
     leftSidebar: {fileID: 2800000, guid: 170a80b2addc1094b924fb5b60af4241, type: 3}
     rightSidebar: {fileID: 2800000, guid: e83a896850a93d240a7d7527b540014a, type: 3}
-    image: {fileID: 2800000, guid: cbcaa639a762c5347b62be1e63fd6cbe, type: 3}
-    offsetX: 0.484
-    offsetY: 0.648
-    zoom: 6.3
   defaultNonBG: {fileID: 0}
   defaultSpellBG: {fileID: 0}
   defaultIntoSpellTransition: {fileID: 0}

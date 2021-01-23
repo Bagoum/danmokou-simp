@@ -173,6 +173,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3402740035640928073, guid: 347818370a7e3584191cdbc95c84b6f0,
         type: 3}
+    - target: {fileID: 5442691617086786321, guid: 567949ea02f82894482d1922e940c492,
+        type: 3}
+      propertyPath: m_text
+      value: Purple Haze Lurking Beyond the Pale / Yakumo Yukari / Purple Haze Lurking
+        Beyond the Pale / Yakumo Yukari /<color=#ff000000>|</color>
+      objectReference: {fileID: 0}
     - target: {fileID: 5738943023965476947, guid: 567949ea02f82894482d1922e940c492,
         type: 3}
       propertyPath: animate.frames.attackAnim.Array.size

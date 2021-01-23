@@ -15,12 +15,13 @@ MonoBehaviour:
   gameIdentifier: SiMP
   gameVersion:
     major: 3
-    minor: 1
-    patch: 5
+    minor: 2
+    patch: 0
   mainMenu: {fileID: 11400000, guid: 977bd9744ba2d3a42a39a6092cb8e0e5, type: 2}
   replaySaveMenu: {fileID: 11400000, guid: 4eb8b66bd76d4d94fa90176835284503, type: 2}
   defaultMenuBackground: {fileID: 6614173089345499342, guid: 56da452ec6a98284295330ef47ecf1c1,
     type: 3}
+  defaultUIFrame: {fileID: 21300000, guid: fd60a7ae3ce4be640b9b311d9d70969e, type: 3}
   unitScene: {fileID: 11400000, guid: f6d073d9562719741ac86ec620f65354, type: 2}
   tutorial: {fileID: 11400000, guid: e027ad7aef4a8f64b9c01607748714d4, type: 2}
   miniTutorial: {fileID: 11400000, guid: fb36de3b12e94e04d9e76959a8887586, type: 2}
@@ -28,7 +29,7 @@ MonoBehaviour:
   campaign: {fileID: 11400000, guid: 0e12394685828ac44a2b553087a8aec5, type: 2}
   exCampaign: {fileID: 11400000, guid: 29d8e1b38a50bdc4dbdbafd33095f788, type: 2}
   dayCampaign: {fileID: 0}
-  defaultTransition: {fileID: 11400000, guid: c8577b9207247ff4b92b5c2e2cc31ec0, type: 2}
+  defaultTransition: {fileID: 11400000, guid: 3e2a8876c4f618c459cd5149f9ae1964, type: 2}
   bounds:
     left: -3.6
     right: 3.6

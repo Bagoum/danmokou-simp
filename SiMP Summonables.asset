@@ -21,7 +21,7 @@ MonoBehaviour:
   - groupTitle: namecards
     prefabs:
     - name: namecard-seija
-      prefab: {fileID: 4801741592690297299, guid: ac807f9482f9ab043bc39ab055b68ff6,
+      prefab: {fileID: 6996511313717563879, guid: a97dd7c2bd40d814dad07fc7d86572f7,
         type: 3}
     - name: namecard-aya
       prefab: {fileID: 6996511313717563879, guid: f1bf8dbba6da37649a730e6bb8c4ea06,

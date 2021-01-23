@@ -8,8 +8,8 @@ pattern {
 }
 <!> showlives 4
 phase 0
-	action block 0
-		shift-phase-to 2
+	paction 0
+		shift-phase-to 3
 	
 	
 !!{ colors { blue purple pink red orange yellow green teal black  }
@@ -50,7 +50,7 @@ phase 0
 <!> root 0 1.5
 <!> showlives 4
 phase 31
-    action block 0
+    paction 0
 		async lightning-*/w <90> gir2d (^ dl 0.4) 600 _ <> {
 		} gcr2 24 5 <-20> {
 			center
@@ -103,7 +103,7 @@ phase 31
 <!> root 0 1.5
 <!> showlives 4
 phase 36
-	action block 0
+	paction 0
 		$power1
 		
 !!{ w lerpd(1.5, 1.2)
@@ -119,7 +119,7 @@ phase 36
 			} gsr2 2 <> { 
 				p this
 			} summons tprot pxy * pm1 p 2.5 -0.5
-				action block 0 :2
+				paction 0 :2
 					async glaser-pink/ <-5;:> gcr {
 						delay 1s
 					} gsr {

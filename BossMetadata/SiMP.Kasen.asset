@@ -13,24 +13,31 @@ MonoBehaviour:
   m_Name: SiMP.Kasen
   m_EditorClassIdentifier: 
   boss: {fileID: 6274564262994426332, guid: fc535ee3310d1574da2cf8ad79e59e23, type: 3}
-  CardPracticeName: Kasen (1)
-  replayNameOverride: 
+  BossPracticeName:
+    _showEnOnly: 0
+    en: Kasen (1)
+    jp: "\u83EF\u4ED9 (1)"
+  challengeNameOverride:
+    _showEnOnly: 0
+    en: 
+    jp: 
+  replayNameOverride:
+    _showEnOnly: 0
+    en: 
+    jp: 
+  bottomTrackerNameOverride:
+    _showEnOnly: 0
+    en: "\u83EF\u4ED9"
+    jp: "\u83EF\u4ED9"
   stateMachine: {fileID: 4900000, guid: 1b7f9bf4af0e5194da746189928d2860, type: 3}
   key: simp.kasen
-  casualName: 
-  casualNameJP: 
-  displayName: Kasen
-  displayTitle: Wild Hermit<br>of Flower<br>and Fruit
   trackName: "\u83EF\u4ED9"
   colors: {fileID: 11400000, guid: 57116f48f7cf03b4ea8a6b2d6b6fbee1, type: 2}
-  rotator: 
+  cardRotator: 
+  spellRotator: 
   profile:
     leftSidebar: {fileID: 2800000, guid: 8cc7235ebe29cdc4aa62302d4c5de717, type: 3}
     rightSidebar: {fileID: 2800000, guid: cf10aa52430cbb743b5db2d6d5cb600a, type: 3}
-    image: {fileID: 2800000, guid: 4bed4529bfa465746a8178f9a47c7a99, type: 3}
-    offsetX: 0.43
-    offsetY: 0.71
-    zoom: 6.5
   defaultNonBG: {fileID: 5180723301924424041, guid: ddaded76ccac01d46b1e0de9b3cd2b53,
     type: 3}
   defaultSpellBG: {fileID: 5180723301924424041, guid: 96832a8ee1768044894f1fde7b536a94,

@@ -14,23 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: {fileID: 6003014192476353498, guid: de476e8b7e8ae2b47a089273d027f53f, type: 3}
   CardPracticeName: Reimu
-  replayNameOverride: 
+  BossPracticeName:
+    _showEnOnly: 0
+    en: Reimu
+    jp: "\u970A\u5922"
+  challengeNameOverride:
+    _showEnOnly: 0
+    en: 
+    jp: 
+  replayNameOverride:
+    _showEnOnly: 0
+    en: 
+    jp: 
   stateMachine: {fileID: 4900000, guid: f61b535c2eac90d438d2fe512b98ffa5, type: 3}
   key: simp.reimu
-  casualName: 
-  casualNameJP: 
-  displayName: Hakurei<br>Reimu
-  displayTitle: The Dragon<br>of the<br>Frontier
   trackName: "\u970A\u5922"
   colors: {fileID: 11400000, guid: b25c8f6870731d14b86cc87bcaf0878b, type: 2}
-  rotator: 
+  cardRotator: 
+  spellRotator: 
   profile:
     leftSidebar: {fileID: 2800000, guid: d72e5c24d7b83db46a6d85028f4d96ac, type: 3}
     rightSidebar: {fileID: 2800000, guid: 1b6d77e5f25d32e469448204cad312d0, type: 3}
-    image: {fileID: 2800000, guid: 677bdbaf7f9cf624687fe596169903f1, type: 3}
-    offsetX: 0.23
-    offsetY: 0.66
-    zoom: 5.3
   defaultNonBG: {fileID: 5180723301924424041, guid: 54af7e21f5658a34eb43a871eff483aa,
     type: 3}
   defaultSpellBG: {fileID: 5180723301924424041, guid: faeacce4333d1b64ab46a93947ff0ce6,

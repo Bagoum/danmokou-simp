@@ -6,8 +6,8 @@ pattern {
 	}
 }
 phase 0
-	action block 0
-		shift-phase-to 6
+	paction 0
+		shift-phase-to 3
 	
 	
 !!{ me kasen
@@ -37,7 +37,7 @@ phase 0
 <!> hp 15000
 <!> root 0 1.5
 phase 27
-    action block 0
+    paction 0
 		async gcircle-*/w <0.5;:> gir2 (/ 150 ^ dl 0.2) _ <> { 
 			p this
 			color { red green }
@@ -77,7 +77,7 @@ phase 27
 <!> type timeout `Five Hundred Years under the Five-Finger Mountain` #{
 <!> root 0 0
 phase 30
-    action block 0
+    paction 0
 		pool-control {{ shell-* }} allowcull false
 		sync sakura-** <> gsr2 7 <> {
 			color { red green }
@@ -110,7 +110,7 @@ phase 30
 <!> hpbar 0.3
 <!> root 0 2.3
 phase 32
-	action block 0
+	paction 0
 		bullet-control persist gcircle-yellow* batch > t 1 {
 			sm _
 				async gpather-yellow/ <> gsr {
@@ -155,9 +155,9 @@ phase 32
 <!> hpbar 0.4
 <!> root 0 2
 phase 28
-	action block 0
+	paction 0
 		$power1
-	action block 1.5
+	paction 1.5
 		async sakura-* <0.4;:> gir2 0 2 <> { 
 			p this 
 			color { green/ red/w }
@@ -180,7 +180,7 @@ phase 28
 <!> hpi 18000 4
 <!> root 0 0.5
 phase 36
-	action block 0
+	paction 0
 		pool-control sakura-* allowcull false
 		bullet-control persist scircle-red/w batch > t + 3 * 0.26 p {
 			softcull cwheel-red/w _

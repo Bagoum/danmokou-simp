@@ -6,7 +6,7 @@ pattern {
 	}
 }
 phase 0
-	action block 0
+	paction 0
 		shift-phase-to 2
 	
 
@@ -42,11 +42,11 @@ phase 0
 <!> type timeout `Sacred Flame: Ashen Flight of a Cindered Soul` #{
 <!> root 0 3
 phase 30
-	action block 0
+	paction 0
 !!{ sunt 2
 		bullet-control persist sun-* cull > t $sunt
 		pool-control { fireball-* } allowcull false
-	action block 0
+	paction 0
 		async fireball-black/b <> gcr2 /i ^ dl 0.4 (lerpt 0 20 130 100) _ <> {
 			root cy 5
 !!{ vs /i ^ dl 0.4 0.9
@@ -108,7 +108,7 @@ phase 30
 <!> root 0 1.5
 <!> hpi 20000 2
 phase 38
-	action block 0
+	paction 0
 !!{ seethet 3
 		bullet-control persist sun-* cull > t $seethet
 		bullet-control-sm persist sun-* onlyonce > t * 0.95 $seethet
@@ -120,7 +120,7 @@ phase 38
 			lssht -1 0.3 * 6 t * -1 t
 			+ * 2 p lssht -0.1 1 * 90 t 0
 		bullet-control-sm persist scircle-* onlyonce offscreen loc
-			action block 0 :2
+			paction 0 :2
 				sync fireball-red/ <-0.6;:> gsr2c * ^ dl 0.7 12 {
 				} gsr2 3 <0.3;:> {
 				} s tprot px lerpt 0.4 1 0.4 1.6
@@ -182,7 +182,7 @@ phase 38
 <!> type timeout `Entei: Erratic Blaze Queen's Flaming Prison` #{
 <!> root 0 1
 phase 38
-	action block 0
+	paction 0
 		draiko 2 4
 		$power1long
 		async x-boom <> gcr2 24 12 <> . sfx

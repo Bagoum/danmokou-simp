@@ -4,7 +4,7 @@ pattern { bgm {
 	8	_
 } }
 phase 0
-	action block 0
+	paction 0
 		shift-phase-to 3
 		
 
@@ -62,9 +62,9 @@ phase 0
 ## 2
 <!> stage
 phase 29 #{
-	action block 0
+	paction 0
 		dangerbot
-	action block 2
+	paction 2
 		$fliplrb(ellipse-green/w, ellipse-teal/b)
 		$fliplrb(ellipse-yellow/w, ellipse-orange/b)
 		sync ifairy5 <> $mw12(cy -6, cy -3, cy -6,
@@ -101,7 +101,7 @@ summonr rvtp %root tprot %vel
 ## 3
 <!> stage
 phase 30 #{
-	action block 0
+	paction 0
 		async fairy1 <> gcr3 /i dl 90 _ <> {
 		} $3(cxy -7 -5, cr 2 20, 60, circle-green/w)
 		async fairy1 <> gcr3 /i dl 90 _ <> {
@@ -114,14 +114,14 @@ phase 30 #{
 		} gsr {
 			root pxy * 4 pm1 p -5
 		} summon null movewrap 1 (pxy [Lplayer].x -3) 2 (pxy * pm1 p 6 -1)
-			action block 0 :2
+			paction 0 :2
 				sync gdlaser-pink/b <-2;:> target Lplayer laser null 1.5 0.5 { s 2 dsfx }
 				wait 1
 			{ hp 600 }
 		async crow <-6;-3.8:> gcr3 /i ^ dl 0.6 3.5sh 12s <180> {
 			p this
 		} summon tprot cx 1
-			action block 0 :2
+			paction 0 :2
 				async gdlaser-yellow/b <-2;:90> iparent this gir {
 					delay rand 0s 2s
 				} laser null 1.5 1 { repeat sfx2 `` x-laser-on }
@@ -141,12 +141,12 @@ phase 0
 ## 5
 <!> stage
 phase 30 #{
-	action block 0
+	paction 0
 		dangerleft2
 		dangerright2
 		dangerbot
 		dangertop
-	action block 2
+	paction 2
 		async ifairy5 <-4.2;-5:> gcr2 6s _ <> {
 		} gsr2c 2 {
 			p this
@@ -177,9 +177,9 @@ phase 30 #{
 ## 6
 <!> stage
 phase 20 #{ ##Some extra time since this precedes the boss
-	action block 0
+	paction 0
 		dangerbot
-	action block 2
+	paction 2
 		bullet-control persist ellipse-* batch & > t 0.8 = &.refire 1 {
 			 restyleeffect arrow-black/w cwheel-black/w _
 			 sfx x-transform-2 _

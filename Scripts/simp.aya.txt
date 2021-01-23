@@ -6,7 +6,7 @@ pattern {
 	}
 }
 phase 0
-	action block 0
+	paction 0
 		shift-phase-to 3
 	
 
@@ -35,7 +35,7 @@ phase 0
 <!> hpi 10000 4
 <!> root 0 2
 phase 30
-	action block 0
+	paction 0
 		_ 0.5 $power1
 		async circle-* <180> gir2 2s 2 <> {
 			p this
@@ -76,9 +76,9 @@ phase 30
 <!> hpi 14000 4
 <!> root 0 7
 phase 32
-	action block 0
+	paction 0
 		pool-control {{ gcircle-* sakura-* fireball-* }} allowcull false
-	action block 0
+	paction 0
 		position 10 6
 !!{ bc sakura-black/
 		bullet-control persist $bc flipy> ymax _
@@ -178,7 +178,7 @@ phase 0
 <!> type timeout `Tengu's Rise: Winged Feet of Pheidippides` #{
 <!> root 0 7
 phase 21
-	action block 0
+	paction 0
 		pool-control {{ gcircle-* }} allowcull false
 		savef lr 0 1
 		sync gcircle-black/b <> loc0 gsr {
@@ -234,7 +234,7 @@ phase 21
 				lerpt 0 0.5 1.4 2.2
 				+ -90 * 25 rangemodh ++ &itr
 			if < &itr 14
-				move-target $movet linear @0 next
+				move-target $movet elinear @0 next
 				wait $movet
 			if = &itr 11
 				bullet-control once gcircle-* cull _

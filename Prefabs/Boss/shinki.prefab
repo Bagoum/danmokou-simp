@@ -189,6 +189,12 @@ PrefabInstance:
       propertyPath: animate.frames.leftAnim.Array.data[0].time
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 5442691617086786321, guid: 567949ea02f82894482d1922e940c492,
+        type: 3}
+      propertyPath: m_text
+      value: God of Makai / Shinki / God of Makai / Shinki / God of Makai / Shinki
+        / God of Makai / Shinki /<color=#ff000000>|</color>
+      objectReference: {fileID: 0}
     - target: {fileID: 5738943023965476947, guid: 567949ea02f82894482d1922e940c492,
         type: 3}
       propertyPath: animate.frames.leftAnim.Array.size

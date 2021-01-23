@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SiMP StageExtra
   m_EditorClassIdentifier: 
   sceneName: SiMP.StageExtra
-  transitionIn: {fileID: 11400000, guid: c8577b9207247ff4b92b5c2e2cc31ec0, type: 2}
+  transitionIn: {fileID: 0}

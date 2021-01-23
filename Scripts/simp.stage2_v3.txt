@@ -4,7 +4,7 @@ pattern { bgm {
 	6	_
 } }
 phase 0
-	action block 0
+	paction 0
 		shift-phase-to 5
 	
 ##1
@@ -23,7 +23,7 @@ sync powerup1 <> powerup2
 
 !{ a1(y 2)
 summonr null(cy(5))
-	action block 0 :2
+	paction 0 :2
 	movewrap 1 goy(%y) 4 gootherside(%y - 0.5)
 		wait-for 0.8
 	_ 0.8 async amulet-red/ <> gcr2 (60 / dl) _ <> {
@@ -82,7 +82,7 @@ summonr null(cy(5))
 
 !{ a4(y 2, stay 1.5)
 summonr null(cy(5))
-	action block 0 :2
+	paction 0 :2
 		movewrap 1 goy(%y) 5 gootherside(%y - 1)
 			wait-for %stay
 		_ 0.8 async gem-pink* <> gcr2 60 _ <> {
@@ -131,39 +131,39 @@ summonr null(cy(5))
 ##2
 <!> stage
 phasej 73 0 #{
-	action block 0
-	action block 0
+	paction 0
+	paction 0
 		async tfairy $l $a1()
 		_ 1 async tfairy $r $a1()
-	action block 2
+	paction 2
 		async tfairy <-2.5;:> gcr2 60 12 <> {
 			frv2(rx($w / 5 * softmod(5, t)))
 			p this
 		} $a2(0.5 + 0.15 * p)
 		_ 1 async tlfairy $l $a3(2)
 		_ 3 async tlfairy <> $a4(2.5, 3)
-	action block 1
+	paction 1
 		async tlfairy <> gsr2 2 <> {
 			bindLR
 			preloop rv2.rx =f ($lr * &lr)
 		} $a5(2.5)
-	action block 6
+	paction 6
 		async tlfairy $l $a3
 		_ 2 async tfairy $r gcr2 50 6 <> {
 			spread(rx(-1 * $w))
 			p this
 		} $a2(1.4 + 0.2 * p)
 		_ 3 async tlfairy $r $a3
-	action block 2
+	paction 2
 		async tlfairy $l $a5
 		_ 1 async tfairy $r gcr2 50 6 <> {
 			spread(rx(-1 * $w))
 			p this
 		} $a2(2.3 - 0.2 * p)
-	action block 3
+	paction 3
 		async tlfairy <-1.5;:> $a4(1, 2)
 		async tlfairy <1.5;:> $a4(1, 2)
-	action block 4
+	paction 4
 		async tlfairy $l gcr2 7s 2 <> { 
 			p this
 		} $a3(1 + 0.5 * p)
@@ -176,7 +176,7 @@ phasej 73 0 #{
 			delay(3s)
 			frv2(rx(2 * pm1(t)))
 		} $a1(3)
-	action block 8
+	paction 8
 		async tfairy <-2.5;:> gcr2 110 16 <> {
 			frv2(rx($w / 5 * softmod(5, t)))
 			p this
@@ -187,7 +187,7 @@ phasej 73 0 #{
 		_ 7 async tlfairy $r $a3
 		_ 10 async tlfairy <2;:> $a5
 		_ 13 async tlfairy $l $a4
-	action block 3
+	paction 3
 		async tlfairy <> $a5(3)
 		async tfairy <> gcr2 60 5 <> {
 			p this
@@ -209,7 +209,7 @@ phase 0
 ##4
 <!> stage
 phase 40 #{
-	action block 0
+	paction 0
 !!{ t1 20s
 		gtr {
 			wt	/i (^ dl 0.6) 360 _
@@ -229,7 +229,7 @@ phase 40 #{
 			delay 3s
 			p this
 		} summon tprot cy 1
-			action block 0 :2
+			paction 0 :2
 				async gdlaser-yellow/b <-2;:> iparent this gcr {
 				
 				} laser null lerpd(1.5, 1) 0.5 { repeat sfx2 `` x-laser-on }
@@ -241,7 +241,7 @@ phase 40 #{
 			delay($t1 + 2s)
 		} summonrz
 			movewrap~ 0 1 goy(rand(2.5, 2.9)) ss0(distToWall(loc, Lplayer - loc) / 3) (toWall(loc, Lplayer - loc) * 1.2)
-				action block 0 :2
+				paction 0 :2
 					sfx x-crow
 					async shell-purple* <180> gir {
 						delay(20)

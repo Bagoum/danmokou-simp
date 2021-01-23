@@ -4,7 +4,7 @@ pattern { bgm {
 	9	_
 } }
 phase 0
-	action block 0
+	paction 0
 		shift-phase-to 9
 		
 
@@ -60,7 +60,7 @@ color fairy3 summonrz
 !}
 
 !{ firem1()
-action block 0 :2
+paction 0 :2
 	async scircle-pink/b <> gcr3 240 10.2s <> {
 		sfx x-fire-burst-3
 	} gsr2c 3 {
@@ -88,7 +88,7 @@ color fairy4 summonrz
 
 
 !{ firem2()
-action block 0 :2
+paction 0 :2
 	async gdlaser-red/ <> gcr3 160 9s <> { 
 		sfx x-fire-burst-1
 	} {
@@ -119,7 +119,7 @@ color fairy4 summonrz
 
 ##unused
 !{ fireh1()
-action block 0 :2
+paction 0 :2
 	async arrow-*/w <1;:> gcr3 3 10s <12h> {
 		sfx x-fire-loop-1
 		p this
@@ -135,13 +135,13 @@ action block 0 :2
 			p add
 		} laser null 0.5 (- 8.8 * 8f p1) {
 			dsfx
-			rotate	0 * pm1 p2 lerpsmooth sine-010 0 (- 9.5 * 17f p1) t (+ -170 * -4 p1) -9
+			rotate	0 * pm1 p2 lerpsmooth esine010 0 (- 9.5 * 17f p1) t (+ -170 * -4 p1) -9
 		}
 !}
 !{ objh1(move)
 color fairy5 summonrz
 	phase 0
-		finish :1
+		finish
 			behpool-control gdlaser-* softcullall cwheel
 		saction 0
 			imovewrap %move
@@ -154,50 +154,50 @@ color fairy5 summonrz
 ##3
 <!> stage
 phasej 66 0 #{
-	action block 0
+	paction 0
 		async _ <;6:> gcr2 30 6 <1.1;:> {
 			center
 		} $obju1(1 goy 2 2 goside 0)
-	action block 0
+	paction 0
 		sync _ <-3;6:> $objs1(1 goy 1 2 goside 0)
 		wait 4
-	action block 0
+	paction 0
 		sync _ <3;6:> $objs1(1 goy 1 2 goside 0)
 		async _ <;6:> gcr2 30 6 <-1.1;:> {
 			center
 		} $obju1(1 goy 2 2 goside 0)
 		wait 5
-	action block 0
+	paction 0
 		sync _ <0;6:> $objm1(1 goy 2 2 goup)
 		wait 5
-	action block 0
+	paction 0
 		sync _ <-3;6:> $objm1(1 goy 2 2 goup)
-	action block 1
+	paction 1
 		sync _ <;6:> $objs1(1 goy 1 2 goside 0)
 		async _ <6;3:> gcr2 40 5 <;-1:> {
 		} $obju1(1 gox 3 2 goside 0)
 		wait 6
-	action block 0
+	paction 0
 		sync _ <-3;6:> $objm2(1 goy 2 2 goup)
-	action block 5
+	paction 5
 		sync _ <3;6:> $objm2(1 goy 2 2 goup)
-	action block 3
+	paction 3
 		sync _ <-3;6:> $objm2(1 goy 1 2 goup)
 		sync _ <;6:> $objs1(2 goy 0 2 goside 0)
-	action block 5
+	paction 5
 		sync _ <3;6:> $objm2(1 goy 2 2 goup)
-	action block 2
+	paction 2
 		async _ <-6;3:> gcr2 40 5 <;-1:> {
 		} $obju1(1 gox -3 2 goside 0)
 		wait 5
-	action block 0
+	paction 0
 		sync _ <;6:> $objm1(1 goy 2 2 goup)
 		sync _ <;6:> gsr2 2 <6;:> { center } $objs1(1 goy 0 2 goside 0)
-	action block 8
+	paction 8
 		sync _ <-3;6:> $objm1(1 goy 2 2 goup)
-	action block 3
+	paction 3
 		sync _ <3;6:> $objm2(1 goy 2 2 goup)
-	action block 3
+	paction 3
 		async _ <;6:> gcr2 40 4 <1;:> { center } $obju1(1 goy 1 2 goside 0)
 #}
 
@@ -212,7 +212,7 @@ phase 0
 
 <!> stage #{
 phase 36
-	action block 0
+	paction 0
 		dangerbot
 		dangerleft2
 		timer restart pt
@@ -220,7 +220,7 @@ phase 36
 		async crow <-3;-5:180> gcr2 $firef _ <180> {
 			p this
 		} summon tprot cy 1
-			action block 0 :2
+			paction 0 :2
 				async gdlaser-*/b <-2;:> iparent this gir {
 					delay * 2s rangemodh p
 					colorf { yellow purple } p
@@ -230,7 +230,7 @@ phase 36
 		async crow <-6;-3.8:180> gcr2 $firef _ <180> {
 			p this
 		} summon tprot cx 1
-			action block 0 :2
+			paction 0 :2
 				async gdlaser-*/b <-2;:90> iparent this gir {
 					delay * 2s rangemodh p
 					colorf { yellow purple } p

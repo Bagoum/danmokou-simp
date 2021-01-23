@@ -34,11 +34,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6003014192476353335, guid: de476e8b7e8ae2b47a089273d027f53f,
         type: 3}
-      propertyPath: cardCircle
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6003014192476353335, guid: de476e8b7e8ae2b47a089273d027f53f,
-        type: 3}
       propertyPath: distorter
       value: 
       objectReference: {fileID: 0}
@@ -132,7 +127,7 @@ PrefabInstance:
     - target: {fileID: 6185771066812665559, guid: de476e8b7e8ae2b47a089273d027f53f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8130455393268500493, guid: de476e8b7e8ae2b47a089273d027f53f,
         type: 3}

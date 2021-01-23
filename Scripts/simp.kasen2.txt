@@ -7,8 +7,8 @@ pattern {
 	}
 }
 phase 0
-	action block 0
-		shift-phase-to 2
+	paction 0
+		shift-phase-to 1
 	
 	
 !!{ me kasen
@@ -38,9 +38,9 @@ phase 0
 <!> hpi 15000 4
 <!> root 0 2
 phase 36
-	action block 0
+	paction 0
 		$power1
-	action block 1.5
+	paction 1.5
 		async lightning-yellow/ <> gcr2 /i ^ dl 0.5 (lerpt 0 3 240 160) _ <> {
 			frv2	a	+ -90 sine 4p 30 t
 			root cy 5
@@ -69,7 +69,7 @@ phase 36
 <!> root 0 0.5
 <!> hpi 17000 9
 phase 36
-	action block 0
+	paction 0
 		$power1
 !!{ rpt * ^ dl 1 18
 		async sakura-*/ <> idelay 1.5s gsr2 12 angle / 180h $rpt {
@@ -169,7 +169,7 @@ phase 29
 <!> hpi 21000 5
 <!> root 0 2
 phase 42
-    action block 0
+    paction 0
 		beh-control persist lightning-* batch onlyonce | > x 4 < x -4 {
 			flipx> 4 _
 			flipx< -4 _

@@ -4,7 +4,7 @@ pattern { bgm {
 	10	_
 } }
 phase 0
-	action block 0
+	paction 0
 		shift-phase-to 4
 	
 
@@ -53,7 +53,7 @@ summonrz
 ##2
 <!> stage
 phase 19 #{
-	action block 0
+	paction 0
 		async fairy3 <3;6:> gcr2 4s 4 <> {
 			postloop rv2.rx *=f -1
 		} $sector1(1)
@@ -67,7 +67,7 @@ phase 19 #{
 ##3
 <!> stage
 phase 20 #{
-	action block 0
+	paction 0
 		async fairy1 <-3;:> gcr3 80 _ <> {
 			sfx x-bubble
 		} gsr2 2 <0.5;:> {
@@ -88,7 +88,7 @@ phase 20 #{
 ##4
 <!> stage
 phase 22 #{
-	action block 0
+	paction 0
 		async fairy3 <;6:> gcr2 8s 3 <> {
 		} gsr2 2 <6.2;:> { 
 			center 
@@ -131,7 +131,7 @@ phase 0
 <!> stage
 phase 50 #{
 !!{ t1 27s
-	action block 0
+	paction 0
 		gtr {
 			wt	/i (min 1 ^ dl 0.6) 360 _
 			for	$t1
@@ -172,7 +172,7 @@ phase 50 #{
 			delay 3s
 			p this
 		} summon tprot cy 1
-			action block 0 :2
+			paction 0 :2
 				async gdlaser-yellow/b <-2;:> iparent this gcr {
 				} laser null 1 0.5 { repeat sfx2 `` x-laser-on }
 				async fireball-blue/b <> gcr2 3s _ <> {
@@ -191,7 +191,7 @@ phase 50 #{
 ##8
 <!> stage
 phase 20 #{
-	action block 0
+	paction 0
 		sync danger <-3;-6:> gsr2 2 <6;:> { } summonsup 
 			tprot lerp3 1 1.5 2 2.5 t cy 2.2 zero cy -2
 			wait
@@ -200,7 +200,7 @@ phase 20 #{
 		} gsr2 2 <9;:> {
 			p this
 		} summon tprot py lerpt 0 2 6 3
-			action block 0 :2
+			paction 0 :2
 				async x-fire-tech-8 <> gcr2 24 5 <> { } sfx
 				async gpather-*/b <> gcr {
 					wt	/i dl 8 _

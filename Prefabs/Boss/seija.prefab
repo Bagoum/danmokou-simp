@@ -154,6 +154,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9038616394982709060, guid: c2dd5232b8ca33d45b07a232cf94cbdd,
         type: 3}
+    - target: {fileID: 5442691617086786321, guid: 567949ea02f82894482d1922e940c492,
+        type: 3}
+      propertyPath: m_text
+      value: Unrepenting Saint / Kishin Seiga / Unrepenting Saint / Kishin Seiga
+        / Unrepenting Saint / Kishin Seiga / <color=#ff000000>|</color>
+      objectReference: {fileID: 0}
     - target: {fileID: 5738943023965476947, guid: 567949ea02f82894482d1922e940c492,
         type: 3}
       propertyPath: animate.frames.attackAnim.Array.size

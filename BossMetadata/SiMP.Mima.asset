@@ -14,23 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: {fileID: 6003014192476353498, guid: 0623db11f1c15fc409072cf3af7a2a95, type: 3}
   CardPracticeName: Mima
-  replayNameOverride: 
+  BossPracticeName:
+    _showEnOnly: 0
+    en: Mima
+    jp: "\u9B45\u9B54"
+  challengeNameOverride:
+    _showEnOnly: 0
+    en: 
+    jp: 
+  replayNameOverride:
+    _showEnOnly: 0
+    en: 
+    jp: 
   stateMachine: {fileID: 4900000, guid: 7c10df2afa4c8d14584d6a96df8a53e7, type: 3}
   key: simp.mima
-  casualName: 
-  casualNameJP: 
-  displayName: Mima
-  displayTitle: God? of the<br>Eighty-Sixth<br>Crescent<br>Moon
   trackName: "\u9B45\u9B54"
   colors: {fileID: 11400000, guid: b02eb45a240428e43b57b533c82a30fa, type: 2}
-  rotator: 
+  cardRotator: 
+  spellRotator: 
   profile:
     leftSidebar: {fileID: 2800000, guid: 83710bc061a8bd54493f96b31c55a3fe, type: 3}
     rightSidebar: {fileID: 2800000, guid: dc3144c9f7e603e43a460d2dae32b8a8, type: 3}
-    image: {fileID: 2800000, guid: ccd351968d7cc41458cce4d93eb11656, type: 3}
-    offsetX: 0.45
-    offsetY: 0.65
-    zoom: 5
   defaultNonBG: {fileID: 5180723301924424041, guid: 0502f791826cbb34d868fcb64bd35a91,
     type: 3}
   defaultSpellBG: {fileID: 5180723301924424041, guid: 07cab9910f9f9cf4c9fe48ca50a3ad85,

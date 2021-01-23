@@ -14,23 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: {fileID: 2839687353931545823, guid: 567949ea02f82894482d1922e940c492, type: 3}
   CardPracticeName: Mokou
-  replayNameOverride: 
+  BossPracticeName:
+    _showEnOnly: 0
+    en: Mokou
+    jp: "\u59B9\u7D05"
+  challengeNameOverride:
+    _showEnOnly: 0
+    en: 
+    jp: 
+  replayNameOverride:
+    _showEnOnly: 0
+    en: 
+    jp: 
   stateMachine: {fileID: 4900000, guid: 355ea18c28fe2a84b8eecc8d720b5d0b, type: 3}
   key: simp.mokou
-  casualName: 
-  casualNameJP: 
-  displayName: Fujiwara<br>no Mokou
-  displayTitle: Rust Phoenix<br>Guarding the<br>Silent Sutra
   trackName: "\u59B9\u7D05"
   colors: {fileID: 11400000, guid: 34641e7d6cf8ea94b8f3b99cf198bd87, type: 2}
-  rotator: 
+  cardRotator: 
+  spellRotator: 
   profile:
     leftSidebar: {fileID: 2800000, guid: f4b6525d0bcf2e1429740b19bfc91128, type: 3}
     rightSidebar: {fileID: 2800000, guid: 2270a25eb59936c4d9d77adc43ab8a94, type: 3}
-    image: {fileID: 2800000, guid: b43db00be9a1e31498ed67c7c77f48a2, type: 3}
-    offsetX: 0.561
-    offsetY: 0.713
-    zoom: 6.28
   defaultNonBG: {fileID: 5180723301924424041, guid: 4a0a8a5316c330c4189ab06c1ba0018c,
     type: 3}
   defaultSpellBG: {fileID: 5180723301924424041, guid: 07cab9910f9f9cf4c9fe48ca50a3ad85,

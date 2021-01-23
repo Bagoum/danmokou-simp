@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiColor: {r: 0.7169812, g: 0, b: 0.32522398, a: 1}
   uiHPColor: {r: 0.93333334, g: 0, b: 0.55975026, a: 1}
-  cardColorR: {r: 0.74509805, g: 0, b: 0.3511989, a: 1}
-  cardColorG: {r: 0.63317585, g: 0, b: 0.6509804, a: 1}
+  cardColorR: {r: 0.97196245, g: 0, b: 1, a: 1}
+  cardColorG: {r: 1, g: 0, b: 0.4749999, a: 1}
   cardColorB: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
-  spellColor1: {r: 0.74509805, g: 0.03921567, b: 0.34034947, a: 0.7607843}
+  spellColor1: {r: 0.6792453, g: 0, b: 0.29056603, a: 1}
   spellColor2: {r: 0.5754717, g: 0.08414916, b: 0.4982293, a: 0.6313726}
   spellColor3: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 0.44705883}

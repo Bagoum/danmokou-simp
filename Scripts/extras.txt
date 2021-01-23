@@ -2,7 +2,7 @@
 pattern {
 }
 phase 0
-	action block 0
+	paction 0
 		shift-phase-to 1
 	
 !!{ me yukari
@@ -11,9 +11,9 @@ phase 0
 <!> type non `Lunatic Princess: Diamonds Revealed in Noble Presence` #{
 <!> hp 17000
 phase 25
-    action block 0
+    paction 0
         move-target 1 io-sine cxy 0 1.3
-	action block 0
+	paction 0
 		position 0 1.3
 		_ 3
 			vulnerable true
@@ -53,7 +53,7 @@ phase 25
 <!> hpi 20000 4
 <!> root 0 1
 phase 35
-    action block 0
+    paction 0
 		bullet-control persist sun-* cull > t 4
 		gtr {
 			wt	220 4
@@ -110,13 +110,13 @@ phase 27
 	end
 		@ keine
 			move 1 tpnrot easedvhomet in-sine 1 cy 10
-    action block 0
+    paction 0
         move 1 tp-nrot easedvhomet in-sine 1 cxy 0 1.5
 		@ keine
 			move 1 tp-nrot easedvhomet in-sine 1 cxy 0 2
-    action block 0
+    paction 0
 		@ keine #{
-			action block 0 :2
+			paction 0 :2
 				move _ nroffset pxy
 					sine -9 2 t
 					sine -9h 0.5 t
@@ -163,7 +163,7 @@ phase 27
 !!{ crr1 { red pink yellow } 
 <!> stage
 phase 21 #{
-	action block 0
+	paction 0
 		async fairy3 <;1:;:> gir2 7s 3 <> {
 			preloop itr =f t
 		} gsr2c 6 {
@@ -171,7 +171,7 @@ phase 21 #{
 		} summon polar
 				logsumshiftt 0.7 4 * 0.6 t * 1.2 t
 				* pm1 &itr logsumshiftt -0.1 6 * 120 t * 70 t
-			action block 0 :2
+			paction 0 :2
 				async arrow-** <140> gcr2d dl 14p _ <> {
 					sfx x-fire-burst-1
 					delay 30

@@ -4,7 +4,7 @@ pattern { bgm {
 	8	_
 } }
 phase 0
-	action block 0
+	paction 0
 		shift-phase-to 1
 		
 
@@ -98,7 +98,7 @@ summonr null(cy(5))
 
 !{ a5(x [Lplayer].x, y 3.5, color pink, delay 0)
 summonr null(cy(5))
-	action block 0 :2
+	paction 0 :2
 		sfx x-crow
 		movewrap 1 pxy(%x, %y) 2 goside(1)
 			>> 1 _ %delay sync gdlaser-%color%/b <-2;:> target Lplayer laser null 1 0.5 { s 2 dsfx }
@@ -117,8 +117,8 @@ summonr null(cy(5))
 ##2
 <!> stage
 phasej 59 0 #{
-	action block 0
-	action block 0
+	paction 0
+	paction 0
 		async tfairy <> gcr2 60 5 <> {
 			p this
 		} gsr {
@@ -126,7 +126,7 @@ phasej 59 0 #{
 			center
 			spread(rx($w - 0.6 * p))
 		} $a1(0 + 0.7 * p)
-	action block 3
+	paction 3
 		async tfairy <> gcr2 60 5 <> {
 			p this
 		} gsr {
@@ -134,7 +134,7 @@ phasej 59 0 #{
 			center
 			spread(rx(1.6 + 0.8 * p))
 		} $a1(0.4 + 0.6 * p)
-	action block 3
+	paction 3
 		async tfairy <> gcr2 60 5 <> {
 			spread(rx(-1 * $w))
 			center
@@ -142,7 +142,7 @@ phasej 59 0 #{
 		_ 1 async tfairy <2;:> $a2
 		_ 1.6 async tfairy <> $a2
 		_ 2.2 async tfairy <-2;:> $a2
-	action block 5
+	paction 5
 		$flipb(circle-green/, circle-green/w)
 		async tlfairy <> gcr2 7s 2 <-2.4;:> {
 		} $a4
@@ -162,7 +162,7 @@ phasej 59 0 #{
 			center
 		} $a1
 		_ 14 async tlfairy <2.5;:> $a4
-	action block 5
+	paction 5
 		async tfairy <> gcr2 6s _ <> {
 		} gsr2 4 <> { 
 			spread(rx($w))
@@ -194,7 +194,7 @@ summonr rvtp %root tprot %vel
 ## 3
 <!> stage
 phase 33 #{
-	action block 0
+	paction 0
 !!{ fd (dl ^ 0.6)
 		async tfairy <> gcr3 /i $fd 90 _ <> {
 		} $al7(cxy -5.4 4.5, cr 2 -15, (60 / $fd), circle-green/w)
@@ -208,14 +208,14 @@ phase 33 #{
 		} gsr {
 			root pxy(4 * pm1 p, 5)
 		} summon null movewrap 1 pxy([Lplayer].x, 3.5) 2 pxy(6 * pm1 p, 1)
-			action block 0 :2
+			paction 0 :2
 				sync gdlaser-pink/b <-2;:> target Lplayer laser null 1 0.5 { s 2 dsfx }
 				wait 1
 			{ hp 600 }
 		async crow <-6;-3.8:> gcr3 (3.5sh / dl ^ 0.8) 16s <180> {
 			p this
 		} summon tprot cx 1
-			action block 0 :2
+			paction 0 :2
 				async gdlaser-yellow/b <-2;:90> iparent this gir {
 					delay rand 0s 2s
 !!{ cold lerpd(1.9, 1.5)
@@ -238,7 +238,7 @@ phase 0
 ## 5 
 <!> stage
 phasej 36 0 #{
-	action block 0
+	paction 0
 		async tfairy <> gcr2 6s 2 <> {
 		} gsr2 4 <> { 
 			spread(rx($w))
@@ -248,10 +248,10 @@ phasej 36 0 #{
 			spread(rx(-1 * $w))
 			center
 		} $a1(3)
-	action block 6
+	paction 6
 		dangerleft
 		dangerright
-	action block 2
+	paction 2
 		async tfairy <-3;-5:> gcr2 5.5s _ <> {
 		} gsr2c 2 {
 			p this
@@ -276,7 +276,7 @@ phasej 36 0 #{
 ## 6
 <!> stage
 phase 19 #{ ##Some extra time since this precedes the boss
-	action block 0
+	paction 0
 		bullet-control persist ellipse-* batch (>(t, 0.8) & =(&.refire, 1)) {
 			 restyleeffect arrow-black/w cwheel-black/w _
 			 sfx x-transform-2 _

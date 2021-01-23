@@ -8,8 +8,8 @@ pattern {
 	set-ui-from(2)
 }
 phase 0
-	action block 0
-		shift-phase-to 4
+	paction 0
+		shift-phase-to 6
 	
 	
 !!{ colors { blue purple pink red orange yellow green teal black  }
@@ -53,7 +53,7 @@ phase 0
 <!> hpi 16000 3
 <!> root 0 1.5
 phase 28
-    action block 0
+    paction 0
 		gtr {
 !!{ per 12
 			async (+ 45 cosine $per 20 t) _ <8h>
@@ -98,7 +98,7 @@ phase 28
 <!> hpi 15000 6
 <!> root 0 1.5
 phase 33
-    action block 0
+    paction 0
 		gtr {
 			wt (/ 120 ^ dl 0.3) _
 			wait-child
@@ -153,7 +153,7 @@ phase 33
 <!> hpi 11000 3
 <!> root 0 2
 phase 32
-    action block 0
+    paction 0
 		bullet-control persist { { shell-* } } cull & (| (offscreen loc) relcirc player <0;0;0.2> ) (< t 0.2)
 		gtr {
 			wt	(lerpt 240 180 0 3) _
@@ -200,7 +200,7 @@ phase 32
 <!> hpi 17000 3
 <!> root 0 2
 phase 30
-    action block 0
+    paction 0
 		gtr {
 			wt	lerp 0 2 dc 160 0  _
 			wait-child
@@ -235,7 +235,7 @@ phase 30
 					roffset px logsumshiftt 0.8 2 0 * 5 t  {
 						ss + + 0.6 * 0.05 dc * -0.1 t nroffset @ pl p 
 						color inode summons doffset pl pd p 0
-							action block 0 :1
+							paction 0 :1
 								##async shell-*/ <> idelay 2s gcr2 6 6 <> {
 								##	colorf { orange teal } pma _ 5
 								##} target Lplayer s tprot px lerpt 0.3 1 0 1.4
@@ -261,7 +261,7 @@ phase 30
 <!> hpi 19000 3
 <!> root 0 1.5
 phase 32
-    action block 0
+    paction 0
 		async shell-*/w <> gcr2d (min dh (^ dh 0.2)) 46 _ <6h> {
 			color $rainbow
 			delay 90

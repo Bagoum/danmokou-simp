@@ -188,6 +188,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7701442557710816432, guid: ba99cc157d020744081c540d638e2498,
         type: 3}
+    - target: {fileID: 5442691617086786321, guid: 567949ea02f82894482d1922e940c492,
+        type: 3}
+      propertyPath: m_text
+      value: Odin's Garrulous Informant / Shameimaru Aya /  Odin's Garrulous Informant
+        / Shameimaru Aya /<color=#ff000000>|</color>
+      objectReference: {fileID: 0}
     - target: {fileID: 5738943023965476947, guid: 567949ea02f82894482d1922e940c492,
         type: 3}
       propertyPath: animate.frames.attackAnim.Array.size

@@ -4,7 +4,7 @@ pattern { bgm {
 	8	_
 } }
 phase 0
-	action block 0
+	paction 0
 		shift-phase-to 3
 		
 !{ mw(source, t1, t2, loc1, loc2, hp, fire)
@@ -53,7 +53,7 @@ color fairy1 summonrz
 !}
 
 !{ firem1()
->> _ action block 1.5 :2
+>> _ paction 1.5 :2
 	async star-red* <> gcr2 60 6 <360h> {
 		sfx x-fire-burst-1
 	} gsr2c * dl 32 {
@@ -125,35 +125,35 @@ color fairy5 summonrz
 ##3
 <!> stage
 phasej 45 0 #{
-	action block 0
+	paction 0
 		async _ <1;6:> gcr2 60 4 <1;:> {
 		} $obju1(1 goy 2 2 goside 0)
-	action block 1
+	paction 1
 		async _ <;1:> $objm1(1)
-	action block 4
+	paction 4
 		async _ <;:> $objm1(-1)
-	action block 3
+	paction 3
 		async _ <;:> $objm1(1)
-	action block 3
+	paction 3
 		sync _ <;6:> $objh1(2 goy 2 2 goup)
-	action block 5
+	paction 5
 		async _ <;:> $objm1(-1)
-	action block 5
+	paction 5
 		sync _ <-3;6:> $objh1(2 goy 2 2 goup)
-	action block 1
+	paction 1
 		async _ <6;2:> gcr2 60 3 <;-1:> {
 		} $obju1(1 gox 3 2 goside 0)
-	action block 5
+	paction 5
 		sync _ <3;6:> $objh1(2 goy 2 2 goup)
 		async _ <;1:> $objm1(1)
-	action block 5
+	paction 5
 		async _ <;1:> $objm1(-1)
 #}
 
 ##4
 <!> stage
 phase 23 #{
-	action block 0
+	paction 0
 		async _ <;6:> gcr2 3.5s _ <> {
 			bindLR
 			p this
@@ -176,7 +176,7 @@ phase 23 #{
 ##5 
 <!> stage
 phase 15 #{
-	action block 0
+	paction 0
 		async fairy1 <;6:> gir2 5s 2 <> {
 			bindLR
 			p this

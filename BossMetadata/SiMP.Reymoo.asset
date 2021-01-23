@@ -13,22 +13,31 @@ MonoBehaviour:
   m_Name: SiMP.Reymoo
   m_EditorClassIdentifier: 
   boss: {fileID: 5557805967316943377, guid: 5d7c2e027fb1a504185dfa12862e5608, type: 3}
-  CardPracticeName: Hakurei Presence
-  replayNameOverride: Ghost?
+  BossPracticeName:
+    _showEnOnly: 0
+    en: Hakurei Presence
+    jp: "\u535A\u9E97\u306E\u5E7D\u970A"
+  challengeNameOverride:
+    _showEnOnly: 0
+    en: 
+    jp: 
+  replayNameOverride:
+    _showEnOnly: 0
+    en: Ghost
+    jp: 
+  bottomTrackerNameOverride:
+    _showEnOnly: 0
+    en: "\u4E0D\u5BE9\u8005"
+    jp: "\u4E0D\u5BE9\u8005"
   stateMachine: {fileID: 4900000, guid: 840384f4e1c2bc34082d045dcb45cde8, type: 3}
   key: simp.reymoo
-  casualName: 
-  casualNameJP: 
-  displayName: ???
-  displayTitle: The Resentful<br>Presence of<br>Hakurei
   trackName: "\u4E0D\u5BE9\u8005"
   colors: {fileID: 11400000, guid: 1af87831a4361b44092750b7f2453dad, type: 2}
-  rotator: 
+  cardRotator: 
+  spellRotator: 
   profile:
-    image: {fileID: 0}
-    offsetX: 0.37
-    offsetY: 0.42
-    zoom: 5.76
+    leftSidebar: {fileID: 0}
+    rightSidebar: {fileID: 0}
   defaultNonBG: {fileID: 5180723301924424041, guid: 54af7e21f5658a34eb43a871eff483aa,
     type: 3}
   defaultSpellBG: {fileID: 5180723301924424041, guid: 9634a3dafc6f67b4d91b51bf5e9dfda8,

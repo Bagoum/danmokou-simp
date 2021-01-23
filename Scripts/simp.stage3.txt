@@ -3,7 +3,7 @@ pattern { bgm {
 	1  simp.3.stage
 } }
 phase 0
-	action block 0
+	paction 0
 		shift-phase-to 2
 		
 
@@ -49,15 +49,15 @@ sync fairy4 <> gsr2 2 <> {
 ## 1
 <!> stage
 phase 39 #{
-	action block 0
+	paction 0
 		$fliplrb(ellipse-blue/w, ellipse-teal/b)
 		$fliplrb(ellipse-red/w, ellipse-pink/b)
-	action block 0
+	paction 0
 		sync danger <-3;-6:> gsr2 3 <3;:> { } summonsup 
 			tprot lerp3 1 1.5 2 2.5 t cy 2.2 zero cy -2
 			wait
 		wait 2
-	action block 0
+	paction 0
 		sync fairy5 <> $mw12(cy -6, cy -3, cy -6, 14000,
 			async ellipse-blue/w <> gcr3 /i dl 56 17s <> {
 				preloop rv2.a =f bouncey ymin loc Lplayer
@@ -67,7 +67,7 @@ phase 39 #{
 			} s tprot px * lerp (1 4) [Lplayer].y 1 1.6  lerpt 0.4 1 7 1.4
 		)
 		wait 17
-	action block 0
+	paction 0
 		sync fairy5 <> $mw12(cy -6, cy -3, cy -6, 11000,
 			async ellipse-blue/w <> gcr3 /i dl 56 14s <> {
 				preloop rv2.a =f + bouncey ymin loc Lplayer * 5 rangemodh t
@@ -99,7 +99,7 @@ gsr {
 ## 2
 <!> stage
 phase 34 #{
-	action block 0
+	paction 0
 		async fairy1 <> gcr3 /i dl 90 _ <> {
 		} $3(cxy -7 -5, cr 2 20, 60, gcircle-blue/b)
 		async fairy1 <> gcr3 /i dl 90 _ <> {
@@ -112,14 +112,14 @@ phase 34 #{
 		} gsr {
 			root pxy * 4 pm1 p -5
 		} summon null imovewrap 1 (pxy [Lplayer].x -3) 2 (pxy * pm1 p 6 -1)
-			action block 0 :2
+			paction 0 :2
 				sync gdlaser-teal/b <-2;:90> laser null 1.5 0.5 { s 4 dsfx }
 				wait 1
 			{ hp 600 }
 		async crow <-6;-3.8:> gcr3 * 3s 1h 12s <180> {
 			p this
 		} summon tprot cx 1
-			action block 0 :2
+			paction 0 :2
 				async gdlaser-yellow/b <-2;:90> iparent this gcr {
 					delay rand 0s 2s
 				} laser null 1.5 1.5 { repeat sfx2 `` x-laser-on }
@@ -132,7 +132,7 @@ phase 34 #{
 ## 3
 <!> stage
 phase 32 #{
-	action block 0
+	paction 0
 !!{ tr (+ t brand 0 0.5)
 		bullet-control persist fireball-yellow/w restyleeffect fireball-yellow/b cwheel-yellow/ > $tr 1.6
 		sync fairy5 <> $mw12(cy -6, cy -3, cy -6, 8000, async fireball-yellow/w <> gir3 /i dl 120 12s <> {
@@ -161,7 +161,7 @@ phase 32 #{
 ## 4
 <!> stage
 phase 18 #{ ##Some extra time since this precedes the boss
-	action block 0
+	paction 0
 	sync fairy5 <> $mw12(cy -6, cy -2, cy -6, 12000, 
 		async ellipse-*/b <1;:> gcrf /i dl 32 _ (angle sine 70 200 tdl) {
 				for	14s

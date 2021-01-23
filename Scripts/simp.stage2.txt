@@ -3,7 +3,7 @@ pattern { bgm {
 	1  simp.2.stage
 } }
 phase 0
-	action block 0
+	paction 0
 		shift-phase-to 7
 		
 !{ mw(source, t1, t2, loc1, loc2, hp, fire)
@@ -19,7 +19,7 @@ $mw(%source, 1, 2, %loc1, %loc2, %hp, %fire)
 !}
 
 !{ 1f(f, t, pr, pp)
-action block 0 :2
+paction 0 :2
 	async gcircle-red/w <> gcr3 %f %t <18c> {
 		while onscreen loc
 		sfx x-fire-burst-1
@@ -77,14 +77,14 @@ $4(%source, %loc1, %loc2, %f, %t,
 ##1
 <!> stage
 phase 32 #{
-	action block 0
+	paction 0
 		$1c(/ 40 dh, 8s)
 		wait 9
-	action block 0
+	paction 0
 		$1l(/ 60 dh, 8s)
 		$4.1(cxy 3 5, pxy + 1 softmod 2.4 * 0.8 p 1, cxy 6 0, /i dh 90, 10s)
 		wait 8
-	action block 0
+	paction 0
 		$1r(60, 8s)
 		$4.3(cxy -3 5, pxy - -1 softmod 2.4 * 0.8 p 1, cxy -6 0, /i dh 120, 10s)
 		wait 8
@@ -137,12 +137,12 @@ $12(2.5, 0.5, 3, %s,
 ##3
 <!> stage
 phase 26 #{
-	action block 0
+	paction 0
 		sync fairy3 <> $mw12(cy 5, cy 2, cy 5, 3000, $5f1(/i dl 50, 5s))
 		sync fairy3 <> $mw12(cxy -3 5, cxy -3 1, cxy -6 0, 3000, $5f2(1, /i dl 120, 4s))
 		sync fairy3 <> $mw12(cxy 3 5, cxy 3 1, cxy 6 0, 3000, $5f2(-1, /i dl 120, 4s))
 		wait 7
-	action block 0
+	paction 0
 		sync fairy3 <> $mw12(cy 5, cy 2, cy 5, 7000, $5f1(/i dl 70, 14s))
 		sync fairy3 <> $mw12(cxy -3 5, cxy -3 1, cxy -6 0, 5000, $5f2(1, /i dl 180, 12s))
 		sync fairy3 <> $mw12(cxy 3 5, cxy 3 1, cxy 6 0, 5000, $5f2(-1, /i dl 180, 12s))
@@ -172,7 +172,7 @@ async %color <> gcr3 %f %t <> {
 ##4
 <!> stage
 phase 20 #{
-	action block 0
+	paction 0
 !!{ f 180
 		sync fairy3 <> $mw12(cxy -3 5, cxy -3 1, cxy -6 0, 9000, $5f3(arrow-blue/w, $f, 15s))
 		_ * 0.5f $f
@@ -195,7 +195,7 @@ phase 20 #{
 ##5
 <!> stage
 phase 18 #{
-	action block 0
+	paction 0
 		async fairy1 <> gcr3 240 14s <> {
 			p this
 		} gsr2 20 <0.6;:> {
@@ -226,7 +226,7 @@ phase 0
 <!> stage
 phase 50 #{
 !!{ t1 27s
-	action block 0
+	paction 0
 		gtr {
 			wt	/i (min 1 ^ dl 0.6) 360 _
 			for	$t1
@@ -246,7 +246,7 @@ phase 50 #{
 			p this
 			root pxy * 4 pm1 p 5
 		} summon null imovewrap 1 (pxy * 4 rangemod 1 * 2h p 2) 2 (pxy * pm1 p 6 1)
-			action block 0.5 :2
+			paction 0.5 :2
 				sync lightning-red/w <180> gsr2 0 <> { ##this is too mcuh...
 					sfx x-lightning
 					target a Lplayer
@@ -274,7 +274,7 @@ phase 50 #{
 			delay 6s
 			p this
 		} summon tprot cy 1
-			action block 0 :2
+			paction 0 :2
 				async gdlaser-yellow/b <-2;:> iparent this gcr {
 				} laser null 1 0.5 { repeat sfx2 `` x-laser-on }
 				async fireball-blue/b <> gcr2 3s _ <> {
@@ -294,7 +294,7 @@ phase 50 #{
 ##8
 <!> stage
 phase 20 #{
-	action block 0
+	paction 0
 		sync danger <-3;-6:> gsr2 2 <6;:> { } summonsup 
 			tprot lerp3 1 1.5 2 2.5 t cy 2.2 zero cy -2
 			wait
@@ -303,7 +303,7 @@ phase 20 #{
 		} gsr2 2 <8;:> {
 			p this
 		} summon tprot py lerpt 0 2 6 3
-			action block 0 :2
+			paction 0 :2
 				async x-fire-tech-8 <> gcr2 24 5 <> { } sfx
 				async gpather-*/b <> gcr {
 					wt	/i dl 4 _

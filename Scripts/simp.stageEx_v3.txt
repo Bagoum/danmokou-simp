@@ -3,7 +3,7 @@ pattern { bgm {
 	9	_
 } }
 phase 0
-	action block 0
+	paction 0
 		shift-phase-to 8
 		
 
@@ -75,7 +75,7 @@ color tlfairy summonr null(cy(5))
 !}
 
 !{ firem1()
-action block 0 :2
+paction 0 :2
 	async scircle-pink/b <> gcr3 (240 / dl) _ <> {
 		sfx x-fire-burst-3
 		while onscreen loc
@@ -105,7 +105,7 @@ color tlfairy summonr null(cy(5))
 
 
 !{ firem2()
-action block 0 :2
+paction 0 :2
 	async gdlaser-red/ <> gcr3 (160 / dl ^ 0.4) 9s <> { 
 		sfx x-fire-burst-1
 		while onscreen loc
@@ -137,7 +137,7 @@ color tlfairy summonr crossdown(%lr, 1.4 * t)
 !}
 
 !{ fireh1()
-action block 0 :3
+paction 0 :3
 	async fireball-*/ <1;:> gcr3 (5 / dl) 11s <15h> {
 		sfx x-fire-loop-1
 		p this
@@ -153,13 +153,13 @@ action block 0 :3
 			p add
 		} laser null 0.5 (- 8.8 * 8f p1) {
 			dsfx
-			rotate	0 * pm1 p2 lerpsmooth sine-010 0 (- 9.5 * 17f p1) t (+ -170 * -4 p1) -9
+			rotate	0 * pm1 p2 lerpsmooth esine010 0 (- 9.5 * 17f p1) t (+ -170 * -4 p1) -9
 		}
 !}
 !{ objh1(y 2.5)
 color tlfairy summonr null(cy(5))
 	phase 0
-		finish :1
+		finish
 			behpool-control gdlaser-* softcullall cwheel
 		saction 0
 			imovewrap 1.3 goy(%y) 3 goside(%y - 0.5)
@@ -180,44 +180,44 @@ color tlfairy summonr null(cy(5))
 
 <!> stage
 phasej 71 0 #{
-	action block 0
+	paction 0
 		async _ <0.5;:> gcr2 30 6 <-0.75;:> {
 			center
 			p this
 		} $obju1(2.4 - 0.2 * p)
 		_ 1 async _ $l $objs1(1.2)
-	action block 1
+	paction 1
 		async _ <> gcr2 0 2 <> {
 			bindLR
 		} $objm2(&lr)
-	action block 5
+	paction 5
 		async _ <-0.6;:> gcr2 30 6 <0.75;:> {
 			center 
 			p this
 		} $obju1(1.4 + 0.6 * softmod(2, p))
 		_ 1 async _ <2;:> $objm1
-	action block 3
+	paction 3
 		async _ <-2.1;:> $objm1(2)
 		async _ $l $objs1(0.5)
 		async _ <0.6;:> gcr2 30 6 <-0.75;:> {
 			center 
 			p this
 		} $obju1(1.4 + 0.3 * p)
-	action block 4.4
+	paction 4.4
 		async _ <> $objm1
 		_ 0.5 async _ <> gsr2 2 rx($w) {
 			center
 		} $objs1(1)
-	action block 5
+	paction 5
 		dangerleft
 		_ 1 async _ <2;:> $objm1(1.8)
 		_ 4 async _ <2;:> $objm1(2.2)
 		_ 2 async _ <;1:> gcr2 6 8 ry(-0.6) {
 			center
 		} $obju1_x(1)
-	action block 3
+	paction 3
 		async _ <> $objh1
-	action block 5
+	paction 5
 		async _ <-0.4;:> gcr2 30 4 <-0.5;:> {
 			p this
 		} $obju1(2.5 - 0.5 * p)
@@ -227,12 +227,12 @@ phasej 71 0 #{
 		_ 7 async _ <;1:> gcr2 6 9 ry(-0.6) {
 			center
 		} $obju1_x(1)
-	action block 4
+	paction 4
 		_ 1 async _ <> $objs1(2)
 		_ 3 async _ $r $objs1(1)
 		_ 5 async _ <> $objm2(-1)
 		_ 5 async _ $l $objs1(0.5)
-	action block 4
+	paction 4
 		async _ <-2;:> $objh1
 		_ 2.8 async _ $r $objs1(1.5)
 		_ 2.5 async _ <;1:> gcr2 6 8 ry(-0.6) {
@@ -249,22 +249,22 @@ phase 0
 
 <!> stage #{
 phasej 31 0
-	action block 0
+	paction 0
 		async _ <2;:> $objh1
 		_ 1.5 async _ $l $objs1(1)
 		_ 1 async _ <-1;:> $objs1(1.5)
-	action block 5
+	paction 5
 		async _ <> $objm2(-1)
 		_ 0.5 async _ <0.2;:> gcr2 30 6 <-0.6;:> {
 			p this
 			center
 		} $obju1(1.2 + 0.3 * p)
-	action block 3
+	paction 3
 		async _ <-2;:> $objh1
 		_ 1.5 async _ <;1:> gcr2 6 8 ry(-0.6) {
 			center
 		} $obju1_x(-1)
-	action block 7
+	paction 7
 		async _ <> $objh1
 		_ 2 async _ <;1:> gcr2 6 5 ry(-0.6) {
 			center
@@ -279,7 +279,7 @@ phasej 31 0
 
 <!> stage #{
 phase 26
-	action block 0
+	paction 0
 		dangerbot
 		dangerleft2
 		timer restart pt
@@ -287,7 +287,7 @@ phase 26
 		async crow <-3;-5:180> gcr2 $firef _ <180> {
 			p this
 		} summon tprot cy 1
-			action block 0 :2
+			paction 0 :2
 				async gdlaser-*/b <-2;:> iparent this gir {
 					delay * 2s rangemodh p
 					colorf { yellow purple } p
@@ -297,7 +297,7 @@ phase 26
 		async crow <-6;-3.8:180> gcr2 $firef _ <180> {
 			p this
 		} summon tprot cx 1
-			action block 0 :2
+			paction 0 :2
 				async gdlaser-*/b <-2;:90> iparent this gir {
 					delay * 2s rangemodh p
 					colorf { yellow purple } p
@@ -334,10 +334,10 @@ phase 0
 
 ##9
 phase 0
-	action block 0
+	paction 0
 		stage-deannounce
 		lifetoscore 2500000
-	action block 0
+	paction 0
 		shift-phase
 
 

@@ -13,22 +13,37 @@ MonoBehaviour:
   m_Name: SiMP.Kaguya
   m_EditorClassIdentifier: 
   boss: {fileID: 3158588245573588644, guid: 403abf52053147b44b8f276702818066, type: 3}
-  CardPracticeName: Kaguya
-  BossPracticeName:
-    _showEnOnly: 0
-    en: Kaguya
-    jp: "\u8F1D\u591C\u59EB"
+  localizationBaseKey: simp.boss.kaguya
+  m_bossPracticeName:
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   challengeNameOverride:
-    _showEnOnly: 0
-    en: 
-    jp: 
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   replayNameOverride:
-    _showEnOnly: 0
-    en: 
-    jp: 
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
+  bottomTrackerNameOverride:
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   stateMachine: {fileID: 0}
   key: simp.kaguya
-  trackName: "\u8F1D\u591C\u59EB"
   colors: {fileID: 11400000, guid: e83c174566855bf419430e8e72dabb67, type: 2}
   cardRotator: 
   spellRotator: 

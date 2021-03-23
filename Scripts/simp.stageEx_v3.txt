@@ -4,7 +4,7 @@ pattern { bgm {
 } }
 phase 0
 	paction 0
-		shift-phase-to 8
+		shift-phase-to 3
 		
 
 <!> dialogue #{
@@ -22,6 +22,7 @@ phase 0
 #}
 
 ##2
+<!> announce
 phase 0
 	saction 0
 		stage-announce
@@ -65,7 +66,7 @@ async star-black/w <> gir2 lerpd(420, 280) (3 + d3d1) <> {
 } gsr2 5 <> {
 	spread <70>
 	center
-} sdd starrotb2 tprot px 2.8
+} simple tprot px 2.8 { dir starrotb2 }
 !}
 !{ objs1(y 2.5)
 color tlfairy summonr null(cy(5))
@@ -87,7 +88,7 @@ paction 0 :2
 	async ellipse-* <> gir2 0 2 <> {
 		color { pink/w red/w }
 		preloop lr =f pm1 t
-	} gcr3 /i dl 12 _ (* idl * &lr <15h>) {
+	} gcr3 /i dl 12 _ (* (/ &lr dl) <15h>) {
 		while onscreen loc
 		sfx x-fire-loop-1
 	} gsr2c 4 {
@@ -333,11 +334,12 @@ phase 0
 
 
 ##9
+<!> announce
 phase 0
 	paction 0
 		stage-deannounce
-		lifetoscore 2500000
-	paction 0
+		lifetoscore 1500000
+	paction 1
 		shift-phase
 
 

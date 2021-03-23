@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: SiMP.Kaguya.Color
   m_EditorClassIdentifier: 
   uiColor: {r: 0.6509434, g: 0, b: 0.20107882, a: 1}
-  uiHPColor: {r: 0.8867924, g: 0.4224813, b: 0.73855287, a: 1}
+  uiHPColor: {r: 0.9056604, g: 0.2691349, b: 0.70067763, a: 1}
+  powerAuraColor: {r: 1, g: 0.3443396, b: 0.84807855, a: 1}
   cardColorR: {r: 0.8584906, g: 0, b: 0, a: 1}
   cardColorG: {r: 0.8396226, g: 0, b: 0.75559515, a: 1}
   cardColorB: {r: 0.5289974, g: 0, b: 0.735849, a: 1}

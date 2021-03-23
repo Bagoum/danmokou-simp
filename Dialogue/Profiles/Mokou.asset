@@ -88,6 +88,7 @@ MonoBehaviour:
         sprite: {fileID: 21300000, guid: c270538d5b5e1dd4fa00b32f1e354c90, type: 3}
     special:
       sprites: []
+  flipOnReduce: 1
   icons:
     normal: {fileID: 21300000, guid: 52d929ae434591947b0d6132c45c7b50, type: 3}
     angry: {fileID: 0}
@@ -96,6 +97,12 @@ MonoBehaviour:
     cry: {fileID: 0}
     surprise: {fileID: 0}
     special: {fileID: 0}
-  displayName: Fujiwara no Mokou
+  displayName:
+    useReference: 1
+    reference: dialogue.mokou
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   key: mokou
   speakSFX: x-bubble-2

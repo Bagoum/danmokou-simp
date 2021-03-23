@@ -61,6 +61,12 @@ MonoBehaviour:
     cry: {fileID: 0}
     surprise: {fileID: 0}
     special: {fileID: 0}
-  displayName: ???
+  displayName:
+    useReference: 1
+    reference: dialogue.unknown
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   key: unknown
   speakSFX: 

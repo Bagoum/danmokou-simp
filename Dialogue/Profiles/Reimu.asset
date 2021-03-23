@@ -88,6 +88,7 @@ MonoBehaviour:
         sprite: {fileID: 21300000, guid: b29398f0ba0076443b155e9f42691ada, type: 3}
     special:
       sprites: []
+  flipOnReduce: 1
   icons:
     normal: {fileID: 21300000, guid: f40702d3067af86489b50180ff6e508f, type: 3}
     angry: {fileID: 0}
@@ -96,6 +97,12 @@ MonoBehaviour:
     cry: {fileID: 0}
     surprise: {fileID: 0}
     special: {fileID: 0}
-  displayName: Hakurei Reimu
+  displayName:
+    useReference: 1
+    reference: dialogue.reimu
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   key: reimu
   speakSFX: x-bubble-3

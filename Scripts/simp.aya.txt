@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	paction 0
-		shift-phase-to 3
+		shift-phase-to 2
 	
 
 !{ power1()
@@ -31,7 +31,7 @@ phase 0
 
 ##2
 <!> bosscutin
-<!> type non `Tengu's Ambition: Mountaintop From Where One Grasps the Sky` #{
+<!> type non :simp.boss.aya.ambition #{
 <!> hpi 10000 4
 <!> root 0 2
 phase 30
@@ -72,11 +72,12 @@ phase 30
 
 
 ## 3
-<!> type spell `Tengu's Rule: Long-Toothed Wings Wrapped Round the Firmament` #{
+<!> type spell :simp.boss.aya.rule #{
 <!> hpi 14000 4
 <!> root 0 7
 phase 32
 	paction 0
+		pool-control gcircle-* allowdelete false
 		pool-control {{ gcircle-* sakura-* fireball-* }} allowcull false
 	paction 0
 		position 10 6
@@ -115,7 +116,7 @@ phase 32
 					px	pma $ww { $wl 2 }
 					py	pm $wl 2
 					plr	pm1 pm 2 1
-				} + lbeh $me qrotate * &lr py 19
+				} + lbeh $me tp qrotate * &lr py 19
 					wings1 $ww $wl 2
 			~ _ 0.5 
 				$power1
@@ -193,7 +194,7 @@ phase 21
 			px	pma $ww { $wl 2 }
 			py	pm $wl 2
 			plr	pm1 pm 2 1
-		} + lbeh $me qrotate * @0 lr py 24
+		} + lbeh $me tp qrotate * @0 lr py 24
 			wings1 $ww $wl 1.2
 		gtr {
 			bindLR

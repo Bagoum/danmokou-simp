@@ -5,7 +5,7 @@ pattern { bgm {
 } }
 phase 0
 	paction 0
-		shift-phase-to 4
+		shift-phase-to 1
 		
 
 ##1 Kasen
@@ -16,6 +16,7 @@ phase 0
 		shift-phase
 
 ##2
+<!> announce
 phase 0
 	saction 0
 		stage-announce
@@ -81,8 +82,9 @@ summonr null(cy(5))
 				} gsr2 2 <> {
 					color { /b / }
 					p this
-				} sdd (pm1 p * starrot2) tprot px
+				} simple tprot px
 					lerpt 0.5 1 4 (2 + 1.4 * p)
+					{ dir (pm1 p * starrot2) }
 			}
 	{ hp 900 }
 !}
@@ -255,11 +257,12 @@ phase 0
 
 
 ##7
+<!> announce
 phase 0
 	paction 0
 		stage-deannounce
-		lifetoscore 2000000
-	paction 0
+		lifetoscore 1000000
+	paction 1
 		shift-phase
 
 

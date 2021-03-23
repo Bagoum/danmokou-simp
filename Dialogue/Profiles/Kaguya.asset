@@ -88,6 +88,7 @@ MonoBehaviour:
         sprite: {fileID: 21300000, guid: f47ec070a8f25d148b18895e7d0e2291, type: 3}
     special:
       sprites: []
+  flipOnReduce: 1
   icons:
     normal: {fileID: 21300000, guid: 5d3aa821054b8034b8dd06976e09cd85, type: 3}
     angry: {fileID: 0}
@@ -96,6 +97,12 @@ MonoBehaviour:
     cry: {fileID: 0}
     surprise: {fileID: 0}
     special: {fileID: 0}
-  displayName: Houraisan Kaguya
+  displayName:
+    useReference: 1
+    reference: dialogue.kaguya
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   key: kaguya
   speakSFX: x-bubble-3

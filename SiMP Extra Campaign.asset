@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startLives: 5
   key: simp.ex
-  shortTitle: SiMP Ex
+  shortTitle: Extra
   endings:
   - {fileID: 11400000, guid: 04bf08683361b894fbfaab7c36bfd3b8, type: 2}
   players:

@@ -46,7 +46,7 @@ phase 0
 ##2
 <!> bosscutin
 <!> hpi 12000 4
-<!> type non `Rabenflug: Flight-Path of the Crow Intoxicated on Lunar Wine` #{
+<!> type non :simp.boss.yukari.rabenflug #{
 <!> root 0 1.5
 <!> showlives 4
 phase 31
@@ -68,14 +68,14 @@ phase 31
 		} saction 0 :3
 			$power1
 			move-target 1.5 io-sine pxy * &lr rand 1 1.4 y
-			sync gdlaser-*/b <> gsr2c 3 { 
+			sync zonelaser-*/b <> gsr2c 3 { 
 				sfx x-crow
 				target a Lplayer
 				p	this
 			} { 
 				gsr {
 					colorf { yellow purple pink } p
-				} laser null 5 0 { dsfx }
+				} safelaser 5 { dsfx }
 				gsr {
 					resetcolor 
 					color icrow
@@ -98,12 +98,13 @@ phase 31
 
 
 ##3
-<!> type spell `Hunter's Rune: Sky Burial` #{
+<!> type spell :simp.boss.yukari.skyburial #{
 <!> hpi 24000 2
 <!> root 0 1.5
 <!> showlives 4
 phase 36
 	paction 0
+		pool-control amulet-black* allowdelete false
 		$power1
 		
 !!{ w lerpd(1.5, 1.2)
@@ -143,8 +144,9 @@ phase 36
 		} gsr2 2 <> {
 			color { /w /b }
 			p add
-		} sdd starrotb3 tprot rotate + * -90 p2 * 4.5 p1
+		} simple tprot rotate + * -90 p2 * 4.5 p1
 			lerpin 0 0.9 cx 2.4
+			{ dir starrotb3 }
 		
 		sync icrow <> gsr2 6 <60> {
 			p this
@@ -155,7 +157,7 @@ phase 36
 					lerpt 2 20 2 lerpd(1.8, 1.4)
 				* 90 t
 			lplayer
-			async amulet-black/b <> gcr2 16p _ <> {
+			async amulet-black/ <> gcr2 16p _ <> {
 				delay 2s
 			} s null
 

@@ -13,22 +13,37 @@ MonoBehaviour:
   m_Name: SiMP.Mokou
   m_EditorClassIdentifier: 
   boss: {fileID: 2839687353931545823, guid: 567949ea02f82894482d1922e940c492, type: 3}
-  CardPracticeName: Mokou
-  BossPracticeName:
-    _showEnOnly: 0
-    en: Mokou
-    jp: "\u59B9\u7D05"
+  localizationBaseKey: simp.boss.mokou
+  m_bossPracticeName:
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   challengeNameOverride:
-    _showEnOnly: 0
-    en: 
-    jp: 
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   replayNameOverride:
-    _showEnOnly: 0
-    en: 
-    jp: 
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
+  bottomTrackerNameOverride:
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   stateMachine: {fileID: 4900000, guid: 355ea18c28fe2a84b8eecc8d720b5d0b, type: 3}
   key: simp.mokou
-  trackName: "\u59B9\u7D05"
   colors: {fileID: 11400000, guid: 34641e7d6cf8ea94b8f3b99cf198bd87, type: 2}
   cardRotator: 
   spellRotator: 

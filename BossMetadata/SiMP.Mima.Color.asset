@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13762918244a65249ab50d0bb376f974, type: 3}
   m_Name: SiMP.Mima.Color
   m_EditorClassIdentifier: 
-  uiColor: {r: 0, g: 0.34716982, b: 0.5283019, a: 1}
-  uiHPColor: {r: 0.40784314, g: 0.65882355, b: 0.8784314, a: 1}
+  uiColor: {r: 0, g: 0.47267652, b: 0.7169812, a: 1}
+  uiHPColor: {r: 0.40784314, g: 0.8784314, b: 0.5641054, a: 1}
+  powerAuraColor: {r: 0, g: 0.7924528, b: 0.48698214, a: 1}
   cardColorR: {r: 0.08454966, g: 0.7169812, b: 0.21823439, a: 1}
   cardColorG: {r: 0.019802418, g: 0.7290851, b: 0.8396226, a: 1}
   cardColorB: {r: 0, g: 0.072839774, b: 0.6156863, a: 1}

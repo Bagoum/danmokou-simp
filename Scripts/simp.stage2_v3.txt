@@ -5,9 +5,10 @@ pattern { bgm {
 } }
 phase 0
 	paction 0
-		shift-phase-to 5
+		shift-phase-to 1
 	
 ##1
+<!> announce
 phase 0
 	saction 0
 		stage-announce
@@ -212,7 +213,7 @@ phase 40 #{
 	paction 0
 !!{ t1 20s
 		gtr {
-			wt	/i (^ dl 0.6) 360 _
+			wt	/i (dl ^ 0.6) 360 _
 			for	$t1
 			p this
 		} saction 0 :2
@@ -267,6 +268,7 @@ phase 0
 
 
 ##6
+<!> announce
 phase 0
 	saction 0
 		stage-deannounce

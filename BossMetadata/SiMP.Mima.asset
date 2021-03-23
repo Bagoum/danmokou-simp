@@ -13,22 +13,37 @@ MonoBehaviour:
   m_Name: SiMP.Mima
   m_EditorClassIdentifier: 
   boss: {fileID: 6003014192476353498, guid: 0623db11f1c15fc409072cf3af7a2a95, type: 3}
-  CardPracticeName: Mima
-  BossPracticeName:
-    _showEnOnly: 0
-    en: Mima
-    jp: "\u9B45\u9B54"
+  localizationBaseKey: simp.boss.mima
+  m_bossPracticeName:
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   challengeNameOverride:
-    _showEnOnly: 0
-    en: 
-    jp: 
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   replayNameOverride:
-    _showEnOnly: 0
-    en: 
-    jp: 
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
+  bottomTrackerNameOverride:
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   stateMachine: {fileID: 4900000, guid: 7c10df2afa4c8d14584d6a96df8a53e7, type: 3}
   key: simp.mima
-  trackName: "\u9B45\u9B54"
   colors: {fileID: 11400000, guid: b02eb45a240428e43b57b533c82a30fa, type: 2}
   cardRotator: 
   spellRotator: 

@@ -97,6 +97,12 @@ MonoBehaviour:
     cry: {fileID: 0}
     surprise: {fileID: 0}
     special: {fileID: 0}
-  displayName: Mima
+  displayName:
+    useReference: 1
+    reference: dialogue.mima
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   key: mima
   speakSFX: x-bubble-2

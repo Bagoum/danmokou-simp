@@ -9,6 +9,7 @@ phase 0
 		
 
 ##1
+<!> announce
 phase 0
 	saction 0
 		stage-announce
@@ -66,7 +67,7 @@ summonr null(cy(5))
 !}
 
 !{ a2(y 2)
-summonr rvtp(cy(5), tpnrot(py(-1.5 * ^(t, 0.5))))
+summonr rvtp(cy(5), tpnrot(py(-1.5 * (t ^ 0.5))))
 	async lcircle-*/ <90> gir2 (60 / dl ^ 0.8) _ <> {
 		while(onscreenby(-0.5, loc) & >(y, -2))
 		p this
@@ -78,7 +79,7 @@ summonr rvtp(cy(5), tpnrot(py(-1.5 * ^(t, 0.5))))
 		sfx x-fire-burst-1
 	} simple velocity
 		cx 1.6
-		py(-2.2 * ^(t, 0.65)) {
+		py(-2.2 * (t ^ 0.65)) {
 			dir(400 * t)
 			scale(lerp(-2, 2.5, &y, 0.8, 0.4))
 		}
@@ -200,7 +201,7 @@ phase 33 #{
 		} $al7(cxy -5.4 4.5, cr 2 -15, (60 / $fd), circle-green/w)
 		async tfairy <> gcr3 /i $fd 90 _ <> {
 		} $al7(cxy 5.5 4.5, cr 2 -165, (60 / $fd), circle-orange/w)
-		async crow <> gir2 /i ^ dl 0.6 lerpt 0 4 360 280 _ <> {
+		async crow <> gir2 /i (dl ^ 0.6) lerpt 0 4 360 280 _ <> {
 			delay 20s
 		} gcr2 36 4 <> {
 			p this
@@ -310,6 +311,7 @@ phase 0
 
 
 ##8
+<!> announce
 phase 0
 	saction 0
 		stage-deannounce

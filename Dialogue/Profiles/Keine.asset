@@ -94,6 +94,7 @@ MonoBehaviour:
       - useDefaultOffset: 1
         offset: {x: 0, y: 0}
         sprite: {fileID: 21300000, guid: fa58177a08e710949b4a89e7226c1875, type: 3}
+  flipOnReduce: 1
   icons:
     normal: {fileID: 21300000, guid: 2fb2e36e7d8ddb64daf2f3b1414e7c5a, type: 3}
     angry: {fileID: 0}
@@ -102,6 +103,12 @@ MonoBehaviour:
     cry: {fileID: 0}
     surprise: {fileID: 0}
     special: {fileID: 0}
-  displayName: Kamishirasawa Keine
+  displayName:
+    useReference: 1
+    reference: dialogue.keine
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   key: keine
   speakSFX: x-bubble-2

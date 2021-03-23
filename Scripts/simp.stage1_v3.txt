@@ -9,6 +9,7 @@ phase 0
 		
 
 ##1
+<!> announce
 phase 0
 	saction 0
 		stage-announce
@@ -255,6 +256,7 @@ phase 0
 
 
 ##6
+<!> announce
 phase 0
 	saction 0
 		stage-deannounce

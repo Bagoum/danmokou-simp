@@ -13,19 +13,37 @@ MonoBehaviour:
   m_Name: SiMP.Aya
   m_EditorClassIdentifier: 
   boss: {fileID: 6274564262994426332, guid: 12ab985c2b2abf0419c613bb98fcbe9d, type: 3}
-  CardPracticeName: Aya
-  BossPracticeName:
-    useEnOnly: 0
-    en: Aya
-    jp: "\u6587"
-  casualName:
-    useEnOnly: 0
-    en: 
-    jp: 
-  replayNameOverride: 
+  localizationBaseKey: simp.boss.aya
+  m_bossPracticeName:
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
+  challengeNameOverride:
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
+  replayNameOverride:
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
+  bottomTrackerNameOverride:
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   stateMachine: {fileID: 4900000, guid: af6b5a45c6905c742935d118f4829e74, type: 3}
   key: simp.aya
-  trackName: "\u6587"
   colors: {fileID: 11400000, guid: 5ebd2d3045839ff4cba23ebafb50e554, type: 2}
   cardRotator: 
   spellRotator: 

@@ -94,6 +94,7 @@ MonoBehaviour:
       - useDefaultOffset: 1
         offset: {x: 0, y: 0}
         sprite: {fileID: 21300000, guid: c8865569eb610484392d5865d65df153, type: 3}
+  flipOnReduce: 1
   icons:
     normal: {fileID: 21300000, guid: 103898d9cbe88b14fb64cf39cb9835e9, type: 3}
     angry: {fileID: 0}
@@ -102,6 +103,12 @@ MonoBehaviour:
     cry: {fileID: 0}
     surprise: {fileID: 0}
     special: {fileID: 0}
-  displayName: Shinki
+  displayName:
+    useReference: 1
+    reference: dialogue.shinki
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   key: shinki
   speakSFX: x-bubble-3

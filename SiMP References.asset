@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameIdentifier: SiMP
   gameVersion:
-    major: 3
+    major: 4
     minor: 2
     patch: 0
   mainMenu: {fileID: 11400000, guid: 977bd9744ba2d3a42a39a6092cb8e0e5, type: 2}
@@ -36,6 +36,7 @@ MonoBehaviour:
     top: 4.1
     bot: -4.5
     center: {x: -1.9, y: 0}
+  achievements: {fileID: 11400000, guid: 49ba1aeadee5a884f902fd0b043fb56a, type: 2}
   dialogue:
   - {fileID: 11400000, guid: 61ec3aa170f0d4f4981fc1a306cfe2e6, type: 2}
   bossMetadata:
@@ -85,7 +86,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7d1138de9ee25e14ea3511ee4271d517, type: 2}
   - {fileID: 11400000, guid: 2339162d9ceecff4d824aa84b163ef7a, type: 2}
   items: {fileID: 11400000, guid: 18e6de6e951f4114e8823af9e617bff7, type: 2}
+  prefabReferences: {fileID: 11400000, guid: 842bcc7c616103e4c9880c49f9735bb4, type: 2}
+  uxmlDefaults: {fileID: 11400000, guid: b4213b3830762944fbcb9250a4b73463, type: 2}
   summonables:
   - {fileID: 11400000, guid: 38afc312ddb0ac242b8cfb301b1b4237, type: 2}
   - {fileID: 11400000, guid: 0d4a9136117bbb444bb6a20b70a5e613, type: 2}
   fileStateMachines: []
+  scriptFolders:
+  - Assets/SiMP/Dialogue/Scripts
+  - Assets/SiMP/Scripts
+  fastParsing: 1

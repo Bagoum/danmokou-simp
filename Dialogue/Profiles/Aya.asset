@@ -94,6 +94,7 @@ MonoBehaviour:
       - useDefaultOffset: 1
         offset: {x: 0, y: 0}
         sprite: {fileID: 21300000, guid: 3cf52461c42a1e5489eed22e5ce5ec30, type: 3}
+  flipOnReduce: 1
   icons:
     normal: {fileID: 21300000, guid: a341f0573024f4e43a0db00cd92ea97f, type: 3}
     angry: {fileID: 0}
@@ -102,6 +103,12 @@ MonoBehaviour:
     cry: {fileID: 0}
     surprise: {fileID: 0}
     special: {fileID: 0}
-  displayName: Shameimaru Aya
+  displayName:
+    useReference: 1
+    reference: dialogue.aya
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   key: aya
   speakSFX: x-bubble-2

@@ -15,7 +15,7 @@ slc
 . `And what about Aya? Was that your fault?`
 z
 srce worry
-. `Oh, did the reporter forget my name? That's... sort of my fault. More like an inevitability, I guess. By the time this incident is cleared up three days from now, the miser and the thief will also have forgotten me.`
+. `Oh, did the reporter forget me? That's... sort of my fault. More like an inevitability, I guess. By the time this incident is cleared up three days from now, the miser and the thief will also have forgotten me.`
 z
 slce worry
 . `Three days? I was planning to clear out this incident within three hours...`
@@ -45,7 +45,7 @@ srce angry
 slc
 . `(I don't know what's going on, but I better shut this boomer up.)`
 z
-. `Oh, yeah, my bad, of course I know about the Skyfeller. I had thought you said Sky<i>fooler</i>. Please, continue.`
+. `Oh, yeah, my bad, of course I know about the Skyfeller. I thought you said Sky<i>fooler</i>. Please, continue.`
 z
 srce worry
 . `...I guess even a millenial would know about the greatest oni to ever lay foot on Gensoukyou's soil, right? Well, whatever.`

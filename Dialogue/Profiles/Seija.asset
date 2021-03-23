@@ -88,6 +88,7 @@ MonoBehaviour:
         sprite: {fileID: 21300000, guid: 9690fc43453860045b2dc66d00fa84a2, type: 3}
     special:
       sprites: []
+  flipOnReduce: 1
   icons:
     normal: {fileID: 21300000, guid: f5003b273a3b49843aaf8b8abc29fe75, type: 3}
     angry: {fileID: 0}
@@ -96,6 +97,12 @@ MonoBehaviour:
     cry: {fileID: 0}
     surprise: {fileID: 0}
     special: {fileID: 0}
-  displayName: Kijin Seija
+  displayName:
+    useReference: 1
+    reference: dialogue.seija
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   key: seija
   speakSFX: x-bubble-3

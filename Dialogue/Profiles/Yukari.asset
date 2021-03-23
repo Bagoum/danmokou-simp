@@ -124,6 +124,7 @@ MonoBehaviour:
         sprite: {fileID: 21300000, guid: 31b491fe187d12046995afa2e4024a94, type: 3}
     special:
       sprites: []
+  flipOnReduce: 1
   icons:
     normal: {fileID: 21300000, guid: fb576bf4de2902a41aadafa8dc4ca0b1, type: 3}
     angry: {fileID: 0}
@@ -132,6 +133,12 @@ MonoBehaviour:
     cry: {fileID: 0}
     surprise: {fileID: 0}
     special: {fileID: 0}
-  displayName: Yakumo Yukari
+  displayName:
+    useReference: 1
+    reference: dialogue.yukari
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   key: yukari
   speakSFX: x-bubble-3

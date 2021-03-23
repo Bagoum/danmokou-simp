@@ -13,22 +13,37 @@ MonoBehaviour:
   m_Name: SiMP.Keine
   m_EditorClassIdentifier: 
   boss: {fileID: 5188976871280437473, guid: 3f74c05d54dfae94ab79f9fa4ea75188, type: 3}
-  CardPracticeName: Keine
-  BossPracticeName:
-    _showEnOnly: 0
-    en: Keine
-    jp: "\u6167\u97F3"
+  localizationBaseKey: simp.boss.keine
+  m_bossPracticeName:
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   challengeNameOverride:
-    _showEnOnly: 0
-    en: 
-    jp: 
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   replayNameOverride:
-    _showEnOnly: 0
-    en: 
-    jp: 
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
+  bottomTrackerNameOverride:
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   stateMachine: {fileID: 0}
   key: simp.keine
-  trackName: "\u6167\u97F3"
   colors: {fileID: 11400000, guid: aba4dc560ddf4354c8bfc6c93a4a0099, type: 2}
   cardRotator: 
   spellRotator: 

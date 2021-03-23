@@ -13,22 +13,37 @@ MonoBehaviour:
   m_Name: SiMP.Shinki
   m_EditorClassIdentifier: 
   boss: {fileID: 6003014192476353498, guid: 190c48124f089ba45a3452933bdb637d, type: 3}
-  CardPracticeName: Shinki
-  BossPracticeName:
-    _showEnOnly: 0
-    en: Shinki
-    jp: "\u795E\u7DBA"
+  localizationBaseKey: simp.boss.shinki
+  m_bossPracticeName:
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   challengeNameOverride:
-    _showEnOnly: 0
-    en: 
-    jp: 
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   replayNameOverride:
-    _showEnOnly: 0
-    en: 
-    jp: 
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
+  bottomTrackerNameOverride:
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   stateMachine: {fileID: 4900000, guid: 2a1193b06701d6b49ab8335b1a00b9c9, type: 3}
   key: simp.shinki
-  trackName: "\u795E\u7DBA"
   colors: {fileID: 11400000, guid: f4604fa083596e449a093d14a07e723b, type: 2}
   cardRotator: 
   spellRotator: 

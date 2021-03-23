@@ -8,7 +8,7 @@ pattern {
 <!> showlives 4
 phase 0
 	paction 0
-		shift-phase-to 3
+		shift-phase-to 1
 	
 
 !!{ yukac { teal purple pink red orange yellow  }
@@ -31,7 +31,7 @@ sync powerup1 <> powerup x-powerup-1
 
 ##1
 <!> bosscutin
-<!> type non `Krähenkönig: One-Eyed Apostle Hanging from the World Tree` #{
+<!> type non :simp.boss.yukariex.nightmare #{
 <!> root 0 1.5
 <!> showlives 4
 <!> hpi 14000 5
@@ -59,20 +59,20 @@ phase 32
 				color icrow summons nroffset @ eloc p stall
 				colorr keine-*/w gsr2c 4 {
 					preloop rv2a =f [&rv2].a
-				} sdd
+				} simple
 !!{ ang * * pm1 p -55 + t * 2h p
-					+ &rv2a $ang
 				offset 
 					rx
 						2.5
 						$ang
 					@ eloc p
+                { dir + &rv2a $ang }
 			}
 #}
 
 
 ##2
-<!> type spell `Murder of Crows: Hunter of Hunters` #{
+<!> type spell :simp.boss.yukariex.karyuudogari #{
 <!> root 0 3
 <!> hpi 20000 3
 <!> showlives 4
@@ -132,7 +132,7 @@ phase 36
 
 
 ##3
-<!> type spell `Profound Danmaku Bounded Field: Wisdom, Justice, and Love` #{
+<!> type spell :simp.boss.yukariex.dbf #{
 <!> root 0 1.5
 <!> hpi 40000 2
 <!> showlives 3

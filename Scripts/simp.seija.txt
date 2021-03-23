@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	paction 0
-		shift-phase-to 5
+		shift-phase-to 8
 	
 !!{ me seija
 !{ 
@@ -41,7 +41,7 @@ phase 0
 
 ##2 
 <!> bosscutin
-<!> type non `Irrefutable Falsehood: syn-Propanethial S-oxide` #{
+<!> type non :simp.boss.seija.onion #{
 <!> hpi 18000 4
 <!> root 0 2
 phase 32
@@ -91,7 +91,7 @@ phase 32
 		
 
 ##3
-<!> type spell `Darker than a Moonless Night: A Grain of Rice for a Wall of Sand` #{
+<!> type spell :simp.boss.seija.rice #{
 <!> hp 22000
 <!> root 0 1.5
 phase 33
@@ -124,12 +124,13 @@ phase 33
 			color { red purple }
 			sfx x-fire-burst-1
 		} gsr2c * dl 20 {
-		} sdd * pm1 p * 400 t tprot
+		} simple tprot
 !!{ s1 2.7
 !!{ s2 1.2
 			if (= z1 p @0 part) 
 				px lerp 0 1 timersec(pct) $s1 $s2
 				px lerp 0 1 timersec(pct) $s2 $s1
+			{ dir  * pm1 p * 400 t } 
 		
 		savef part 0 1
 		bullet-control persist lcircle-red/w restyleeffect lcircle-red/b cwheel-red/ = @0 part 0
@@ -158,7 +159,7 @@ phase 33
 
 
 ##4
-<!> type non `Memory of Pugachev: Hyaku Shou Ik-Ki` #{
+<!> type non :simp.boss.seija.100 #{
 <!> hpi 15000 3
 <!> root 0 1.9
 phase 30
@@ -194,7 +195,7 @@ phase 30
 
 
 ##5
-<!> type spell `Fallacy: Circular Reasoning` #{
+<!> type spell :simp.boss.seija.circular #{
 <!> hp 23000
 <!> root 0 1.5
 phase 34
@@ -271,11 +272,12 @@ phase 34
 
 
 ##6
-<!> type non `Disproven Truth: A Pareto-Optimal Nonspell` #{
+<!> type non :simp.boss.seija.pareto #{
 <!> hpi 16000 3
 <!> root 0 2.3
 phase 37
     paction 0
+		pool-control lcircle-orange/ allowdelete true
 		dangerbot
 		pool-control { ellipse-* } cullrad 15
 !!{ crep * dl 16
@@ -362,7 +364,7 @@ bullet-control persist ellipse-%color%/w cull circ withz &.root 0.04
 
 
 ##7
-<!> type spell `Army Gazing Across the Channel: Feast of Undercooked Potatoes` #{
+<!> type spell :simp.boss.seija.potato #{
 <!> hpi 18000 5
 phase 34
 	paction 0
@@ -447,7 +449,7 @@ phase 34
 	
 
 ##8
-<!> type final `Fallacy: Affirming the Consequent` #{
+<!> type final :simp.boss.seija.consequent #{
 <!> hpi 16000 7
 <!> root 0 1.5
 phase 40
@@ -495,11 +497,12 @@ phase 40
 					p add
 					postloop rv2.a =f - 180 [&rv2].a
 					color { red purple }
-				} sdd * pm1 p2 * 400 t tprot rx
+				} simple tprot rx
 					* + 0.23 * 0.2 $p1r
 						lerp3 (0.3, 1.4, - $et1 0.2, + $et1 0.5, t, 3, 1.7,
 							lerpt($et2, + $et2 2, 0, 4))
 					* pm1 p2 + 80 * 7p $p1r
+					{ dir * pm1 p2 * 400 t }
 					
 		async ellipse-*/b <;:> gcr2d (^ dl 0.5) 90 _ angle / 180h 16 {
 			p this
@@ -681,7 +684,7 @@ async gem-%c%/b <0.2;:> gir {
 							} s polar
 								+ 0.2 * 0.7 t
 								* pm1 p logsumshiftt -0.3 3 * 22 t * 9 t
-					ss 0.5 nroffset @ plb p
+					simple nroffset @ plb p { scale 0.5 }
 			}
 			async sun-red/b <> gcr { delay 5s } gsr2c 3 { 
 				p add
@@ -701,7 +704,7 @@ async gem-%c%/b <0.2;:> gir {
 							} gsr2c 12 {
 								bank <0.2;:>
 							} s tprot cx 1.2
-					ss 0.5 nroffset @ plr p
+					simple nroffset @ plr p { scale 0.5 }
 			}
 		
 		}

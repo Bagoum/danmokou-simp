@@ -30,7 +30,7 @@ sync powerup1 <> powerup2
 !!{ me eraa
 ##2
 <!> bosscutin
-<!> type non `Memory Leak: Unsatiated Wrath of the Garbage Collector` #{
+<!> type non :simp.boss.eraa.gc #{
 <!> hpi 24000 5
 <!> root 0 2.5
 phase 42
@@ -48,7 +48,7 @@ phase 42
 				* 1 sin * 3 &t
 		} gsr {
 			colorf {  /b /w } z1 p
-		} sdd starrotb2 tprot lerp 0.5 1 (+ t * 0.4 z1 p) zero px + 1.2 * 0.5 (z1 p)
+		} simple tprot lerp 0.5 1 (+ t * 0.4 z1 p) zero px + 1.2 * 0.5 (z1 p) { dir starrotb2 }
 		gtr {
 			wt 60 _
 			wait-child
@@ -83,11 +83,12 @@ phase 42
 !!{ seq2 pxy (+ * 0.2 &t (* 2 cos * 0.75 &t)) sin * 0.8 &t
 !!{ teq2 pxy (+ * 0.2 &t2 (* 2 cos * 0.7 &t2)) sin * 0.8 &t2
 ##3
-<!> type spell `Self-Recreation: Rewriting One Step Ahead of the Instruction Pointer` #{
+<!> type spell :simp.boss.eraa.ip #{
 <!> hpi 21000 6
 <!> root 0 2.5
 phase 42
 	paction 0
+		pool-control circle-* allowdelete false
 		##bullet-control persist gcircle-* cull & (= t 0) offscreenby 0.6 loc
 !!{ rpt + 4 * 2 dc
 		async ellipse-orange/ <-60> gcr2 140 _ angle / 360h $rpt {

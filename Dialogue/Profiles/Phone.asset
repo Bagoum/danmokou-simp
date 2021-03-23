@@ -14,13 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftStands2:
     defaultRoot:
+      useDefaultOffset: 0
       offset: {x: 0, y: 0}
       sprite: {fileID: 0}
+    defaultOffset: {x: 0, y: 0}
     normal:
       sprites:
-      - offset: {x: 0, y: 0}
+      - useDefaultOffset: 0
+        offset: {x: 0, y: 0}
         sprite: {fileID: 0}
-      - offset: {x: 0, y: 0}
+      - useDefaultOffset: 0
+        offset: {x: 0, y: 0}
         sprite: {fileID: 21300000, guid: b509929f3c51bfe4f9956226605b66e3, type: 3}
     angry:
       sprites: []
@@ -36,13 +40,17 @@ MonoBehaviour:
       sprites: []
   rightStands2:
     defaultRoot:
+      useDefaultOffset: 0
       offset: {x: 0, y: 0}
       sprite: {fileID: 0}
+    defaultOffset: {x: 0, y: 0}
     normal:
       sprites:
-      - offset: {x: 0, y: 0}
+      - useDefaultOffset: 0
+        offset: {x: 0, y: 0}
         sprite: {fileID: 0}
-      - offset: {x: 0, y: 0}
+      - useDefaultOffset: 0
+        offset: {x: 0, y: 0}
         sprite: {fileID: 21300000, guid: b509929f3c51bfe4f9956226605b66e3, type: 3}
     angry:
       sprites: []
@@ -56,22 +64,7 @@ MonoBehaviour:
       sprites: []
     special:
       sprites: []
-  leftStands:
-    normal: {fileID: 21300000, guid: b509929f3c51bfe4f9956226605b66e3, type: 3}
-    angry: {fileID: 0}
-    happy: {fileID: 0}
-    worry: {fileID: 0}
-    cry: {fileID: 0}
-    surprise: {fileID: 0}
-    special: {fileID: 0}
-  rightStands:
-    normal: {fileID: 21300000, guid: b509929f3c51bfe4f9956226605b66e3, type: 3}
-    angry: {fileID: 0}
-    happy: {fileID: 0}
-    worry: {fileID: 0}
-    cry: {fileID: 0}
-    surprise: {fileID: 0}
-    special: {fileID: 0}
+  flipOnReduce: 1
   icons:
     normal: {fileID: 21300000, guid: 2fde6d913e9da8342b24553326ee1dc2, type: 3}
     angry: {fileID: 0}
@@ -80,6 +73,12 @@ MonoBehaviour:
     cry: {fileID: 0}
     surprise: {fileID: 0}
     special: {fileID: 0}
-  displayName: Communications Device
+  displayName:
+    useReference: 1
+    reference: dialogue.phone
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   key: phone
   speakSFX: x-bubble-3

@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	paction 0
-		shift-phase-to 2
+		shift-phase-to 3
 	
 	
 !!{ me reimu
@@ -32,11 +32,13 @@ phase 0
 
 
 ##2
-<!> type spell `Gods' Throwing Dice` #{
+<!> type spell :simp.boss.reymoo.dice #{
 <!> root 0 2.5
 <!> hpi 23000 2
 phase 33
     paction 0
+	pool-control gcircle-* allowdelete false
+	pool-control gcircle-* allowcull false
 	event playerinvuln 240
 	gtr {
 		wt	lerpt 0 3 7s 6s _
@@ -80,18 +82,14 @@ phase 33
 		y	+ + &py * &i1 &stp1y * &i2 &stp2y
 		z	+ + &pz * &i1 &stp1z * &i2 &stp2z
 		ts	+ /(-(1, cos t), +(1, t)) *  ^(t, 1.02) / atanr2(t, 3) hpi
-	} offset zero projectview
-			* 10 &ts
-			* 8 &ts
-			30
-			&x
-			&y
-			&z
+	} nroffset tp qrotate
+	        pxyz * 10 &ts * 8 &ts 30
+			pxyz &x &y &z
 #}
 
 
 ## 3
-<!> type timeout `Winds Bringing No Change` #{
+<!> type timeout :simp.boss.reymoo.wind #{
 <!> root 0 0
 phase 30
 	paction 0

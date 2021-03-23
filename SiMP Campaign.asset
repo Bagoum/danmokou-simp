@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startLives: 8
   key: simp.main
-  shortTitle: SiMP Main
+  shortTitle: Main
   endings:
   - {fileID: 11400000, guid: ee061571258144046846fbe13456a608, type: 2}
   - {fileID: 11400000, guid: 7f65b4581454d4c4ea4ac16e73a06754, type: 2}

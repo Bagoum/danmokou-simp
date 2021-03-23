@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	paction 0
-		shift-phase-to 3
+		shift-phase-to 6
 	
 	
 !!{ me kasen
@@ -33,7 +33,7 @@ phase 0
 
 ## 2
 <!> bosscutin
-<!> type non `Platinum Elysium: Dancing in the Shadow of the Heavens` #{
+<!> type non :simp.boss.kasen.platinum #{
 <!> hp 15000
 <!> root 0 1.5
 phase 27
@@ -74,11 +74,12 @@ phase 27
 
 
 ##3
-<!> type timeout `Five Hundred Years under the Five-Finger Mountain` #{
+<!> type timeout :simp.boss.kasen.500 #{
 <!> root 0 0
 phase 30
     paction 0
-		pool-control {{ shell-* }} allowcull false
+		pool-control {{ sakura-* }} allowcull false
+		pool-control {{ sakura-* }} allowdelete false
 		sync sakura-** <> gsr2 7 <> {
 			color { red green }
 			bindItr layer
@@ -105,7 +106,7 @@ phase 30
 
 
 ##4
-<!> type non `Golden Cudgel Hidden Behind the Ear` #{
+<!> type non :simp.boss.kasen.cudgel #{
 <!> hpi 11000 4
 <!> hpbar 0.3
 <!> root 0 2.3
@@ -150,7 +151,7 @@ phase 32
 #}
 
 ## 5
-<!> type non `Flowering Seal: Rooted in the Earth and Reaching for the Skies` #{
+<!> type non :simp.boss.kasen.flower #{
 <!> hpi 13000 3
 <!> hpbar 0.4
 <!> root 0 2
@@ -176,12 +177,13 @@ phase 28
 
 
 ## 6
-<!> type final `Stone Cradle: Standing Alone on the Mountaintop` #{
+<!> type final :simp.boss.kasen.stonecradle #{
 <!> hpi 18000 4
 <!> root 0 0.5
 phase 36
 	paction 0
 		pool-control sakura-* allowcull false
+		pool-control sakura-*/w allowdelete false
 		bullet-control persist scircle-red/w batch > t + 3 * 0.26 p {
 			softcull cwheel-red/w _
 			sm _ 

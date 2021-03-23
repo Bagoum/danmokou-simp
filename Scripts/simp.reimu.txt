@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	paction 0
-		shift-phase-to 4
+		shift-phase-to 7
 	
 	
 !!{ me reimu
@@ -31,7 +31,7 @@ sync powerup1 <> powerup x-powerup-1
 
 ##1
 <!> bosscutin
-<!> type non `Silent Sinner's Summoning Ceremony` #{
+<!> type non :simp.boss.reimu.sssc #{
 <!> hpi 15000 3
 <!> roott 3 0 2
 phase 32
@@ -67,7 +67,7 @@ phase 32
 	
 
 ##2
-<!> type spell `Apollon Gravity Assist` #{
+<!> type spell :simp.boss.reimu.apollo #{
 <!> hpi 22000 3
 <!> root 0 2
 phase 37
@@ -104,7 +104,7 @@ phase 37
 	
 
 ##3
-<!> type non `Fantasy Seal ~Centripetal Force~` #{
+<!> type non :simp.boss.reimu.centripetal #{
 <!> hpi 10000 7
 <!> root 0 1.9
 phase 32
@@ -150,11 +150,12 @@ phase 32
 
 
 ##4
-<!> type spell `The Breaking-Wheel of Karma` #{
+<!> type spell :simp.boss.reimu.breakingwheel #{
 <!> hpi 18000 3
 <!> root 0 1
 phase 36
 	paction 0
+		pool-control amuletreimu-* allowdelete false
 		pool-control amuletreimu-* allowcull false
 !!{ lrpt + 3 dc
 !!{ amuletRpt 10s
@@ -199,7 +200,7 @@ phase 36
 
 
 ##5
-<!> type non `Silent Sinner's Secret Sentry` #{
+<!> type non :simp.boss.reimu.ssss #{
 <!> hpi 14000 3
 <!> root 0 2
 phase 31
@@ -243,7 +244,7 @@ phase 31
 
 
 ##6
-<!> type timeout `Fantasy Seal ~Impure Wrath of the Avaricious~` #{
+<!> type timeout :simp.boss.reimu.avaricious #{
 <!> root 0 2
 phase 37
 	paction 0
@@ -311,19 +312,19 @@ $innerfire(reg2star, %color%, %n%, %ct%, / 720 %ct%, %angoff%)
 !}
 			
 ##7
-<!> type final `Lost Cry of a Forgotten God` #{
+<!> type final :simp.boss.reimu.final #{
 <!> root 0 3
 <!> hp 50000
-phase 0
+phase 100
 !{ hpr(v)
 	> hpratio $me %v
 !}
-!!{ hp1 $hpr(.8)
-!!{ hp2 $hpr(.6)
-!!{ hp3 $hpr(.35)
+!!{ hp1 (& $hpr(.8) < timersec(phaset) 20)
+!!{ hp2 (& $hpr(.6) < timersec(phaset) 40)
+!!{ hp3 (& $hpr(.35) < timersec(phaset) 65)
     paction 0
 		pool-control scircle-* allowcull false
-		sync sun-red/b <> ss 1 null
+		sync sun-red/b <> s null
 		
 		gtr {
 			while not $hp1
@@ -343,10 +344,11 @@ phase 0
 	!!{ crpt 11
 				colorr scircle-*/b gsr2 $crpt <> {
 					p add
-				} ss 0.67 polar
+				} simple polar
 	!!{ per + 45 * 3 &lr
 					lerpsmooth out-sine 0 5 t 0 * 5 ++ sine $per 1 (+ + t (* p2 / $per $crpt) (* p1 * 1h $per))
 					$rot
+					{ scale 0.67 }
 			}
 	
 !!{ lrpt round + 4 * 0.5 dc

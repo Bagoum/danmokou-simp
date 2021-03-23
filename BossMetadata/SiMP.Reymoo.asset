@@ -13,25 +13,37 @@ MonoBehaviour:
   m_Name: SiMP.Reymoo
   m_EditorClassIdentifier: 
   boss: {fileID: 5557805967316943377, guid: 5d7c2e027fb1a504185dfa12862e5608, type: 3}
-  BossPracticeName:
-    _showEnOnly: 0
-    en: Hakurei Presence
-    jp: "\u535A\u9E97\u306E\u5E7D\u970A"
+  localizationBaseKey: simp.boss.reymoo
+  m_bossPracticeName:
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   challengeNameOverride:
-    _showEnOnly: 0
-    en: 
-    jp: 
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   replayNameOverride:
-    _showEnOnly: 0
-    en: Ghost
-    jp: 
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   bottomTrackerNameOverride:
-    _showEnOnly: 0
-    en: "\u4E0D\u5BE9\u8005"
-    jp: "\u4E0D\u5BE9\u8005"
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   stateMachine: {fileID: 4900000, guid: 840384f4e1c2bc34082d045dcb45cde8, type: 3}
   key: simp.reymoo
-  trackName: "\u4E0D\u5BE9\u8005"
   colors: {fileID: 11400000, guid: 1af87831a4361b44092750b7f2453dad, type: 2}
   cardRotator: 
   spellRotator: 

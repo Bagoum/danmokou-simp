@@ -13,22 +13,35 @@ MonoBehaviour:
   m_Name: SiMP.Kaguya-Fake
   m_EditorClassIdentifier: 
   boss: {fileID: 3665291995995624048, guid: efc8d19268d8b854c912ba518b2bb0dd, type: 3}
-  BossPracticeName:
-    _showEnOnly: 0
-    en: Rabbit?
-    jp: "\u8B0E\u306E\u514E"
+  localizationBaseKey: simp.boss.kaguyaf
+  m_bossPracticeName:
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   challengeNameOverride:
-    _showEnOnly: 0
-    en: 
-    jp: 
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   replayNameOverride:
-    _showEnOnly: 0
-    en: 
-    jp: 
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   bottomTrackerNameOverride:
-    _showEnOnly: 0
-    en: "\u4E0D\u5BE9\u8005"
-    jp: "\u4E0D\u5BE9\u8005"
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   stateMachine: {fileID: 4900000, guid: 09c66581f08b1fb4d94eac60e59db48f, type: 3}
   key: simp.kaguya-fake
   colors: {fileID: 11400000, guid: e83c174566855bf419430e8e72dabb67, type: 2}

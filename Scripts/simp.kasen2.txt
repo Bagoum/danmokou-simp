@@ -8,7 +8,7 @@ pattern {
 }
 phase 0
 	paction 0
-		shift-phase-to 1
+		shift-phase-to 4
 	
 	
 !!{ me kasen
@@ -34,7 +34,7 @@ phase 0
 
 ## 2
 <!> bosscutin
-<!> type non `Flowering Seal: Rooted in the Earth and Reaching for the Moon` #{
+<!> type non :simp.boss.kasen2.flower #{
 <!> hpi 15000 4
 <!> root 0 2
 phase 36
@@ -65,11 +65,13 @@ phase 36
 #}
 
 ## 3
-<!> type spell `Conspiracy Woven Behind the Water Curtain` #{
+<!> type spell :simp.boss.kasen2.conspiracy #{
 <!> root 0 0.5
 <!> hpi 17000 9
 phase 36
 	paction 0
+		pool-control sakura-* allowdelete false
+		pool-control sakura-* allowcull false
 		$power1
 !!{ rpt * ^ dl 1 18
 		async sakura-*/ <> idelay 1.5s gsr2 12 angle / 180h $rpt {
@@ -99,7 +101,7 @@ phase 36
 
 
 ## 4
-<!> type non `Fiery-Eyed Escape from Eight Trigrams` #{
+<!> type non :simp.boss.kasen2.hakkero #{
 <!> hpi 10000 2
 <!> root 1 3
 phase 29
@@ -165,11 +167,12 @@ phase 29
 
 
 ##5
-<!> type spell `The Shattered Sky: Where Tenryuu Consumes the North Star` #{
+<!> type spell :simp.boss.kasen2.tss #{
 <!> hpi 21000 5
 <!> root 0 2
 phase 42
     paction 0
+		pool-control gcircle-* allowdelete false
 		beh-control persist lightning-* batch onlyonce | > x 4 < x -4 {
 			flipx> 4 _
 			flipx< -4 _
@@ -213,14 +216,14 @@ phase 42
 !!{ t1 1.3
 !{ spine(t)
 lerp(- $t1 0.6, + $t1 0.6, %t,
-	tp * lerpt(0, 0.6, 3, 1) cxy 0.5 2,
+	* lerpt(0, 0.6, 3, 1) pxy 0.5 2,
 	qrotate px + -22 sine * 1h $rt 5 %t
 		pxyz
 			dcosine $rt 4 - %t $t1
 			0
 			dsine $rt 4 - %t $t1)
 !}
-			tpnrot $spine(t) {
+			tpnrot tp $spine(t) {
 !!{ rep 20
 !!{ vp	1
 				gsr2 $rep <> {
@@ -228,7 +231,7 @@ lerp(- $t1 0.6, + $t1 0.6, %t,
 				} s nroffset :: {
 					vt		+ t * * .9 $vp / &i $rep
 				} + @ pl p
-					v3rotate $spine(t)  :: {
+					tp v3rotate $spine(t)  :: {
 						r	cosine 100 1 - p 5
 					} pxyz
 						cosine $vp &r &vt
@@ -243,7 +246,7 @@ lerp(- $t1 0.6, + $t1 0.6, %t,
 !!{ rep 20
 					} gsr2 $rep <> {
 						preloop dir =v2 
-								v3rotate $spine(&st)
+								tp v3rotate $spine(&st)
 								pxyz
 									cosine $rep 1 + t + * 2h p * / 360h $rep &pi
 									sine $rep 1 + t + * 2h p * / 360h $rep &pi
@@ -254,7 +257,7 @@ lerp(- $t1 0.6, + $t1 0.6, %t,
 #}
 
 
-## 5
+## 6
 <!> dialogue #{
 phase 0
 	saction 0

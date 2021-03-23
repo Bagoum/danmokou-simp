@@ -94,6 +94,7 @@ MonoBehaviour:
       - useDefaultOffset: 1
         offset: {x: 0, y: 0}
         sprite: {fileID: 21300000, guid: 29270ed8bf749eb4ca99220463c038cd, type: 3}
+  flipOnReduce: 1
   icons:
     normal: {fileID: 21300000, guid: fb8551777943f1748ae40cc6b701ffde, type: 3}
     angry: {fileID: 0}
@@ -102,6 +103,12 @@ MonoBehaviour:
     cry: {fileID: 0}
     surprise: {fileID: 0}
     special: {fileID: 0}
-  displayName: ???
+  displayName:
+    useReference: 1
+    reference: dialogue.eraa
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   key: eraa
   speakSFX: 

@@ -17,7 +17,7 @@ phase 0
 	paction 0
 		@ { kaguya keine }
 			position -15 0
-		shift-phase-to 15
+		shift-phase-to 12
 	
 	
 !!{ mimac { black yellow orange green teal blue pink }
@@ -99,7 +99,7 @@ async ellipse-red/w <> gcr2 /i ^ dl 0.8 32 _ <> {
 
 ##2. joint 1 (keine)
 <!> showlives 1
-<!> type non `Imperishable Night: Event Horizon`
+<!> type non :simp.boss.mima.keine1
 <!> hpi 11000 3
 <!> root -3 3
 !!{ kbase pxy 0 1.5
@@ -118,11 +118,12 @@ phase 31 #{
 				p this
 			} gsr2c 6 {
 				color $mimacnb
-			} sdd starrotb1 roffset +
+			} simple roffset +
 				px lssht 1 1 * -0.4 t * 1.5 t
 			!!{ per 6
-				qrotate py 62 
+				tp qrotate py 62 
 					circle $per (lerpt 0 0.7 0 1.3) + t * p / $per $repc 
+                { dir starrotb1 }
 			@ keine
 				move-target 1 out-sine + $kbase rx
 					1.6
@@ -148,7 +149,7 @@ phase 31 #{
 				0.8
 				* &lr lssht 0.3 1 0 * 30 t {
 					inode nroffset @ pl p $gfire($root)
-					ss 0.2 nroffset @ pl p
+					simple nroffset @ pl p { scale 0.2 }
 				}
 		sync sun-blue/ <> gsr2c 4 {
 			p this
@@ -159,7 +160,7 @@ phase 31 #{
 				0.8
 				* &eo * -24 t {
 					inode nroffset @ pl2 p $gfire4($root)
-					ss 0.2 nroffset @ pl2 p
+					simple nroffset @ pl2 p { scale 0.2 }
 				}
 			
 
@@ -168,7 +169,7 @@ phase 31 #{
 
 ##3. joint 2 (keine)
 <!> showlives 1
-<!> type spell `Ancient Night: Embarking Step Upon an Untraversed Land`
+<!> type spell :simp.boss.mima.keine2
 <!> hpi 20000 2
 <!> spellcutin 1
 <!> root -3 1
@@ -194,8 +195,9 @@ phase 41 #{
 			} gsr2 3 <> {
 				p this
 				color { /b / /w }
-			} sdd starrotb1 tprot px * lerpt 0.0 0.2 2 1
+			} simple tprot px * lerpt 0.0 0.2 2 1
 				+ 1.4 * 0.3 p
+				{ dir starrotb1 }
 			
 			
 		gtr {
@@ -251,10 +253,11 @@ phase 41 #{
 							frv2	angle + (- 90 * 65 &lr, cosine 12h 26 t)
 							sfx x-boom
 							p this
-						} sdd starrotb2 tp
+						} simple tp
 							px * lerpt 0.2 0.4 3 1
 								+ 1.5 cosine 20h 0.8 p
 							py * -0.55 t
+							{ dir starrotb2 }
 						sync  lightning-red/ <90> gsr2 2 <140> {
 							start rv2.a +=f  * 90 &lr
 							center
@@ -277,8 +280,8 @@ phase 41 #{
 								delay * /i dl 30 * 1h p
 							} gsr2 4 <0.1;:> {
 							} {
-								 color blue sdd starrotb2 tprot py lerpt(0, 1, 1, lerp(1, 2.5, + t * 0.06 p, 3, -4.5))
-								 color green sdd starrotb1 tprot py lerpt 0 1 0 -3.7
+								 color blue simple tprot py lerpt(0, 1, 1, lerp(1, 2.5, + t * 0.06 p, 3, -4.5)) { dir starrotb2 }
+								 color green simple tprot py lerpt 0 1 0 -3.7 { dir starrotb1 }
 							}
 				}
 				@ keine
@@ -326,7 +329,7 @@ phase 0
 
 ##5. joint 1 (kaguya)
 <!> showlives 1
-<!> type non `Silent Night: The Comet Cursing its Own Name`
+<!> type non :simp.boss.mima.kaguya1
 <!> hpi 11000 3
 <!> root 0 3.5
 <!> rootother kaguya 0 1
@@ -334,25 +337,26 @@ phase 31 #{
 	paction 0
 		bullet-control persist sun-blue/b cull > t 3
 !{ ctrl(idx)
-bullet-control-sm persist keine-*  circ + tp @ pl %idx <;;0.8>
+bullet-control-sm persist keine-*  circ + tp @ pl %idx circ(<;;0.8>)
 	sync star-** <> gsr {
 		sfx x-fire-star-1
 	} { 
 		gsr {
 			resetcolor
 			 color sun-blue/b
-		} ss lerpt 0 3 0.8 0 null
+		} simple null { scale lerpt 0 3 0.8 0 }
 		gsr2c * ^ dl 0.9 15 {
 			color $mimac2
 		} gsr2 2 <> {
 			color { /b /w }
 			p add
-		} sdd starrotb1 polar
+		} simple polar
 			lssht(-2, 0.4, * 3 t, * (+ 1.2 * 0.8 p2, t))
 			* pm1 p1 * pm1 p2 * 10 t
+			{ dir starrotb1 }
 	}
 		
-bullet-control persist keine-* cull circ + tp @ pl %idx <;;0.8>
+bullet-control persist keine-* cull circ + tp @ pl %idx circ(<;;0.8>)
 !}
 		$ctrl(0)
 		$ctrl(1)
@@ -369,9 +373,9 @@ bullet-control persist keine-* cull circ + tp @ pl %idx <;;0.8>
 		} guideempty .1 p { pl loc } { }
 			nroffset + lbeh mima
 !!{ per 2
-				qrotate px + 50 sine 5p 20 t
+				tp qrotate px + 50 sine 5p 20 t
 					circle $per 1 + t * p / $per 2 {
-				ss 0.4 nroffset @ pl p
+				simple nroffset @ pl p { scale 0.4 }
 			}
 	
 		@ kaguya
@@ -449,7 +453,7 @@ async _ <> iparent this gsr2c 3 {
 		p this
 	} gsr2 3 <120> {
 		bank <>
-	} sdd starrot1 tprot  px + 1.2 * 0.65 p
+	} simple tprot  px + 1.2 * 0.65 p { dir starrot1 }
 
 !}
 !{ kaguf(t, r)
@@ -469,7 +473,7 @@ async gem-*/w <> gir2 0 2 <> {
 !}
 ##6 joint 2 (kaguya)
 <!> showlives 1
-<!> type timeout `Imperishable Night: Anticyclonic Storm Wiping Away Desire`
+<!> type timeout :simp.boss.mima.kaguya2
 <!> spellcutin 2
 <!> root 3 0
 <!> rootother kaguya -3 1
@@ -550,11 +554,12 @@ phase 0
 
 ##8
 <!> bosscutin
-<!> type spell `Tenryuu's Descent: Kars Wandering the Asteroid Belt` #{
+<!> type spell :simp.boss.mima.kars #{
 <!> hpi 19000 4
 <!> root 0 2
 phase 37
     paction 0
+		pool-control lstar-* allowdelete false
 		pool-control { { star-* sun-* lstar-* } } cullrad 10
 		gtr2 0 _ <> {
 			delay 3s
@@ -579,23 +584,25 @@ phase 37
 			sfx	x-fire-burst-3
 		} guideempty .1 p { eloc loc } { } 
 			tprot py brand -1.2 -0.8 {
-				colorr sun-*/b ss 0.3 nroffset @ eloc p
-				colorr lstar-*/ gsr2c(+ 5 d3d1) { } sdd * pm1 p starrot2 offset 
+				colorr sun-*/b simple nroffset @ eloc p { scale 0.3 }
+				colorr lstar-*/ gsr2c(+ 5 d3d1) { } simple offset 
 					polartoxy
 						+ 1.6 cosine 7 1.1 + t * 4h p
 						* * pm1 p 22 + t * 2h p
 					@ eloc p
-				colorr star-*/w gsr2c(+ 5 d3d1) { } sdd * pm1 p starrot3 offset 
+					{ dir  * pm1 p starrot2 }
+				colorr star-*/w gsr2c(+ 5 d3d1) { } simple offset 
 					rx
 						1.3
 						* * pm1 p -44 + t * 2h p
 					@ eloc p
+					{ dir  * pm1 p starrot3 }
 			}
 #}
 
 
 ##9
-<!> type non `Silent Night: Following the Stars to the End of Nowhere` #{
+<!> type non :simp.boss.mima.stars #{
 <!> hpi 17000 3
 <!> root 0 2
 phase 36
@@ -640,16 +647,18 @@ phase 36
 										color /w
 										face v
 										start rv2.ry =f sine 13 0.4 (pma 1000 { })
-									} sdd starrotb1 tprot polartoxy
+									} simple tprot polartoxy
 										lerp 0 1 t 0 1.2
 										* 25 (+ * 18 pma $n { 1000 } pma 1000 { })
+										{ dir starrotb1 }
 									gsr { 
 										color /
 										face v
 										start rv2.ry =f sine 13h 0.4 (pma 1000 { })
-									} sdd starrotb1 tprot polartoxy
+									} simple tprot polartoxy
 										lerp 0 2 t 0 0.8
 										* 25p (+ * 13 pma $n { 1000 } pma 1000 { })
+										{ dir starrotb1 }
 								} #}
 							
 								gcr2 /i dh 36 _ <> {
@@ -660,10 +669,11 @@ phase 36
 								} gsr2 2 <180> {
 								} gsr2 4 <> {
 									p this
-								} sdd starrot2 tprot px * lerpt(0.2, 0.6, 0.1, 1) + 0.88 * 0.23 p
+								} simple tprot px * lerpt(0.2, 0.6, 0.1, 1) + 0.88 * 0.23 p
+								    { dir starrotb2 }
 							}
 						}
-						colorr lstar-*/w sdd starrot2 nroffset @ eloc p
+						colorr lstar-*/w simple nroffset @ eloc p { dir starrot2 }
 			}
 			~ _ + 3.4 $rrt
 				sfx x-metal
@@ -695,7 +705,7 @@ phase 36
 !!{ cb5 cxy -3.7 0.6
 #}
 ##10
-<!> type spell `Tenryuu's Ascent: All Quiet in the Constellation's Eye` #{
+<!> type spell :simp.boss.mima.constellations #{
 <!> hpi 20000 5
 <!> root 0 2
 phase 42
@@ -746,13 +756,14 @@ phase 42
 						start	rv2 =rv2 zero
 				sfx	x-metal
 				color	sun-red/b
-					} ss * 0.6 (- 1 * 0.4 t) null
+					} simple null { scale * 0.6 (- 1 * 0.4 t) }
 					icacheloc gir2 0 5 <72> . gcr2d dl 2 24 angle /i dl 12 { 
 						bank <0.5;:-144>
 						p this 
 						colorr star-*/w
-					} sdd starrot2 tprot  rotate - 160 * (/i dl + 5 * 1.7 t, mod 4 p)
+					} simple tprot  rotate - 160 * (/i dl + 5 * 1.7 t, mod 4 p)
 						px * $slow lerp3c 1 3 4 (+ t * /i dl 40f // p 4) 0 2 3.5
+						{ dir starrot2 }
 				} #}
 			}
 			wait-for 10
@@ -777,15 +788,16 @@ phase 42
 						start	rv2 =rv2 zero
 				sfx	x-metal
 				color	sun-red/b
-					} ss * 0.6 (- 1 * 0.4 t) null
+					} simple null { scale * 0.6 (- 1 * 0.4 t) }
 					icacheloc gir . {
 ## r = 0.5, c = 0.5
 						gir2 0 5 <72> . gcr2d dl 1 48 angle /i dl 6 { 
 							bank <0.5;:-144>
 							p this 
 							colorr star-*/w
-						} sdd starrotb2 tprot  rotate - 160 * (/i dl + 2 * 0.8 t, mod 4 p)
+						} simple tprot  rotate - 160 * (/i dl + 2 * 0.8 t, mod 4 p)
 							px * $slow lerp3c 1 3 4 (+ t * /i dl 16f // p 4) 0 2 3.5
+							{ dir starrotb2 }
 						gir2 0 5 <72> {
 ## r' = (r+c)cos 36, c' = (r+c)sin 36,  where 36 = 180 / 5
 							start rv2 =rv2 <.809;:180>
@@ -793,8 +805,9 @@ phase 42
 							bank <.5878;:-90>
 							p this 
 							colorr star-*/
-						} sdd starrotb1 tprot  rotate - 160 * (/i dl + 1 * 0.2 t, mod 4 p)
+						} simple tprot  rotate - 160 * (/i dl + 1 * 0.2 t, mod 4 p)
 							px * $slow lerp 4 5 (+ t * /i dl 40f // p 4) 0 2.5
+							{ dir starrotb1 }
 					} 
 				} #}
 			}
@@ -804,17 +817,18 @@ phase 42
 
 
 ##11
-<!> type non `Starry Night: The Andromeda Revolving` #{
+<!> type non :simp.boss.mima.andromeda #{
 <!> hpi 19000 3
 <!> root 0 2
 phase 34
     paction 0
+		pool-control  { { star-* lstar-* } } allowdelete false
 		$mimapower1
 		event playerinvuln 360
 		sync lightning-*/ <> gsr2 20 <> { root zero p this color $mimac } pather 1 0.4 polar
 			+ 0.1 * 0.072 p
 			+ * 240h p *  -(500, * 20 p) t { }
-		sync lstar-teal/b <> gsr { root zero } sdd * 230 t null
+		sync lstar-teal/b <> gsr { root zero } simple null { dir * 230 t }
 	paction 1.5
 		async star-*/ <4.5;:> gir2 60 _ <120h> { wait-child sfx x-metal } gcr {
 			wt	0.5 2300
@@ -823,7 +837,7 @@ phase 34
 							sine 480 18 (- t 720)
 							(* -0.04 ^ (/ - t 860 2, 1.7))
 			sfxif	x-fire-star-2 & (divby 16 t, in t 650 1100)
-		} gsr2 3 <120> { root zero color $mimac1 }  sdd starrot2 tp-rot cx 1
+		} gsr2 3 <120> { root zero color $mimac1 }  simple tp-rot cx 1 { dir starrot2 }
 !{ sqf(ct, thdr, th0r, spd)
 :: {
 	t	* * lerpd(0.8, 1) %spd t
@@ -845,9 +859,9 @@ phase 34
 	&thd
 !}
 !!{ ct floor * dh 36
-		sync star-pink/w <135> gsr2 $ct <> { root zero p this } sdd starrot2 $sqf($ct, 1.4, 1.4, 0.4)
-		sync star-teal/w <225> gsr2 $ct <> { root zero p this } sdd starrot2 $sqf($ct, 0.7, 1.4, 0.4)
-		sync star-blue/w <> gsr2 $ct <> { root zero p this } sdd starrot1 $sqf($ct, 0.5, 1.4, -0.3)
+		sync star-pink/w <135> gsr2 $ct <> { root zero p this } simple $sqf($ct, 1.4, 1.4, 0.4) { dir starrot2 }
+		sync star-teal/w <225> gsr2 $ct <> { root zero p this } simple $sqf($ct, 0.7, 1.4, 0.4) { dir starrot2 }
+		sync star-blue/w <> gsr2 $ct <> { root zero p this } simple $sqf($ct, 0.5, 1.4, -0.3) { dir starrot1 }
 		gtr {
 			delay 2s
 			wt	6s _
@@ -859,11 +873,12 @@ phase 34
 
 
 ##12
-<!> type spell `Silent Night: Where Fallen Stars Come to Rest` #{
+<!> type spell :simp.boss.mima.starfall #{
 <!> hpi 23000 8
 <!> root 0 2
 phase 44
     paction 0
+		pool-control lstar-* allowdelete false
 		bullet-control persist empty.1 flipx> 3.4 _
 		bullet-control persist empty.1 flipx< -3.4 _
 		bullet-control-sm persist empty.1 onlyonce < y ymin
@@ -885,7 +900,7 @@ phase 44
 		async star-** <1;:90> gcr2d dl 3 88 angle /i dl 7.026 { 
 			color $mimac
 			sfxif	x-fire-star-2 divby 3 t
-			} gsr2 3 <5.6793h> { color { /b / /w }  p this } doubleflipx sdd starrot2 tprot px + 1.5 * 0.35 p
+			} gsr2 3 <5.6793h> { color { /b / /w }  p this } doubleflipx simple tprot px + 1.5 * 0.35 p { dir starrot2 }
 		gtr {
 			delay 6s
 			wt	6s _
@@ -912,12 +927,13 @@ phase 44
 							ba    	=f 	* t / twau $n
 							rv2.a	=f 	raddeg * $l smoothloop io-sine (/ &ba $l)
 						}
-					} colorr star-*/ sdd starrot1 offset 
+					} colorr star-*/ simple offset 
 						rx
 							reg2star 2.2 5 &a
 							+  srand 0 360 p * (srand 6 12 p, t)
 						@ eloc p
-					colorr lstar-*/b sdd starrotb2 nroffset @ eloc p
+						{ dir starrot1 }
+					colorr lstar-*/b simple nroffset @ eloc p { dir starrotb2 }
 					colorr lightning-*/ pather 3 2 nroffset @ eloc p { }
 					
 		}
@@ -928,7 +944,7 @@ phase 44
 
 
 ##13
-<!> type non `Crescent Moon: Funeral Bell for the Four-Pointed Star` #{
+<!> type non :simp.boss.mima.4pt #{
 <!> hpi 17000 2
 <!> root 0 2.5
 phase 35
@@ -977,7 +993,7 @@ phase 35
 							2.34
 							-1.28
 			} gsr2 4 <90> {
-			} sdd starrot2 tprot px + 1.3 + * 0.01 p1 * 0.5  ^ p2 .86
+			} simple tprot px + 1.3 + * 0.01 p1 * 0.5  ^ p2 .86 { dir starrot2 }
 			wait-for 1
 			$mimapower1
 			move 1.5 tpnrot easedvhomet io-sine 1.5 pxy
@@ -988,7 +1004,7 @@ phase 35
 
 
 ##14
-<!> type spell `Starry Night: Dancing Where the Sun Dares Not Shine` #{
+<!> type spell :simp.boss.mima.dancing #{
 <!> hpi 19000 3
 <!> root 0 2
 phase 37
@@ -1008,15 +1024,16 @@ phase 37
 				polar 
 					logsumshiftt 1.2 1.5 (* 1 t) (* 8 t)
 					* pm1 p1 (* 15 t) {
-					colorr sun-*/b ss * 1 (- 1 * 0.35 t) nroffset @ eloc p
+					colorr sun-*/b simple nroffset @ eloc p { scale * 1 (- 1 * 0.35 t) }
 					colorr lightning-*/ pather 3 1 nroffset @ eloc p {
 						sm async lstar-*/ <> gcr2 20 _ <> {
 							delay	1.2s
 							while	onscreen loc
 							colorf	$mimac1 p2
 							sfx	x-fire-star-2
-						} target Lplayer sdd if > t 100 (* - t 100 brand 120 260) 0 tprot switchH t 100 zero
+						} target Lplayer simple tprot switchH t 100 zero
 							lerp3c 0.2 0.9 1.1 t zero ss0 px clamp 0.7 4 * 0.5 dist loc Lplayer zero
+							{ dir if > t 100 (* - t 100 brand 120 260) 0  }
 					}
 				}
 			wait-for 2
@@ -1030,11 +1047,12 @@ phase 37
 				sync star-** <;:> gsr2c ceil(* dh 12) { color $mimac2 } gsr2 2 <> {
 					color { /w /b }
 					p this
-				} sdd starrotb1 polar
+				} simple polar
 					logsumshiftt -5 0.1 (* - 5 p t) (* t if(= p 0, brand 0.7 0.9, brand 0.4 0.5))
 					* brandpm1 * t if = p 0
 						brand 4 7
 						0
+                    { dir starrotb1 }
 			pool-control {{ lstar-* }} softcullall cwheel
 			move 3 tpnrot easedvhomet io-sine 3 pxy (* pm1 p rand 1 2, 2)
 			break
@@ -1042,7 +1060,7 @@ phase 37
 
 
 ##15
-<!> type final `Supernova: Temporality Consumed by its Progeny` #{
+<!> type final :simp.boss.mima.supernova #{
 <!> hpi 34000 6
 <!> root 0 2
 phase 54
@@ -1059,15 +1077,16 @@ phase 54
 			bullet-control persist sun-red/b savev2 jupiter p loc _
 			sync sun-yellow/ <> gsr {
 				root	multiplyx mp1 p cxy 8 -2
-			} ss 1.5 tprot multiplyx mp1 p 
+			} simple tprot multiplyx mp1 p 
 				if < t 7
 					lerp 2 3.5 t cx -2 zero
 					lerp $collt $collt2 t zero rx 0.8 -60
+                { scale 1.5 }
 			_ 6.3
 				sfx x-metal
 			sync sun-red/b <> gsr {
 				root	multiplyx mp1 p cxy -8 8 ##-8 8
-			} ss 1.8 tprot 
+			} simple tprot 
 				multiplyx mp1 p lerpmany {
 					2	rx 2 -40
 					3.5		zero
@@ -1075,6 +1094,7 @@ phase 54
 					$collt	rx 3 -40
 					$collt2	rx 0.8 -20
 				} t
+				{ scale 1.8 }
 			async gdlaser-teal/w <> gcr2 10 6 <> {
 				delay * 1s $collt
 				p	add
@@ -1086,7 +1106,7 @@ phase 54
 				straight	atan :: {
 						a	+ * p2 / 360 $rpt * / 360h $rpt p1
 						ar	degrad &a
-					} qrotate pxyz -25 0 0
+					} tp qrotate pxyz -25 0 0
 						pxyz cos &ar 0 sin &ar
 				sfx2	x-laser-fire x-laser-on
 			}
@@ -1099,11 +1119,12 @@ phase 54
 				pm add p2
 				color $mimac1
 				preloop rv2.ry =f sine 18h (+ 1.0 sine 18p 0.3 (+ p1 * 6 t)) (+ p1 * 6 t)
-			} sdd starrotb3 tp +
+			} simple tp +
 				rx lerp 0.5 5 t 0 1.5
 					* 20 (+ p1 * 30h p2)
 				lerp 4 8 t  zero cx -0.8
 				lerp 4 8 t zero cy -4
+				{ dir starrotb3 }
 				
 !!{ rate /i ^ dl 0.6 90
 			async star-*/w <> gcr3 $rate * $collt 1s <> {
@@ -1113,19 +1134,20 @@ phase 54
 				p	mod
 !!{ ct floor * ^ dl 0.8 120
 !!{ incr / 720 $ct
-			} gsr { tmmod $ct } loc0 sdd starrotb2 nroffset :: { 
+			} gsr { tmmod $ct } loc0 simple nroffset :: { 
 				p1	p1maf { 30 $ct }
 				p2	pmaf 30 { $ct }
 				p3	pmaf $ct { }
 				a	+ * * (pm1 &p3) 3 t  + (* 6h &p2) * $incr // &p3 2
 				ar	degrad &a
 				r	+ 1.3 logsumshiftt -2 1 (* 2.5 t) (* 1.4 t)
-			} + @ saturn &p1 qrotate pxyz
+			} + @ saturn &p1 tp qrotate pxyz
 				-25 0 * mp1 &p1 -20
 				pxyz
 					* cos &ar &r
 					0
 					* sin &ar &r
+                { dir starrotb2 }
 			async x-boom <> gcr2 20 7 <> { delay * 1s $collt } sfx
 			_ (- $collt 1.5)
 				$mimapower1

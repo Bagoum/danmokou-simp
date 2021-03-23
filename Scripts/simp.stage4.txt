@@ -9,6 +9,7 @@ phase 0
 		shift-phase-to 2
 		
 
+<!> announce
 phase 0
 	saction 0
 		stage-announce
@@ -22,6 +23,7 @@ phase 0
 		shift-phase
 
 ##8
+<!> announce
 phase 0
 	saction 0
 		stage-deannounce

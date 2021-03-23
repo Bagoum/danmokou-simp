@@ -13,25 +13,37 @@ MonoBehaviour:
   m_Name: SiMP.Kasen2
   m_EditorClassIdentifier: 
   boss: {fileID: 6274564262994426332, guid: fc535ee3310d1574da2cf8ad79e59e23, type: 3}
-  BossPracticeName:
-    _showEnOnly: 0
-    en: Kasen (2)
-    jp: "\u83EF\u4ED9 (2)"
+  localizationBaseKey: simp.boss.kasen2
+  m_bossPracticeName:
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   challengeNameOverride:
-    _showEnOnly: 0
-    en: 
-    jp: 
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   replayNameOverride:
-    _showEnOnly: 0
-    en: 
-    jp: 
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   bottomTrackerNameOverride:
-    _showEnOnly: 0
-    en: "\u83EF\u4ED9"
-    jp: "\u83EF\u4ED9"
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
+      _showEnOnly: 0
   stateMachine: {fileID: 4900000, guid: ca1fb53a373513044bef11c168ccc8a0, type: 3}
   key: simp.kasen2
-  trackName: "\u83EF\u4ED9"
   colors: {fileID: 11400000, guid: 5df9dbcaf94c7f8459e791a37f854553, type: 2}
   cardRotator: 
   spellRotator: 

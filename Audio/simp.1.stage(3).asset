@@ -14,10 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 92ccdbb17307c6b4585171fa5fadf025, type: 3}
   key: simp.1.stage
-  title: level1
+  trackPlayLocation: Stage 1
+  title: Forest of the Found
+  musicRoomDescription:
+    useReference: 1
+    reference: simp.music.stage1
+    hardcoded:
+      en: 
+      jp: 
   volume: 0.2
   pitch: 1
   stopOnPause: 0
   loop: 1
   loopSeconds: {x: 7.68, y: 84.48}
   startWithTime: 0
+  musicRoomRequirement: campaigncompleted(simp.main)
+  showInMusicRoom: 1

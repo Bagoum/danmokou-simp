@@ -14,10 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: db1e7b8c971307e4f872aac679ee2415, type: 3}
   key: simp.5.kasen
-  title: The Will to Rewrite All Stations
-  volume: 0.24
+  trackPlayLocation: Kasen
+  title: Loved by Beasts, Forsaken by Divinity
+  musicRoomDescription:
+    useReference: 1
+    reference: simp.music.stage1boss
+    hardcoded:
+      en: 
+      jp: 
+  volume: 0.23
   pitch: 1
   stopOnPause: 0
   loop: 1
   loopSeconds: {x: 10, y: 101.5}
   startWithTime: 0
+  musicRoomRequirement: campaigncompleted(simp.main)
+  showInMusicRoom: 0

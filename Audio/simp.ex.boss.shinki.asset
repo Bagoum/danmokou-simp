@@ -14,10 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 2f8e9c3e097fe6246b547928b55780c2, type: 3}
   key: simp.ex.shinki
-  title: Gone, Gone, Gone to the Other Shore
+  trackPlayLocation: Shinki
+  title: A Body Without Organs
+  musicRoomDescription:
+    useReference: 1
+    reference: simp.music.stageexboss
+    hardcoded:
+      en: 
+      jp: 
   volume: 0.24
   pitch: 1
   stopOnPause: 0
   loop: 1
   loopSeconds: {x: 10, y: 146.72}
   startWithTime: 0
+  musicRoomRequirement: campaigncompleted(simp.ex)
+  showInMusicRoom: 1

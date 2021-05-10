@@ -14,10 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: d1646ebfc8b76dd43bea9235375aa606, type: 3}
   key: simp.2.stage
+  trackPlayLocation: Yukari
   title: Building a World Upon the Unsaid
+  musicRoomDescription:
+    useReference: 1
+    reference: simp.music.stage2
+    hardcoded:
+      en: 
+      jp: 
   volume: 0.16
   pitch: 1
   stopOnPause: 0
   loop: 1
   loopSeconds: {x: 10, y: 118}
   startWithTime: 0
+  musicRoomRequirement: campaigncompleted(simp.main)
+  showInMusicRoom: 1

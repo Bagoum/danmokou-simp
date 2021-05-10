@@ -14,10 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 7524171c9a961d04a8501987dc376832, type: 3}
   key: simp.3.stage
-  title: Restless Tirade of the Harmless
+  trackPlayLocation: Stage 3
+  title: 999 Warnings, 0 Exceptions
+  musicRoomDescription:
+    useReference: 1
+    reference: simp.music.stage3
+    hardcoded:
+      en: 
+      jp: 
   volume: 0.13
   pitch: 1
   stopOnPause: 0
   loop: 1
   loopSeconds: {x: 10, y: 103.71}
   startWithTime: 0
+  musicRoomRequirement: campaigncompleted(simp.main)
+  showInMusicRoom: 1

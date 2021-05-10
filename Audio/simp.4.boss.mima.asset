@@ -14,10 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 9fd8f62209faaf14fb7e80e0dea61946, type: 3}
   key: simp.4.mima
-  title: Haunted Fragments of a Long-Forgotten Past
+  trackPlayLocation: Mima
+  title: Moonlit Flamenco
+  musicRoomDescription:
+    useReference: 1
+    reference: simp.music.stage4boss
+    hardcoded:
+      en: 
+      jp: 
   volume: 0.24
   pitch: 1
   stopOnPause: 0
   loop: 1
   loopSeconds: {x: 62.55, y: 200.94}
   startWithTime: 0
+  musicRoomRequirement: campaigncompleted(simp.main)
+  showInMusicRoom: 1

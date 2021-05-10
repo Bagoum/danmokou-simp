@@ -14,10 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 487204f025e654a418df8a6992041898, type: 3}
   key: simp.5.stage
-  title: A Measured Descent into Hell
+  trackPlayLocation: Stage 5
+  title: Black, White, and Red All Over
+  musicRoomDescription:
+    useReference: 1
+    reference: simp.music.stage5
+    hardcoded:
+      en: 
+      jp: 
   volume: 0.18
   pitch: 1
   stopOnPause: 0
   loop: 1
   loopSeconds: {x: 10, y: 98.8}
   startWithTime: 0
+  musicRoomRequirement: campaigncompleted(simp.main)
+  showInMusicRoom: 1

@@ -14,10 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 2cbab5c541a48314694ed4c214fb8a7d, type: 3}
   key: simp.5.reimu
-  title: The Eventuality of the Messianic Moment
+  trackPlayLocation: Reimu
+  title: Lazily Evaluated Justice
+  musicRoomDescription:
+    useReference: 1
+    reference: simp.music.stage5boss
+    hardcoded:
+      en: 
+      jp: 
   volume: 0.17
   pitch: 1
   stopOnPause: 0
   loop: 1
   loopSeconds: {x: 39.14, y: 164.28}
   startWithTime: 0
+  musicRoomRequirement: campaigncompleted(simp.main)
+  showInMusicRoom: 1

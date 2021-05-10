@@ -14,10 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: eb24db5a3b1a7944ea5042f55af894c8, type: 3}
   key: simp.3.seija
+  trackPlayLocation: Seija
   title: Racing on the Backs of Snails
+  musicRoomDescription:
+    useReference: 1
+    reference: simp.music.stage3boss
+    hardcoded:
+      en: 
+      jp: 
   volume: 0.16
   pitch: 1
   stopOnPause: 0
   loop: 1
   loopSeconds: {x: 26.21, y: 96.5}
   startWithTime: 0
+  musicRoomRequirement: campaigncompleted(simp.main)
+  showInMusicRoom: 1

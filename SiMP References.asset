@@ -56,21 +56,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2a8da76a930486b49aebfdb0e223c0fc, type: 2}
   - {fileID: 11400000, guid: 214dfc15532abf8488c4daa08ac45624, type: 2}
   - {fileID: 11400000, guid: 061f122427d8e1e418fbe6a8e4252d31, type: 2}
-  dialogueProfiles:
-  - {fileID: 11400000, guid: 48e71b3322e78b4419e43bc485f84094, type: 2}
-  - {fileID: 11400000, guid: 3d0de9eac03b2dd4484ef1c80bd287c8, type: 2}
-  - {fileID: 11400000, guid: 8d045e886f1f9264bad97dff58821389, type: 2}
-  - {fileID: 11400000, guid: c5aa4d4065880f148b17df263afeb84e, type: 2}
-  - {fileID: 11400000, guid: ce2cc8720b8755f48a843881227e069b, type: 2}
-  - {fileID: 11400000, guid: 1b0555d033f22f0498b1c66d4cfecca2, type: 2}
-  - {fileID: 11400000, guid: 45726fbce08df8149a5db279928404cf, type: 2}
-  - {fileID: 11400000, guid: c3ce876b88714714b94403c387176de9, type: 2}
-  - {fileID: 11400000, guid: a696b7ed6c3b1ac438c56fb5812f8c1e, type: 2}
-  - {fileID: 11400000, guid: 17fa304fbc3122a46a69981e403e9001, type: 2}
-  - {fileID: 11400000, guid: 8bd7a77c825f5e14eab7f82b97165a59, type: 2}
-  - {fileID: 11400000, guid: b9eed17982805a1459988086f1ff0ff4, type: 2}
-  - {fileID: 11400000, guid: ccabd24506cde6743805dec823aa8f75, type: 2}
-  - {fileID: 11400000, guid: e4f2342ee3ea32c4a96302013b10c69b, type: 2}
+  dialogueProfiles: []
   tracks:
   - {fileID: 11400000, guid: 7d1138de9ee25e14ea3511ee4271d517, type: 2}
   - {fileID: 11400000, guid: 2339162d9ceecff4d824aa84b163ef7a, type: 2}
@@ -87,7 +73,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ab1e7964542a5b14ea6113eb50c0f46a, type: 2}
   items: {fileID: 11400000, guid: 18e6de6e951f4114e8823af9e617bff7, type: 2}
   prefabReferences: {fileID: 11400000, guid: 842bcc7c616103e4c9880c49f9735bb4, type: 2}
+  suzunoyaReferences: {fileID: 11400000, guid: eb72c7e04aab1d645bef9ba5d2605602, type: 2}
   uxmlDefaults: {fileID: 11400000, guid: b4213b3830762944fbcb9250a4b73463, type: 2}
+  SFX: []
   summonables:
   - {fileID: 11400000, guid: 38afc312ddb0ac242b8cfb301b1b4237, type: 2}
   - {fileID: 11400000, guid: 0d4a9136117bbb444bb6a20b70a5e613, type: 2}

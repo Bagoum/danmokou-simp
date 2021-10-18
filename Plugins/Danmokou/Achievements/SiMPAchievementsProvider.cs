@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reactive;
 using Danmokou.Achievements;
 using Danmokou.Core;
+using Danmokou.Services;
 using Danmokou.Danmaku;
 using Danmokou.GameInstance;
 using Danmokou.Player;
 using JetBrains.Annotations;
 using UnityEngine;
-using static Danmokou.Core.GameManagement;
+using static Danmokou.Services.GameManagement;
 
 namespace SiMP.Achievements {
 [CreateAssetMenu(menuName = "Achievements/SiMP Provider")]
@@ -20,15 +22,15 @@ public class SiMPAchievementRepo : AchievementRepo {
     protected override string LocalizationPrefix => "simp.acv";
     private const string smain = "simp.main";
     private const string sex = "simp.ex";
-    private Func<InstanceRecord, bool> IsMain => i => i.Campaign == smain;
-    private Func<InstanceRecord, bool> IsEx => i => i.Campaign == sex;
+    private Func<InstanceRecord, bool> IsMainCampaign => i => i.IsCampaign && i.Campaign == smain;
+    private Func<InstanceRecord, bool> IsExCampaign => i => i.IsCampaign && i.Campaign == sex;
 
 
     public override State? SavedAchievementState(string key) => SaveData.r.GetAchievementState(key);
     
     public override IEnumerable<Achievement> MakeAchievements() {
-        var main = L("maindone", () => new CompletedInstanceRequirement(IsMain));
-        var ex = L("exdone", () => new CompletedInstanceRequirement(IsEx));
+        var main = L("maindone", () => new CompletedInstanceRequirement(IsMainCampaign));
+        var ex = L("exdone", () => new CompletedInstanceRequirement(IsExCampaign));
         return new[] {
             L("open", () => new CompletedFixedReq()),
             L("tutorial", () => new TutorialCompletedReq()),
@@ -41,15 +43,15 @@ public class SiMPAchievementRepo : AchievementRepo {
             ex.Delay(),
             L("mainendgood", () => main.Lock(new EndingRequirement("main.good"))).Delay(),
             L("mainendbad", () => main.Lock(new EndingRequirement("main.bad"))).Delay(),
-            L("main1cc", () => main.Lock(new Normal1CCRequirement(IsMain))).Delay(),
-            L("ex1cc", () => ex.Lock(new Normal1CCRequirement(IsEx))).Delay(),
-            L("mainnull", () => main.Lock(new Shot1CCReq("null", IsMain))).Delay(),
-            L("exnull", () => ex.Lock(new Shot1CCReq("null", IsEx))).Delay(),
-            L("nometer", () => new DidntUseMeter1CCReq(IsMain)).Delay(),
+            L("main1cc", () => main.Lock(new Normal1CCRequirement(IsMainCampaign))).Delay(),
+            L("ex1cc", () => ex.Lock(new Normal1CCRequirement(IsExCampaign))).Delay(),
+            L("mainnull", () => main.Lock(new Shot1CCReq("null", IsMainCampaign))).Delay(),
+            L("exnull", () => ex.Lock(new Shot1CCReq("null", IsExCampaign))).Delay(),
+            L("nometer", () => new DidntUseMeter1CCReq(IsMainCampaign)).Delay(),
             L("meter", () => new UsedMeterReq()),
             L("c42",
                 () => new CustomRequirement(i =>
-                    IsMain(i) && i.HitsTaken <= 42 && i.Difficulty.customValueSlider == 42)).Delay(),
+                    IsMainCampaign(i) && i.HitsTaken <= 42 && i.Difficulty.customValueSlider == 42)).Delay(),
             L("aya", () => new StarsRequirement(smain, "simp.aya", 2).SelfLock()),
             L("kasen1", () => new StarsRequirement(smain, "simp.kasen", 5).SelfLock()),
             L("kaguya", () => new StarsRequirement(smain, "simp.kaguya-fake", 5).SelfLock()),
@@ -72,14 +74,17 @@ public class SiMPAchievementRepo : AchievementRepo {
                 ir.SubshotSwitches == 0 &&
                 ir.SharedInstanceMetadata.team.HasMultishot)).Delay(),
             L("emptypowershift", () => 
-                new EventRequirement(InstanceData.UselessPowerupCollected, () => Instance.IsCampaign)),
+                new EventRequirement<Unit>(
+                    EvInstance.ProxyEvent(i => i.UselessPowerupCollected), _ => Instance.IsCampaign)),
             L("mushrooms", () => new CompletedInstanceRequirement(ir => ir.IsCampaign &&
                                                                         ir.OneUpItemsCollected == 0)
                 .SelfLock()).Delay(),
             L("darksouls", () => new ListeningRequirement(() => 
                 Instance.IsCampaign && Instance.campaignKey == smain &&
-                Instance.HitsTaken > 0 && Instance.BossesEncountered.Count == 0, InstanceData.PlayerTookHit).SelfLock()),
-            L("bombplz", () => new EventRequirement<PhaseCompletion>(InstanceData.PhaseCompleted, pc => 
+                Instance.HitsTaken > 0 && Instance.BossesEncountered.Count == 0,
+                EvInstance.ProxyEvent(i => i.PlayerTookHit)).SelfLock()),
+            L("bombplz", () => new EventRequirement<PhaseCompletion>(
+                    EvInstance.ProxyEvent(i => i.PhaseCompleted), pc => 
                 pc.props.phaseType?.IsCard() == true && pc.hits >= 4).SelfLock()),
             L("deathbombplz", () => new ListeningRequirement(() => 
                 GameManagement.Instance.LastTookHitFrame > 0 && 
@@ -94,11 +99,11 @@ public class SiMPAchievementRepo : AchievementRepo {
             L("graze1337", () => new CampaignGrazeReq(1337)),
             L("graze9000", () => new CampaignGrazeReq(9001)),
             L("maxlives", () => new ListeningRequirement(() => GameManagement.Instance.Lives > 18, 
-                InstanceData.AnyExtendAcquired).SelfLock()),
+                EvInstance.ProxyEvent(i => i.AnyExtendAcquired)).SelfLock()),
             L("replay", () => new EventRequirement<InstanceRequest>(InstanceRequest.InstancedRequested, 
-                ir => ir.replay != null).SelfLock()).Delay(),
+                ir => ir.replay is ReplayMode.Replaying).SelfLock()).Delay(),
             L("practice", () => new EventRequirement<InstanceRequest>(InstanceRequest.InstancedRequested, 
-                ir => ir.replay == null && ir.Mode == InstanceMode.BOSS_PRACTICE || ir.Mode == InstanceMode.STAGE_PRACTICE).SelfLock()).Delay()
+                ir => !(ir.replay is ReplayMode.Replaying) && ir.Mode == InstanceMode.BOSS_PRACTICE || ir.Mode == InstanceMode.STAGE_PRACTICE).SelfLock()).Delay()
         };
     }
 }

@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	paction 0
-		shift-phase-to 2
+		shift-phase-to 3
 	
 
 !{ power1()
@@ -118,7 +118,7 @@ phase 38
 	paction 0
 !!{ seethet 3
 		bullet-control persist sun-* cull > t $seethet
-		bullet-control-sm persist sun-* onlyonce > t * 0.95 $seethet
+		bullet-control persist sun-* sm onlyonce > t * 0.95 $seethet
 			sync fireball-black/ <> gsr2c * ^ dl 0.6 8 {
 				sfx x-boom
 			} gsr2 (+ 4 d3d1) <> {
@@ -126,7 +126,7 @@ phase 38
 			} s polar
 			lssht -1 0.3 * 6 t * -1 t
 			+ * 2 p lssht -0.1 1 * 90 t 0
-		bullet-control-sm persist scircle-* onlyonce offscreen loc
+		bullet-control persist scircle-* sm onlyonce offscreen loc
 			paction 0 :2
 				sync fireball-red/ <-0.6;:> gsr2c * ^ dl 0.7 12 {
 				} gsr2 3 <0.3;:> {

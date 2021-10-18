@@ -8,7 +8,7 @@ pattern {
 }
 phase 0
 	paction 0
-		shift-phase-to 1
+		shift-phase-to 14
 	
 
 !{ power1()
@@ -166,7 +166,8 @@ phase 25
 <!> hpi 11000 5
 phase 34
 	paction 0
-		async gdlaser-red/b <> gcr2 /i ^ dl 0.6 (lerpt 0 25 190 140) _ <> {
+		async gdlaser-red/ <> gcr2 /i ^ dl 0.6 (lerpt 0 25 190 140) _ <> {
+			delay 180
 		} {
 			gsr {
 				root cy 6

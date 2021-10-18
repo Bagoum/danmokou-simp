@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	paction 0
-		shift-phase-to 6
+		shift-phase-to 7
 	
 	
 !!{ me kasen
@@ -57,7 +57,7 @@ phase 27
 		} laser null 1.5 0.5 {
 			sfx2 x-laser-fire	x-laser-on
 		}
-		laser-control-sm persist {{ gdlaser-* }} onlyonce & > &lt 1.5 offscreen loc
+		laser-control persist {{ gdlaser-* }} sm onlyonce & > &lt 1.5 offscreen loc
 			async sakura-*/w <-0.5;:> gcr2 36 2 <> {
 				offset(angle(rand(0, 360)))
 				color { red green }

@@ -14,6 +14,8 @@ using static Danmokou.Core.LocalizationRendering;
 namespace SiMP.Localization {
 public static partial class LocalizedStrings {
 	private static readonly Dictionary<string, LString> _allDataMap = new Dictionary<string, LString>() {
+		{ "simp.acv.d_emptypowershift", SiMPAchievements.d_emptypowershift },
+		{ "simp.acv.emptypowershift", SiMPAchievements.emptypowershift },
 		{ "simp.acv.d_practice", SiMPAchievements.d_practice },
 		{ "simp.acv.practice", SiMPAchievements.practice },
 		{ "simp.acv.d_replay", SiMPAchievements.d_replay },
@@ -44,10 +46,10 @@ public static partial class LocalizedStrings {
 		{ "simp.acv.bombplz", SiMPAchievements.bombplz },
 		{ "simp.acv.d_mushrooms", SiMPAchievements.d_mushrooms },
 		{ "simp.acv.mushrooms", SiMPAchievements.mushrooms },
-		{ "simp.acv.d_emptypowershift", SiMPAchievements.d_emptypowershift },
-		{ "simp.acv.emptypowershift", SiMPAchievements.emptypowershift },
 		{ "simp.acv.d_options", SiMPAchievements.d_options },
 		{ "simp.acv.options", SiMPAchievements.options },
+		{ "simp.acv.d_eileen", SiMPAchievements.d_eileen },
+		{ "simp.acv.eileen", SiMPAchievements.eileen },
 		{ "simp.acv.d_recitation", SiMPAchievements.d_recitation },
 		{ "simp.acv.recitation", SiMPAchievements.recitation },
 		{ "simp.acv.d_shinki", SiMPAchievements.d_shinki },

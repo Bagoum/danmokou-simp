@@ -17,7 +17,7 @@ phase 0
 	paction 0
 		@ { kaguya keine }
 			position -15 0
-		shift-phase-to 12
+		shift-phase-to 2
 	
 	
 !!{ mimac { black yellow orange green teal blue pink }
@@ -176,7 +176,7 @@ phase 31 #{
 <!> rootother keine 3 2
 phase 41 #{
 	paction 0
-		beh-control-sm persist gpather-blue/b onlyonce > abs x xmax
+		beh-control persist gpather-blue/b sm onlyonce > abs x xmax
 			async glcircle-blue/b <> gir { sfx x-fire-burst-1 } gcr2 12 3 <3.6> {
 !!{ rpt  ceil * ^ dl 0.9 9
 				start rv2.a +=f * p / 360h $rpt
@@ -188,16 +188,17 @@ phase 41 #{
 				py lerp 0.5 4 (+ t * 0.2 p) 1 -3.6
 		bullet-control persist glcircle-blue/b restyleeffect fireball-blue/b cwheel-blue/w >(+ t &.st, 1.5)
 !!{ starwhen > t (+ 0.8 * 3 modh p)
-		bullet-control persist lstar-red/ cull $starwhen
-		bullet-control-sm persist lstar-red/ $starwhen
-			sync star-red* <> gsr2c * dl 10 {
-				sfx x-boom
-			} gsr2 3 <> {
-				p this
-				color { /b / /w }
-			} simple tprot px * lerpt 0.0 0.2 2 1
-				+ 1.4 * 0.3 p
-				{ dir starrotb1 }
+		bullet-control persist lstar-red/ batch $starwhen {
+			sm _ sync star-red* <> gsr2c * dl 10 {
+					sfx x-boom
+				} gsr2 3 <> {
+					p this
+					color { /b / /w }
+				} simple tprot px * lerpt 0.0 0.2 2 1
+					+ 1.4 * 0.3 p
+					{ dir starrotb1 }
+			cull _
+		} 
 			
 			
 		gtr {
@@ -337,7 +338,7 @@ phase 31 #{
 	paction 0
 		bullet-control persist sun-blue/b cull > t 3
 !{ ctrl(idx)
-bullet-control-sm persist keine-*  circ + tp @ pl %idx circ(<;;0.8>)
+bullet-control- persist keine-* sm circ + tp @ pl %idx circ(<;;0.8>)
 	sync star-** <> gsr {
 		sfx x-fire-star-1
 	} { 
@@ -881,7 +882,7 @@ phase 44
 		pool-control lstar-* allowdelete false
 		bullet-control persist empty.1 flipx> 3.4 _
 		bullet-control persist empty.1 flipx< -3.4 _
-		bullet-control-sm persist empty.1 onlyonce < y ymin
+		bullet-control persist empty.1 sm onlyonce < y ymin
 			sync gdlaser-*/b <90> gsr { face d colorf $mimac p } laser null 1.5 0.5 {
 				sfx2	x-laser-fire x-laser-on
 				s(lerpd(2, 3))
@@ -1043,7 +1044,7 @@ phase 37
 			wait-for 1
 			~ async x-boom <> gcr2 18 4 <> . sfx
 			~ draiko 0.5 1
-			bullet-control-sm once {{ lstar-* }} _ 
+			bullet-control once {{ lstar-* }} sm _ 
 				sync star-** <;:> gsr2c ceil(* dh 12) { color $mimac2 } gsr2 2 <> {
 					color { /w /b }
 					p this

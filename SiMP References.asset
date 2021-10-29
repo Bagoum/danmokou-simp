@@ -81,6 +81,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0d4a9136117bbb444bb6a20b70a5e613, type: 2}
   fileStateMachines: []
   scriptFolders:
-  - Assets/SiMP/Dialogue/Scripts
+  - Assets/SiMP/Dialogue
   - Assets/SiMP/Scripts
   fastParsing: 1

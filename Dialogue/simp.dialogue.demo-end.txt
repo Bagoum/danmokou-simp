@@ -1,7 +1,6 @@
 script
 sl mima
 sr mima
-endcard activate
 src
 . `Thanks for playing the SiMP demo! The full version will be out by August 28.`
 z

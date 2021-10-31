@@ -86,8 +86,8 @@ phase 32
 		bullet-control persist $bc flipx> 4.3 _
 		bullet-control persist $bc flipx< -4.3 _
 		bullet-control persist $bc batch > t 3 {
-			restyleeffect circle-pink/w cwheel-pink/ _
 			sfx x-transform-1 _
+			restyleeffect circle-pink/w cwheel-pink/ _
 		}
 		bullet-control persist circle-pink/w force _ 
 			tpnrot rx

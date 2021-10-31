@@ -85,7 +85,7 @@ public class SiMPAchievementRepo : AchievementRepo {
                 EvInstance.ProxyEvent(i => i.PlayerTookHit)).SelfLock()),
             L("bombplz", () => new EventRequirement<PhaseCompletion>(
                     EvInstance.ProxyEvent(i => i.PhaseCompleted), pc => 
-                pc.props.phaseType?.IsCard() == true && pc.hits >= 4).SelfLock()),
+                pc.phase.PhaseType?.IsCard() == true && pc.hits >= 4).SelfLock()),
             L("deathbombplz", () => new ListeningRequirement(() => 
                 GameManagement.Instance.LastTookHitFrame > 0 && 
                 GameManagement.Instance.LastMeterStartFrame - 

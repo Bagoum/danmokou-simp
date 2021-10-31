@@ -5,7 +5,7 @@ pattern { bgm {
 } }
 phase 0
 	paction 0
-		shift-phase-to 2
+		shift-phase-to 6
 		
 
 ##1
@@ -131,8 +131,8 @@ phasej 57 0 #{
 	paction 0
 		##a3 helper
 		bullet-control persist dot-blue/b batch > t $a3t {
-			 restyleeffect arrow-blue/w cwheel-blue/ _
 			 sfx x-transform-1 _
+			 restyleeffect arrow-blue/w cwheel-blue/ _
 		}
 	paction 0
 		sts $l $a1

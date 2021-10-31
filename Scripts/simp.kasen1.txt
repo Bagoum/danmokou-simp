@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	paction 0
-		shift-phase-to 7
+		shift-phase-to 6
 	
 	
 !!{ me kasen
@@ -185,13 +185,13 @@ phase 36
 		pool-control sakura-* allowcull false
 		pool-control sakura-*/w allowdelete false
 		bullet-control persist scircle-red/w batch > t + 3 * 0.26 p {
-			softcull cwheel-red/w _
 			sm _ 
 				sync gdlaser-red/ <-10;:> gsr2 1 <60> {
 					center
 					target a Lplayer
 					face d
 				} laser null 1.5 0.5 { length 30 dsfx s 0.7 }
+			softcull cwheel-red/w _
 		}
 		gtr {
 			wt	1 _

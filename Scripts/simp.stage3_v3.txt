@@ -5,7 +5,7 @@ pattern { bgm {
 } }
 phase 0
 	paction 0
-		shift-phase-to 1
+		shift-phase-to 4
 		
 
 ##1
@@ -29,8 +29,8 @@ bullet-control persist %color batch < x xmin {
 !{ flipb(color, color2)
 bullet-control persist %color batch < y ymin {
 	flipy< ymin _
-	restyle %color2 _
 	sfx x-transform-1 _
+	restyle %color2 _
 }
 !}
 
@@ -279,8 +279,8 @@ phasej 36 0 #{
 phase 19 #{ ##Some extra time since this precedes the boss
 	paction 0
 		bullet-control persist ellipse-* batch (>(t, 0.8) & =(&.refire, 1)) {
-			 restyleeffect arrow-black/w cwheel-black/w _
 			 sfx x-transform-2 _
+			 restyleeffect arrow-black/w cwheel-black/w _
 		}
 		sync tlfairy <> summonr null(cy(5)) movewrap 1.5 cy(2) 2 cy(5)
 			async ellipse-*/b <1;:> gcrf /i dl 25 _ (angle sine 80 200 tdl) {

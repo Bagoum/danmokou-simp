@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	paction 0
-		shift-phase-to 2
+		shift-phase-to 7
 	
 	
 !!{ me reimu
@@ -324,6 +324,7 @@ phase 100
 !!{ hp3 (& $hpr(.35) < timersec(phaset) 65)
     paction 0
 		pool-control scircle-* allowcull false
+		pool-control scircle-* allowdelete false
 		sync sun-red/b <> s null
 		
 		gtr {

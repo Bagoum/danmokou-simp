@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	paction 0
-		shift-phase-to 1
+		shift-phase-to 7
 	
 !!{ me seija
 !{ 
@@ -96,6 +96,7 @@ phase 32
 <!> root 0 1.5
 phase 33
 	paction 0
+		dangerbot
 		pool-control { { ellipse-*/ } { red purple } } allowcull false
 		gtr {
 			delay 3s
@@ -340,19 +341,19 @@ tprot px lerpmany {
 		
 !{ ctrl(color)
 bullet-control persist ellipse-%color%/b batch < abs - t $t1 2f {
-	restyleeffect ellipse-%color%/w cwheel-%color%/ _
 	sfx x-transform-1 _
+	restyleeffect ellipse-%color%/w _ _
 }
 bullet-control persist ellipse-%color%/w batch < abs - t $t2 2f {
-	restyleeffect ellipse-%color%/ cwheel-%color%/ _
 	sfx x-fire-small-2 _
+	restyleeffect ellipse-%color%/ _ _
 }
 bullet-control persist ellipse-%color%/ batch < abs - t $t4 2f {
-	restyleeffect ellipse-%color%/w cwheel-%color%/ _
 	sm _
 		sync ellipse-%color%/b.1 <>  gsr {
 			sfx x-fire-small-3
 		} s tprot px lerpt 0 0.6 0 2.5
+	restyleeffect ellipse-%color%/w _ _
 }
 bullet-control persist ellipse-%color%/w cull circ withz &.root 0.04
 !}
@@ -432,16 +433,16 @@ phase 34
 				$r
 				witha lerpt 0 1 0 0.4 pink
 		bullet-control persist ellipse-red/w batch not $rct {
-			softcull cwheel-red/ _
 			sm _ sync lellipse-red/b <> simple tprot cx 2.2 { scale lerpt(0.1, 0.3, 1, 2) }
+			softcull _ _
 		}
-		bullet-control persist ellipse-red/b restyleeffect ellipse-red/w cwheel-red/ $rct
+		bullet-control persist ellipse-red/b restyleeffect ellipse-red/w _ $rct
 		bullet-control persist ellipse-red/b slowdown 0.8 _
 		bullet-control persist ellipse-purple/b slowdown 0.2 _
-		bullet-control persist ellipse-purple/w restyleeffect ellipse-purple/b cwheel-purple/ $rct
+		bullet-control persist ellipse-purple/w restyleeffect ellipse-purple/b _ $rct
 		bullet-control persist ellipse-purple/b batch & < y [lbeh pointer].y not $rct {
-			softcull cwheel-purple/ _
 			sm _ sync lellipse-purple/w <> simple tprot px lerpt(0.1, 0.4, 3, 6) { scale lerpt(0.1, 0.3, 1, 2) }
+			softcull _ _
 		
 		}
 		
@@ -472,6 +473,7 @@ phase 40
 !!{ et2 11
 		$rbf($glr(!$, /w, /, in t $et1 -- $et2))
 		$rbf($glr(!$, /, /w, > t $et2))
+		pool-control lcircle-* allowdelete false
 		pool-control ellipse-* cullrad 8
 		gtr {
 			delay 3s
@@ -517,10 +519,10 @@ phase 40
 				px lerp 0 1 timersec(pct) $s2 $s1
 		
 		savef part 0 1
-		bullet-control persist ellipse-red/w restyleeffect ellipse-red/b cwheel-red/ = @0 part 0
-		bullet-control persist ellipse-red/b restyleeffect ellipse-red/w cwheel-red/  not = @0 part 0
-		bullet-control persist ellipse-purple/w restyleeffect ellipse-purple/b cwheel-purple/ = @0 part 1
-		bullet-control persist ellipse-purple/b restyleeffect ellipse-purple/w cwheel-purple/ not = @0 part 1
+		bullet-control persist ellipse-red/w restyleeffect ellipse-red/b _ = @0 part 0
+		bullet-control persist ellipse-red/b restyleeffect ellipse-red/w _  not = @0 part 0
+		bullet-control persist ellipse-purple/w restyleeffect ellipse-purple/b _ = @0 part 1
+		bullet-control persist ellipse-purple/b restyleeffect ellipse-purple/w _ not = @0 part 1
 		timer restart pct
 		
 		gtr {

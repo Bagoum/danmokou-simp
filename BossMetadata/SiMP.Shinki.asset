@@ -14,34 +14,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: {fileID: 6003014192476353498, guid: 190c48124f089ba45a3452933bdb637d, type: 3}
   localizationBaseKey: simp.boss.shinki
+  m_casualName:
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
   m_bossPracticeName:
     useReference: 1
     reference: 
     hardcoded:
       en: 
       jp: 
-      _showEnOnly: 0
-  challengeNameOverride:
-    useReference: 1
-    reference: 
-    hardcoded:
-      en: 
-      jp: 
-      _showEnOnly: 0
   replayNameOverride:
     useReference: 1
     reference: 
     hardcoded:
       en: 
       jp: 
-      _showEnOnly: 0
   bottomTrackerNameOverride:
     useReference: 1
     reference: 
     hardcoded:
       en: 
       jp: 
-      _showEnOnly: 0
   stateMachine: {fileID: 4900000, guid: 2a1193b06701d6b49ab8335b1a00b9c9, type: 3}
   key: simp.shinki
   colors: {fileID: 11400000, guid: f4604fa083596e449a093d14a07e723b, type: 2}
@@ -61,4 +57,4 @@ MonoBehaviour:
   bossCutin: {fileID: 2426727079670566650, guid: 7bc7d8102d81a684d8aa9c8768924585,
     type: 3}
   spellCutins:
-  - {fileID: 5101881453110368087, guid: 55e4fa769cf4b28479a5503275230561, type: 3}
+  - {fileID: 9053741855511276947, guid: 89c4b02d42d57e94c95440c9c76a9f8c, type: 3}

@@ -255,6 +255,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3290238121844968753, guid: cd77fcd8b4e4d41489479fb8f6de0a18,
+        type: 3}
+      propertyPath: defaultSupport
+      value: 
+      objectReference: {fileID: 11400000, guid: 13157d81a8a5ff646accca16a0311ad8,
+        type: 2}
+    - target: {fileID: 3290238121844968753, guid: cd77fcd8b4e4d41489479fb8f6de0a18,
+        type: 3}
+      propertyPath: defaultShots.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3290238121844968753, guid: cd77fcd8b4e4d41489479fb8f6de0a18,
+        type: 3}
+      propertyPath: defaultPlayers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3290238121844968753, guid: cd77fcd8b4e4d41489479fb8f6de0a18,
+        type: 3}
+      propertyPath: defaultShots.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0ad5898c3351494468a4cd358d676fd4,
+        type: 2}
     - target: {fileID: 3290238121844968754, guid: cd77fcd8b4e4d41489479fb8f6de0a18,
         type: 3}
       propertyPath: m_Name
@@ -455,6 +477,7 @@ MonoBehaviour:
   tutorialBoss: {fileID: 1130578704472725924, guid: a4d35084df7f48946b01c28987bdfb43,
     type: 3}
   bossSM: {fileID: 4900000, guid: 641d26273f4f7d64e964c82881c8fd15, type: 3}
+  pauseMenu: {fileID: 1871502620}
   skip: 0
 --- !u!4 &579532052
 Transform:
@@ -466,6 +489,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2118285700}
   - {fileID: 1488215144}
@@ -575,6 +599,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 579532052}
   m_RootOrder: 1
@@ -606,8 +631,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 81b89331e3802f846babe030f451d7eb, type: 2}
-  m_sharedMaterial: {fileID: 1744428156900035190, guid: 81b89331e3802f846babe030f451d7eb,
+  m_fontAsset: {fileID: 11400000, guid: 061b7647d2e4e7140a981e365ceb61fe, type: 2}
+  m_sharedMaterial: {fileID: 8613960392620556761, guid: 061b7647d2e4e7140a981e365ceb61fe,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -638,7 +663,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -671,12 +696,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 1488215146}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: -1714704369
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1488215146}
+  m_maskType: 0
 --- !u!23 &1488215146
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -688,6 +713,7 @@ MeshRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -696,7 +722,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1744428156900035190, guid: 81b89331e3802f846babe030f451d7eb, type: 2}
+  - {fileID: 8613960392620556761, guid: 061b7647d2e4e7140a981e365ceb61fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -716,8 +742,20 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1714704369
   m_SortingLayer: 12
-  m_SortingOrder: 32400
+  m_SortingOrder: 32050
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1871502620 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2751001841577565892, guid: 935d6d3b359104c4fa7b5a1adaa0eda5,
+    type: 3}
+  m_PrefabInstance: {fileID: 545923305}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b30dd2735323489d8623d48d6205078e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2118285699
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,6 +784,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 579532052}
   m_RootOrder: 0
@@ -777,8 +816,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 81b89331e3802f846babe030f451d7eb, type: 2}
-  m_sharedMaterial: {fileID: 1744428156900035190, guid: 81b89331e3802f846babe030f451d7eb,
+  m_fontAsset: {fileID: 11400000, guid: 061b7647d2e4e7140a981e365ceb61fe, type: 2}
+  m_sharedMaterial: {fileID: 8613960392620556761, guid: 061b7647d2e4e7140a981e365ceb61fe,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -809,7 +848,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -842,12 +881,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 2118285702}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 2118285702}
+  m_maskType: 0
 --- !u!23 &2118285702
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -859,6 +898,7 @@ MeshRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -867,7 +907,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1744428156900035190, guid: 81b89331e3802f846babe030f451d7eb, type: 2}
+  - {fileID: 8613960392620556761, guid: 061b7647d2e4e7140a981e365ceb61fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -887,7 +927,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1714704369
   m_SortingLayer: 12
-  m_SortingOrder: 32400
+  m_SortingOrder: 32050
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &360509424075748755
 PrefabInstance:

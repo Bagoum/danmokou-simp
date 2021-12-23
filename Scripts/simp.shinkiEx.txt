@@ -8,7 +8,7 @@ pattern {
 }
 phase 0
 	paction 0
-		shift-phase-to 4
+		shift-phase-to 12
 	
 
 !{ power1()
@@ -82,6 +82,7 @@ phase 33
         bullet-control PERSIST lcircle-* FLIPX< xmin _
         bullet-control PERSIST lcircle-* FLIPY> 4 _
         bullet-control PERSIST lcircle-* FLIPY< -4 _
+        pool-control lcircle-* allowdelete false
 		bullet-control persist lcircle-purple/ batch & > t 1.5 relcirc $me circ <0;0;1> {
 			time 100 _
 			SFX x-bubble _
@@ -578,6 +579,7 @@ phase 40
 				ang =f if(= t 0, -90, + -90 * pm1(t) lerpt(0, 5, 12, 20))
 			}
 		} {
+			debug hello
 			timer restart wingt
 			sfx x-lockon
 	!!{ timeToPt 3

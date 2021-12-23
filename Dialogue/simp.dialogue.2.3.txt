@@ -6,6 +6,7 @@ slce worry
 z
 place r1 yukari
 setstandopacity yukari 0
+re sfx vn-yukari-power
 fadestandin yukari 1
 sr yukari
 srce happy

@@ -13,17 +13,8 @@ srce _
 namecard namecard-kasen
 . `Sure. Although there really isn't that much more than what I told her last night.`
 z
-.`A few weeks back, some fairies were searching around the Hakurei shrine, and happened upon Reimu's yin-yang orbs.`
-z
 srce worry
-. `Reimu doesn't know it, but they're the shrine's g-- Excuse me. They're incredibly powerful holy weapons tied, in some way, to the continued existence of the barrier.`
-z
-. `The fairies thought they were plastic toys and dumped them somewhere. I picked them up.
-My, uh, hermit sense is perceptive enough that I could instantly tell something was wrong with the orbs.`
-z
-. `Since then, I've been keeping a close eye on the orbs with my animal friends. Nothing in particular happened until last night.`
-z
-. `Last night, the orbs suddenly cloaked themselves in a terrifying aura reminiscent of a vengeful spirit. I have no idea why. The situation has remained static, but it's already dangerous enough that we can't let it continue.`
+. `You know Reimu's yin-yang orbs? Last night, the orbs suddenly cloaked themselves in a terrifying aura reminiscent of a vengeful spirit. I have no idea why. The situation has remained static since then, but it's highly dangerous as-is.`
 z
 . `I don't know any more than that. As long as the orbs are in this questionable state, we can't let Reimu use any of her Hakurei powers. We'd risk infecting her too. Keine told me she'd take care of Reimu, though.`
 z
@@ -53,9 +44,11 @@ srce angry
 . `I have no choice. I can't let you leave this place alive.`
 z
 slc
-. `If you don't want people to come to your house, don't invite them over. That's kept people away from my place for over a millennium now.
-Anyways, thanks for the help. I'll take my leave. Sorry to bother you.`
+. `If you don't want people to come to your house, don't invite them over. That's kept people away from my place for over a millennium now.`
+z
+slce happy
+. `Anyways, thanks for the help. I'll take my leave. Sorry to bother you.`
 z
 src
-. `<b>Mondou muyou</b>! <i>En garde</i>!`
+. `<ruby=Dialogue is meaningless>問答無用</ruby>! <i>En garde</i>!`
 z

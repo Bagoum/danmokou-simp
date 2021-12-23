@@ -3,6 +3,7 @@ place l1 mima
 sle mima worry
 .z `Someone's here.`
 place r1 yukari
+re sfx vn-yukari-power
 setstandopacity yukari 0
 fadestandin yukari 1
 sr yukari
@@ -15,10 +16,6 @@ Wait, what did you call me?`
 z
 src
 .z `The vengeful spirit sealed away in the Hakurei shrine. The root cause of the last incident. The god of the eighty-sixth crescent moon. It's all you, isn't it?`
-srce worry
-.z `I suspected there was something Keine wasn't telling me. The last incident wrapped up too cleanly for only Mokou and Seija to have participated.`
-srce _
-.z `I guess it was you she was hiding. This little facade worked perfectly in drawing you out.`
 slce _
 .z `A god is nothing more than a name. That the minor gods of this land have lost their names to history and are in the process of losing too their control thereover... it's a shame, honestly.`
 .z `I, though, have no intention of suffering that fate.`

@@ -145,7 +145,7 @@ PrefabInstance:
         type: 3}
       propertyPath: animate.frames.idleAnim.Array.data[2].sprite
       value: 
-      objectReference: {fileID: 2273963727564342367, guid: cfd1f24b5664ce24091f3a52e98976f7,
+      objectReference: {fileID: -535643753816095210, guid: cfd1f24b5664ce24091f3a52e98976f7,
         type: 3}
     - target: {fileID: 5274603300772143566, guid: 567949ea02f82894482d1922e940c492,
         type: 3}
@@ -163,7 +163,7 @@ PrefabInstance:
         type: 3}
       propertyPath: animate.frames.rightAnim.Array.data[0].sprite
       value: 
-      objectReference: {fileID: -5813401515490803257, guid: cfd1f24b5664ce24091f3a52e98976f7,
+      objectReference: {fileID: 3655955399767461668, guid: cfd1f24b5664ce24091f3a52e98976f7,
         type: 3}
     - target: {fileID: 5442691617086786321, guid: 567949ea02f82894482d1922e940c492,
         type: 3}

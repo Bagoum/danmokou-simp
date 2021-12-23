@@ -1,8 +1,8 @@
 script
 place l1 mokou
-place r1 aya
+place r1 ayanews
 sl mokou
-sr aya
+sr ayanews
 srce cry
 . `Ayayayaya, if only my wings weren't flammable...`
 z
@@ -29,29 +29,12 @@ z
 slce _
 . `Hmm, this is useful information. I'd better prepare a few Moebius strips. What's she called?`
 z
-srce angry
-. `Take this! My final piece of evidence!
-Her name is--`
-z
-srce cry
-. `...uh, sorry, I can't remember.`
-z
-slce worry
-. `What do you mean you can't remember?
-Isn't it your job to remember these things?`
-z
 src
-. `Well, normally I write this stuff down, but I burned all my notebooks on this incident to avoid any information leaking.`
-z
-. `So the only people who know her name now are the people who were personally involved in the incident.`
-z
-slc
-. `Well, I guess this was good enough information, even with the holes. In exchange, I'll give you a small gift.`
+. `Due to extenuating circumstances related to the identities of confidential sources, I am unable to respond to that question.`
 z
 slce happy
-. `I'll have you invited to the after-party. Reimu won't be there, but she will be one door over.
-Have fun chewing on that.`
+. `But even a crow will talk if you whack it hard enough, right?`
 z
-src
-. `No... I'm bad at riddles!`
+srce surprise
+. `Not if it flies away first!`
 z

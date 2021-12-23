@@ -33,28 +33,10 @@ z
 srce worry
 . `I told you! This incident isn't my fault!`
 z
-. `Look. Think of it this way. The reporter told you about the incident I actually caused, right? I infected almost every fairy in Gensoukyou and threw the natural order of this plane into chaos. In three days.`
-z
-. `How long has the Skyfeller been--`
-z
-slce worry
-. `Skyfeller? What?`
-z
-srce angry
-. `Damned millenials! Do you even read the news?! I swear, it's because the lot of you are so irresponsible that Gensoukyou has gone down the drain recently. Since you fools can't get your act together and maintain the balance of Gensoukyou, I have to start getting involved in incident politics again! Lazy entitled shitheads! Have some respect for your elders and let us retire in peace!`
-slc
-. `(I don't know what's going on, but I better shut this boomer up.)`
-z
-. `Oh, yeah, my bad, of course I know about the Skyfeller. I thought you said Sky<i>fooler</i>. Please, continue.`
-z
-srce worry
-. `...I guess even a millenial would know about the greatest oni to ever lay foot on Gensoukyou's soil, right? Well, whatever.`
-z
-srce _
-. `The Skyfeller has been screwing around with the Hakurei orbs for a few weeks now. With that kind of time, I could turn 93.7% of the living beings in Gensoukyou into puppets. I even wrote a paper on it.`
+. `Look. Think of it this way. That fake hermit has been playing around with Reimu's balls for a few weeks now. With that kind of time, I could turn 93.7% of the living beings in Gensoukyou into puppets. I even wrote a paper on it.`
 z
 . `You think I'd waste my time playing pranks on some some stupid shrine maiden?
-<size=52>Also, want to see the paper? It was a big deal, Nature doesn't publish disease pathology often. Not until 2020, anyways.</size>`
+<size=0.24>Also, want to see the paper? It was a big deal, Nature doesn't publish disease pathology often. Not until 2020, anyways.</size>`
 z
 slc
 . `I'll pass. Maybe when I have more time. 

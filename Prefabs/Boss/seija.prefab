@@ -9,15 +9,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2839687353931545650, guid: 567949ea02f82894482d1922e940c492,
         type: 3}
-      propertyPath: nonspellColor.refVal
-      value: 
-      objectReference: {fileID: 11400000, guid: c6048b333d3cdff42a676585d0cea4fe,
-        type: 2}
-    - target: {fileID: 2839687353931545650, guid: 567949ea02f82894482d1922e940c492,
-        type: 3}
       propertyPath: spellColor.refVal
       value: 
       objectReference: {fileID: 11400000, guid: 1dc15f516beb60e489d9e1b8dbeb8f0b,
+        type: 2}
+    - target: {fileID: 2839687353931545650, guid: 567949ea02f82894482d1922e940c492,
+        type: 3}
+      propertyPath: nonspellColor.refVal
+      value: 
+      objectReference: {fileID: 11400000, guid: c6048b333d3cdff42a676585d0cea4fe,
         type: 2}
     - target: {fileID: 2839687353931545650, guid: 567949ea02f82894482d1922e940c492,
         type: 3}
@@ -31,6 +31,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7133738721219535352, guid: c2dd5232b8ca33d45b07a232cf94cbdd,
         type: 3}
+    - target: {fileID: 2839687353931545787, guid: 567949ea02f82894482d1922e940c492,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2839687353931545787, guid: 567949ea02f82894482d1922e940c492,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -48,6 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2839687353931545787, guid: 567949ea02f82894482d1922e940c492,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2839687353931545787, guid: 567949ea02f82894482d1922e940c492,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -59,16 +69,6 @@ PrefabInstance:
     - target: {fileID: 2839687353931545787, guid: 567949ea02f82894482d1922e940c492,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2839687353931545787, guid: 567949ea02f82894482d1922e940c492,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2839687353931545787, guid: 567949ea02f82894482d1922e940c492,
-        type: 3}
-      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2839687353931545787, guid: 567949ea02f82894482d1922e940c492,
@@ -99,6 +99,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 5274603300772143566, guid: 567949ea02f82894482d1922e940c492,
         type: 3}
+      propertyPath: animate.UDRelation
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274603300772143566, guid: 567949ea02f82894482d1922e940c492,
+        type: 3}
       propertyPath: animate.frames.upAnim.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -106,11 +111,6 @@ PrefabInstance:
         type: 3}
       propertyPath: animate.frames.attackAnim.Array.size
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5274603300772143566, guid: 567949ea02f82894482d1922e940c492,
-        type: 3}
-      propertyPath: animate.UDRelation
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5274603300772143566, guid: 567949ea02f82894482d1922e940c492,
         type: 3}
@@ -128,7 +128,7 @@ PrefabInstance:
         type: 3}
       propertyPath: animate.frames.idleAnim.Array.data[2].sprite
       value: 
-      objectReference: {fileID: -8019572438980128620, guid: c2dd5232b8ca33d45b07a232cf94cbdd,
+      objectReference: {fileID: 5757879789718125966, guid: c2dd5232b8ca33d45b07a232cf94cbdd,
         type: 3}
     - target: {fileID: 5274603300772143566, guid: 567949ea02f82894482d1922e940c492,
         type: 3}
@@ -144,15 +144,15 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 5274603300772143566, guid: 567949ea02f82894482d1922e940c492,
         type: 3}
-      propertyPath: animate.frames.rightAnim.Array.data[0].sprite
-      value: 
-      objectReference: {fileID: -8098905224844234260, guid: c2dd5232b8ca33d45b07a232cf94cbdd,
-        type: 3}
-    - target: {fileID: 5274603300772143566, guid: 567949ea02f82894482d1922e940c492,
-        type: 3}
       propertyPath: animate.frames.leftAnim.Array.data[0].sprite
       value: 
       objectReference: {fileID: 9038616394982709060, guid: c2dd5232b8ca33d45b07a232cf94cbdd,
+        type: 3}
+    - target: {fileID: 5274603300772143566, guid: 567949ea02f82894482d1922e940c492,
+        type: 3}
+      propertyPath: animate.frames.rightAnim.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 2680842207399861440, guid: c2dd5232b8ca33d45b07a232cf94cbdd,
         type: 3}
     - target: {fileID: 5442691617086786321, guid: 567949ea02f82894482d1922e940c492,
         type: 3}
@@ -162,8 +162,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5738943023965476947, guid: 567949ea02f82894482d1922e940c492,
         type: 3}
-      propertyPath: animate.frames.attackAnim.Array.size
-      value: 0
+      propertyPath: ID
+      value: seija
+      objectReference: {fileID: 0}
+    - target: {fileID: 5738943023965476947, guid: 567949ea02f82894482d1922e940c492,
+        type: 3}
+      propertyPath: animate.UDRelation
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5738943023965476947, guid: 567949ea02f82894482d1922e940c492,
         type: 3}
@@ -172,9 +177,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5738943023965476947, guid: 567949ea02f82894482d1922e940c492,
         type: 3}
-      propertyPath: ID
-      value: seija
+      propertyPath: animate.frames.attackAnim.Array.size
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5738943023965476947, guid: 567949ea02f82894482d1922e940c492,
+        type: 3}
+      propertyPath: animate.frames.upAnim.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: -3562600043446698044, guid: c2dd5232b8ca33d45b07a232cf94cbdd,
+        type: 3}
     - target: {fileID: 5738943023965476947, guid: 567949ea02f82894482d1922e940c492,
         type: 3}
       propertyPath: animate.frames.idleAnim.Array.data[0].sprite
@@ -216,12 +227,6 @@ PrefabInstance:
       propertyPath: animate.frames.rightAnim.Array.data[0].sprite
       value: 
       objectReference: {fileID: -8098905224844234260, guid: c2dd5232b8ca33d45b07a232cf94cbdd,
-        type: 3}
-    - target: {fileID: 5738943023965476947, guid: 567949ea02f82894482d1922e940c492,
-        type: 3}
-      propertyPath: animate.frames.upAnim.Array.data[0].sprite
-      value: 
-      objectReference: {fileID: -3562600043446698044, guid: c2dd5232b8ca33d45b07a232cf94cbdd,
         type: 3}
     - target: {fileID: 5738943023965476947, guid: 567949ea02f82894482d1922e940c492,
         type: 3}
@@ -253,10 +258,5 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 622314643438429640, guid: c2dd5232b8ca33d45b07a232cf94cbdd,
         type: 3}
-    - target: {fileID: 5738943023965476947, guid: 567949ea02f82894482d1922e940c492,
-        type: 3}
-      propertyPath: animate.UDRelation
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 567949ea02f82894482d1922e940c492, type: 3}

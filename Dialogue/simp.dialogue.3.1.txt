@@ -45,7 +45,7 @@ src
 . `You piece of shit! If <i>she</i> hadn't asked me to help you, I'd skewer your limbs on Youkai Mountain and draw a road made of your entrails from Muenzuka to Higan!`
 z
 slce angry
-. `Don't rush it, fool. Every beating needs to be preceeded by some banter.`
+. `Don't rush it, kiddo. Every beating needs to be preceeded by some banter.`
 z
 slce happy
 . `And since the final boss takes the biggest beating, they deserve the widest slice of the pie.`

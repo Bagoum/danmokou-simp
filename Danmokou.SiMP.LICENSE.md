@@ -1,12 +1,12 @@
-# Danmokou-SiMP
+# Danmokou-SiMP License
 
 ## About
 
-Copyright (c) 2020 <reneedebatz@gmail.com>
+Copyright (c) 2020 Bagoum <reneedebatz@gmail.com>
 
 This is a submodule of Danmokou containing all resources specific to the fangame project Spirits in Memetic Paradise. 
-See the parent repository here: https://github.com/Bagoum/danmokou
-See this repository here: https://github.com/Bagoum/danmokou-simp
+The Danmokou source code is on Github at [Bagoum/danmokou](https://github.com/Bagoum/danmokou).
+This project's source code is on Github at [Bagoum/danmokou-simp](https://github.com/Bagoum/danmokou-simp).
 
 
 
@@ -15,18 +15,14 @@ Source code is present in the folders Plugins, Scripts, and Dialogue/Scripts.
 
 
 
-Non-code resources are distributed under various licenses (see below for details). 
-
-
-
 The copyright of Touhou Project is owned by Team Shanghai Alice.
-
-License details are provided at the end of this file.
 
 ## Non-Code Resources
 
 - Cutins/dairi: by dairi (https://www.pixiv.net/en/users/4920496).
 - UI: by me, licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+The main menu background is by 紅月カイ on [Pixiv](https://www.pixiv.net/en/artworks/78519209).
 
 In the release version of this game, character portraits will appear in the sidebars of the screen during boss sections. These portraits are by various artists. 
 They are not committed to the repository for licensing reasons. Sources are as follows:

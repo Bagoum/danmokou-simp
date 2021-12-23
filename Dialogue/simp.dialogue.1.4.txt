@@ -28,12 +28,8 @@ srce happy
 . `I'm a hermit. I have no wordly desires. I guess I'd like to make it to Heaven one day, but that's completely unrelated to this incident, isn't it?` 
 z
 srce _
-. `Kume! Kanda!
-I only have a vague idea of where Yukari lives. You'll have to do the real searching.`
-z
-. `Kanda will follow you and serve as liaison. 
-Hop on Kume's back and we'll be off.`
+. `Kume, my pet giant hawk, will take you to the mountains where Yukari lives. Hop on his back, and godspeed.`
 z
 re sfx extend-any
-. `(Kanda joined the party!)`
+. `(Kume joined the party!)`
 z

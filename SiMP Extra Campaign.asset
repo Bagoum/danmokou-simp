@@ -15,6 +15,8 @@ MonoBehaviour:
   startLives: 5
   key: simp.ex
   shortTitle: Extra
+  replayable: 1
+  allowDialogueSkip: 1
   endings:
   - {fileID: 11400000, guid: 04bf08683361b894fbfaab7c36bfd3b8, type: 2}
   players:

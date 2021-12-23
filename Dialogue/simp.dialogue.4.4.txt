@@ -47,38 +47,10 @@ srce worry
 . `No, no, that won't be necessary! Since my soul has been, uh, purified, there's no way that my reclaiming that energy could lead to any negative outcomes! (lie)`
 z
 slc
-. `...Let's see what Keine has to say about this.`
-z
-slce _
-place center phone
-setstandopacity phone 0
-fadestandin phone 1
-. `Keine? This is Mokou. I caught the ghost.`
-z
-slce surprise
-. `...Yeah, how did you know?`
-z
-slce worry
-. `...Second thoughts? Do we really have time to be worrying about them?`
-z
-. `...I guess that makes sense. Come over later and we'll work through it.`
-z
-slce _
-. `...OK. I'll head to the shrine. See ya.`
-fadestandout phone 1
-z
-. `Mima, are you good at hiding?`
-z
-srce _
-. `Hiding?`
-fadestandout mima 1
-.cn `Like this?`
-z
-slce worry
-. `...I guess that works. Keine wants you to avoid being seen while we head to our final destination.`
+. `...`
 z
 slce happy
-. `Well, I guess it's finally time to burn down the Hakurei shrine. Let's make this fun.`
+. `Well, that's Reimu's problem, not mine. So let's go burn down the Hakurei Shrine together, Mima.`
 z
 src
 re sfx extend-any

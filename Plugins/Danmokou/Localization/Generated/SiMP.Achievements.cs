@@ -15,342 +15,342 @@ namespace SiMP.Localization {
 public static partial class LocalizedStrings {
 	public static partial class SiMPAchievements {
 		
-		public static readonly LString open = new LString("Embarking Step",
+		public static readonly LString open = new LText("Embarking Step",
 			(Locales.JP, "踏み出す足"))
 			{ ID = "simp.acv.open" };
 		
-		public static readonly LString d_open = new LString("Open Spirits in Memetic Paradise.")
+		public static readonly LString d_open = new LText("Open Spirits in Memetic Paradise.")
 			{ ID = "simp.acv.d_open" };
 		
-		public static readonly LString tutorial = new LString("Learn the Red and the Blue",
+		public static readonly LString tutorial = new LText("Learn the Red and the Blue",
 			(Locales.JP, "赤き・青き真実"))
 			{ ID = "simp.acv.tutorial" };
 		
-		public static readonly LString d_tutorial = new LString("Play the tutorial.")
+		public static readonly LString d_tutorial = new LText("Play the tutorial.")
 			{ ID = "simp.acv.d_tutorial" };
 		
-		public static readonly LString st1 = new LString("Stage 1 Complete",
+		public static readonly LString st1 = new LText("Stage 1 Complete",
 			(Locales.JP, "1面クリア"))
 			{ ID = "simp.acv.st1" };
 		
-		public static readonly LString d_st1 = new LString("Clear stage 1.")
+		public static readonly LString d_st1 = new LText("Clear stage 1.")
 			{ ID = "simp.acv.d_st1" };
 		
-		public static readonly LString st2 = new LString("Stage 2 Complete",
+		public static readonly LString st2 = new LText("Stage 2 Complete",
 			(Locales.JP, "2面クリア"))
 			{ ID = "simp.acv.st2" };
 		
-		public static readonly LString d_st2 = new LString("Clear stage 2.")
+		public static readonly LString d_st2 = new LText("Clear stage 2.")
 			{ ID = "simp.acv.d_st2" };
 		
-		public static readonly LString st3 = new LString("Stage 3 Complete",
+		public static readonly LString st3 = new LText("Stage 3 Complete",
 			(Locales.JP, "3面クリア"))
 			{ ID = "simp.acv.st3" };
 		
-		public static readonly LString d_st3 = new LString("Clear stage 3.")
+		public static readonly LString d_st3 = new LText("Clear stage 3.")
 			{ ID = "simp.acv.d_st3" };
 		
-		public static readonly LString st4 = new LString("Stage 4 Complete",
+		public static readonly LString st4 = new LText("Stage 4 Complete",
 			(Locales.JP, "4面クリア"))
 			{ ID = "simp.acv.st4" };
 		
-		public static readonly LString d_st4 = new LString("Clear stage 4.")
+		public static readonly LString d_st4 = new LText("Clear stage 4.")
 			{ ID = "simp.acv.d_st4" };
 		
-		public static readonly LString st5 = new LString("Stage 5 Complete",
+		public static readonly LString st5 = new LText("Stage 5 Complete",
 			(Locales.JP, "5面クリア"))
 			{ ID = "simp.acv.st5" };
 		
-		public static readonly LString d_st5 = new LString("Clear stage 5.")
+		public static readonly LString d_st5 = new LText("Clear stage 5.")
 			{ ID = "simp.acv.d_st5" };
 		
-		public static readonly LString maindone = new LString("Use a separate cutting board for raw meats and produce, or scrub boards thoroughly between usages.")
+		public static readonly LString maindone = new LText("Use a separate cutting board for raw meats and produce, or scrub boards thoroughly between usages.")
 			{ ID = "simp.acv.maindone" };
 		
-		public static readonly LString d_maindone = new LString("Clear the main game.")
+		public static readonly LString d_maindone = new LText("Clear the main game.")
 			{ ID = "simp.acv.d_maindone" };
 		
-		public static readonly LString mainendgood = new LString("Fishing Date with Kaguya",
+		public static readonly LString mainendgood = new LText("Fishing Date with Kaguya",
 			(Locales.JP, "かぐやとの釣りデート"))
 			{ ID = "simp.acv.mainendgood" };
 		
-		public static readonly LString d_mainendgood = new LString("Get the good ending to the main game (Normal or harder).")
+		public static readonly LString d_mainendgood = new LText("Get the good ending to the main game (Normal or harder).")
 			{ ID = "simp.acv.d_mainendgood" };
 		
-		public static readonly LString mainendbad = new LString("Wandering the Depths of Oblivion",
+		public static readonly LString mainendbad = new LText("Wandering the Depths of Oblivion",
 			(Locales.JP, "闇の淵を彷徨うもの"))
 			{ ID = "simp.acv.mainendbad" };
 		
-		public static readonly LString d_mainendbad = new LString("Get the bad ending to the main game (Normal or harder).")
+		public static readonly LString d_mainendbad = new LText("Get the bad ending to the main game (Normal or harder).")
 			{ ID = "simp.acv.d_mainendbad" };
 		
-		public static readonly LString exdone = new LString("Truth Explaining Lies and Lies Explaining Truth",
+		public static readonly LString exdone = new LText("Truth Explaining Lies and Lies Explaining Truth",
 			(Locales.JP, "真実を説く虚偽・虚偽を説く真実"))
 			{ ID = "simp.acv.exdone" };
 		
-		public static readonly LString d_exdone = new LString("Clear the EX stage.")
+		public static readonly LString d_exdone = new LText("Clear the EX stage.")
 			{ ID = "simp.acv.d_exdone" };
 		
-		public static readonly LString main1cc = new LString("Not That Tough Without Yukari, Are You?",
+		public static readonly LString main1cc = new LText("Not That Tough Without Yukari, Are You?",
 			(Locales.JP, "紫がいないと、お前なんか弱くね？"))
 			{ ID = "simp.acv.main1cc" };
 		
-		public static readonly LString d_main1cc = new LString("Clear the main game (1CC, Normal or harder).")
+		public static readonly LString d_main1cc = new LText("Clear the main game (1CC, Normal or harder).")
 			{ ID = "simp.acv.d_main1cc" };
 		
-		public static readonly LString ex1cc = new LString("One Undivided with No Second",
+		public static readonly LString ex1cc = new LText("One Undivided with No Second",
 			(Locales.JP, "二のない一"))
 			{ ID = "simp.acv.ex1cc" };
 		
-		public static readonly LString d_ex1cc = new LString("Clear the EX stage (1CC, Normal or harder).")
+		public static readonly LString d_ex1cc = new LText("Clear the EX stage (1CC, Normal or harder).")
 			{ ID = "simp.acv.d_ex1cc" };
 		
-		public static readonly LString mainnull = new LString("Without Love, It Cannot Be Seen",
+		public static readonly LString mainnull = new LText("Without Love, It Cannot Be Seen",
 			(Locales.JP, "愛がなければ視えない"))
 			{ ID = "simp.acv.mainnull" };
 		
-		public static readonly LString d_mainnull = new LString("Clear the main game with the null shot (1CC, Normal or harder).")
+		public static readonly LString d_mainnull = new LText("Clear the main game with the null shot (1CC, Normal or harder).")
 			{ ID = "simp.acv.d_mainnull" };
 		
-		public static readonly LString exnull = new LString("Wisdom of the Tathagata",
+		public static readonly LString exnull = new LText("Wisdom of the Tathagata",
 			(Locales.JP, "如来の知恵"))
 			{ ID = "simp.acv.exnull" };
 		
-		public static readonly LString d_exnull = new LString("Clear the EX stage with the null shot (1CC, Normal or harder).")
+		public static readonly LString d_exnull = new LText("Clear the EX stage with the null shot (1CC, Normal or harder).")
 			{ ID = "simp.acv.d_exnull" };
 		
-		public static readonly LString nometer = new LString("It Is Physically Impossible, Therefore It Does Not Exist",
+		public static readonly LString nometer = new LText("It Is Physically Impossible, Therefore It Does Not Exist",
 			(Locales.JP, "物理的に不可能だから存在しない"))
 			{ ID = "simp.acv.nometer" };
 		
-		public static readonly LString d_nometer = new LString("Clear the main game without breaking the laws of general relativity (1CC,  Normal or harder).")
+		public static readonly LString d_nometer = new LText("Clear the main game without breaking the laws of general relativity (1CC,  Normal or harder).")
 			{ ID = "simp.acv.d_nometer" };
 		
-		public static readonly LString meter = new LString("This Is Fantasy, Not Mystery",
+		public static readonly LString meter = new LText("This Is Fantasy, Not Mystery",
 			(Locales.JP, "ミステリーじゃない。ファンタジーだ"))
 			{ ID = "simp.acv.meter" };
 		
-		public static readonly LString d_meter = new LString("Break the laws of general relativity.")
+		public static readonly LString d_meter = new LText("Break the laws of general relativity.")
 			{ ID = "simp.acv.d_meter" };
 		
-		public static readonly LString c42 = new LString("42")
+		public static readonly LString c42 = new LText("42")
 			{ ID = "simp.acv.c42" };
 		
-		public static readonly LString d_c42 = new LString("Clear the main game on custom difficulty 42 with at most 42 deaths.")
+		public static readonly LString d_c42 = new LText("Clear the main game on custom difficulty 42 with at most 42 deaths.")
 			{ ID = "simp.acv.d_c42" };
 		
-		public static readonly LString aya = new LString("A Moa Dreaming of Haast",
+		public static readonly LString aya = new LText("A Moa Dreaming of Haast",
 			(Locales.JP, "ハーストを夢見るモア"))
 			{ ID = "simp.acv.aya" };
 		
-		public static readonly LString d_aya = new LString("Defeat Aya with the maximum number of stars.")
+		public static readonly LString d_aya = new LText("Defeat Aya with the maximum number of stars.")
 			{ ID = "simp.acv.d_aya" };
 		
-		public static readonly LString kasen1 = new LString("When the Hermit is Sus",
+		public static readonly LString kasen1 = new LText("When the Hermit is Sus",
 			(Locales.JP, "この仙人なんか怪しい。。。"))
 			{ ID = "simp.acv.kasen1" };
 		
-		public static readonly LString d_kasen1 = new LString("Defeat Kasen with the maximum number of stars.")
+		public static readonly LString d_kasen1 = new LText("Defeat Kasen with the maximum number of stars.")
 			{ ID = "simp.acv.d_kasen1" };
 		
-		public static readonly LString kaguya = new LString("I Swear I'm Reisen",
+		public static readonly LString kaguya = new LText("I Swear I'm Reisen",
 			(Locales.JP, "私鈴仙ですよ！本当に！"))
 			{ ID = "simp.acv.kaguya" };
 		
-		public static readonly LString d_kaguya = new LString("Defeat the rabbit with the maximum number of stars.")
+		public static readonly LString d_kaguya = new LText("Defeat the rabbit with the maximum number of stars.")
 			{ ID = "simp.acv.d_kaguya" };
 		
-		public static readonly LString yukari = new LString("Come Amuse Me, Child of Man",
+		public static readonly LString yukari = new LText("Come Amuse Me, Child of Man",
 			(Locales.JP, "楽しませてくれ、人の子よ"))
 			{ ID = "simp.acv.yukari" };
 		
-		public static readonly LString d_yukari = new LString("Defeat (?) Yukari with the maximum number of stars.")
+		public static readonly LString d_yukari = new LText("Defeat (?) Yukari with the maximum number of stars.")
 			{ ID = "simp.acv.d_yukari" };
 		
-		public static readonly LString nemo = new LString("SQL Injection Vulnerabilities in 2021???",
+		public static readonly LString nemo = new LText("SQL Injection Vulnerabilities in 2021???",
 			(Locales.JP, "2021でSQL注入脆弱性？？？"))
 			{ ID = "simp.acv.nemo" };
 		
-		public static readonly LString d_nemo = new LString("Defeat [NULL REFERENCE EXCEPTION] with the maximum number of stars.")
+		public static readonly LString d_nemo = new LText("Defeat [NULL REFERENCE EXCEPTION] with the maximum number of stars.")
 			{ ID = "simp.acv.d_nemo" };
 		
-		public static readonly LString seija = new LString("You Do Not Have This Achievement",
+		public static readonly LString seija = new LText("You Do Not Have This Achievement",
 			(Locales.JP, "お前はこのトロフィーは持っていない"))
 			{ ID = "simp.acv.seija" };
 		
-		public static readonly LString d_seija = new LString("Defeat Seija with zero stars.")
+		public static readonly LString d_seija = new LText("Defeat Seija with zero stars.")
 			{ ID = "simp.acv.d_seija" };
 		
-		public static readonly LString mima = new LString("Become As Gods",
+		public static readonly LString mima = new LText("Become As Gods",
 			(Locales.JP, "私は、神になる"))
 			{ ID = "simp.acv.mima" };
 		
-		public static readonly LString d_mima = new LString("Defeat Mima with the maximum number of stars.")
+		public static readonly LString d_mima = new LText("Defeat Mima with the maximum number of stars.")
 			{ ID = "simp.acv.d_mima" };
 		
-		public static readonly LString kasen2 = new LString("Thunderclad Disciple of the Yellow Emperor",
+		public static readonly LString kasen2 = new LText("Thunderclad Disciple of the Yellow Emperor",
 			(Locales.JP, "雷に巻かれた黄帝の使徒"))
 			{ ID = "simp.acv.kasen2" };
 		
-		public static readonly LString d_kasen2 = new LString("Defeat Kasen and her dragon with the maximum number of stars.")
+		public static readonly LString d_kasen2 = new LText("Defeat Kasen and her dragon with the maximum number of stars.")
 			{ ID = "simp.acv.d_kasen2" };
 		
-		public static readonly LString reimu = new LString("Cook meat to an internal temperature of at least 145º to avoid contamination by harmful bacteria.")
+		public static readonly LString reimu = new LText("Cook meat to an internal temperature of at least 145º to avoid contamination by harmful bacteria.")
 			{ ID = "simp.acv.reimu" };
 		
-		public static readonly LString d_reimu = new LString("Defeat Reimu with the maximum number of stars.")
+		public static readonly LString d_reimu = new LText("Defeat Reimu with the maximum number of stars.")
 			{ ID = "simp.acv.d_reimu" };
 		
-		public static readonly LString mokou = new LString("Every Soul Has Its Dark",
+		public static readonly LString mokou = new LText("Every Soul Has Its Dark",
 			(Locales.JP, "どのソールにでも、ダークがある"))
 			{ ID = "simp.acv.mokou" };
 		
-		public static readonly LString d_mokou = new LString("Defeat Mokou with the maximum number of stars.")
+		public static readonly LString d_mokou = new LText("Defeat Mokou with the maximum number of stars.")
 			{ ID = "simp.acv.d_mokou" };
 		
-		public static readonly LString yukariex = new LString("I Hate the Color Green",
+		public static readonly LString yukariex = new LText("I Hate the Color Green",
 			(Locales.JP, "緑色が嫌い！"))
 			{ ID = "simp.acv.yukariex" };
 		
-		public static readonly LString d_yukariex = new LString("Defeat Shikumo Midori with the maximum number of stars.")
+		public static readonly LString d_yukariex = new LText("Defeat Shikumo Midori with the maximum number of stars.")
 			{ ID = "simp.acv.d_yukariex" };
 		
-		public static readonly LString shinki = new LString("If You Meet the Buddha, Kill the Buddha",
+		public static readonly LString shinki = new LText("If You Meet the Buddha, Kill the Buddha",
 			(Locales.JP, "仏に逢うては仏を殺せ"))
 			{ ID = "simp.acv.shinki" };
 		
-		public static readonly LString d_shinki = new LString("Defeat Shinki with the maximum number of stars.")
+		public static readonly LString d_shinki = new LText("Defeat Shinki with the maximum number of stars.")
 			{ ID = "simp.acv.d_shinki" };
 		
-		public static readonly LString recitation = new LString("Lectures of the Primordial Vampire",
+		public static readonly LString recitation = new LText("Lectures of the Primordial Vampire",
 			(Locales.JP, "元祖の吸血鬼の講"))
 			{ ID = "simp.acv.recitation" };
 		
-		public static readonly LString d_recitation = new LString("Sit patiently through a night of Buddhist recitations.")
+		public static readonly LString d_recitation = new LText("Sit patiently through a night of Buddhist recitations.")
 			{ ID = "simp.acv.d_recitation" };
 		
-		public static readonly LString eileen = new LString("Eileen the Crow",
+		public static readonly LString eileen = new LText("Eileen the Crow",
 			(Locales.JP, "烏羽の狩人"))
 			{ ID = "simp.acv.eileen" };
 		
-		public static readonly LString d_eileen = new LString("Succumb to the Blade of Mercy.")
+		public static readonly LString d_eileen = new LText("Succumb to the Blade of Mercy.")
 			{ ID = "simp.acv.d_eileen" };
 		
-		public static readonly LString options = new LString("I Keep My Options Open",
+		public static readonly LString options = new LText("I Keep My Options Open",
 			(Locales.JP, "選択は、ある方が便利"))
 			{ ID = "simp.acv.options" };
 		
-		public static readonly LString d_options = new LString("Pick a multishot but don't change it for the entirety of a campaign.")
+		public static readonly LString d_options = new LText("Pick a multishot but don't change it for the entirety of a campaign.")
 			{ ID = "simp.acv.d_options" };
 		
-		public static readonly LString mushrooms = new LString("I Hate Mushrooms",
+		public static readonly LString mushrooms = new LText("I Hate Mushrooms",
 			(Locales.JP, "キノコが嫌い"))
 			{ ID = "simp.acv.mushrooms" };
 		
-		public static readonly LString d_mushrooms = new LString("Don't eat any mushrooms for the entirety of a campaign.")
+		public static readonly LString d_mushrooms = new LText("Don't eat any mushrooms for the entirety of a campaign.")
 			{ ID = "simp.acv.d_mushrooms" };
 		
-		public static readonly LString bombplz = new LString("Please Just Let Me Bomb",
+		public static readonly LString bombplz = new LText("Please Just Let Me Bomb",
 			(Locales.JP, "ボムを一つくらいくれてください！"))
 			{ ID = "simp.acv.bombplz" };
 		
-		public static readonly LString d_bombplz = new LString("Die four times on the same card.")
+		public static readonly LString d_bombplz = new LText("Die four times on the same card.")
 			{ ID = "simp.acv.d_bombplz" };
 		
-		public static readonly LString deathbombplz = new LString("Wrong Game, Kiddo",
+		public static readonly LString deathbombplz = new LText("Wrong Game, Kiddo",
 			(Locales.JP, "ゲーム間違ってるよ"))
 			{ ID = "simp.acv.deathbombplz" };
 		
-		public static readonly LString d_deathbombplz = new LString("Try (emphasis on try) to deathbomb.")
+		public static readonly LString d_deathbombplz = new LText("Try (emphasis on try) to deathbomb.")
 			{ ID = "simp.acv.d_deathbombplz" };
 		
-		public static readonly LString darksouls = new LString("Welcome to Dark Souls",
+		public static readonly LString darksouls = new LText("Welcome to Dark Souls",
 			(Locales.JP, "ダークソウルへようこそ"))
 			{ ID = "simp.acv.darksouls" };
 		
-		public static readonly LString d_darksouls = new LString("Die before reaching the first boss.")
+		public static readonly LString d_darksouls = new LText("Die before reaching the first boss.")
 			{ ID = "simp.acv.d_darksouls" };
 		
-		public static readonly LString s100mil = new LString("Ichi Juu Hyaku Sen Man Oku",
+		public static readonly LString s100mil = new LText("Ichi Juu Hyaku Sen Man Oku",
 			(Locales.JP, "一・十・百・千・万・億"))
 			{ ID = "simp.acv.s100mil" };
 		
-		public static readonly LString d_s100mil = new LString("Get 100,000,000 points in a single game.")
+		public static readonly LString d_s100mil = new LText("Get 100,000,000 points in a single game.")
 			{ ID = "simp.acv.d_s100mil" };
 		
-		public static readonly LString s330mil = new LString("Gunbarrel Diplomacy",
+		public static readonly LString s330mil = new LText("Gunbarrel Diplomacy",
 			(Locales.JP, "砲身の先の外交"))
 			{ ID = "simp.acv.s330mil" };
 		
-		public static readonly LString d_s330mil = new LString("Get 330,000,000 points in a single game.")
+		public static readonly LString d_s330mil = new LText("Get 330,000,000 points in a single game.")
 			{ ID = "simp.acv.d_s330mil" };
 		
-		public static readonly LString s666mil = new LString("What if I were to Purchase Fast Food and Disguise it as My Own Score?",
+		public static readonly LString s666mil = new LText("What if I were to Purchase Fast Food and Disguise it as My Own Score?",
 			(Locales.JP, "ファストフードを自分の料理に偽装したら？"))
 			{ ID = "simp.acv.s666mil" };
 		
-		public static readonly LString d_s666mil = new LString("Get 666,000,000 points in a single game.")
+		public static readonly LString d_s666mil = new LText("Get 666,000,000 points in a single game.")
 			{ ID = "simp.acv.d_s666mil" };
 		
-		public static readonly LString s1bil = new LString("Billionaires Shouldn't Exist",
+		public static readonly LString s1bil = new LText("Billionaires Shouldn't Exist",
 			(Locales.JP, "ビリオネアはあってはならぬ"))
 			{ ID = "simp.acv.s1bil" };
 		
-		public static readonly LString d_s1bil = new LString("Get 1,000,000,000 points in a single game.")
+		public static readonly LString d_s1bil = new LText("Get 1,000,000,000 points in a single game.")
 			{ ID = "simp.acv.d_s1bil" };
 		
-		public static readonly LString smul420 = new LString("Blaze It",
+		public static readonly LString smul420 = new LText("Blaze It",
 			(Locales.JP, "燃やせ！"))
 			{ ID = "simp.acv.smul420" };
 		
-		public static readonly LString d_smul420 = new LString("Raise your score multiplier to 4.20.")
+		public static readonly LString d_smul420 = new LText("Raise your score multiplier to 4.20.")
 			{ ID = "simp.acv.d_smul420" };
 		
-		public static readonly LString smul690 = new LString("Nice...",
+		public static readonly LString smul690 = new LText("Nice...",
 			(Locales.JP, "いい"))
 			{ ID = "simp.acv.smul690" };
 		
-		public static readonly LString d_smul690 = new LString("Raise your score multiplier to 6.90.")
+		public static readonly LString d_smul690 = new LText("Raise your score multiplier to 6.90.")
 			{ ID = "simp.acv.d_smul690" };
 		
-		public static readonly LString graze1337 = new LString("Hackerman",
+		public static readonly LString graze1337 = new LText("Hackerman",
 			(Locales.JP, "ハッカーマン"))
 			{ ID = "simp.acv.graze1337" };
 		
-		public static readonly LString d_graze1337 = new LString("Get 1337 graze in a single game.")
+		public static readonly LString d_graze1337 = new LText("Get 1337 graze in a single game.")
 			{ ID = "simp.acv.d_graze1337" };
 		
-		public static readonly LString graze9000 = new LString("It's Over Nine Thousand!",
+		public static readonly LString graze9000 = new LText("It's Over Nine Thousand!",
 			(Locales.JP, "八千以上だ！（英語では九千）"))
 			{ ID = "simp.acv.graze9000" };
 		
-		public static readonly LString d_graze9000 = new LString("Get over nine thousand graze in a single game.")
+		public static readonly LString d_graze9000 = new LText("Get over nine thousand graze in a single game.")
 			{ ID = "simp.acv.d_graze9000" };
 		
-		public static readonly LString maxlives = new LString("What happens if I get an extra life when I already have the maximum amount?")
+		public static readonly LString maxlives = new LText("What happens if I get an extra life when I already have the maximum amount?")
 			{ ID = "simp.acv.maxlives" };
 		
-		public static readonly LString d_maxlives = new LString("The life is still counted, but it's not shown on the UI.")
+		public static readonly LString d_maxlives = new LText("The life is still counted, but it's not shown on the UI.")
 			{ ID = "simp.acv.d_maxlives" };
 		
-		public static readonly LString replay = new LString("The Witch of Theatergoing, Drama, and Spectatorship",
+		public static readonly LString replay = new LText("The Witch of Theatergoing, Drama, and Spectatorship",
 			(Locales.JP, "観劇と戯曲と傍観の魔女"))
 			{ ID = "simp.acv.replay" };
 		
-		public static readonly LString d_replay = new LString("Watch a replay.")
+		public static readonly LString d_replay = new LText("Watch a replay.")
 			{ ID = "simp.acv.d_replay" };
 		
-		public static readonly LString practice = new LString("The Answer Lies in Your Memories",
+		public static readonly LString practice = new LText("The Answer Lies in Your Memories",
 			(Locales.JP, "記憶に隠れる解答"))
 			{ ID = "simp.acv.practice" };
 		
-		public static readonly LString d_practice = new LString("Play the practice modes.")
+		public static readonly LString d_practice = new LText("Play the practice modes.")
 			{ ID = "simp.acv.d_practice" };
 		
-		public static readonly LString emptypowershift = new LString("Japanese Food for a Western Dining Room")
+		public static readonly LString emptypowershift = new LText("Japanese Food for a Western Dining Room")
 			{ ID = "simp.acv.emptypowershift" };
 		
-		public static readonly LString d_emptypowershift = new LString("Pick up a multishot powerup when not using a multishot.")
+		public static readonly LString d_emptypowershift = new LText("Pick up a multishot powerup when not using a multishot.")
 			{ ID = "simp.acv.d_emptypowershift" };
 		
 	}

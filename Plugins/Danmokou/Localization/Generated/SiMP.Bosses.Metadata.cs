@@ -15,141 +15,141 @@ namespace SiMP.Localization {
 public static partial class LocalizedStrings {
 	public static partial class SiMPBossMetadata {
 		
-		public static readonly LString aya = new LString("Aya",
+		public static readonly LString aya = new LText("Aya",
 			(Locales.JP, "文"))
 			{ ID = "simp.boss.aya" };
 		
-		public static readonly LString aya_tracker = new LString("文")
+		public static readonly LString aya_tracker = new LText("文")
 			{ ID = "simp.boss.aya.tracker" };
 		
-		public static readonly LString eraa = new LString("Nemo",
+		public static readonly LString eraa = new LText("Nemo",
 			(Locales.JP, "無名"))
 			{ ID = "simp.boss.eraa" };
 		
-		public static readonly LString eraa_tracker = new LString("不審者",
+		public static readonly LString eraa_tracker = new LText("不審者",
 			(Locales.JP, "不審者"))
 			{ ID = "simp.boss.eraa.tracker" };
 		
-		public static readonly LString kaguyaf = new LString("Rabbit?",
+		public static readonly LString kaguyaf = new LText("Rabbit?",
 			(Locales.JP, "謎の兎"))
 			{ ID = "simp.boss.kaguyaf" };
 		
-		public static readonly LString kaguyaf_tracker = new LString("不審者",
+		public static readonly LString kaguyaf_tracker = new LText("不審者",
 			(Locales.JP, "不審者"))
 			{ ID = "simp.boss.kaguyaf.tracker" };
 		
-		public static readonly LString kaguya = new LString("Kaguya",
+		public static readonly LString kaguya = new LText("Kaguya",
 			(Locales.JP, "輝夜姫"))
 			{ ID = "simp.boss.kaguya" };
 		
-		public static readonly LString kaguya_tracker = new LString("輝夜姫")
+		public static readonly LString kaguya_tracker = new LText("輝夜姫")
 			{ ID = "simp.boss.kaguya.tracker" };
 		
-		public static readonly LString kasen = new LString("Kasen",
+		public static readonly LString kasen = new LText("Kasen",
 			(Locales.JP, "華仙"))
 			{ ID = "simp.boss.kasen" };
 		
-		public static readonly LString kasen_practice = new LString("Kasen (1)",
+		public static readonly LString kasen_practice = new LText("Kasen (1)",
 			(Locales.JP, "華仙 (1)"))
 			{ ID = "simp.boss.kasen.practice" };
 		
-		public static readonly LString kasen_replay = new LString("Kasen-1",
+		public static readonly LString kasen_replay = new LText("Kasen-1",
 			(Locales.JP, "華仙-1"))
 			{ ID = "simp.boss.kasen.replay" };
 		
-		public static readonly LString kasen_tracker = new LString("華仙",
+		public static readonly LString kasen_tracker = new LText("華仙",
 			(Locales.JP, "華仙"))
 			{ ID = "simp.boss.kasen.tracker" };
 		
-		public static readonly LString kasen2 = new LString("Kasen",
+		public static readonly LString kasen2 = new LText("Kasen",
 			(Locales.JP, "華仙"))
 			{ ID = "simp.boss.kasen2" };
 		
-		public static readonly LString kasen2_practice = new LString("Kasen (2)",
+		public static readonly LString kasen2_practice = new LText("Kasen (2)",
 			(Locales.JP, "華仙 (2)"))
 			{ ID = "simp.boss.kasen2.practice" };
 		
-		public static readonly LString kasen2_replay = new LString("Kasen-2",
+		public static readonly LString kasen2_replay = new LText("Kasen-2",
 			(Locales.JP, "華仙-2"))
 			{ ID = "simp.boss.kasen2.replay" };
 		
-		public static readonly LString kasen2_tracker = new LString("華仙",
+		public static readonly LString kasen2_tracker = new LText("華仙",
 			(Locales.JP, "華仙"))
 			{ ID = "simp.boss.kasen2.tracker" };
 		
-		public static readonly LString keine = new LString("Keine",
+		public static readonly LString keine = new LText("Keine",
 			(Locales.JP, "慧音"))
 			{ ID = "simp.boss.keine" };
 		
-		public static readonly LString keine_tracker = new LString("慧音")
+		public static readonly LString keine_tracker = new LText("慧音")
 			{ ID = "simp.boss.keine.tracker" };
 		
-		public static readonly LString mima = new LString("Mima",
+		public static readonly LString mima = new LText("Mima",
 			(Locales.JP, "魅魔"))
 			{ ID = "simp.boss.mima" };
 		
-		public static readonly LString mima_tracker = new LString("魅魔")
+		public static readonly LString mima_tracker = new LText("魅魔")
 			{ ID = "simp.boss.mima.tracker" };
 		
-		public static readonly LString mokou = new LString("Mokou",
+		public static readonly LString mokou = new LText("Mokou",
 			(Locales.JP, "妹紅"))
 			{ ID = "simp.boss.mokou" };
 		
-		public static readonly LString mokou_tracker = new LString("妹紅")
+		public static readonly LString mokou_tracker = new LText("妹紅")
 			{ ID = "simp.boss.mokou.tracker" };
 		
-		public static readonly LString reimu = new LString("Reimu",
+		public static readonly LString reimu = new LText("Reimu",
 			(Locales.JP, "霊夢"))
 			{ ID = "simp.boss.reimu" };
 		
-		public static readonly LString reimu_tracker = new LString("霊夢")
+		public static readonly LString reimu_tracker = new LText("霊夢")
 			{ ID = "simp.boss.reimu.tracker" };
 		
-		public static readonly LString reymoo = new LString("Hakurei Presence",
+		public static readonly LString reymoo = new LText("Hakurei Presence",
 			(Locales.JP, "博麗の幽霊"))
 			{ ID = "simp.boss.reymoo" };
 		
-		public static readonly LString reymoo_replay = new LString("Ghost")
+		public static readonly LString reymoo_replay = new LText("Ghost")
 			{ ID = "simp.boss.reymoo.replay" };
 		
-		public static readonly LString reymoo_tracker = new LString("不審者",
+		public static readonly LString reymoo_tracker = new LText("不審者",
 			(Locales.JP, "不審者"))
 			{ ID = "simp.boss.reymoo.tracker" };
 		
-		public static readonly LString seija = new LString("Seija",
+		public static readonly LString seija = new LText("Seija",
 			(Locales.JP, "正邪"))
 			{ ID = "simp.boss.seija" };
 		
-		public static readonly LString seija_tracker = new LString("正邪")
+		public static readonly LString seija_tracker = new LText("正邪")
 			{ ID = "simp.boss.seija.tracker" };
 		
-		public static readonly LString shinki = new LString("Shinki",
+		public static readonly LString shinki = new LText("Shinki",
 			(Locales.JP, "神綺"))
 			{ ID = "simp.boss.shinki" };
 		
-		public static readonly LString shinki_tracker = new LString("神綺")
+		public static readonly LString shinki_tracker = new LText("神綺")
 			{ ID = "simp.boss.shinki.tracker" };
 		
-		public static readonly LString yukari = new LString("Yukari",
+		public static readonly LString yukari = new LText("Yukari",
 			(Locales.JP, "紫"))
 			{ ID = "simp.boss.yukari" };
 		
-		public static readonly LString yukari_tracker = new LString("紫")
+		public static readonly LString yukari_tracker = new LText("紫")
 			{ ID = "simp.boss.yukari.tracker" };
 		
-		public static readonly LString yukariex = new LString("Yukari",
+		public static readonly LString yukariex = new LText("Yukari",
 			(Locales.JP, "紫"))
 			{ ID = "simp.boss.yukariex" };
 		
-		public static readonly LString yukariex_practice = new LString("Yukari (Ex)",
+		public static readonly LString yukariex_practice = new LText("Yukari (Ex)",
 			(Locales.JP, "紫 (Ex)"))
 			{ ID = "simp.boss.yukariex.practice" };
 		
-		public static readonly LString yukariex_replay = new LString("Yukari-Ex",
+		public static readonly LString yukariex_replay = new LText("Yukari-Ex",
 			(Locales.JP, "紫-Ex"))
 			{ ID = "simp.boss.yukariex.replay" };
 		
-		public static readonly LString yukariex_tracker = new LString("紫",
+		public static readonly LString yukariex_tracker = new LText("紫",
 			(Locales.JP, "紫"))
 			{ ID = "simp.boss.yukariex.tracker" };
 		

@@ -15,40 +15,40 @@ namespace SiMP.Localization {
 public static partial class LocalizedStrings {
 	public static partial class SiMPMusic {
 		
-		public static readonly LString mainmenu = new LString("(Main menu theme)")
+		public static readonly LString mainmenu = new LText("(Main menu theme)")
 			{ ID = "simp.music.mainmenu" };
 		
-		public static readonly LString stage1 = new LString("(Stage 1 theme)")
+		public static readonly LString stage1 = new LText("(Stage 1 theme)")
 			{ ID = "simp.music.stage1" };
 		
-		public static readonly LString stage1boss = new LString("(Kasen theme)")
+		public static readonly LString stage1boss = new LText("(Kasen theme)")
 			{ ID = "simp.music.stage1boss" };
 		
-		public static readonly LString stage2 = new LString("(Stage 2 theme)")
+		public static readonly LString stage2 = new LText("(Stage 2 theme)")
 			{ ID = "simp.music.stage2" };
 		
-		public static readonly LString stage2boss = new LString("(Reisen theme)")
+		public static readonly LString stage2boss = new LText("(Reisen theme)")
 			{ ID = "simp.music.stage2boss" };
 		
-		public static readonly LString stage3 = new LString("(Stage 3 theme)")
+		public static readonly LString stage3 = new LText("(Stage 3 theme)")
 			{ ID = "simp.music.stage3" };
 		
-		public static readonly LString stage3boss = new LString("(Seija theme)")
+		public static readonly LString stage3boss = new LText("(Seija theme)")
 			{ ID = "simp.music.stage3boss" };
 		
-		public static readonly LString stage4boss = new LString("(Mima theme)")
+		public static readonly LString stage4boss = new LText("(Mima theme)")
 			{ ID = "simp.music.stage4boss" };
 		
-		public static readonly LString stage5 = new LString("(Stage 5 theme)")
+		public static readonly LString stage5 = new LText("(Stage 5 theme)")
 			{ ID = "simp.music.stage5" };
 		
-		public static readonly LString stage5boss = new LString("(Reimu theme)")
+		public static readonly LString stage5boss = new LText("(Reimu theme)")
 			{ ID = "simp.music.stage5boss" };
 		
-		public static readonly LString stageex = new LString("You may not have noticed, but this theme is also a flamenco.")
+		public static readonly LString stageex = new LText("You may not have noticed, but this theme is also a flamenco.")
 			{ ID = "simp.music.stageex" };
 		
-		public static readonly LString stageexboss = new LString("(Shinki theme)")
+		public static readonly LString stageexboss = new LText("(Shinki theme)")
 			{ ID = "simp.music.stageexboss" };
 		
 	}

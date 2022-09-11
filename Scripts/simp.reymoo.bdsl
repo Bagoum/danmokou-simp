@@ -1,0 +1,149 @@
+<#> strict(none)
+pattern { 
+	boss simp.reymoo
+	bgm {
+		1 simp.5.stage
+	}
+}
+phase 0
+	paction 0
+		shift-phase-to 2
+	
+	
+!!{ me reimu
+
+!{ power1()
+sync powerup1 <> poweraura boss1
+	witha 0.9 lerp 0 1 t red pink
+	rgba 0.9 0.9 0.9 0.9
+!}
+
+
+## 1
+<!> dialogue #{
+phase 0
+	saction 0
+		move-target 3 io-sine cy 1
+		dialogue simp.dialogue.5.3
+		shift-phase
+#}
+
+
+##2
+<!> type spell :simp.boss.reymoo.dice #{
+<!> root 0 2.5
+<!> hpi 23000 2
+phase 33
+    paction 0
+	pool-control circle-recolor* allowdelete false
+	pool-control circle-recolor* allowcull false
+	pool-control circle-recolor* sortz
+		pool-control circle-recolor*  tint(:: {
+		## Make the nearer bullets brighter
+			a lerp(-2, 2, z, 1, 0.8)
+		} rgba(&a, &a, &a, 1))
+	##pool-control circle-recolor* tint rgba(1,1,1,0.6)
+	pool-control circle-recolor* recolor(
+		select p1 { palette(pink, h) palette(purple, h) palette(red, h) 
+						palette(pink, d) palette(purple, d) palette(red, d)},
+		select p1 { palette(pink, d) palette(purple, d) palette(red, d) 
+						palette(pink, l) palette(purple , l) palette(red, l) })
+	event playerinvuln 240
+	gtr {
+		wt	lerpt 0 3 7s 6s _
+		wait-child
+		rpp <180>
+	} saction 0 :3
+		$power1
+		wait 1.5
+		sync laser-black/ <-5.1;5:> gsr { root zero } laser roffset
+			px logsumshiftt -0.5 6.7 (* 1.2 t) (* -1.4 t)
+		0 14 { straight -90 s 1.5 }
+	
+!!{ q + 6 dc
+	sync circle-recolor/w <> gsr2 6 <> {
+		root zero
+		##color { pink/b pink/ pink/w red/b red/ red/w }
+		p this
+	} gsr2 * $q $q <> {
+		p add
+		preloop {
+			ia =f (mod $q p2)
+			ib =f (// p2 $q)
+		}
+	} gsr {
+		## This prevents overlapping at edges, however,
+		## it also makes it so two of the eight vertices have nothing on them. 
+		## That's a problem for the general case, I guess
+		clip or(= &ia 0, = &ib 0)
+	} simple ::: {
+		f q	$q
+		f fi	p1
+		f fmul  if <(&fi, 3) 1 -1
+		f fm3   mod 3 &fi
+		
+		f s	7.2
+		f hs 	/ &s 2
+		f a * &s / &ia -- &q
+		f b * &s / &ib  -- &q
+		## Face 0: origin <0,0,0>, aVec <1,0,0>, bVec <0,1,0>
+		## Face 1: origin <s,0,0> aVec <0,1,0>, bVec <0,0,1>
+		## Face 2: origin <s,s,0> aVec <0,0,1>, bVec <-1,0,0>
+		## Face 3+i: origin <s,s,s>-origin(face i), aVec, bVec are inverted
+		v3 f012origin pxyz(if(>(&fm3, 0), &s, 0), if(>(&fm3, 1), &s, 0), 0)
+		v3 origin - if(<(&fi, 3), &f012origin, - pxyz(&s, &s, &s) &f012origin) pxyz(&hs, &hs, &hs)
+		v3 adir * &fmul pxyz(if(=(0, &fm3), 1, 0), if(=(1, &fm3), 1, 0), if(=(2, &fm3), 1, 0))
+		v3 bdir * &fmul pxyz(if(=(2, &fm3), -1, 0), if(=(0, &fm3), 1, 0), if(=(1, &fm3), 1, 0))
+		v3 loc  + + &origin (* &a &adir) (* &b &bdir) 
+		
+		f ts	+ /(-(1, cos t), +(1, t)) *  ^(t, 1.02) / atanr2(t, 3) hpi
+	} offset3d zero qrotate
+	        pxyz * 10 &ts * 8 &ts 30
+			&loc {
+				scale(- 1 * 0.05 z)
+			}
+#}
+
+
+## 3
+<!> type timeout :simp.boss.reymoo.wind #{
+<!> root 0 0
+phase 30
+	paction 0
+		sync gdlaser-*/ <> gsr2c 6 {
+			color { red pink }
+		} laser null 1.5 _ {
+			dsfx
+			s 0.5
+			stagger 0.24
+			dynamic polar 
+				* 2 t
+				+ * (- -11 * 2 dc) &lt sine 2.1 (+ 14 * 2 dc) + * 1.1 &lt t
+		}
+		$power1
+	paction 1.5
+!!{ arpt + dc 2
+		async amulet-* <> gcr2 (lerpt 0 6 300 200) _ angle / 360h $arpt {
+			p this
+			color { pink/b red/ }
+			sfx x-fire-burst-1
+		} gsr2c $arpt {
+		} gsr {
+			t 11
+			bindArrow
+			frv2		rxy * pm1 p * 0.136 (- &aixd 3) * 0.11 &aiyd
+		} s tprot cx 0.8
+#}
+
+
+## 4
+<!> dialogue #{
+phase 0
+	saction 0
+		move-target 2 io-sine cy 0
+		dialogue simp.dialogue.5.4
+		move-target 2 in-sine cy 10
+		shift-phase
+#}
+
+

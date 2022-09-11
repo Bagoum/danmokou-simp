@@ -476,7 +476,7 @@ MonoBehaviour:
   message: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
   tutorialBoss: {fileID: 1130578704472725924, guid: a4d35084df7f48946b01c28987bdfb43,
     type: 3}
-  bossSM: {fileID: 4900000, guid: 641d26273f4f7d64e964c82881c8fd15, type: 3}
+  bossSM: {fileID: 2811297602134710623, guid: a07c32ce6945d92459f25bb21d2c0f9a, type: 3}
   pauseMenu: {fileID: 1871502620}
   skip: 0
 --- !u!4 &579532052

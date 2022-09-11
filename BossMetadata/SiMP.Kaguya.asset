@@ -14,35 +14,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: {fileID: 3158588245573588644, guid: 403abf52053147b44b8f276702818066, type: 3}
   localizationBaseKey: simp.boss.kaguya
+  m_casualName:
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
   m_bossPracticeName:
     useReference: 1
     reference: 
     hardcoded:
       en: 
       jp: 
-      _showEnOnly: 0
-  challengeNameOverride:
-    useReference: 1
-    reference: 
-    hardcoded:
-      en: 
-      jp: 
-      _showEnOnly: 0
   replayNameOverride:
     useReference: 1
     reference: 
     hardcoded:
       en: 
       jp: 
-      _showEnOnly: 0
   bottomTrackerNameOverride:
     useReference: 1
     reference: 
     hardcoded:
       en: 
       jp: 
-      _showEnOnly: 0
-  stateMachine: {fileID: 0}
+  stateMachine: {fileID: 2811297602134710623, guid: 54d8319209a0825458406d01eda63d7e,
+    type: 3}
   key: simp.kaguya
   colors: {fileID: 11400000, guid: e83c174566855bf419430e8e72dabb67, type: 2}
   cardRotator: 

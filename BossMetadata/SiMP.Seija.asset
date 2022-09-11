@@ -14,35 +14,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: {fileID: 6274564262994426332, guid: 33ce4a0ca42ed7e4c98b829e4314bddb, type: 3}
   localizationBaseKey: simp.boss.seija
+  m_casualName:
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
   m_bossPracticeName:
     useReference: 1
     reference: 
     hardcoded:
       en: 
       jp: 
-      _showEnOnly: 0
-  challengeNameOverride:
-    useReference: 1
-    reference: 
-    hardcoded:
-      en: 
-      jp: 
-      _showEnOnly: 0
   replayNameOverride:
     useReference: 1
     reference: 
     hardcoded:
       en: 
       jp: 
-      _showEnOnly: 0
   bottomTrackerNameOverride:
     useReference: 1
     reference: 
     hardcoded:
       en: 
       jp: 
-      _showEnOnly: 0
-  stateMachine: {fileID: 4900000, guid: 1b371c9e201e35747911cfdc25a695ce, type: 3}
+  stateMachine: {fileID: 2811297602134710623, guid: 638d5ca7bd9340f439fe8e71039a328b,
+    type: 3}
   key: simp.seija
   colors: {fileID: 11400000, guid: 2b0cbd0b46a92ad429b425b10ae95074, type: 2}
   cardRotator: 

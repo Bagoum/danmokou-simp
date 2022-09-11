@@ -10,8 +10,9 @@ This project's source code is on Github at [Bagoum/danmokou-simp](https://github
 
 
 
-All source code in the SiMP submodule is distributed under the GNU GPL v3. 
-Source code is present in the folders Plugins, Scripts, and Dialogue/Scripts.
+All source code in the SiMP submodule is distributed under the GNU GPL v3, provided at the end of this file. Source code is present in the folders Plugins, Scripts, and Dialogue/Scripts.
+
+If you are making use of this project, please reproduce this license file or link to it ([Github link](https://github.com/Bagoum/danmokou-simp/blob/master/Danmokou.SiMP.LICENSE.md)).
 
 
 
@@ -48,9 +49,7 @@ They are not committed to the repository for licensing reasons. Sources are as f
   - Vima on [Pixiv](https://www.pixiv.net/en/artworks/56464081)
   - カタケイ on [Pixiv](https://www.pixiv.net/en/artworks/50652694)
 
-## Code Licenses
-
-### This project: GNU GPL v3
+## GNU GPL v3 License
 
 ```
 This program is free software: you can redistribute it and/or modify

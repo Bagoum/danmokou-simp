@@ -38,7 +38,8 @@ MonoBehaviour:
     hardcoded:
       en: 
       jp: 
-  stateMachine: {fileID: 4900000, guid: 2a1193b06701d6b49ab8335b1a00b9c9, type: 3}
+  stateMachine: {fileID: 2811297602134710623, guid: b9b775d19ed5a2045b6c2f045fead9cd,
+    type: 3}
   key: simp.shinki
   colors: {fileID: 11400000, guid: f4604fa083596e449a093d14a07e723b, type: 2}
   cardRotator: 

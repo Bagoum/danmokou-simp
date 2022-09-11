@@ -14,35 +14,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: {fileID: 5557805967316943377, guid: 5d7c2e027fb1a504185dfa12862e5608, type: 3}
   localizationBaseKey: simp.boss.reymoo
+  m_casualName:
+    useReference: 1
+    reference: 
+    hardcoded:
+      en: 
+      jp: 
   m_bossPracticeName:
     useReference: 1
     reference: 
     hardcoded:
       en: 
       jp: 
-      _showEnOnly: 0
-  challengeNameOverride:
-    useReference: 1
-    reference: 
-    hardcoded:
-      en: 
-      jp: 
-      _showEnOnly: 0
   replayNameOverride:
     useReference: 1
     reference: 
     hardcoded:
       en: 
       jp: 
-      _showEnOnly: 0
   bottomTrackerNameOverride:
     useReference: 1
     reference: 
     hardcoded:
       en: 
       jp: 
-      _showEnOnly: 0
-  stateMachine: {fileID: 4900000, guid: 840384f4e1c2bc34082d045dcb45cde8, type: 3}
+  stateMachine: {fileID: 2811297602134710623, guid: 3282499306156444a9a24477cdb976e5,
+    type: 3}
   key: simp.reymoo
   colors: {fileID: 11400000, guid: 1af87831a4361b44092750b7f2453dad, type: 2}
   cardRotator: 

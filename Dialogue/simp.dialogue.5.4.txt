@@ -33,6 +33,7 @@ src
 z
 . `Poisoning someone and then beating them up is a bit morally questionable, but you're the only one who can do it, Mokou.`
 z
+fadestandout keine 1
 fadestandout phone 1
 sr seija
 slce worry

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: SiMP Stage1 Stage
   m_EditorClassIdentifier: 
   sceneConfig: {fileID: 11400000, guid: af9e932b0aa564846a63544671391c65, type: 2}
-  stateMachine: {fileID: 4900000, guid: 6344be43abb611a4bb7b71e5aab2fbed, type: 3}
+  stateMachine: {fileID: 2811297602134710623, guid: c80ddd0c59891934882f78d8aea6667f,
+    type: 3}
   description: Prowling Under Cover of Dawn
   stageNumber: 1
   defaultSuicideStyle: triangle-red/

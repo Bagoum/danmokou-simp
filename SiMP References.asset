@@ -54,7 +54,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2a8da76a930486b49aebfdb0e223c0fc, type: 2}
   - {fileID: 11400000, guid: 214dfc15532abf8488c4daa08ac45624, type: 2}
   - {fileID: 11400000, guid: 061f122427d8e1e418fbe6a8e4252d31, type: 2}
-  dialogueProfiles: []
   tracks:
   - {fileID: 11400000, guid: 7d1138de9ee25e14ea3511ee4271d517, type: 2}
   - {fileID: 11400000, guid: 2339162d9ceecff4d824aa84b163ef7a, type: 2}
@@ -72,6 +71,7 @@ MonoBehaviour:
   items: {fileID: 11400000, guid: 18e6de6e951f4114e8823af9e617bff7, type: 2}
   prefabReferences: {fileID: 11400000, guid: 842bcc7c616103e4c9880c49f9735bb4, type: 2}
   suzunoyaReferences: {fileID: 11400000, guid: eb72c7e04aab1d645bef9ba5d2605602, type: 2}
+  advReferences: {fileID: 0}
   uxmlDefaults: {fileID: 11400000, guid: b4213b3830762944fbcb9250a4b73463, type: 2}
   SFX:
   - {fileID: 11400000, guid: 2765638c24dcd6f4684c2acbc07800c4, type: 2}

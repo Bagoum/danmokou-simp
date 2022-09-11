@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: SiMP Stage3 Stage
   m_EditorClassIdentifier: 
   sceneConfig: {fileID: 11400000, guid: f02fc6c0014dadd4f838e1f77f337b33, type: 2}
-  stateMachine: {fileID: 4900000, guid: 6c6ca384e5d2e4e4a89f99f517315309, type: 3}
+  stateMachine: {fileID: 2811297602134710623, guid: 174d5481dbb2e6843b0ad676fcd70b23,
+    type: 3}
   description: Nightmare of Perfectly Symmetric Squares
   stageNumber: 3
   defaultSuicideStyle: triangle-purple/

@@ -4,6 +4,7 @@ sl mokou
 slce worry
 . `Is that Reimu?`
 z
+place r1 kaguyaf
 sr kaguyaf
 . `No, definitely not.`
 z

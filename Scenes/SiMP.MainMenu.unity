@@ -1383,7 +1383,7 @@ MonoBehaviour:
   replays:
   - {fileID: 11400000, guid: cb661392b80571a4789ee38880206435, type: 2}
   stateMachines:
-  - {fileID: 4900000, guid: 83d895926f063264f9adc5887261db81, type: 3}
+  - {fileID: 2811297602134710623, guid: e1a29e14b8444434fa65f98540b4b07d, type: 3}
   reflectFXY:
   - ^ x 0.8
   reflectTP3:

@@ -1640,7 +1640,7 @@ PrefabInstance:
         type: 3}
       propertyPath: behaviorScript
       value: 
-      objectReference: {fileID: 2811297602134710623, guid: 7c10df2afa4c8d14584d6a96df8a53e7,
+      objectReference: {fileID: 2811297602134710623, guid: 7e56cedad6e63994da14d42ad2e41442,
         type: 3}
     - target: {fileID: 4288191306515568470, guid: 0623db11f1c15fc409072cf3af7a2a95,
         type: 3}
@@ -2019,13 +2019,13 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultShots.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 94c9dbd65f23dec46894ae6f01f35d23,
+      objectReference: {fileID: 11400000, guid: 115c3a78d504fef4eb7a03e8a0dcfe35,
         type: 2}
     - target: {fileID: 3290238121844968753, guid: cd77fcd8b4e4d41489479fb8f6de0a18,
         type: 3}
       propertyPath: defaultShots.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 3c69cff4d6513f14e880462e80103a4b,
+      objectReference: {fileID: 11400000, guid: 054062588373598469a2911098fdc10d,
         type: 2}
     - target: {fileID: 3290238121844968753, guid: cd77fcd8b4e4d41489479fb8f6de0a18,
         type: 3}

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reactive;
+using BagoumLib;
 using Danmokou.Achievements;
 using Danmokou.Core;
 using Danmokou.Services;
@@ -75,16 +76,16 @@ public class SiMPAchievementRepo : AchievementRepo {
                 ir.SharedInstanceMetadata.team.HasMultishot)).Delay(),
             L("emptypowershift", () => 
                 new EventRequirement<Unit>(
-                    EvInstance.ProxyEvent(i => i.UselessPowerupCollected), _ => Instance.IsCampaign)),
+                    EvInstance.Bind(i => i.UselessPowerupCollected), _ => Instance.IsCampaign)),
             L("mushrooms", () => new CompletedInstanceRequirement(ir => ir.IsCampaign &&
                                                                         ir.OneUpItemsCollected == 0)
                 .SelfLock()).Delay(),
             L("darksouls", () => new ListeningRequirement(() => 
                 Instance.IsCampaign && Instance.campaignKey == smain &&
                 Instance.HitsTaken > 0 && Instance.BossesEncountered.Count == 0,
-                EvInstance.ProxyEvent(i => i.PlayerTookHit)).SelfLock()),
+                EvInstance.Bind(i => i.PlayerTookHit)).SelfLock()),
             L("bombplz", () => new EventRequirement<PhaseCompletion>(
-                    EvInstance.ProxyEvent(i => i.PhaseCompleted), pc => 
+                    EvInstance.Bind(i => i.PhaseCompleted), pc => 
                 pc.phase.PhaseType?.IsCard() == true && pc.hits >= 4).SelfLock()),
             L("deathbombplz", () => new ListeningRequirement(() => 
                 GameManagement.Instance.LastTookHitFrame > 0 && 
@@ -99,7 +100,7 @@ public class SiMPAchievementRepo : AchievementRepo {
             L("graze1337", () => new CampaignGrazeReq(1337)),
             L("graze9000", () => new CampaignGrazeReq(9001)),
             L("maxlives", () => new ListeningRequirement(() => GameManagement.Instance.Lives > 18, 
-                EvInstance.ProxyEvent(i => i.AnyExtendAcquired)).SelfLock()),
+                EvInstance.Bind(i => i.AnyExtendAcquired)).SelfLock()),
             L("replay", () => new EventRequirement<InstanceRequest>(InstanceRequest.InstancedRequested, 
                 ir => ir.replay is ReplayMode.Replaying).SelfLock()).Delay(),
             L("practice", () => new EventRequirement<InstanceRequest>(InstanceRequest.InstancedRequested, 

@@ -13,12 +13,7 @@ using JetBrains.Annotations;
 using UnityEngine;
 using static Danmokou.Services.GameManagement;
 
-namespace SiMP.Achievements {
-[CreateAssetMenu(menuName = "Achievements/SiMP Provider")]
-public class SiMPAchievementsProvider : AchievementProviderSO {
-    public override AchievementRepo MakeRepo() => new SiMPAchievementRepo();
-}
-
+namespace SiMP {
 public class SiMPAchievementRepo : AchievementRepo {
     protected override string LocalizationPrefix => "simp.acv";
     private const string smain = "simp.main";
@@ -100,7 +95,7 @@ public class SiMPAchievementRepo : AchievementRepo {
             L("graze1337", () => new CampaignGrazeReq(1337)),
             L("graze9000", () => new CampaignGrazeReq(9001)),
             L("maxlives", () => new ListeningRequirement(() => GameManagement.Instance.Lives > 18, 
-                EvInstance.Bind(i => i.AnyExtendAcquired)).SelfLock()),
+                EvInstance.Bind(i => i.ExtendAcquired.Erase())).SelfLock()),
             L("replay", () => new EventRequirement<InstanceRequest>(InstanceRequest.InstancedRequested, 
                 ir => ir.replay is ReplayMode.Replaying).SelfLock()).Delay(),
             L("practice", () => new EventRequirement<InstanceRequest>(InstanceRequest.InstancedRequested, 

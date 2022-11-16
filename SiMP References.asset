@@ -17,6 +17,7 @@ MonoBehaviour:
     major: 5
     minor: 0
     patch: 3
+  gameDefinition: {fileID: 11400000, guid: 716ca57932b59ff4696e72c69dcb4d75, type: 2}
   mainMenu: {fileID: 11400000, guid: 977bd9744ba2d3a42a39a6092cb8e0e5, type: 2}
   replaySaveMenu: {fileID: 11400000, guid: 4eb8b66bd76d4d94fa90176835284503, type: 2}
   defaultUIFrame: {fileID: 21300000, guid: fd60a7ae3ce4be640b9b311d9d70969e, type: 3}
@@ -34,7 +35,6 @@ MonoBehaviour:
     top: 4.1
     bot: -4.5
     center: {x: -1.9, y: 0}
-  achievements: {fileID: 11400000, guid: 49ba1aeadee5a884f902fd0b043fb56a, type: 2}
   dialogue:
   - {fileID: 11400000, guid: 61ec3aa170f0d4f4981fc1a306cfe2e6, type: 2}
   bossMetadata:

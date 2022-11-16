@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af4d2ca568e7449ba4130af6a06866be, type: 3}
+  m_Name: SiMP GameDef
+  m_EditorClassIdentifier: 
+  m_key: SiMP2
+  m_version:
+    major: 5
+    minor: 0
+    patch: 4
+  m_tutorial: {fileID: 11400000, guid: e027ad7aef4a8f64b9c01607748714d4, type: 2}
+  m_miniTutorial: {fileID: 11400000, guid: fb36de3b12e94e04d9e76959a8887586, type: 2}
+  m_replaySaveMenu: {fileID: 11400000, guid: 4eb8b66bd76d4d94fa90176835284503, type: 2}
+  m_bounds:
+    left: -3.6
+    right: 3.6
+    top: 4.1
+    bot: -4.5
+    center: {x: -1.9, y: 0}
+  m_endcard: {fileID: 11400000, guid: 8d6f4f35b7d2da942a254e43329ca03c, type: 2}
+  m_campaign: {fileID: 11400000, guid: 0e12394685828ac44a2b553087a8aec5, type: 2}
+  m_extraCampaign: {fileID: 11400000, guid: 29d8e1b38a50bdc4dbdbafd33095f788, type: 2}

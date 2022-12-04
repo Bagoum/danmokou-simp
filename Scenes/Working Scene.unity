@@ -1621,6 +1621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c84a2dc24f158d244a031bf940d0c1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  circleApproximationRadius: 0
   colliderType: 1
   radius: 0
   point1: {x: 0, y: 0}
@@ -1632,7 +1633,6 @@ MonoBehaviour:
   skip: 0
   end: 0
   points: []
-  target: {fileID: 11400000, guid: d20af02baec12db42baba53da24bff95, type: 2}
   debug: 1
 --- !u!1001 &1920118507
 PrefabInstance:
@@ -2018,13 +2018,13 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultSupport
       value: 
-      objectReference: {fileID: 11400000, guid: 13157d81a8a5ff646accca16a0311ad8,
+      objectReference: {fileID: 11400000, guid: 55ba8ec33d158e04c99115a5a6eacaf2,
         type: 2}
     - target: {fileID: 3290238121844968753, guid: cd77fcd8b4e4d41489479fb8f6de0a18,
         type: 3}
       propertyPath: defaultShots.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 5ba708ae7b69a3943bb901676deb259c,
+      objectReference: {fileID: 11400000, guid: 3c69cff4d6513f14e880462e80103a4b,
         type: 2}
     - target: {fileID: 3290238121844968753, guid: cd77fcd8b4e4d41489479fb8f6de0a18,
         type: 3}

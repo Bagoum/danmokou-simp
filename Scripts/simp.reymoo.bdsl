@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	paction 0
-		shift-phase-to 2
+		shift-phase-to 3
 	
 	
 !!{ me reimu
@@ -76,7 +76,7 @@ phase 33
 		## it also makes it so two of the eight vertices have nothing on them. 
 		## That's a problem for the general case, I guess
 		clip or(= &ia 0, = &ib 0)
-	} simple ::: {
+	} simple let {
 		f q	$q
 		f fi	p1
 		f fmul  if <(&fi, 3) 1 -1

@@ -12,29 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d7768018aff40589017a165e079b3c1, type: 3}
   m_Name: SiMP References
   m_EditorClassIdentifier: 
-  gameIdentifier: SiMP
-  gameVersion:
-    major: 5
-    minor: 0
-    patch: 3
   gameDefinition: {fileID: 11400000, guid: 716ca57932b59ff4696e72c69dcb4d75, type: 2}
   mainMenu: {fileID: 11400000, guid: 977bd9744ba2d3a42a39a6092cb8e0e5, type: 2}
-  replaySaveMenu: {fileID: 11400000, guid: 4eb8b66bd76d4d94fa90176835284503, type: 2}
   defaultUIFrame: {fileID: 21300000, guid: fd60a7ae3ce4be640b9b311d9d70969e, type: 3}
   unitScene: {fileID: 11400000, guid: f6d073d9562719741ac86ec620f65354, type: 2}
-  tutorial: {fileID: 11400000, guid: e027ad7aef4a8f64b9c01607748714d4, type: 2}
-  miniTutorial: {fileID: 11400000, guid: fb36de3b12e94e04d9e76959a8887586, type: 2}
-  endcard: {fileID: 11400000, guid: 8d6f4f35b7d2da942a254e43329ca03c, type: 2}
-  campaign: {fileID: 11400000, guid: 0e12394685828ac44a2b553087a8aec5, type: 2}
-  exCampaign: {fileID: 11400000, guid: 29d8e1b38a50bdc4dbdbafd33095f788, type: 2}
-  dayCampaign: {fileID: 0}
   defaultTransition: {fileID: 11400000, guid: 3e2a8876c4f618c459cd5149f9ae1964, type: 2}
-  bounds:
-    left: -3.6
-    right: 3.6
-    top: 4.1
-    bot: -4.5
-    center: {x: -1.9, y: 0}
   dialogue:
   - {fileID: 11400000, guid: 61ec3aa170f0d4f4981fc1a306cfe2e6, type: 2}
   bossMetadata:

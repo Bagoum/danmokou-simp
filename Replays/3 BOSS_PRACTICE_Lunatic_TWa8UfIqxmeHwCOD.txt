@@ -1,0 +1,89 @@
+{
+  "Record": {
+    "SavedMetadata": {
+      "team": {
+        "Players": [
+          {
+            "Item1": "basic-mima",
+            "Item2": "mima-wide"
+          }
+        ],
+        "SelectedIndex": 0,
+        "SupportAbilityKey": "WitchTime",
+        "Subshot": 0
+      },
+      "difficulty": {
+        "standard": 50,
+        "customValueSlider": 18,
+        "customRank": null,
+        "numSuicideBullets": 0,
+        "playerDamageMod": 1.0,
+        "bossHPMod": 1.0,
+        "respawnOnDeath": null,
+        "faithDecayMultiplier": 1.0,
+        "faithAcquireMultiplier": 1.0,
+        "meterUsageMultiplier": 1.0,
+        "meterAcquireMultiplier": 1.0,
+        "bombsEnabled": true,
+        "meterEnabled": true,
+        "playerSpeedMultiplier": 1.0,
+        "playerHitboxMultiplier": 1.0,
+        "playerGrazeboxMultiplier": 1.0,
+        "pocOffset": 0.0,
+        "startingLives": null
+      }
+    },
+    "Mode": 4,
+    "Campaign": "simp.ex",
+    "RequestKey": {
+      "$type": "Danmokou.GameInstance.BossPracticeRequestKey, Danmokou.Danmaku",
+      "Boss": "simp.mokou",
+      "PhaseIndex": 4,
+      "Campaign": "simp.ex"
+    },
+    "Seed": 1190813837,
+    "Uuid": "TWa8UfIqxmeHwCOD",
+    "CustomName": "ATTRACT Mok3",
+    "Date": "2023-02-26T16:02:24.2575729-08:00",
+    "Score": 357420,
+    "EngineVersion": {
+      "major": 10,
+      "minor": 1,
+      "patch": 0
+    },
+    "GameVersion": {
+      "major": 5,
+      "minor": 0,
+      "patch": 4
+    },
+    "GameIdentifier": "SiMP2",
+    "CardHistory": {
+      "record": {
+        "simp.mokou": [
+          {
+            "campaign": "simp.ex",
+            "boss": "simp.mokou",
+            "phase": 4,
+            "stars": 3,
+            "method": 2,
+            "hits": 0
+          }
+        ]
+      }
+    },
+    "ContinuesUsed": 0,
+    "Completed": true,
+    "Photos": [],
+    "Ending": null,
+    "HitsTaken": 0,
+    "TotalFrames": 5198,
+    "MeterFrames": 0,
+    "BombsUsed": 0,
+    "SubshotSwitches": 0,
+    "OneUpItemsCollected": 0
+  },
+  "DialogueSpeed": 1.0,
+  "SmoothInput": false,
+  "Locale": null,
+  "Debug": false
+}

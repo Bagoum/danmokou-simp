@@ -1,0 +1,89 @@
+{
+  "Record": {
+    "SavedMetadata": {
+      "team": {
+        "Players": [
+          {
+            "Item1": "basic-mima",
+            "Item2": "mima-multishot-1"
+          }
+        ],
+        "SelectedIndex": 0,
+        "SupportAbilityKey": "WitchTime",
+        "Subshot": 2
+      },
+      "difficulty": {
+        "standard": 50,
+        "customValueSlider": 18,
+        "customRank": null,
+        "numSuicideBullets": 0,
+        "playerDamageMod": 1.0,
+        "bossHPMod": 1.0,
+        "respawnOnDeath": null,
+        "faithDecayMultiplier": 1.0,
+        "faithAcquireMultiplier": 1.0,
+        "meterUsageMultiplier": 1.0,
+        "meterAcquireMultiplier": 1.0,
+        "bombsEnabled": true,
+        "meterEnabled": true,
+        "playerSpeedMultiplier": 1.0,
+        "playerHitboxMultiplier": 1.0,
+        "playerGrazeboxMultiplier": 1.0,
+        "pocOffset": 0.0,
+        "startingLives": null
+      }
+    },
+    "Mode": 4,
+    "Campaign": "simp.ex",
+    "RequestKey": {
+      "$type": "Danmokou.GameInstance.BossPracticeRequestKey, Danmokou.Danmaku",
+      "Boss": "simp.yukari2",
+      "PhaseIndex": 2,
+      "Campaign": "simp.ex"
+    },
+    "Seed": 961499243,
+    "Uuid": "fRqIv3EaAoXJwPWB",
+    "CustomName": "ATTRACT YEx 2",
+    "Date": "2023-02-26T16:00:35.5389643-08:00",
+    "Score": 297948,
+    "EngineVersion": {
+      "major": 10,
+      "minor": 1,
+      "patch": 0
+    },
+    "GameVersion": {
+      "major": 5,
+      "minor": 0,
+      "patch": 4
+    },
+    "GameIdentifier": "SiMP2",
+    "CardHistory": {
+      "record": {
+        "simp.yukari2": [
+          {
+            "campaign": "simp.ex",
+            "boss": "simp.yukari2",
+            "phase": 2,
+            "stars": 3,
+            "method": 0,
+            "hits": 0
+          }
+        ]
+      }
+    },
+    "ContinuesUsed": 0,
+    "Completed": true,
+    "Photos": [],
+    "Ending": null,
+    "HitsTaken": 0,
+    "TotalFrames": 2975,
+    "MeterFrames": 0,
+    "BombsUsed": 0,
+    "SubshotSwitches": 0,
+    "OneUpItemsCollected": 0
+  },
+  "DialogueSpeed": 1.0,
+  "SmoothInput": false,
+  "Locale": null,
+  "Debug": false
+}

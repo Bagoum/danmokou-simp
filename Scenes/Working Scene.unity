@@ -553,7 +553,8 @@ PrefabInstance:
         type: 3}
       propertyPath: behaviorScript
       value: 
-      objectReference: {fileID: 4900000, guid: 683abfd70edf15949a317f649f1344ce, type: 3}
+      objectReference: {fileID: 2811297602134710623, guid: 54d8319209a0825458406d01eda63d7e,
+        type: 3}
     - target: {fileID: 6490234047905658620, guid: efc8d19268d8b854c912ba518b2bb0dd,
         type: 3}
       propertyPath: linkToEditorReload
@@ -2030,7 +2031,7 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultShots.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 054062588373598469a2911098fdc10d,
+      objectReference: {fileID: 11400000, guid: 0ad5898c3351494468a4cd358d676fd4,
         type: 2}
     - target: {fileID: 3290238121844968753, guid: cd77fcd8b4e4d41489479fb8f6de0a18,
         type: 3}

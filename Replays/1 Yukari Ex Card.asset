@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2e7f575c5642efb91a321938ae7fd7, type: 3}
+  m_Name: 1 Yukari Ex Card
+  m_EditorClassIdentifier: 
+  replayMetadata: {fileID: 4900000, guid: 010c0f255b2ad874393d382c3a4d4bb8, type: 3}
+  replayFile: {fileID: 4900000, guid: 4d01474c227a1234fad68f4145ff3b46, type: 3}

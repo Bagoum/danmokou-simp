@@ -127,6 +127,7 @@ gsr {
 
 ## 2
 <!> stage
+<!> checkpoint
 phasej 57 0 #{
 	paction 0
 		##a3 helper
@@ -135,38 +136,38 @@ phasej 57 0 #{
 			 restyleeffect arrow-blue/w cwheel-blue/ _
 		}
 	paction 0
-		sts $l $a1
-		_ 1.5 sts <1;:> gcr2 60 2 <1.6;:> {
+		async _ $l $a1
+		_ 1.5 async _ <1;:> gcr2 60 2 <1.6;:> {
 			 p this
 		} $a2(2.5 - 1.5 * p)
 	paction 3
-		sts $r $a1
-		_ 1.5 stsp 0 <> $a4(1)
+		async _ $r $a1
+		_ 1.5 async _ <> isetp 0 $a4(1)
 	paction 4
-		sts <-1.8;:> $a1
-		sts $l $a2(1)
-		_ 2 sts <2;:> $a3
+		async _ <-1.8;:> $a1
+		async _ $l $a2(1)
+		_ 2 async _ <2;:> $a3
 	paction 3
-		stsp 1 <> $a4(-1)
-		sts <> gcr2 60 5 <-0.8;:> {
+		async _ <> isetp 1 $a4(-1)
+		async _ <> gcr2 60 5 <-0.8;:> {
 			center
 			p this
 		} $a2(2.8 - 0.4 * p)
-		_ 0.6 sts <-2.1;:> $a3
+		_ 0.6 async _ <-2.1;:> $a3
 	paction 4
-		sts $l $a1
-		sts $r $a1
-		sts <> $a3(3)
-		_ 2.5 sts <> gcr2 120 2 <> {
+		async _ $l $a1
+		async _ $r $a1
+		async _ <> $a3(3)
+		_ 2.5 async _ <> gcr2 120 2 <> {
 			p this
 		} gsr2 2 rx(4.4 + 1.4 * p) {
 			center
 		} $a2(2.5 - 0.9 * p)
 	paction 3
-		sts $r $a1
-		_ 1 sts $l $a1
-		_ 2 stsp 2 <> $a4(1)
-		_ 3 stsp 3 <> $a4(-1)
+		async _ $r $a1
+		_ 1 async _ $l $a1
+		_ 2 async _ <> isetp 2 $a4(1)
+		_ 3 async _ <> isetp 3 $a4(-1)
 	paction 5
 		async tfairy <> gcr3 240 _ <> {
 			p this
@@ -183,13 +184,13 @@ phasej 57 0 #{
 					p this
 				} s tprot py(-0.7 + -0.5 * p)
 			{ hp 400 }
-		_ 2 stsp 4 <> $a4(1)
-		_ 2.5 sts <0.8;:> $a1
-		_ 5 sts <1.8;:> gcr2 120 2 <1;:> {
+		_ 2 async _ <> isetp 4 $a4(1)
+		_ 2.5 async _ <0.8;:> $a1
+		_ 5 async _ <1.8;:> gcr2 120 2 <1;:> {
 			p this
 		} $a2(2 - 0.8 * p)
-		_ 9 sts <-2.2;:> $a3
-		_ 12 sts <2.2;:> $a3
+		_ 9 async _ <-2.2;:> $a3
+		_ 12 async _ <2.2;:> $a3
 	
 #}
 

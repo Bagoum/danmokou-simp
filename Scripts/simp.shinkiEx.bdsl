@@ -8,7 +8,7 @@ pattern {
 }
 phase 0
 	paction 0
-		shift-phase-to 9
+		shift-phase-to 13
 	
 
 !{ power1()
@@ -365,7 +365,7 @@ phase 37
 			sfx	x-fire-burst-3
 			frv2 rx * * 0.25 $dx pm1 t
 		} gsr2 8 rx $dx {
-			root py if >(&pi, 1) 4 (- 4 * * (- 2 &pi) 0.866 $dx)
+			root py if >(t, 1) 4 (- 4 * * (- 2 t) 0.866 $dx)
 			center
 			maxt 8
 			p mod
@@ -375,7 +375,7 @@ phase 37
 				colorr lcircle-*/w simple nroffset @ eloc p
 				    { scale  0.9 dir * pm1 &layer * -400 t }
 				colorr lcircle-*/ gsr2c 60 { } gsr {
-					clip < mod 30 &pi lerp(0, 4, dc, 22, 9)
+					clip < mod 30 t lerp(0, 4, dc, 22, 9)
 				} simple offset 
 					rx
 						1.4
@@ -476,8 +476,8 @@ phase 42
 		} gsr {
 			clip		< * 1.2 p1m $wl p2m $wl
 			tmmod	2
-			alternate if < dh 1 0 1
-		} {
+			
+		} alternate if < dh 1 0 1 {
 			s nroffset :: {
 				px	pma $ww { $wl 2 }
 				py	pm $wl 2
@@ -489,8 +489,6 @@ phase 42
 				plr	pm1 pm 2 1
 			} + lbeh $me tp wings1 $ww $wl $wper2
 		}
-		
-		
 !!{ rpt 24
 		async lcircle-*/ <> gcr2 * 1s $wperf _ <> {
 			delay * 1s $wperf
@@ -682,7 +680,7 @@ phase 100
 			bindLR
 			##frv2	a * &lr * 15 p
 		} gsr {
-			clip & = p 0 = &pi 0
+			clip & = p 0 = t 0
 		} laser null 1 0.3 { 
 			high
 			dsfx 

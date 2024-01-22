@@ -17,7 +17,7 @@ phase 0
 	paction 0
 		@ { kaguya keine }
 			position -15 0
-		shift-phase-to 15
+		shift-phase-to 9
 	
 	
 !!{ mimac { black yellow orange green teal blue pink }
@@ -625,10 +625,9 @@ phase 36
 					 {
 						colorr gpather-*/ pather 3 0.5 nroffset @ eloc p {
 							sm async star-** <> gir2 0 2 <> {
-								alternate t
 								wait-child
 								colorf $mimac2 pma _ { $n }
-							} {
+							} alternate t {
 								gcr { #{
 									wtm	/i dl 4.5 1000 1000
 									cancel < y ymin

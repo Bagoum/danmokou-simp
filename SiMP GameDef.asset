@@ -26,6 +26,12 @@ MonoBehaviour:
     top: 4.1
     bot: -4.5
     center: {x: -1.9, y: 0}
+  m_playerMovementBounds:
+    left: -3.5
+    right: 3.5
+    top: 4
+    bot: -4.08
+    center: {x: -1.9, y: 0}
   m_endcard: {fileID: 11400000, guid: 8d6f4f35b7d2da942a254e43329ca03c, type: 2}
-  m_campaign: {fileID: 11400000, guid: 0e12394685828ac44a2b553087a8aec5, type: 2}
+  m_campaign: {fileID: 11400000, guid: a066223c557e1d94abc1ad2d23948a07, type: 2}
   m_extraCampaign: {fileID: 11400000, guid: 29d8e1b38a50bdc4dbdbafd33095f788, type: 2}

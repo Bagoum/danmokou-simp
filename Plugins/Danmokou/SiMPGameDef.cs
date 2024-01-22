@@ -1,6 +1,8 @@
-﻿using Danmokou;
+﻿using System.Linq;
+using Danmokou;
 using Danmokou.Achievements;
 using Danmokou.Core;
+using Danmokou.Core.DInput;
 using Danmokou.Danmaku;
 using Danmokou.GameInstance;
 using UnityEngine;

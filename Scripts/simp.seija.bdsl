@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	paction 0
-		shift-phase-to 1
+		shift-phase-to 5
 	
 !!{ me seija
 !{ 
@@ -257,8 +257,7 @@ phase 34
 			gsr {
 				color gdlaser-*/b
 				frv2	ny * 1 modh p
-				alternate p
-			} {
+			} alternate p {
 	!!{ lr * dl 18 ry /i dl 0.7
 				gsr2 $lr {
 					color purple

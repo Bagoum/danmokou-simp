@@ -22,8 +22,7 @@ summonr null(cy(5))
 		wait-for 0.8
 	_ 0.8 async amulet-red/ <> gcr2 (60 / dl) _ <> {
 		while(onscreen(loc))
-		alternate(limit 1 t)
-	} { 
+	} alternate(limit 1 t) { 
 		gsr2 3 <> {
 			sfx(x-fire-burst-1)
 			spread(<10>)

@@ -12,14 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f64d4a00c194018afbe5db3323da211, type: 3}
   m_Name: SiMP Campaign
   m_EditorClassIdentifier: 
-  startLives: 8
   key: simp.main
   shortTitle: Main
   replayable: 1
   allowDialogueSkip: 1
-  endings:
-  - {fileID: 11400000, guid: ee061571258144046846fbe13456a608, type: 2}
-  - {fileID: 11400000, guid: 7f65b4581454d4c4ea4ac16e73a06754, type: 2}
+  startLives: 8
   players:
   - {fileID: 11400000, guid: 794bb6976ccc5104a88d12a1c93fa9fd, type: 2}
   stages:
@@ -39,3 +36,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 43e8e3031b95bc8498525b35ec31b1c9, type: 2}
   - {fileID: 11400000, guid: 5d20410abda162f4b86c5b5511038e76, type: 2}
   - {fileID: 11400000, guid: 1a0ddcbc2a436e8438020c8f8384c55a, type: 2}
+  endings:
+  - {fileID: 11400000, guid: ee061571258144046846fbe13456a608, type: 2}
+  - {fileID: 11400000, guid: 7f65b4581454d4c4ea4ac16e73a06754, type: 2}

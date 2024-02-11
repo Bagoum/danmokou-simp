@@ -1642,7 +1642,7 @@ MonoBehaviour:
   stateMachines:
   - {fileID: 2811297602134710623, guid: e1a29e14b8444434fa65f98540b4b07d, type: 3}
   reflectFXY:
-  - ^ x 0.8
+  - x ^ 0.8
   reflectTP3:
   - pz(50 * t)
   - pz(-50 * t)

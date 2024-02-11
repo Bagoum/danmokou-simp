@@ -8,7 +8,7 @@ pattern {
 }
 phase 0
 	paction 0
-		shift-phase-to 2
+		shift-phase-to 4
 	
 	
 !!{ me kasen
@@ -72,7 +72,9 @@ phase 36
 		pool-control sakura-* allowcull false
 		$power1
 !!{ rpt * ^ dl 1 18
-		async sakura-*/ <> idelay 1.5s gsr2 12 angle / 180h $rpt {
+		async sakura-*/ <> gcr {
+			delay 1.5s
+		} gsr2 12 angle / 180h $rpt {
 			p this
 			color { yellow green }
 		} gsr2c $rpt {
@@ -86,12 +88,12 @@ phase 36
 		async lightning-red/ <> gir2 /i ^ dl 0.35 lerpt 0 5 240 140 _ <> {
 			sfx x-lightning
 		} gcr2 24 6 <;1.4:> {
-			root pxy * pm1 &pi -6 4
+			root pxy * pm1 &i -6 4
 			target a Lplayer
 			p this
 		} gsr2 2 <> {
 			postloop rv2.ry *=f -1
-		} gsr { clip & = p 0 = &pi 1 } { 
+		} gsr { clip & = p 0 = &i 1 } { 
 			pather 1 0.7 tprot px lerpt3(0.3, 0.5, 0.9, 1.5, 8, 2, 6) { high s 2 }
 			color glaser-red/b laser null 2.4 0 { hueshift(* 90 t) }
 		}

@@ -5,7 +5,7 @@ pattern { bgm {
 } }
 phase 0
 	paction 0
-		shift-phase-to 3
+		shift-phase-to 4
 	
 ##1
 <!> announce
@@ -99,7 +99,7 @@ summonr null(cy(5))
 			for(8s)
 			sfx(x-fire-burst-3)
 		} gsr2c(14 * dl) {
-			offset(aphi(&times) * &pi)
+			offset(aphi(&times) * &i)
 		} gsr2 (3 + d3d1) <> {
 			p this
 		} gsr2 2 <> {

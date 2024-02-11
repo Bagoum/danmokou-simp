@@ -8,7 +8,7 @@ pattern {
 }
 phase 0
 	paction 0
-		shift-phase-to 13
+		shift-phase-to 11
 	
 
 !{ power1()
@@ -522,7 +522,7 @@ phase 42
 		} gsr2 3 a lerpsmooth out-sine 0 2 timersec(pt) 180 45 {
 			center
 			start rv2.a =f flipxpmmod &lr [&rv2].a
-		} gsr { clip & = &pi 1 < timersec(pt) 2 } s tprot cx 7
+		} gsr { clip & = &i 1 < timersec(pt) 2 } s tprot cx 7
 		 async arrow-purple/ <-88> gir2 0 2 <> {
 			start rv2.a +=f * dl 5
 			bindLR
@@ -532,7 +532,7 @@ phase 42
 		} gsr2 3 a lerpsmooth out-sine 0 2 timersec(pt) 180 60 {
 			center
 			start rv2.a =f flipxpmmod &lr [&rv2].a
-		} gsr { clip & = &pi 1 < timersec(pt) 2 }  s tprot cx 6
+		} gsr { clip & = &i 1 < timersec(pt) 2 }  s tprot cx 6
 		
 #}
 

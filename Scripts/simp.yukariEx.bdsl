@@ -8,7 +8,7 @@ pattern {
 <!> showlives 4
 phase 0
 	paction 0
-		shift-phase-to 2
+		shift-phase-to 1
 	
 
 !!{ yukac { teal purple pink red orange yellow  }
@@ -114,7 +114,7 @@ phase 36
 					preloop target =v2 Lplayer
 					root zero
 				} gsr {
-					clip neq p mod 4 &pi
+					clip neq p mod 4 &i
 				} laser nroffset @ crowloc p 1 0.2 {
 					dsfx
 					rotate 0 angleto &target

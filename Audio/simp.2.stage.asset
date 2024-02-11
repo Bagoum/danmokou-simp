@@ -28,5 +28,5 @@ MonoBehaviour:
   loopMode: 2
   loopSeconds: {x: 2, y: 110}
   startWithTime: 0
-  musicRoomRequirement: campaigncompleted(simp.main)
+  musicRoomRequirement: campaigncompleted("simp.main")
   showInMusicRoom: 1

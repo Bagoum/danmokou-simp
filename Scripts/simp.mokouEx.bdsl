@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	paction 0
-		shift-phase-to 2
+		shift-phase-to 4
 	
 
 !{ power1()
@@ -78,7 +78,7 @@ phase(30)
 			} gsr2 2 <> {
 				postloop rv2.a *=f -1
 			} gsr {
-				clip & = p 0 = &pi 0
+				clip & = p 0 = &i 0
 			} {
 				color glaser-pink/ laser null 1 0 {
 					tint(rgba(1, 1, 1, lerpsmooth(in-sine, 0.4, 1, t, 1, 0)))
@@ -142,13 +142,12 @@ phase 38
 				target a Lplayer
 				p add
 				preloop fitr =f t
-				expose { f fitr }
 			} gsr2 2 <> {
 				p add
 				bindLR
 				frv2	a * &lr * 50 &pi
 			} gsr {
-				clip & = &fitr 0 = &pi 1 
+				clip & = &fitr 0 = &i 1 
 			} guideempty .1 p { pl loc } { } tprot px lerpt 0.5 1.5 2 6
 				{
 					color arrowpather-red/b pather 0.5 0.4 nroffset @ pl p { 

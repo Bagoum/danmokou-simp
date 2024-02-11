@@ -5,7 +5,7 @@ pattern { bgm {
 } }
 phase 0
 	paction 0
-		shift-phase-to 4
+		shift-phase-to 6
 		
 
 ##1
@@ -83,7 +83,7 @@ summonr null(cy(5))
 		async circle-green/ <> gcr3 (50 / dl ^ 0.6) 8s <> {
 			sfx x-fire-burst-2
 		} gsr2c(22 * dl ^ 0.5) {
-			offset(aphi(&times) * &pi)
+			offset(aphi(&times) * &i)
 		} s rvelocity(px(1.6 + sine(2, 0.8, t)))
 	{ hp 2500 }	
 !}
@@ -93,7 +93,7 @@ summonr null(cy(5))
 	paction 0 :2
 		sfx x-crow
 		movewrap 1 pxy(%x, %y) 2 goside(1)
-			>> 1 _ %delay sync gdlaser-%color%/b <-2;:> target Lplayer laser null 1 0.5 { s 2 dsfx }
+			>> 1 _ %delay sync gdlaser-%color%/b <-2;:> gsr { target a Lplayer } laser null 1 0.5 { s 2 dsfx }
 	{ hp 500 }
 !}
 
@@ -201,7 +201,7 @@ phase 33 #{
 			root pxy(4 * pm1 p, 5)
 		} summon null movewrap 1 pxy([Lplayer].x, 3.5) 2 pxy(6 * pm1 p, 1)
 			paction 0 :2
-				sync gdlaser-pink/b <-2;:> target Lplayer laser null 1 0.5 { s 2 dsfx }
+				sync gdlaser-pink/b <-2;:> gsr { target a Lplayer } laser null 1 0.5 { s 2 dsfx }
 				wait 1
 			{ hp 600 }
 		async crow <-6;-3.8:> gcr3 (3.5sh / dl ^ 0.8) 16s <180> {
@@ -277,13 +277,13 @@ phase 19 #{ ##Some extra time since this precedes the boss
 			async ellipse-*/b <1;:> gcrf /i dl 25 _ (angle sine 80 200 tdl) {
 					for	14s
 					sfx x-fire-burst-2
-					preloop refire =f if (divby 8 t) 1 0
+					preloop refirea =f if (divby 8 t) 1 0
 				} gsr2c 6 {
 				} gsr2 4 <> {
 					p this
 					color { red orange pink purple }
 				} gsr {
-					start refire =f (&refire * (if < p 3 1 0))
+					start refire =f (&refirea * (if < p 3 1 0))
 				} s tp rx(
 						2.8 * if =(&refire, 0) 1 lerpt 0.7 0.9 1 0,
 						-180 +  pm1(p) * (if =(p // 2, 0) 120 60) / 2)

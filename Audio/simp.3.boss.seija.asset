@@ -25,8 +25,8 @@ MonoBehaviour:
   volume: 0.16
   pitch: 1
   stopOnPause: 0
-  loop: 1
+  loopMode: 2
   loopSeconds: {x: 26.21, y: 96.5}
   startWithTime: 0
-  musicRoomRequirement: campaigncompleted(simp.main)
+  musicRoomRequirement: campaigncompleted("simp.main")
   showInMusicRoom: 1

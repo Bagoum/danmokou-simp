@@ -1,3 +1,4 @@
+<#> bdsl1
 script
 sre mokou _
 . `<silent>As that nameless weirdo promised, my involvement in the incident ended today.`

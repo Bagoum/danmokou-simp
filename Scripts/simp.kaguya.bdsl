@@ -9,7 +9,7 @@ pattern {
 }
 phase 0
 	paction 0
-		shift-phase-to 3
+		shift-phase-to 6
 	
 	
 !!{ colors { blue purple pink red orange yellow green teal black  }
@@ -279,7 +279,6 @@ phase 32
 			async gdlaser-green/ <> gcr2 10 12 <> {
 				##color $rainbow
 				p this
-				expose  f st
 			} gsr2 2 <> { 
 				p add
 			} laser null 0.5 (- 4.8 * 0.17 p1) {

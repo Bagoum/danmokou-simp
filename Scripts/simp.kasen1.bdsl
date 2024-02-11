@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	paction 0
-		shift-phase-to 2
+		shift-phase-to 4
 	
 	
 !!{ me kasen
@@ -117,7 +117,7 @@ phase 32
 					target a Lplayer
 					sfx x-fire-tech-6
 				} pather 0.5 0.3 rvelocity px lerp(0.2, 0.6, - t lerpd(0.5, 0), 3, lerpd(6, 9)) { }
-			softcull cwheel-yellow/w _
+			softcull _ _
 		}
 		async gcircle-yellow/w <> gir2 (/ 300 ^ dl 0.5) _ <360h> {
 		} gcr2 6 18 <12h> {
@@ -129,7 +129,7 @@ phase 32
 			sfx x-fire-burst-1
 			delay 2s
 		} gsr2c(* dl 15) {
-			offset(* &pi aphi(&times))
+			offset(* &i aphi(&times))
 		} gsr2 (+ 4 d3d1) <2> {
 			center
 		} s rvelocity px 2
@@ -137,7 +137,7 @@ phase 32
 			sfx x-fire-small-1
 			delay 2s
 		} gsr2c(* dl 24) {
-		 offset(* &pi aphi(&times))
+		 offset(* &i aphi(&times))
 		} s rvelocity px(3.2)
 		
 		gtr {

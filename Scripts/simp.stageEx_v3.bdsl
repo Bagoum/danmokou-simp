@@ -1,10 +1,11 @@
+<#> bdsl1
 pattern { bgm {
 	1  simp.ex.stage
 	9	_
 } }
 phase 0
 	paction 0
-		shift-phase-to 4
+		shift-phase-to 9
 		
 
 <!> dialogue #{
@@ -50,7 +51,7 @@ sync powerup1 <> poweraura {
 async fireball-red/b <> gcr3 /i dl 70 6.2s <> {
 	delay(lerpd(60, 0))
 	sfx x-bubble
-} target Lplayer s tprot px lerpt 0 0.4 4.4 3.6
+} gsr { target a Lplayer } s tprot px lerpt 0 0.4 4.4 3.6
 !}
 !{ obju1(y 2)
 color tfairy summonr null(cy(5))
@@ -167,7 +168,7 @@ paction 0 :3
 !{ objh1(y 2.5)
 color tlfairy summonr null(cy(5))
 	phase 0
-		finish
+		end :1
 			behpool-control gdlaser-* softcullall cwheel
 		saction 0
 			imovewrap 1.3 goy(%y) 3 goside(%y - 0.5)

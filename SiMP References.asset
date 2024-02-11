@@ -60,6 +60,7 @@ MonoBehaviour:
   summonables:
   - {fileID: 11400000, guid: 38afc312ddb0ac242b8cfb301b1b4237, type: 2}
   - {fileID: 11400000, guid: 0d4a9136117bbb444bb6a20b70a5e613, type: 2}
+  - {fileID: 11400000, guid: 426d696a644b0f54d95990d794ca1427, type: 2}
   fileStateMachines: []
   licenses:
   - name: Binary
@@ -72,6 +73,9 @@ MonoBehaviour:
     file: {fileID: 4900000, guid: 6084a1326dccb4f409163c7bee129244, type: 3}
   - name: SuzunoyaUnity
     file: {fileID: 4900000, guid: a16e43d784102664e80cec9f25cb52c6, type: 3}
+  importableScripts:
+  - name: myRefFile
+    file: {fileID: 2811297602134710623, guid: 6c0263d2bbc23514faec11e5e08df079, type: 3}
   scriptFolders:
   - Assets/SiMP/Dialogue
   - Assets/SiMP/Scripts

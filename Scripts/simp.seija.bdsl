@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	paction 0
-		shift-phase-to 5
+		shift-phase-to 9
 	
 !!{ me seija
 !{ 
@@ -221,7 +221,6 @@ phase 34
 			root pxy 
 				if (| = t 1 = t 2) xmin xmax
 				if (< t 2) ymax ymin
-			expose f idx2
 		} s tprot ::v2 {
 			fast	cx 1.5
 			slow	cx 0.75
@@ -324,7 +323,6 @@ phase 37
 				bindItr(n)
 				sfxf	{ x-fire-small-1 x-fire-small-2 } 0
 				preloop root =v2 loc
-				expose v2 root
 			} gsr2c ceil(* (^ dl 0.3) 24) { 
 !!{ t1 0.8
 !!{ t2 2.1

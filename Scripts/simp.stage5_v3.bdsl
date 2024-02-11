@@ -5,7 +5,7 @@ pattern { bgm {
 } }
 phase 0
 	paction 0
-		shift-phase-to 1
+		shift-phase-to 3
 		
 
 ##1 Kasen
@@ -31,7 +31,7 @@ summonr null(cy(5))
 			delay(lerpd(60, 0))
 			while(onscreen(loc) & < y 3.5)
 			sfx x-fire-small-1
-		} target Lplayer gsr2 3 <40> {
+		} gsr { target a Lplayer } gsr2 3 <40> {
 			center
 		} s rvelocity px(lerpt(0, 0.4, 4.2, 3.5))
 	{ hp 180 }
@@ -47,7 +47,7 @@ gcr {
 		while onscreen loc
 		sfx x-fire-tech-6
 		delay(rand(0, 30))
-	} target Lplayer pather 0.5 0.25 rvelocity px
+	} gsr { target a Lplayer } pather 0.5 0.25 rvelocity px
 		lerpt3(0, 0.2, 0.4, 0.7, 5, 1, lerpd(4, 6))
 		{ s 1.5 }
 	{ hp 100 }
@@ -227,15 +227,14 @@ phase 14 #{
 		} summon
 			tprot py eased out-sine 2 -2.7
 			phase 4
-				end
-					poof
-				finish
+				end :2
 					sync gcircle-*/ <> gsr2c(sqrt(dl) * 18) {
 						colorf { pink red } pmz1 &lr
 						target a Lplayer
 					} gsr2 15 <> { 
 						p this
 					} s tprot px(1.2 + 0.21 * p)
+					poof
 			{ hp 150 drops3(3, 3, 3) }
 #}
 

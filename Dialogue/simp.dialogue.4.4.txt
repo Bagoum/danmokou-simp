@@ -1,3 +1,4 @@
+<#> bdsl1
 script
 place l1 mokou
 place r1 mima

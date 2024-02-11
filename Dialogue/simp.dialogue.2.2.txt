@@ -1,3 +1,4 @@
+<#> bdsl1
 script
 place r1 kaguyaf
 sr kaguyaf

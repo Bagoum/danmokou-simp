@@ -25,7 +25,8 @@ public class SiMPGameDef : CampaignDanmakuGameDef {
         ScoreExt = new ScoreExtendFeatureCreator(),
         Meter = d.meterEnabled ? 
             new MeterFeatureCreator() : 
-            new DisabledMeterFeatureCreator()
+            new DisabledMeterFeatureCreator(),
+        CustomData = new SiMPCustomDataFeatureCreator()
     };
 }
 }

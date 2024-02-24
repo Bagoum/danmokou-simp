@@ -1848,7 +1848,7 @@ PrefabInstance:
         type: 3}
       propertyPath: behaviorScript
       value: 
-      objectReference: {fileID: 2811297602134710623, guid: 02b43ee0f6be3144abf0ca3f3e9cd69d,
+      objectReference: {fileID: 2811297602134710623, guid: 36e4232007b9a5d499f4e738c8b2fb77,
         type: 3}
     - target: {fileID: 4288191306515568470, guid: 0623db11f1c15fc409072cf3af7a2a95,
         type: 3}
@@ -1918,7 +1918,7 @@ PrefabInstance:
     - target: {fileID: 6003014192476353498, guid: 0623db11f1c15fc409072cf3af7a2a95,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2241,7 +2241,7 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultSupport
       value: 
-      objectReference: {fileID: 11400000, guid: 55ba8ec33d158e04c99115a5a6eacaf2,
+      objectReference: {fileID: 11400000, guid: 3a0c5b4cb7a173245835d11e28585c65,
         type: 2}
     - target: {fileID: 3290238121844968753, guid: cd77fcd8b4e4d41489479fb8f6de0a18,
         type: 3}
@@ -2280,7 +2280,7 @@ PrefabInstance:
     - target: {fileID: 3290238121844968754, guid: cd77fcd8b4e4d41489479fb8f6de0a18,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

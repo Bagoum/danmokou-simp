@@ -17,7 +17,7 @@ phase 0
 	paction 0
 		@ { kaguya keine }
 			position -15 0
-		shift-phase-to 14
+		shift-phase-to 8
 	
 	
 !!{ mimac { black yellow orange green teal blue pink }

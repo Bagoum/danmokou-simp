@@ -325,6 +325,7 @@ MonoBehaviour:
   Size: {x: 1, y: 1}
   Offset: {x: 1, y: 2}
   testIcon: {fileID: 21300000, guid: a3e68d26b33f78b4fa0d6859aaec0020, type: 3}
+  visible: 00000000
 --- !u!4 &263590809
 Transform:
   m_ObjectHideFlags: 0
@@ -615,7 +616,7 @@ PrefabInstance:
     - target: {fileID: 3665291995995624048, guid: efc8d19268d8b854c912ba518b2bb0dd,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6490234047905658620, guid: efc8d19268d8b854c912ba518b2bb0dd,
         type: 3}
@@ -631,7 +632,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7991237679574530942, guid: efc8d19268d8b854c912ba518b2bb0dd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: efc8d19268d8b854c912ba518b2bb0dd, type: 3}
 --- !u!1001 &380366834
 PrefabInstance:
@@ -1260,7 +1265,7 @@ PrefabInstance:
         type: 3}
       propertyPath: behaviorScript
       value: 
-      objectReference: {fileID: 2811297602134710623, guid: e2c4624517dcf1b4aa433f41ba2d0dcc,
+      objectReference: {fileID: 2811297602134710623, guid: 5b87b8bda53b77b4a9d6472520b7aa56,
         type: 3}
     - target: {fileID: 4602661400090615120, guid: 2e4cfe2f6f8095747a49bcb45d5dea46,
         type: 3}
@@ -1848,7 +1853,7 @@ PrefabInstance:
         type: 3}
       propertyPath: behaviorScript
       value: 
-      objectReference: {fileID: 2811297602134710623, guid: 36e4232007b9a5d499f4e738c8b2fb77,
+      objectReference: {fileID: 2811297602134710623, guid: 22cf69b1b7dc8b546a1218532bc65f36,
         type: 3}
     - target: {fileID: 4288191306515568470, guid: 0623db11f1c15fc409072cf3af7a2a95,
         type: 3}
@@ -1918,7 +1923,7 @@ PrefabInstance:
     - target: {fileID: 6003014192476353498, guid: 0623db11f1c15fc409072cf3af7a2a95,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1928,10 +1933,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1920118509}
-    - targetCorrespondingSourceObject: {fileID: 1114027828330437332, guid: 0623db11f1c15fc409072cf3af7a2a95,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 0623db11f1c15fc409072cf3af7a2a95, type: 3}
 --- !u!1 &1920118508 stripped
 GameObject:
@@ -2252,7 +2253,7 @@ PrefabInstance:
         type: 3}
       propertyPath: 'defaultShots.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 94c9dbd65f23dec46894ae6f01f35d23,
+      objectReference: {fileID: 11400000, guid: 9b809459ea3c04943a34159db41a660f,
         type: 2}
     - target: {fileID: 3290238121844968753, guid: cd77fcd8b4e4d41489479fb8f6de0a18,
         type: 3}

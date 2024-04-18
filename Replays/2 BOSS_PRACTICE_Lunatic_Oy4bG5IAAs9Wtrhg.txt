@@ -5,11 +5,11 @@
         "Players": [
           {
             "Item1": "basic-mokou",
-            "Item2": "mokou-arrowpather"
+            "Item2": "mokou-arrowpather",
+			"Item3": "WitchTime",
           }
         ],
         "SelectedIndex": 0,
-        "SupportAbilityKey": "WitchTime",
         "Subshot": 0
       },
       "difficulty": {

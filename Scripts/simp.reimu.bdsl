@@ -7,7 +7,7 @@ pattern {
 }
 phase 0
 	paction 0
-		shift-phase-to 1
+		shift-phase-to 6
 	
 	
 !!{ me reimu
@@ -269,7 +269,7 @@ phase 37
 				p this
 			} gsr2 2 <> {
 				p add
-			} gsr2 2 angle - 140 * 40 &pi {
+			} gsr2 2 angle - 140 * 40 p1 {
 				center
 			} s tprot px * lerp -0.3 0.5 (- t * 1.1 p2) 0 1
 				+ 1.4 * 0.7 p1

@@ -12,6 +12,7 @@ using static BagoumLib.Culture.LocalizationRendering;
 using static Danmokou.Core.LocalizationRendering;
 
 namespace SiMP.Localization {
+[LocalizationStringsRepo]
 public static partial class LocalizedStrings {
 	private static readonly Dictionary<string, LString> _allDataMap = new Dictionary<string, LString>() {
 		{ "simp.acv.d_emptypowershift", SiMPAchievements.d_emptypowershift },

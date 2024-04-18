@@ -5,11 +5,11 @@
         "Players": [
           {
             "Item1": "basic-mima",
-            "Item2": "mima-wide"
+            "Item2": "mima-wide",
+			"Item3": "WitchTime",
           }
         ],
         "SelectedIndex": 0,
-        "SupportAbilityKey": "WitchTime",
         "Subshot": 0
       },
       "difficulty": {

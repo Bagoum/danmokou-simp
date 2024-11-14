@@ -17,7 +17,7 @@ phase 0
 	paction 0
 		@ { kaguya keine }
 			position -15 0
-		shift-phase-to 9
+		shift-phase-to 14
 	
 	
 !!{ mimac { black yellow orange green teal blue pink }
@@ -124,7 +124,7 @@ phase 31 #{
 			wait-child
 			preloop {
 				lr =f mp1 // ++ t 2
-				ud =f pm1  pred10(in mod 4 ++ t 0.5 2.5)
+				ud =f pm1  pred10(in(mod 4 ++ t, 0.5, 2.5))
 			}
 		} move-target 4h io-sine pxy * &lr 3 + 1.2 * 2 &ud
 	

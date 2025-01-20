@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: SiMP.Main.Ending.Bad
   m_EditorClassIdentifier: 
   key: main.bad
-  dialogueKey: simp.dialogue.e-bad
+  stateMachine: {fileID: 2811297602134710623, guid: 567832c4299a31e4ea9f606366a9218c,
+    type: 3}
   predicate: _

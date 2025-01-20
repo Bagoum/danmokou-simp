@@ -42,7 +42,8 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -1762,7 +1763,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1709406703
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1914,7 +1915,7 @@ PrefabInstance:
         type: 3}
       propertyPath: behaviorScript
       value: 
-      objectReference: {fileID: 2811297602134710623, guid: 7c10df2afa4c8d14584d6a96df8a53e7,
+      objectReference: {fileID: 2811297602134710623, guid: 6f5901e3f84c4bf42b44789b6dd79f9a,
         type: 3}
     - target: {fileID: 4288191306515568470, guid: 0623db11f1c15fc409072cf3af7a2a95,
         type: 3}
@@ -1984,7 +1985,7 @@ PrefabInstance:
     - target: {fileID: 6003014192476353498, guid: 0623db11f1c15fc409072cf3af7a2a95,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8831922895497459403, guid: 0623db11f1c15fc409072cf3af7a2a95,
         type: 3}
@@ -1999,10 +2000,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1920118509}
-    - targetCorrespondingSourceObject: {fileID: 1114027828330437332, guid: 0623db11f1c15fc409072cf3af7a2a95,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 0623db11f1c15fc409072cf3af7a2a95, type: 3}
 --- !u!1 &1920118508 stripped
 GameObject:
@@ -2266,7 +2263,7 @@ PrefabInstance:
     - target: {fileID: 3290238121844968752, guid: cd77fcd8b4e4d41489479fb8f6de0a18,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3290238121844968752, guid: cd77fcd8b4e4d41489479fb8f6de0a18,
         type: 3}
@@ -2328,13 +2325,13 @@ PrefabInstance:
         type: 3}
       propertyPath: 'defaultShots.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 054062588373598469a2911098fdc10d,
+      objectReference: {fileID: 11400000, guid: 7aea117ce3a952f42911167011a10d91,
         type: 2}
     - target: {fileID: 3290238121844968753, guid: cd77fcd8b4e4d41489479fb8f6de0a18,
         type: 3}
       propertyPath: 'defaultShots.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: 3c69cff4d6513f14e880462e80103a4b,
+      objectReference: {fileID: 11400000, guid: 054062588373598469a2911098fdc10d,
         type: 2}
     - target: {fileID: 3290238121844968753, guid: cd77fcd8b4e4d41489479fb8f6de0a18,
         type: 3}
